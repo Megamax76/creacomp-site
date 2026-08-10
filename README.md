@@ -45,7 +45,7 @@ src/
   views/                   une vue par type de page, partagée entre les deux langues
   pages/                   routes françaises à la racine, anglaises sous /en/
   components/              en-tête, pied de page, carte, grille, bouton de copie
-  assets/images/           les onze photographies, stockées dans le dépôt
+  assets/images/           les trois photographies, stockées dans le dépôt
   data/credits.json        auteurs et liens des photographies
 scripts/
   extract-framework.py     régénère les données françaises depuis le document Word
@@ -75,29 +75,30 @@ Le script échoue bruyamment si la structure du document a changé, plutôt que
 de produire des données silencieusement fausses. La traduction anglaise, elle,
 est maintenue à la main et doit être mise à jour en parallèle.
 
-## Les images
+## Images et motifs
 
-Onze photographies, issues d'Unsplash et utilisées sous licence Unsplash (usage
-libre, y compris commercial) : une photographie d'ouverture sur la page
-d'accueil, et dix matières abstraites — une par rubrique, une par fil
-transversal.
+**Trois photographies** seulement, sur les pages où une illustration a du sens :
+l'accueil (dans le hero, à droite du titre), « Le cadre » et « Contact ». Elles
+proviennent d'Unsplash, sont utilisées sous licence Unsplash — usage libre, y
+compris commercial — et sont stockées dans le dépôt : le site n'émet aucune
+requête vers un service d'images. Les crédits figurent sur la page
+« Utiliser & citer ».
 
-Les dix matières sont affichées en **bichromie** : la photographie est
-désaturée par CSS, puis un calque de l'encre de la rubrique lui est appliqué en
-mode de fusion `color`. Dix photographies d'auteurs différents forment ainsi une
-série cohérente, et la teinte suit automatiquement le thème clair ou sombre. Un
-changement de couleur de rubrique dans `global.css` se propage aux images sans
-retoucher un seul fichier.
-
-Les fichiers sont stockés dans le dépôt et optimisés à la construction : le site
-n'émet aucune requête vers un service d'images. Les crédits sont affichés sur la
-page « Utiliser & citer » — le référentiel comporte une compétence « Créditer et
-respecter les droits des autres », le site l'applique à lui-même.
-
-Pour changer une image : remplacez le fichier dans `src/assets/images/` en
-conservant son nom, et mettez à jour son auteur dans `src/data/credits.json`.
-Pour repartir de zéro, modifiez la table `SELECTION` de `scripts/fetch-images.py`
+Pour en changer une : remplacez le fichier dans `src/assets/images/` en gardant
+son nom, et mettez à jour son auteur dans `src/data/credits.json`. Pour repartir
+d'autres photographies, modifiez la table `SELECTION` de `scripts/fetch-images.py`
 et relancez-le.
+
+**Les rubriques du référentiel ne portent pas de photographies** mais des
+**motifs géométriques dessinés en SVG** — voir `src/components/Motif.astro`. Une
+figure par rubrique, qui dit ce qu'elle fait : des strates pour S'informer, une
+trame de points pour Analyser, des arcs pour Créer, une cadence de barres pour
+Faire, des cercles entrelacés pour Collaborer, une élévation pour Entreprendre,
+une accumulation pour Rentabiliser ; et trois figures pour les fils transversaux.
+
+Chaque motif est tracé dans `var(--accent)` sur un dégradé de la même encre : il
+suit donc la couleur de sa rubrique et le thème clair ou sombre sans réglage,
+et ne pèse rien puisqu'il est écrit dans le HTML.
 
 ## Partis pris techniques
 

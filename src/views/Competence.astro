@@ -1,7 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
 import CopyButton from '../components/CopyButton.astro';
-import Texture from '../components/Texture.astro';
 import {
   site,
   path,
@@ -13,7 +12,6 @@ import {
   type Lang,
   type Entry,
 } from '../lib/i18n';
-import { imageKeyFor } from '../lib/images';
 
 interface Props {
   lang: Lang;
@@ -32,7 +30,6 @@ const next = index < all.length - 1 ? all[index + 1] : undefined;
 
 const citation = citationOf(lang, entry);
 const heading = rubric ? `${s.ui.competence} ${entry.code}` : `${s.ui.thread} ${entry.code}`;
-const textureKey = imageKeyFor(entry);
 ---
 
 <Base
@@ -45,8 +42,7 @@ const textureKey = imageKeyFor(entry);
 >
   <article class="competence">
     <header class="head">
-      <div class="wrap head__inner">
-        <div class="head__text">
+      <div class="wrap">
         <nav class="crumbs" aria-label={s.ui.backToFramework}>
           <a href={path(lang, 'framework')}>{s.nav.framework}</a>
           <span aria-hidden="true">/</span>
@@ -71,16 +67,6 @@ const textureKey = imageKeyFor(entry);
             </p>
           )
         }
-        </div>
-
-        <Texture
-          imageKey={textureKey}
-          ratio="4 / 3"
-          widths={[320, 640]}
-          sizes="(max-width: 60rem) 100vw, 260px"
-          class="head__texture"
-          loading="eager"
-        />
       </div>
     </header>
 
@@ -186,21 +172,6 @@ const textureKey = imageKeyFor(entry);
     padding-block: clamp(2rem, 5vw, 3.2rem) clamp(2rem, 4vw, 3rem);
     border-bottom: 1px solid var(--rule);
     background: var(--accent-wash);
-  }
-
-  .head__inner {
-    display: grid;
-    gap: clamp(1.5rem, 4vw, 3rem);
-    align-items: end;
-  }
-  @media (min-width: 60rem) {
-    .head__inner { grid-template-columns: minmax(0, 1fr) 16rem; }
-  }
-  .head__inner :global(.head__texture) { width: 100%; }
-  @media (max-width: 60rem) {
-    .head__inner { grid-template-areas: 'image' 'text'; }
-    .head__text { grid-area: text; }
-    .head__inner :global(.head__texture) { grid-area: image; aspect-ratio: 16 / 5; }
   }
 
   .crumbs {

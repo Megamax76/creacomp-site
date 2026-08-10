@@ -1,5 +1,5 @@
 ---
-import Texture from './Texture.astro';
+import Motif from './Motif.astro';
 import {
   site,
   framework,
@@ -88,13 +88,7 @@ const searchIndex = (entry: Entry) =>
       data.rubrics.map((rubric) => (
         <section class="row" id={rubric.slug} data-accent={rubric.color} data-row>
           <header class="row__head">
-            <Texture
-              imageKey={`rubrique-${rubric.id}`}
-              ratio="16 / 6"
-              widths={[320, 640]}
-              sizes="(max-width: 68rem) 100vw, 240px"
-              class="row__texture"
-            />
+            <Motif motifKey={`rubrique-${rubric.id}`} ratio="16 / 6" class="row__motif" />
             <p class="row__code">
               {s.ui.rubric} {rubric.id}
             </p>
@@ -127,12 +121,7 @@ const searchIndex = (entry: Entry) =>
     <header class="threads__head">
       <div class="threads__strip">
         {data.threads.map((thread) => (
-          <Texture
-            imageKey={`fil-${thread.code.toLowerCase()}`}
-            ratio="16 / 5"
-            widths={[320, 640]}
-            sizes="(max-width: 46rem) 33vw, 220px"
-          />
+          <Motif motifKey={`fil-${thread.code.toLowerCase()}`} ratio="16 / 5" />
         ))}
       </div>
       <h3 class="threads__title">{s.framework.threadsTitle}</h3>
@@ -328,7 +317,7 @@ const searchIndex = (entry: Entry) =>
     padding: 1.15rem 1.25rem;
     border-left: 3px solid var(--accent);
   }
-  .row__head :global(.row__texture) { margin-bottom: 0.9rem; }
+  .row__head :global(.row__motif) { margin-bottom: 0.9rem; }
 
   .row__code {
     font-family: var(--font-mono);

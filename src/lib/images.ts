@@ -19,10 +19,5 @@ export function credit(key: string): Credit | undefined {
   return credits.items.find((item) => item.key === key);
 }
 
-/** Clé d'image d'une entrée du référentiel : sa rubrique, ou son propre fil. */
-export function imageKeyFor(entry: { code: string; rubricId?: number }): string {
-  return entry.rubricId ? `rubrique-${entry.rubricId}` : `fil-${entry.code.toLowerCase()}`;
-}
-
 /** Tous les crédits, dans l'ordre d'apparition sur le site. */
 export const allCredits = credits.items;

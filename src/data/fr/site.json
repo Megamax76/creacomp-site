@@ -346,7 +346,8 @@
         "Trois zones de contact méritent d'être explicitées. La compétence 1.2 (fiabilité et manipulation) prolonge la zone « littératie informationnelle » de DigComp vers la détection des contenus synthétiques et des techniques d'influence propres aux espaces de création. La compétence 5.3 (conduite en ligne) prolonge la zone « communication et collaboration » vers la modération et la gestion publique de la critique. La compétence 7.4 (actifs indépendants) reprend la question des données sous un angle patrimonial — posséder son audience et ses contenus — là où DigComp la traite sous l'angle défensif de la protection. Dans les trois cas, CréaComp suppose les bases DigComp acquises et décrit exclusivement le prolongement créatif.",
         "Enfin, l'éducation aux médias et à l'information (EMI), inscrite dans les programmes scolaires français, trouve dans la rubrique S'informer son prolongement naturel : CréaComp offre aux enseignants d'EMI une trajectoire qui mène de la réception critique — leur territoire — vers la création assumée, qui est le sien."
       ]
-    }
+    },
+    "imageAlt": "Une bibliothèque contemporaine baignée de lumière."
   },
   "use": {
     "eyebrow": "Utiliser & citer",
@@ -431,7 +432,7 @@
     },
     "credits": {
       "title": "Crédits photographiques",
-      "lead": "Les photographies du site proviennent d'Unsplash et sont utilisées sous licence Unsplash, qui autorise l'usage libre y compris commercial. Elles sont hébergées sur ce site, jamais chargées depuis un service tiers. Le référentiel comporte une compétence « Créditer et respecter les droits des autres » : la moindre des choses est de l'appliquer ici.",
+      "lead": "Photographies issues d'Unsplash, utilisées sous licence Unsplash, qui en autorise l'usage libre y compris commercial. Elles sont hébergées sur ce site.",
       "sourceLabel": "Voir sur"
     }
   },
@@ -484,7 +485,8 @@
       "title": "Par courrier électronique",
       "body": "Le formulaire n'est pas encore configuré. Écrivez directement à l'adresse suivante :",
       "bodyConfigured": "Vous préférez votre propre messagerie ? Écrivez directement à :"
-    }
+    },
+    "imageAlt": "Gros plan d'un crayon de bois taillé."
   },
   "footer": {
     "about": "CréaComp est un référentiel ouvert de littératie créative numérique, conçu pour cartographier les savoirs de la création à l'ère des créateurs.",

@@ -1,0 +1,184 @@
+---
+/**
+ * Motif géométrique d'une rubrique ou d'un fil transversal.
+ *
+ * Dessiné en SVG plutôt que photographié : sept marques abstraites, tracées
+ * dans l'encre de la rubrique, tiennent le registre sobre d'un référentiel
+ * académique là où sept photographies feraient illustration. La teinte vient
+ * de `--accent`, donc elle suit la rubrique et le thème sans réglage.
+ */
+
+interface Props {
+  /** « rubrique-3 », « fil-t2 »… */
+  motifKey: string;
+  ratio?: string;
+  class?: string;
+}
+
+const { motifKey, ratio = '1 / 1', class: className = '' } = Astro.props;
+const uid = `m-${motifKey}-${Math.random().toString(36).slice(2, 8)}`;
+
+/** Suite déterministe : les motifs doivent être identiques d'une page à l'autre. */
+function series(count: number, seed: number): number[] {
+  const out: number[] = [];
+  let value = seed;
+  for (let i = 0; i < count; i += 1) {
+    value = (value * 1103515245 + 12345) % 2147483648;
+    out.push(value / 2147483648);
+  }
+  return out;
+}
+
+type Shape = { d?: string; cx?: number; cy?: number; r?: number; x?: number; y?: number;
+               w?: number; h?: number; fill?: boolean; opacity: number; width?: number };
+
+/** Chaque rubrique reçoit une figure qui dit ce qu'elle fait. */
+function shapesFor(key: string): Shape[] {
+  switch (key) {
+    // S'informer — des strates : les couches de sources que l'on empile.
+    case 'rubrique-1':
+      return series(9, 11).map((n, i) => ({
+        x: 12, y: 14 + i * 9, w: 30 + n * 58, h: 3.4, fill: true,
+        opacity: 0.85 - i * 0.07,
+      }));
+
+    // Analyser — une trame de signaux, plus dense là où le système mesure.
+    case 'rubrique-2': {
+      const dots: Shape[] = [];
+      for (let row = 0; row < 8; row += 1) {
+        for (let col = 0; col < 8; col += 1) {
+          const t = (row + col) / 14;
+          dots.push({
+            cx: 14 + col * 10.5, cy: 14 + row * 10.5,
+            r: 1.1 + (1 - t) * 3, fill: true, opacity: 0.25 + (1 - t) * 0.6,
+          });
+        }
+      }
+      return dots;
+    }
+
+    // Créer — une émanation : des arcs qui partent d'un même point.
+    case 'rubrique-3':
+      return [14, 28, 42, 56, 70, 84, 98].map((r, i) => ({
+        d: `M ${8 + r} 100 A ${r} ${r} 0 0 0 8 ${100 - r}`,
+        width: 2.6, opacity: 0.82 - i * 0.1,
+      }));
+
+    // Faire — une cadence de production, lue comme une onde.
+    case 'rubrique-4':
+      return series(14, 29).map((n, i) => {
+        const h = 14 + n * 62;
+        return { x: 11 + i * 6.4, y: 88 - h, w: 3.6, h, fill: true, opacity: 0.35 + n * 0.5 };
+      });
+
+    // Collaborer — des cercles qui se recouvrent : les liens entre pairs.
+    case 'rubrique-5':
+      return [
+        { cx: 38, cy: 40, r: 24 }, { cx: 62, cy: 40, r: 24 },
+        { cx: 50, cy: 62, r: 24 }, { cx: 30, cy: 66, r: 17 },
+        { cx: 70, cy: 66, r: 17 },
+      ].map((c, i) => ({ ...c, width: 2.4, opacity: 0.75 - i * 0.09 }));
+
+    // Entreprendre — une élévation : le projet qui se construit par paliers.
+    case 'rubrique-6':
+      return [0, 1, 2, 3, 4].map((i) => ({
+        x: 12 + i * 16, y: 82 - i * 15, w: 13, h: 6 + i * 15,
+        fill: true, opacity: 0.35 + i * 0.13,
+      }));
+
+    // Rentabiliser — une accumulation : les actifs qui se déposent en couches.
+    case 'rubrique-7':
+      return [0, 1, 2, 3, 4, 5].map((i) => ({
+        x: 14 + i * 2.5, y: 84 - i * 12, w: 72 - i * 5, h: 8,
+        fill: true, opacity: 0.3 + i * 0.11,
+      }));
+
+    // Discerner — une ligne de partage nette entre ce qu'on fait et ce qu'on refuse.
+    case 'fil-t1':
+      return [
+        { d: 'M 6 94 L 94 6', width: 3, opacity: 0.85 },
+        ...series(7, 71).map((n, i) => ({
+          d: `M ${14 + i * 11} 92 L ${34 + i * 11 + n * 8} ${72 - i * 8}`,
+          width: 1.6, opacity: 0.5 - i * 0.05,
+        })),
+      ];
+
+    // Durer — une onde longue, régulière, qui ne s'épuise pas.
+    case 'fil-t2':
+      return [0, 1, 2, 3].map((i) => ({
+        d: `M 4 ${28 + i * 16} C 28 ${10 + i * 16}, 44 ${46 + i * 16}, 68 ${28 + i * 16} S 96 ${10 + i * 16}, 96 ${28 + i * 16}`,
+        width: 2.4, opacity: 0.8 - i * 0.16,
+      }));
+
+    // Se réinventer — un même carré, repris sous un autre angle.
+    case 'fil-t3':
+      return [0, 1, 2, 3, 4].map((i) => ({
+        d: `M 50 50 m -${16 + i * 7} -${16 + i * 7} h ${32 + i * 14} v ${32 + i * 14} h -${32 + i * 14} Z`,
+        width: 2.2, opacity: 0.8 - i * 0.14,
+        rotate: i * 9,
+      })) as Shape[];
+
+    default:
+      return [];
+  }
+}
+
+const shapes = shapesFor(motifKey);
+const rotated = motifKey === 'fil-t3';
+---
+
+<div class:list={['motif', className]} style={`--ratio: ${ratio}`} aria-hidden="true">
+  <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" role="presentation">
+    <defs>
+      <linearGradient id={uid} x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.22" />
+        <stop offset="100%" stop-color="var(--accent)" stop-opacity="0.05" />
+      </linearGradient>
+    </defs>
+
+    <rect width="100" height="100" fill={`url(#${uid})`} />
+
+    <g stroke="var(--accent)" fill="none" stroke-linecap="round">
+      {
+        shapes.map((shape, index) => {
+          const common = {
+            opacity: shape.opacity,
+            ...(rotated ? { transform: `rotate(${index * 9} 50 50)` } : {}),
+          };
+          if (shape.d) {
+            return <path d={shape.d} stroke-width={shape.width} {...common} />;
+          }
+          if (shape.r !== undefined) {
+            return shape.fill ? (
+              <circle cx={shape.cx} cy={shape.cy} r={shape.r} fill="var(--accent)" stroke="none" {...common} />
+            ) : (
+              <circle cx={shape.cx} cy={shape.cy} r={shape.r} stroke-width={shape.width} {...common} />
+            );
+          }
+          return (
+            <rect
+              x={shape.x}
+              y={shape.y}
+              width={shape.w}
+              height={shape.h}
+              fill="var(--accent)"
+              stroke="none"
+              {...common}
+            />
+          );
+        })
+      }
+    </g>
+  </svg>
+</div>
+
+<style>
+  .motif {
+    aspect-ratio: var(--ratio);
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: var(--paper-raised);
+    border: 1px solid var(--rule);
+  }
+  .motif svg { width: 100%; height: 100%; display: block; }
+</style>

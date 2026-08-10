@@ -346,7 +346,8 @@
         "Three contact zones deserve to be made explicit. Competency 1.2 (reliability and manipulation) extends DigComp's information-literacy zone towards the detection of synthetic content and of influence techniques specific to creative spaces. Competency 5.3 (conduct online) extends the communication-and-collaboration zone towards moderation and the public handling of criticism. Competency 7.4 (platform-independent assets) revisits the question of data from an ownership angle — owning your audience and your content — where DigComp treats it defensively as protection. In all three cases, CréaComp assumes the DigComp foundations are in place and describes exclusively the creative extension.",
         "Finally, media and information literacy — a formal part of the French school curriculum — finds its natural extension in the Gather domain: CréaComp offers MIL teachers a trajectory leading from critical reception, their territory, towards assumed creation, which is its own."
       ]
-    }
+    },
+    "imageAlt": "A light-filled contemporary library."
   },
   "use": {
     "eyebrow": "Use & cite",
@@ -431,7 +432,7 @@
     },
     "credits": {
       "title": "Photography credits",
-      "lead": "The photographs on this site come from Unsplash and are used under the Unsplash License, which permits free use including commercial use. They are hosted on this site and never loaded from a third-party service. The framework includes a competency called “Credit and respect the rights of others”: the least this site can do is apply it.",
+      "lead": "Photographs from Unsplash, used under the Unsplash License, which permits free use including commercial use. They are hosted on this site.",
       "sourceLabel": "View on"
     }
   },
@@ -484,7 +485,8 @@
       "title": "By email",
       "body": "The form is not configured yet. Write directly to the following address:",
       "bodyConfigured": "Prefer your own mail client? Write directly to:"
-    }
+    },
+    "imageAlt": "Close-up of a sharpened pencil."
   },
   "footer": {
     "about": "CréaComp is an open framework of digital creative literacy, built to map the knowledge of creation in the creator era.",

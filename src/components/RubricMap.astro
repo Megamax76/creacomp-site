@@ -1,5 +1,5 @@
 ---
-import Texture from './Texture.astro';
+import Motif from './Motif.astro';
 import { framework, competencesOf, path, type Lang } from '../lib/i18n';
 
 interface Props {
@@ -16,13 +16,7 @@ const data = framework(lang);
       <li class="band" data-accent={rubric.color}>
         <a class="band__link" href={`${path(lang, 'framework')}#${rubric.slug}`}>
           <span class="band__mark">
-            <Texture
-              imageKey={`rubrique-${rubric.id}`}
-              ratio="1 / 1"
-              widths={[96, 192]}
-              sizes="72px"
-              class="band__texture"
-            />
+            <Motif motifKey={`rubrique-${rubric.id}`} ratio="1 / 1" class="band__motif" />
             <span class="band__number" aria-hidden="true">
               {String(rubric.id).padStart(2, '0')}
             </span>
@@ -86,14 +80,13 @@ const data = framework(lang);
     align-self: start;
   }
 
-  .band__mark :global(.band__texture) {
+  .band__mark :global(.band__motif) {
     width: 4.5rem;
-    filter: saturate(0.9);
-    transition: filter 0.22s ease, transform 0.22s ease;
+    transition: transform 0.22s ease, border-color 0.22s ease;
   }
-  .band__link:hover .band__mark :global(.band__texture) {
-    filter: saturate(1.25) contrast(1.05);
-    transform: scale(1.03);
+  .band__link:hover .band__mark :global(.band__motif) {
+    transform: scale(1.04);
+    border-color: var(--accent-edge);
   }
 
   .band__number {
@@ -107,7 +100,7 @@ const data = framework(lang);
   .band__link:hover .band__number { color: var(--accent); }
 
   @media (max-width: 40rem) {
-    .band__mark :global(.band__texture) { width: 3rem; }
+    .band__mark :global(.band__motif) { width: 3rem; }
   }
 
   .band__body { display: grid; gap: 0.3rem; }
