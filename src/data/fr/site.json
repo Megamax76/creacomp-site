@@ -428,6 +428,11 @@
       "title": "Vous l'utilisez ?",
       "body": "Signaler un usage, une traduction ou une adaptation n'est pas une obligation de la licence, mais cela aide à faire vivre le référentiel et à en préparer les révisions.",
       "cta": "Écrire à l'auteur"
+    },
+    "credits": {
+      "title": "Crédits photographiques",
+      "lead": "Les photographies du site proviennent d'Unsplash et sont utilisées sous licence Unsplash, qui autorise l'usage libre y compris commercial. Elles sont hébergées sur ce site, jamais chargées depuis un service tiers. Le référentiel comporte une compétence « Créditer et respecter les droits des autres » : la moindre des choses est de l'appliquer ici.",
+      "sourceLabel": "Voir sur"
     }
   },
   "contact": {

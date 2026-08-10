@@ -428,6 +428,11 @@
       "title": "Are you using it?",
       "body": "Reporting a use, a translation or an adaptation is not a licence obligation, but it helps keep the framework alive and informs its future revisions.",
       "cta": "Write to the author"
+    },
+    "credits": {
+      "title": "Photography credits",
+      "lead": "The photographs on this site come from Unsplash and are used under the Unsplash License, which permits free use including commercial use. They are hosted on this site and never loaded from a third-party service. The framework includes a competency called “Credit and respect the rights of others”: the least this site can do is apply it.",
+      "sourceLabel": "View on"
     }
   },
   "contact": {

@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import CopyButton from '../components/CopyButton.astro';
 import { site, path, type Lang } from '../lib/i18n';
+import { allCredits, creditSource } from '../lib/images';
 
 interface Props {
   lang: Lang;
@@ -100,6 +101,30 @@ const u = s.use;
       </div>
 
       <p class="citation__note">{u.citation.competenceNote}</p>
+    </div>
+  </section>
+
+  <section class="section section--ruled">
+    <div class="wrap">
+      <h2 class="title-2">{u.credits.title}</h2>
+      <p class="lead credits__lead">{u.credits.lead}</p>
+      <ul class="credits">
+        {
+          allCredits.map((item) => (
+            <li class="credit">
+              <a href={item.photoUrl} rel="noopener noreferrer" target="_blank">
+                {item.author}
+              </a>
+              <span class="credit__source">
+                {u.credits.sourceLabel}{' '}
+                <a href={creditSource.url} rel="noopener noreferrer" target="_blank">
+                  {creditSource.name}
+                </a>
+              </span>
+            </li>
+          ))
+        }
+      </ul>
     </div>
   </section>
 
@@ -299,6 +324,39 @@ const u = s.use;
     line-height: 1.6;
     color: var(--ink-faint);
     max-width: 50rem;
+  }
+
+  /* --- Crédits photographiques --------------------------------------------------- */
+
+  .credits__lead { margin: 0.9rem 0 clamp(1.5rem, 3vw, 2.2rem); }
+
+  /* Onze crédits ne remplissent aucune grille proprement : une liste au fil du
+     texte évite les cases vides et convient mieux à une mention de sources. */
+  .credits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.5rem;
+    list-style: none;
+    padding: 1.2rem 1.4rem 1.3rem;
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius);
+    background: var(--paper-raised);
+    max-width: 58rem;
+  }
+  .credit {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    font-size: 0.86rem;
+  }
+  .credit a { text-decoration: none; }
+  .credit a:hover { color: var(--accent); text-decoration: underline; }
+  .credit__source {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.06em;
+    color: var(--ink-faint);
   }
 
   /* --- Clôture ------------------------------------------------------------------- */

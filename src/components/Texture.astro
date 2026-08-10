@@ -1,0 +1,86 @@
+---
+import { Image } from 'astro:assets';
+import { image } from '../lib/images';
+
+interface Props {
+  /** Clé de l'image : « rubrique-3 », « fil-t2 »… */
+  imageKey: string;
+  /** Largeurs générées, en pixels. */
+  widths?: number[];
+  sizes?: string;
+  /** Proportion appliquée au cadre, par exemple « 4 / 3 ». */
+  ratio?: string;
+  class?: string;
+  loading?: 'lazy' | 'eager';
+}
+
+const {
+  imageKey,
+  widths = [200, 400, 800],
+  sizes = '(max-width: 48rem) 40vw, 320px',
+  ratio = '4 / 3',
+  class: className = '',
+  loading = 'lazy',
+} = Astro.props;
+
+const source = image(imageKey);
+---
+
+{
+  source && (
+    <div class:list={['texture', className]} style={`--ratio: ${ratio}`} aria-hidden="true">
+      {/* La désaturation puis le calque de teinte masquent les artefacts de
+          compression : une qualité basse suffit et allège nettement les pages. */}
+      <Image src={source} alt="" widths={widths} sizes={sizes} loading={loading} quality={58} />
+    </div>
+  )
+}
+
+<style>
+  /*
+    Bichromie : l'image est désaturée, puis un calque de l'encre de la rubrique
+    est fondu en mode « color » — il impose sa teinte et sa saturation tout en
+    conservant la luminosité de la photographie. Sept photographies d'auteurs
+    différents forment ainsi une série cohérente, et la teinte suit
+    automatiquement le thème clair ou sombre.
+  */
+  .texture {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    aspect-ratio: var(--ratio);
+    background: var(--accent);
+    border-radius: var(--radius);
+  }
+
+  .texture :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(1) contrast(1.06);
+  }
+
+  .texture::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--accent);
+    mix-blend-mode: color;
+  }
+
+  /* Un voile de papier atténue l'ensemble : la texture doit accompagner le
+     texte, jamais lui disputer l'attention. */
+  .texture::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: var(--paper);
+    opacity: 0.16;
+    pointer-events: none;
+  }
+
+  @media (prefers-contrast: more) {
+    .texture::before { opacity: 0.3; }
+  }
+</style>

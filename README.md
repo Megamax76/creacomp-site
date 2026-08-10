@@ -45,8 +45,11 @@ src/
   views/                   une vue par type de page, partagée entre les deux langues
   pages/                   routes françaises à la racine, anglaises sous /en/
   components/              en-tête, pied de page, carte, grille, bouton de copie
+  assets/images/           les onze photographies, stockées dans le dépôt
+  data/credits.json        auteurs et liens des photographies
 scripts/
   extract-framework.py     régénère les données françaises depuis le document Word
+  fetch-images.py          retélécharge les photographies et réécrit les crédits
 ```
 
 Les 62 pages de compétences (31 entrées × 2 langues) sont générées par
@@ -72,10 +75,34 @@ Le script échoue bruyamment si la structure du document a changé, plutôt que
 de produire des données silencieusement fausses. La traduction anglaise, elle,
 est maintenue à la main et doit être mise à jour en parallèle.
 
+## Les images
+
+Onze photographies, issues d'Unsplash et utilisées sous licence Unsplash (usage
+libre, y compris commercial) : une photographie d'ouverture sur la page
+d'accueil, et dix matières abstraites — une par rubrique, une par fil
+transversal.
+
+Les dix matières sont affichées en **bichromie** : la photographie est
+désaturée par CSS, puis un calque de l'encre de la rubrique lui est appliqué en
+mode de fusion `color`. Dix photographies d'auteurs différents forment ainsi une
+série cohérente, et la teinte suit automatiquement le thème clair ou sombre. Un
+changement de couleur de rubrique dans `global.css` se propage aux images sans
+retoucher un seul fichier.
+
+Les fichiers sont stockés dans le dépôt et optimisés à la construction : le site
+n'émet aucune requête vers un service d'images. Les crédits sont affichés sur la
+page « Utiliser & citer » — le référentiel comporte une compétence « Créditer et
+respecter les droits des autres », le site l'applique à lui-même.
+
+Pour changer une image : remplacez le fichier dans `src/assets/images/` en
+conservant son nom, et mettez à jour son auteur dans `src/data/credits.json`.
+Pour repartir de zéro, modifiez la table `SELECTION` de `scripts/fetch-images.py`
+et relancez-le.
+
 ## Partis pris techniques
 
-- **Aucune dépendance externe au chargement.** Polices auto-hébergées, aucun
-  script tiers, aucun traceur, aucun cookie.
+- **Aucune dépendance externe au chargement.** Polices et photographies
+  auto-hébergées, aucun script tiers, aucun traceur, aucun cookie.
 - **Lisible sans JavaScript.** Les 124 descripteurs sont rendus côté serveur ;
   le sélecteur de niveau de la carte repose sur des boutons radio et `:has()`.
   Le JavaScript n'ajoute que la recherche, le bouton de copie et le thème.
