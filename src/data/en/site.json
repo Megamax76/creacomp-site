@@ -1,0 +1,497 @@
+{
+  "lang": "en",
+  "locale": "en-GB",
+  "langName": "English",
+  "otherLangName": "Français",
+  "meta": {
+    "name": "CréaComp",
+    "version": "1.0",
+    "edition": "2026",
+    "versionLabel": "CréaComp 1.0 — 2026 edition",
+    "author": "Maxime Hébert",
+    "email": "maxime.hebert76@gmail.com",
+    "license": "CC BY-SA 4.0",
+    "licenseName": "Creative Commons Attribution–ShareAlike 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "subtitle": "Digital Creative Literacy Framework",
+    "tagline": "The competency framework for the creator era",
+    "description": "CréaComp maps digital creative literacy: 7 domains, 28 competencies, 3 transversal threads, 4 levels, 124 observable descriptors. An open framework released under CC BY-SA 4.0."
+  },
+  "counts": {
+    "rubrics": "7 domains",
+    "competences": "28 competencies",
+    "threads": "3 transversal threads",
+    "levels": "4 levels",
+    "descriptors": "124 observable descriptors"
+  },
+  "routes": {
+    "home": "",
+    "framework": "framework",
+    "foundations": "foundations",
+    "use": "use",
+    "contact": "contact"
+  },
+  "nav": {
+    "home": "Home",
+    "framework": "The framework",
+    "foundations": "Foundations",
+    "use": "Use & cite",
+    "contact": "Contact",
+    "skipToContent": "Skip to content",
+    "menu": "Menu",
+    "close": "Close",
+    "theme": "Switch theme",
+    "switchLang": "Français"
+  },
+  "levels": [
+    {
+      "id": "N1",
+      "name": "Discovery",
+      "posture": "I discover and understand by practising on a small scale.",
+      "landmark": "Lower secondary · complete beginner",
+      "digcomp": "DigComp 1–2"
+    },
+    {
+      "id": "N2",
+      "name": "Application",
+      "posture": "I apply deliberately within a regular practice.",
+      "landmark": "Upper secondary · advanced beginner",
+      "digcomp": "DigComp 3–4"
+    },
+    {
+      "id": "N3",
+      "name": "Autonomy",
+      "posture": "I experiment, measure and improve independently.",
+      "landmark": "Tertiary · junior professional",
+      "digcomp": "DigComp 5–6"
+    },
+    {
+      "id": "N4",
+      "name": "Expertise",
+      "posture": "I systematise and master for the benefit of others.",
+      "landmark": "Experienced professional · trainer",
+      "digcomp": "DigComp 7–8"
+    }
+  ],
+  "ui": {
+    "rubric": "Domain",
+    "rubrics": "Domains",
+    "competence": "Competency",
+    "competences": "Competencies",
+    "thread": "Transversal thread",
+    "threads": "Transversal threads",
+    "definition": "Definition",
+    "components": "Components",
+    "levelsHeading": "The four levels",
+    "descriptor": "Observable descriptor",
+    "evidence": "Evidence of assessment",
+    "boundary": "Boundary",
+    "object": "Scope",
+    "previous": "Previous",
+    "next": "Next",
+    "backToFramework": "Back to the framework",
+    "cite": "Cite this competency",
+    "copied": "Copied",
+    "copy": "Copy",
+    "search": "Search a competency",
+    "searchPlaceholder": "Search a word: narrative, AI, rights, community…",
+    "noResults": "No competency matches this search.",
+    "showLevel": "Show level",
+    "levelSelectorHint": "Change level to read the matching descriptor inside every competency.",
+    "readMore": "Read the competency",
+    "onThisPage": "On this page",
+    "level": "Level"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "CréaComp 1.0 — 2026 edition",
+      "title": "The competency framework for the creator era",
+      "lead": "CréaComp maps digital creative literacy: the body of knowledge that allows a person to critically receive, understand, imagine, make, publish and capitalise on content and projects in digital environments.",
+      "primaryCta": "Explore the 31 competencies",
+      "secondaryCta": "Understand the foundations"
+    },
+    "warning": {
+      "title": "What CréaComp is, and what it is not",
+      "lead": "Four misunderstandings worth clearing up before you read any further.",
+      "pairs": [
+        {
+          "is": "A map",
+          "isNot": "Not a curriculum",
+          "body": "The framework describes knowledge and makes it assessable. It prescribes no pathway, no method and no training content. Any instructional design can build on it; none follows from it automatically."
+        },
+        {
+          "is": "A territory where each person draws their own profile",
+          "isNot": "Not a baseline everyone must master",
+          "body": "There is no hierarchy between domains and no imposed order of progression. The same person can be expert in one competency and a beginner in another. Nobody is expected to master the whole."
+        },
+        {
+          "is": "Evidence of creation",
+          "isNot": "No quizzes, no overall grade",
+          "body": "A competency is validated through a real artefact — published content, a completed project, a system built — together with a short reflective analysis. The framework produces no average and no aggregate score."
+        },
+        {
+          "is": "Capacities of judgement",
+          "isNot": "Not a list of software",
+          "body": "No descriptor names a tool, a platform or a model. Tools are replaced every six months; the judgement, direction and method that govern them remain."
+        }
+      ]
+    },
+    "why": {
+      "eyebrow": "Why this framework",
+      "title": "Value has moved",
+      "shift": {
+        "title": "From the attention economy to the intention economy",
+        "body": [
+          "The dominant digital economy captures attention: it optimises time spent, reflexive engagement, consumption endured rather than chosen. CréaComp argues for a shift — from an economy in which people are the extracted resource to one in which they become authors again, of what they read, what they create and what they build.",
+          "Every domain can be reread through that shift: understanding algorithms not in order to flatter them but in order to choose what you feed; building a community you own rather than an audience you rent; creating with AI by directing it, rather than by delegating your judgement to it."
+        ],
+        "fromLabel": "Attention economy",
+        "fromBody": "The person is the extracted resource.",
+        "toLabel": "Intention economy",
+        "toBody": "The person becomes the author again."
+      },
+      "chain": {
+        "title": "The creator era and the displacement of value",
+        "body": [
+          "Generative artificial intelligence has collapsed the cost of production: a competent text, a clean visual, an edited video are becoming universally accessible. What becomes ordinary loses its value, and value moves towards both ends of the creative chain.",
+          "This thesis does not change the architecture of the framework, which remains a complete map. It is its reading key: it explains why the upstream and downstream domains weigh as much as making itself."
+        ],
+        "caption": "Where value sits along the creative chain",
+        "stages": [
+          {
+            "label": "Upstream",
+            "name": "The eye",
+            "body": "Knowing what to create, why, and from which point of view.",
+            "value": "high",
+            "rubrics": "Gather · Analyse · Create"
+          },
+          {
+            "label": "Midstream",
+            "name": "Making",
+            "body": "Producing a correct form. Cost collapsed, value diluted.",
+            "value": "low",
+            "rubrics": "Make"
+          },
+          {
+            "label": "Downstream",
+            "name": "The relationship",
+            "body": "Trust, community, and the assets you actually own.",
+            "value": "high",
+            "rubrics": "Collaborate · Venture · Monetise"
+          }
+        ]
+      }
+    },
+    "map": {
+      "eyebrow": "Overview",
+      "title": "Seven domains of action, named with verbs",
+      "lead": "Each domain gathers four competencies. Three transversal threads run through all of them. Hover a domain to reveal what it contains.",
+      "cta": "Open the full map"
+    },
+    "levels": {
+      "eyebrow": "The shared grammar",
+      "title": "Four levels — postures, not ages",
+      "lead": "The same four levels apply identically to all thirty-one entries in the framework, and that is what gives it internal coherence. The educational landmarks and the DigComp equivalence are indicative only.",
+      "goldenRule": "Calibration golden rule: every Discovery-level descriptor is achievable by a lower-secondary student equipped with nothing more than a smartphone. None presupposes professional equipment, an existing audience or an established activity."
+    },
+    "audiences": {
+      "eyebrow": "Uses",
+      "title": "Who is this framework for?",
+      "items": [
+        {
+          "name": "Teachers",
+          "body": "Anchor a progression in observable descriptors rather than in intentions, from lower secondary to higher education. The Gather domain is a natural extension of media and information literacy."
+        },
+        {
+          "name": "Training providers",
+          "body": "Build a legible offer aligned with a public framework, and assess it through evidence of creation rather than through questionnaires."
+        },
+        {
+          "name": "Creators and freelancers",
+          "body": "Locate your practice on a map, identify your blind spots, and choose deliberately what to learn next."
+        },
+        {
+          "name": "Institutions and researchers",
+          "body": "Work from an open, citable framework, complementary to DigComp, to support public policy or research."
+        }
+      ],
+      "cta": "How to use the framework"
+    },
+    "closing": {
+      "title": "A common good",
+      "body": "CréaComp is published under a Creative Commons Attribution–ShareAlike 4.0 licence. You may reuse it, translate it, adapt it and embed it in your own programmes, provided you credit its origin and share your adaptations under the same terms.",
+      "primaryCta": "Use & cite",
+      "secondaryCta": "Write to the author"
+    }
+  },
+  "framework": {
+    "eyebrow": "The map",
+    "title": "The whole framework at a glance",
+    "lead": "Twenty-eight competencies across seven domains, crossed by three threads. Move the level selector to read, across the entire map, what each competency means at that level of mastery.",
+    "reminder": "A reminder: this map describes a territory, not a pathway. Nobody is expected to master the whole, and there is no imposed order of progression.",
+    "threadsTitle": "The three transversal threads",
+    "threadsLead": "The threads do not add to the twenty-eight competencies: they qualify the way all of them are exercised. Discern, Sustain and Reinvent run through the seven domains the way ethics, endurance and adaptability run through any practice.",
+    "resultsSingular": "competency found",
+    "resultsPlural": "competencies found"
+  },
+  "foundations": {
+    "eyebrow": "Foundations",
+    "title": "Grounding, principles and method",
+    "lead": "What the framework describes, the principles it rests on, how it is organised and how it is assessed.",
+    "sections": [
+      {
+        "id": "preamble",
+        "title": "Digital creative literacy",
+        "body": [
+          "Digital creative literacy is the body of knowledge, know-how and dispositions that allows a person to critically receive, understand, imagine, make, publish and capitalise on content and projects in digital environments — autonomously, ethically and sustainably.",
+          "As reading, writing and arithmetic were to the civilisation of print, it constitutes a foundation: a body of knowledge society has an interest in seeing widely shared, and which can be mapped, observed and measured by levels — without anyone being expected to master all of it. CréaComp is that map."
+        ]
+      },
+      {
+        "id": "intention",
+        "title": "From the attention economy to the intention economy",
+        "body": [
+          "The dominant digital economy captures attention: it optimises time spent, reflexive engagement, consumption endured rather than chosen. CréaComp argues for a shift: from an attention economy, in which people are the extracted resource, to an intention economy, in which they become authors again — of what they read, what they create and what they build.",
+          "Every domain of the framework can be reread through that shift: understanding algorithms not in order to flatter them but in order to choose what you feed; building a community you own rather than an audience you rent; creating with AI by directing it, rather than by delegating your judgement to it."
+        ]
+      },
+      {
+        "id": "creator-era",
+        "title": "The creator era and the displacement of value",
+        "body": [
+          "Generative artificial intelligence has collapsed the cost of production: a competent text, a clean visual, an edited video are becoming universally accessible. What becomes ordinary loses its value; value moves towards both ends of the creative chain. Upstream: the eye — knowing what to create, why, and from which point of view. Downstream: the relationship — trust, community, and the ability to turn attention received into assets owned.",
+          "This thesis does not change the architecture of the framework, which remains a complete map; it is its reading key. It explains why the upstream domains (Gather, Analyse, Create) and the downstream ones (Collaborate, Monetise) weigh as much as making itself."
+        ]
+      }
+    ],
+    "principles": {
+      "id": "principles",
+      "title": "The seven guiding principles",
+      "items": [
+        {
+          "id": "P1",
+          "title": "A map, not a curriculum",
+          "body": "CréaComp describes knowledge and makes it assessable; it prescribes no pathway, no method and no training content. Any instructional design can build on it; none follows from it automatically."
+        },
+        {
+          "id": "P2",
+          "title": "Universal entry",
+          "body": "Every competency is accessible at Discovery level to a lower-secondary student equipped with nothing more than a smartphone. This is the framework's calibration golden rule: no level-1 descriptor presupposes professional equipment, an existing audience or an established activity."
+        },
+        {
+          "id": "P3",
+          "title": "Nobody is expected to master everything",
+          "body": "The framework maps a territory; each person draws their own profile within it. There is no hierarchy between domains and no imposed order of progression: the same individual can be expert in one competency and a beginner in another."
+        },
+        {
+          "id": "P4",
+          "title": "Observable descriptors",
+          "body": "Every level of every competency is described by what the person is able to do, verifiable by a third-party assessor, and paired with concrete evidence of assessment. The framework measures neither intentions nor isolated declarative knowledge."
+        },
+        {
+          "id": "P5",
+          "title": "Evidence of creation, never questionnaires",
+          "body": "A framework for creators is assessed through artefacts: published content, completed projects, systems built, accompanied by a reflective analysis. The portfolio of evidence is the central instrument of validation."
+        },
+        {
+          "id": "P6",
+          "title": "Longevity through judgement",
+          "body": "No descriptor names a piece of software, a platform or a model: the framework describes capacities of judgement, direction and method, which outlive the permanent renewal of tools."
+        },
+        {
+          "id": "P7",
+          "title": "Complementarity with DigComp",
+          "body": "CréaComp presupposes and complements the European DigComp framework: account security, defensive personal-data protection and office software are deliberately excluded from it. DigComp equips the digital citizen; CréaComp equips the creator."
+        }
+      ]
+    },
+    "architecture": {
+      "id": "architecture",
+      "title": "The architecture",
+      "body": [
+        "The framework is organised into seven domains of action — named with verbs — each gathering four competencies, and crossed by three transversal threads. Every competency is described at four levels, giving 124 observable descriptors (28 competencies and 3 threads, multiplied by 4 levels), each paired with evidence of assessment."
+      ]
+    },
+    "levels": {
+      "id": "levels",
+      "title": "The grammar of the four levels",
+      "body": [
+        "The levels describe postures, not ages: they apply identically to all competencies, which is what gives the framework its internal coherence. The educational landmarks and the correspondence with the eight DigComp levels are indicative."
+      ],
+      "goldenRule": "Golden rule: every Discovery-level descriptor is achievable by a lower-secondary student equipped with nothing more than a smartphone. This rule guarantees that the framework genuinely covers all audiences, from school to professional practice."
+    },
+    "assessment": {
+      "id": "assessment",
+      "title": "Assessment methodology",
+      "items": [
+        {
+          "title": "Evidence of creation",
+          "body": "A competency is validated at a given level when the person produces the corresponding evidence of assessment — a real artefact: published content, a completed project, a system built, a written analysis — accompanied by a short reflective analysis (what I did, why, what I take from it), and when that evidence is verified by a third-party assessor against the descriptor. Validating a level entails validating the lower levels of the same competency."
+        },
+        {
+          "title": "The portfolio",
+          "body": "The central instrument is the portfolio of evidence: a single artefact can attest to several competencies — a published video series can prove 3.3, 4.1 and 4.4 at once — and the portfolio draws the person's literacy profile: never an overall score, always an individual map. The framework produces neither average nor aggregate grade: adding up heterogeneous competencies would make no sense."
+        },
+        {
+          "title": "Validity requirements",
+          "body": "To support scientific and certifying use, assessment based on CréaComp meets three requirements: verifiability (every descriptor is observable in the evidence produced, without extensive interpretation), inter-rater reliability (two trained assessors reach the same verdict on the same evidence) and traceability (each validation references the evidence, the date and the assessor). The framework is subject to an empirical validation protocol — a pilot study on real cohorts, measurement of inter-rater agreement, annual revision of ambiguous descriptors — as a precondition to any certifying claim."
+        }
+      ]
+    },
+    "digcomp": {
+      "id": "digcomp",
+      "title": "Interface with DigComp, and what is excluded",
+      "body": [
+        "CréaComp presupposes and complements DigComp; it does not replace it. The European framework covers citizen digital literacy — including its defensive dimension: device and account security, personal-data protection, technical problem-solving, office software and administrative communication. CréaComp treats those as its foundation and duplicates none of them: it begins where DigComp stops, on the offensive side — creating, understanding systems, venturing, capitalising.",
+        "Three contact zones deserve to be made explicit. Competency 1.2 (reliability and manipulation) extends DigComp's information-literacy zone towards the detection of synthetic content and of influence techniques specific to creative spaces. Competency 5.3 (conduct online) extends the communication-and-collaboration zone towards moderation and the public handling of criticism. Competency 7.4 (platform-independent assets) revisits the question of data from an ownership angle — owning your audience and your content — where DigComp treats it defensively as protection. In all three cases, CréaComp assumes the DigComp foundations are in place and describes exclusively the creative extension.",
+        "Finally, media and information literacy — a formal part of the French school curriculum — finds its natural extension in the Gather domain: CréaComp offers MIL teachers a trajectory leading from critical reception, their territory, towards assumed creation, which is its own."
+      ]
+    }
+  },
+  "use": {
+    "eyebrow": "Use & cite",
+    "title": "A common good, made to be reused",
+    "lead": "CréaComp is published under an open licence so that it can be used, translated, adapted and embedded. Here is what that permits, what it requires, and how to cite it properly.",
+    "profiles": {
+      "title": "Four ways to put it to work",
+      "items": [
+        {
+          "name": "Teach",
+          "body": "Anchor a lesson sequence, a yearly progression or a class project in observable descriptors. The Discovery level is calibrated to be reachable with nothing more than a smartphone, which makes the framework usable from lower secondary onwards.",
+          "how": "Select the relevant competencies, fix the target level, and have the associated evidence of assessment produced."
+        },
+        {
+          "name": "Train and certify",
+          "body": "Build a legible training offer aligned with a public, citable framework, and assess it through evidence of creation. The validity requirements — verifiability, inter-rater reliability, traceability — are set out in the foundations.",
+          "how": "Map your offer onto the 31 entries, then define the target exit level for each."
+        },
+        {
+          "name": "Locate yourself",
+          "body": "A creator, a freelancer or a team can use the map as a mirror: where am I expert, where am I a beginner, which blind spot deserves work now.",
+          "how": "Walk through the map level by level and spot the competencies where your actual practice falls short."
+        },
+        {
+          "name": "Research and inform policy",
+          "body": "The framework is open, dated and citable. It lends itself to analysis, to comparison with other frameworks, to national or sectoral adaptation, and to reasoned criticism.",
+          "how": "Cite the version and the edition, and flag your adaptations: they enrich the commons."
+        }
+      ]
+    },
+    "notPrescriptive": {
+      "title": "What the framework does not prescribe",
+      "body": "CréaComp prescribes no pathway, no method, no training content, no duration and no tool. It defines no threshold for entering the labour market and produces no overall grade. Any instructional design can build on it; none follows from it automatically. This reserve is not false modesty: it is the condition for one framework to serve a secondary school, a vocational training provider and an independent creator without betraying any of them."
+    },
+    "license": {
+      "title": "The licence",
+      "lead": "CréaComp is published under a Creative Commons Attribution–ShareAlike 4.0 International licence (CC BY-SA 4.0).",
+      "allowed": {
+        "title": "You may",
+        "items": [
+          "Share the framework — copy and redistribute it in any medium or format.",
+          "Adapt it — remix, transform, translate and build upon it.",
+          "Use it commercially, including within a paid training offer."
+        ]
+      },
+      "required": {
+        "title": "On two conditions",
+        "items": [
+          "Attribution — credit the author, the version and the edition, indicate whether changes were made, and provide a link to the licence.",
+          "ShareAlike — if you adapt or translate the framework, distribute your version under the same CC BY-SA 4.0 licence."
+        ]
+      },
+      "note": "No additional restrictions may be added: you may not apply legal terms or technological measures that legally restrict others from doing anything the licence permits.",
+      "linkLabel": "Read the full licence text"
+    },
+    "citation": {
+      "title": "Citing CréaComp",
+      "lead": "Three formats depending on context. Each one can be copied in a single click.",
+      "formats": [
+        {
+          "label": "Short citation",
+          "hint": "In teaching material, a presentation, a website.",
+          "value": "Hébert, M. (2026). CréaComp 1.0 — Digital Creative Literacy Framework. CC BY-SA 4.0."
+        },
+        {
+          "label": "Academic reference (APA)",
+          "hint": "In an article, a dissertation, a report.",
+          "value": "Hébert, M. (2026). CréaComp 1.0: Digital Creative Literacy Framework (2026 edition). Published under a Creative Commons Attribution–ShareAlike 4.0 licence."
+        },
+        {
+          "label": "BibTeX",
+          "hint": "In a LaTeX bibliography.",
+          "value": "@misc{hebert2026creacomp,\n  author  = {H{\\'e}bert, Maxime},\n  title   = {Cr{\\'e}aComp 1.0: Digital Creative Literacy Framework},\n  year    = {2026},\n  edition = {2026},\n  note    = {CC BY-SA 4.0}\n}"
+        }
+      ],
+      "competenceNote": "To cite a specific competency, add its code and title — for example: CréaComp 1.0, competency 3.3 “Master narrative”. Every competency page offers its own ready-to-copy reference."
+    },
+    "closing": {
+      "title": "Are you using it?",
+      "body": "Reporting a use, a translation or an adaptation is not a licence obligation, but it helps keep the framework alive and informs its future revisions.",
+      "cta": "Write to the author"
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Write to the author",
+    "lead": "CréaComp is designed and maintained by Maxime Hébert. The framework is open work: feedback, reported uses and reasoned objections all feed its revisions.",
+    "reasons": {
+      "title": "Good reasons to write",
+      "items": [
+        {
+          "name": "A teaching use",
+          "body": "You are anchoring a course, a progression or an assessment scheme in the framework and would like to report or discuss it."
+        },
+        {
+          "name": "A translation",
+          "body": "You are considering a translation into another language, or an adaptation to a national or sectoral context."
+        },
+        {
+          "name": "Research",
+          "body": "You are studying the framework, would like to take part in the empirical validation protocol, or wish to raise a reasoned criticism of a descriptor."
+        },
+        {
+          "name": "An institutional partnership",
+          "body": "You represent an institution, a network or an organisation interested in a larger-scale deployment."
+        }
+      ]
+    },
+    "form": {
+      "title": "Form",
+      "name": "Your name",
+      "email": "Your email address",
+      "organisation": "Organisation (optional)",
+      "subject": "Subject",
+      "subjectOptions": [
+        "Teaching use",
+        "Translation or adaptation",
+        "Research",
+        "Institutional partnership",
+        "Other"
+      ],
+      "message": "Your message",
+      "submit": "Send",
+      "sending": "Sending…",
+      "success": "Message sent. Thank you — a reply will follow as soon as possible.",
+      "error": "Sending failed. You can write directly to the address below.",
+      "required": "Required field"
+    },
+    "direct": {
+      "title": "By email",
+      "body": "The form is not configured yet. Write directly to the following address:",
+      "bodyConfigured": "Prefer your own mail client? Write directly to:"
+    }
+  },
+  "footer": {
+    "about": "CréaComp is an open framework of digital creative literacy, built to map the knowledge of creation in the creator era.",
+    "navTitle": "Navigate",
+    "licenseTitle": "Licence",
+    "licenseBody": "Content published under a Creative Commons Attribution–ShareAlike 4.0 licence. Free to reuse with citation.",
+    "authorTitle": "Author",
+    "credit": "CréaComp 1.0 — 2026 edition · Maxime Hébert"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "This page does not exist or has been moved.",
+    "cta": "Back to home"
+  }
+}

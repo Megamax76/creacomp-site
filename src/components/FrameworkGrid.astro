@@ -1,0 +1,415 @@
+---
+import {
+  site,
+  framework,
+  competencesOf,
+  entryPath,
+  type Lang,
+  type Entry,
+} from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const s = site(lang);
+const data = framework(lang);
+const levels = s.levels;
+
+/** Index de recherche : tout le texte de l'entrée, en minuscules, sans accents. */
+const searchIndex = (entry: Entry) =>
+  [
+    entry.code,
+    entry.title,
+    entry.subtitle ?? '',
+    entry.definition,
+    ...entry.components,
+    ...Object.values(entry.levels).flatMap((l) => [l.descriptor, l.evidence]),
+  ]
+    .join(' ')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '');
+---
+
+<div class="map" data-map>
+  <div class="controls">
+    <fieldset class="levelbar">
+      <legend class="controls__label">{s.ui.showLevel}</legend>
+      <div class="levelbar__options">
+        {
+          levels.map((level, index) => (
+            <>
+              <input
+                type="radio"
+                name="map-level"
+                id={`map-${level.id}`}
+                value={level.id}
+                checked={index === 0}
+              />
+              <label for={`map-${level.id}`}>
+                <span class="levelbar__id">{level.id}</span>
+                <span class="levelbar__name">{level.name}</span>
+              </label>
+            </>
+          ))
+        }
+      </div>
+    </fieldset>
+
+    <div class="search">
+      <label class="controls__label" for="map-search">{s.ui.search}</label>
+      <input
+        type="search"
+        id="map-search"
+        data-map-search
+        placeholder={s.ui.searchPlaceholder}
+        autocomplete="off"
+      />
+    </div>
+  </div>
+
+  <p class="hint">{s.ui.levelSelectorHint}</p>
+
+  <p
+    class="results"
+    role="status"
+    aria-live="polite"
+    data-map-results
+    data-singular={s.framework.resultsSingular}
+    data-plural={s.framework.resultsPlural}
+    hidden
+  ></p>
+
+  <div class="matrix">
+    {
+      data.rubrics.map((rubric) => (
+        <section class="row" id={rubric.slug} data-accent={rubric.color} data-row>
+          <header class="row__head">
+            <p class="row__code">
+              {s.ui.rubric} {rubric.id}
+            </p>
+            <h3 class="row__title">{rubric.title}</h3>
+            <p class="row__object">{rubric.object}</p>
+          </header>
+
+          {competencesOf(lang, rubric.id).map((entry) => (
+            <a
+              class="cell"
+              href={entryPath(lang, entry.slug)}
+              data-cell
+              data-search={searchIndex(entry)}
+            >
+              <span class="cell__code code-chip">{entry.code}</span>
+              <span class="cell__title">{entry.title}</span>
+              {levels.map((level) => (
+                <span class="cell__descriptor" data-level={level.id}>
+                  {entry.levels[level.id].descriptor}
+                </span>
+              ))}
+            </a>
+          ))}
+        </section>
+      ))
+    }
+  </div>
+
+  <section class="threads" data-accent="graphite">
+    <header class="threads__head">
+      <h3 class="threads__title">{s.framework.threadsTitle}</h3>
+      <p class="threads__lead">{s.framework.threadsLead}</p>
+    </header>
+    <div class="threads__grid" data-row>
+      {
+        data.threads.map((thread) => (
+          <a
+            class="cell cell--thread"
+            href={entryPath(lang, thread.slug)}
+            data-cell
+            data-search={searchIndex(thread as Entry)}
+          >
+            <span class="cell__code code-chip">{thread.code}</span>
+            <span class="cell__title">{thread.title}</span>
+            <span class="cell__subtitle">{thread.subtitle}</span>
+            {levels.map((level) => (
+              <span class="cell__descriptor" data-level={level.id}>
+                {thread.levels[level.id].descriptor}
+              </span>
+            ))}
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</div>
+
+<script>
+  const map = document.querySelector('[data-map]');
+  const field = map?.querySelector<HTMLInputElement>('[data-map-search]');
+  const results = map?.querySelector<HTMLElement>('[data-map-results]');
+  if (map && field && results) {
+    const cells = Array.from(map.querySelectorAll<HTMLElement>('[data-cell]'));
+    const sections = Array.from(map.querySelectorAll<HTMLElement>('section'));
+    const singular = results.dataset.singular ?? '';
+    const plural = results.dataset.plural ?? '';
+
+    const normalise = (value: string) =>
+      value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+
+    field.addEventListener('input', () => {
+      const query = normalise(field.value);
+
+      if (!query) {
+        cells.forEach((cell) => cell.removeAttribute('hidden'));
+        sections.forEach((section) => section.removeAttribute('hidden'));
+        results.hidden = true;
+        return;
+      }
+
+      let matches = 0;
+      cells.forEach((cell) => {
+        const hit = (cell.dataset.search ?? '').includes(query);
+        cell.toggleAttribute('hidden', !hit);
+        if (hit) matches += 1;
+      });
+
+      // Une rubrique dont aucune compétence ne ressort disparaît entièrement.
+      sections.forEach((section) => {
+        const visible = section.querySelectorAll('[data-cell]:not([hidden])').length;
+        section.toggleAttribute('hidden', visible === 0);
+      });
+
+      results.hidden = false;
+      results.textContent = `${matches} ${matches === 1 ? singular : plural}`;
+    });
+  }
+</script>
+
+<style>
+  .map { --cell-gap: 1px; }
+
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.5rem 2rem;
+    padding-bottom: 1.1rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .controls__label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    padding: 0;
+    margin-bottom: 0.6rem;
+  }
+
+  .levelbar { border: 0; padding: 0; margin: 0; }
+  .levelbar__options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .levelbar input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .levelbar label {
+    display: flex;
+    align-items: baseline;
+    gap: 0.45rem;
+    padding: 0.55rem 0.95rem;
+    background: var(--paper);
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+  .levelbar label:hover { background: var(--paper-sunken); }
+  .levelbar__id {
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    font-weight: 600;
+    color: var(--ink-faint);
+  }
+  .levelbar__name { font-size: 0.88rem; }
+  .levelbar input:checked + label {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .levelbar input:checked + label .levelbar__id { color: var(--paper); }
+  .levelbar input:focus-visible + label { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+  /* En colonne étroite, les quatre niveaux tiennent une grille 2×2 pleine :
+     un simple retour à la ligne laisserait une case vide en fin de rangée. */
+  @media (max-width: 34rem) {
+    .levelbar { width: 100%; }
+    .levelbar__options { display: grid; grid-template-columns: 1fr 1fr; }
+  }
+
+  .search { flex: 1 1 18rem; max-width: 26rem; }
+  .search input {
+    width: 100%;
+    padding: 0.62rem 0.85rem;
+    font: inherit;
+    font-size: 0.92rem;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+  }
+  .search input::placeholder { color: var(--ink-faint); }
+  .search input:focus-visible { border-color: var(--accent); }
+
+  .hint {
+    margin: 1rem 0 0;
+    font-size: 0.86rem;
+    color: var(--ink-faint);
+    max-width: 44rem;
+  }
+
+  .results {
+    margin: 0.7rem 0 0;
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+  }
+
+  /* --- La matrice ---------------------------------------------------------- */
+
+  .matrix {
+    display: grid;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .row {
+    display: grid;
+    gap: var(--cell-gap);
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .row__head {
+    background: var(--paper-raised);
+    padding: 1.15rem 1.25rem;
+    border-left: 3px solid var(--accent);
+  }
+  .row__code {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .row__title {
+    font-size: 1.32rem;
+    letter-spacing: 0.01em;
+    color: var(--accent);
+    margin: 0.3rem 0 0.5rem;
+  }
+  .row__object {
+    font-size: 0.84rem;
+    line-height: 1.5;
+    color: var(--ink-faint);
+  }
+
+  .cell {
+    display: grid;
+    align-content: start;
+    gap: 0.4rem;
+    padding: 1.15rem 1.25rem 1.3rem;
+    background: var(--paper-raised);
+    text-decoration: none;
+    transition: background-color 0.16s ease;
+  }
+  .cell:hover { background: var(--accent-wash); }
+  .cell:hover .cell__title { color: var(--accent); }
+
+  .cell__code { line-height: 1; }
+  .cell__title {
+    font-family: var(--font-display);
+    font-variation-settings: 'SOFT' 20, 'WONK' 1, 'opsz' 18;
+    font-size: 1.02rem;
+    font-weight: 600;
+    line-height: 1.22;
+    letter-spacing: -0.01em;
+    transition: color 0.16s ease;
+    text-wrap: balance;
+  }
+  .cell__subtitle {
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+    margin-top: -0.15rem;
+  }
+  .cell__descriptor {
+    font-size: 0.845rem;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    margin-top: 0.35rem;
+    padding-top: 0.55rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  /* Un seul descripteur visible à la fois, piloté par les boutons radio.
+     Sans prise en charge de :has(), les quatre restent lisibles — le contenu
+     n'est jamais perdu, seule la mise en forme se dégrade. */
+  @supports selector(:has(*)) {
+    .map:has(#map-N1:checked) .cell__descriptor:not([data-level='N1']),
+    .map:has(#map-N2:checked) .cell__descriptor:not([data-level='N2']),
+    .map:has(#map-N3:checked) .cell__descriptor:not([data-level='N3']),
+    .map:has(#map-N4:checked) .cell__descriptor:not([data-level='N4']) {
+      display: none;
+    }
+  }
+
+  /* --- Fils transversaux ---------------------------------------------------- */
+
+  .threads { margin-top: 3.5rem; }
+  .threads__head { max-width: 46rem; margin-bottom: 1.6rem; }
+  .threads__title {
+    font-size: var(--step-2);
+    color: var(--accent);
+  }
+  .threads__lead {
+    margin-top: 0.7rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+  .threads__grid {
+    display: grid;
+    gap: var(--cell-gap);
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-top: 3px solid var(--accent);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  @media (min-width: 46rem) {
+    .row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .row__head { grid-column: 1 / -1; }
+    .threads__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+
+  @media (min-width: 68rem) {
+    .row { grid-template-columns: 15rem repeat(4, minmax(0, 1fr)); }
+    .row__head { grid-column: auto; }
+  }
+</style>

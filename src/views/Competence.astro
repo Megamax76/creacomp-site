@@ -1,0 +1,432 @@
+---
+import Base from '../layouts/Base.astro';
+import CopyButton from '../components/CopyButton.astro';
+import {
+  site,
+  path,
+  entryPath,
+  entries,
+  rubricById,
+  accentOf,
+  citationOf,
+  type Lang,
+  type Entry,
+} from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+  entry: Entry;
+}
+
+const { lang, entry } = Astro.props;
+const s = site(lang);
+const accent = accentOf(lang, entry);
+const rubric = entry.rubricId ? rubricById(lang, entry.rubricId) : undefined;
+
+const all = entries(lang);
+const index = all.findIndex((candidate) => candidate.code === entry.code);
+const previous = index > 0 ? all[index - 1] : undefined;
+const next = index < all.length - 1 ? all[index + 1] : undefined;
+
+const citation = citationOf(lang, entry);
+const heading = rubric ? `${s.ui.competence} ${entry.code}` : `${s.ui.thread} ${entry.code}`;
+---
+
+<Base
+  lang={lang}
+  page="framework"
+  title={`${entry.code} ${entry.title}`}
+  description={entry.definition}
+  code={entry.code}
+  accent={accent}
+>
+  <article class="competence">
+    <header class="head">
+      <div class="wrap">
+        <nav class="crumbs" aria-label={s.ui.backToFramework}>
+          <a href={path(lang, 'framework')}>{s.nav.framework}</a>
+          <span aria-hidden="true">/</span>
+          {
+            rubric ? (
+              <a href={`${path(lang, 'framework')}#${rubric.slug}`}>{rubric.title}</a>
+            ) : (
+              <a href={path(lang, 'framework')}>{s.ui.threads}</a>
+            )
+          }
+        </nav>
+
+        <p class="head__kind">{heading}</p>
+        <h1 class="head__title">{entry.title}</h1>
+        {entry.subtitle && <p class="head__subtitle">{entry.subtitle}</p>}
+
+        {
+          rubric && (
+            <p class="head__boundary">
+              <span class="head__boundary-label">{s.ui.boundary}</span>
+              {rubric.boundary}
+            </p>
+          )
+        }
+      </div>
+    </header>
+
+    <div class="wrap layout">
+      <div class="main">
+        <section class="block">
+          <h2 class="block__title">{s.ui.definition}</h2>
+          <p class="definition">{entry.definition}</p>
+        </section>
+
+        <section class="block">
+          <h2 class="block__title">{s.ui.components}</h2>
+          <ul class="components">
+            {entry.components.map((component) => <li>{component}</li>)}
+          </ul>
+        </section>
+
+        <section class="block">
+          <h2 class="block__title">{s.ui.levelsHeading}</h2>
+          <ol class="levels">
+            {
+              s.levels.map((level) => (
+                <li class="lvl">
+                  <div class="lvl__head">
+                    <span class="lvl__id">{level.id}</span>
+                    <span class="lvl__name">{level.name}</span>
+                  </div>
+                  <div class="lvl__body">
+                    <div class="lvl__field">
+                      <p class="lvl__label">{s.ui.descriptor}</p>
+                      <p class="lvl__descriptor">{entry.levels[level.id].descriptor}</p>
+                    </div>
+                    <div class="lvl__field">
+                      <p class="lvl__label">{s.ui.evidence}</p>
+                      <p class="lvl__evidence">{entry.levels[level.id].evidence}</p>
+                    </div>
+                  </div>
+                </li>
+              ))
+            }
+          </ol>
+        </section>
+      </div>
+
+      <aside class="aside">
+        {
+          rubric && (
+            <div class="aside__block">
+              <p class="aside__label">{s.ui.rubric}</p>
+              <p class="aside__rubric">{rubric.title}</p>
+              <p class="aside__object">{rubric.object}</p>
+            </div>
+          )
+        }
+
+        <div class="aside__block">
+          <p class="aside__label">{s.ui.cite}</p>
+          <p class="aside__citation">{citation}</p>
+          <CopyButton value={citation} label={s.ui.copy} copiedLabel={s.ui.copied} />
+        </div>
+
+        <div class="aside__block">
+          <p class="aside__label">{s.meta.license}</p>
+          <p class="aside__licence">{s.footer.licenseBody}</p>
+          <a href={path(lang, 'use')} class="aside__link">{s.nav.use} →</a>
+        </div>
+      </aside>
+    </div>
+
+    <nav class="pager" aria-label={s.ui.backToFramework}>
+      <div class="wrap pager__inner">
+        {
+          previous ? (
+            <a class="pager__link pager__link--prev" href={entryPath(lang, previous.slug)}>
+              <span class="pager__dir">← {s.ui.previous}</span>
+              <span class="pager__title">
+                <span class="code-chip">{previous.code}</span> {previous.title}
+              </span>
+            </a>
+          ) : (
+            <span />
+          )
+        }
+        {
+          next ? (
+            <a class="pager__link pager__link--next" href={entryPath(lang, next.slug)}>
+              <span class="pager__dir">{s.ui.next} →</span>
+              <span class="pager__title">
+                <span class="code-chip">{next.code}</span> {next.title}
+              </span>
+            </a>
+          ) : (
+            <span />
+          )
+        }
+      </div>
+    </nav>
+  </article>
+</Base>
+
+<style>
+  .head {
+    padding-block: clamp(2rem, 5vw, 3.2rem) clamp(2rem, 4vw, 3rem);
+    border-bottom: 1px solid var(--rule);
+    background: var(--accent-wash);
+  }
+
+  .crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 1.6rem;
+  }
+  .crumbs a { text-decoration: none; color: var(--ink-faint); }
+  .crumbs a:hover { color: var(--accent); }
+
+  .head__kind {
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .head__title {
+    margin-top: 0.6rem;
+    font-size: var(--step-4);
+    max-width: 20ch;
+  }
+  .head__subtitle {
+    margin-top: 0.7rem;
+    font-size: var(--step-1);
+    color: var(--ink-soft);
+  }
+
+  .head__boundary {
+    margin-top: 1.7rem;
+    max-width: 50rem;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+  /* Le tiret évite l'espace insécable qu'exigerait un deux-points en français. */
+  .head__boundary-label::after { content: ' — '; }
+  .head__boundary-label {
+    display: inline-block;
+    margin-right: 0.3rem;
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .layout {
+    display: grid;
+    gap: clamp(2.5rem, 5vw, 4rem);
+    align-items: start;
+    padding-block: clamp(2.5rem, 6vw, 4rem);
+  }
+  @media (min-width: 62rem) {
+    .layout { grid-template-columns: minmax(0, 1fr) 18rem; }
+    .aside { position: sticky; top: 6rem; }
+  }
+
+  .block + .block { margin-top: clamp(2.5rem, 5vw, 3.5rem); }
+
+  .block__title {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 1.2rem;
+  }
+
+  .definition {
+    font-size: var(--step-1);
+    line-height: 1.6;
+    color: var(--ink);
+    max-width: 46rem;
+    text-wrap: pretty;
+  }
+
+  .components {
+    list-style: none;
+    display: grid;
+    gap: 0.75rem;
+    max-width: 46rem;
+  }
+  .components li {
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+  .components li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.68em;
+    width: 0.7rem;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .levels {
+    list-style: none;
+    display: grid;
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .lvl {
+    background: var(--paper-raised);
+    display: grid;
+    gap: 1rem;
+    padding: 1.3rem 1.4rem 1.5rem;
+  }
+  @media (min-width: 48rem) {
+    .lvl { grid-template-columns: 9rem minmax(0, 1fr); gap: 1.5rem; }
+  }
+
+  .lvl__head { display: grid; align-content: start; gap: 0.15rem; }
+  .lvl__id {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+  }
+  .lvl__name {
+    font-family: var(--font-display);
+    font-variation-settings: 'SOFT' 20, 'WONK' 1, 'opsz' 20;
+    font-size: 1.12rem;
+    font-weight: 600;
+    letter-spacing: -0.012em;
+  }
+
+  .lvl__body { display: grid; gap: 1rem; }
+  .lvl__label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 0.35rem;
+  }
+  .lvl__descriptor {
+    font-size: 1rem;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+  .lvl__evidence {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    padding-left: 0.9rem;
+    border-left: 2px solid var(--accent-edge);
+  }
+
+  /* --- Colonne latérale ------------------------------------------------------- */
+
+  .aside { display: grid; gap: 1px; align-content: start; }
+  .aside__block {
+    background: var(--paper-sunken);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    padding: 1.15rem 1.2rem 1.3rem;
+  }
+  .aside__block + .aside__block { margin-top: 0.9rem; }
+  .aside__label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 0.6rem;
+  }
+  .aside__rubric {
+    font-family: var(--font-display);
+    font-variation-settings: 'SOFT' 20, 'WONK' 1, 'opsz' 20;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .aside__object,
+  .aside__licence {
+    margin-top: 0.45rem;
+    font-size: 0.82rem;
+    line-height: 1.55;
+    color: var(--ink-faint);
+  }
+  .aside__citation {
+    font-size: 0.78rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    margin-bottom: 0.8rem;
+  }
+  .aside__link {
+    display: inline-block;
+    margin-top: 0.7rem;
+    font-size: 0.82rem;
+    text-decoration: none;
+    color: var(--accent);
+  }
+  .aside__link:hover { text-decoration: underline; }
+
+  /* --- Pagination -------------------------------------------------------------- */
+
+  .pager {
+    border-top: 1px solid var(--rule);
+    background: var(--paper-sunken);
+  }
+  .pager__inner {
+    display: grid;
+    gap: 1px;
+    padding-block: 0;
+  }
+  @media (min-width: 46rem) {
+    .pager__inner { grid-template-columns: 1fr 1fr; }
+  }
+  .pager__link {
+    display: grid;
+    gap: 0.4rem;
+    padding: 1.5rem 0;
+    text-decoration: none;
+    transition: color 0.16s ease;
+  }
+  .pager__link--next { text-align: right; }
+  .pager__link:hover .pager__title { color: var(--accent); }
+  .pager__dir {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .pager__title {
+    font-family: var(--font-display);
+    font-variation-settings: 'SOFT' 20, 'WONK' 1, 'opsz' 20;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.012em;
+    transition: color 0.16s ease;
+  }
+  @media (min-width: 46rem) {
+    .pager__link--prev { padding-right: 1.5rem; border-right: 1px solid var(--rule); }
+    .pager__link--next { padding-left: 1.5rem; }
+  }
+</style>

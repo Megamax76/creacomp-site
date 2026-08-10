@@ -1,0 +1,554 @@
+---
+import Base from '../layouts/Base.astro';
+import RubricMap from '../components/RubricMap.astro';
+import LevelCards from '../components/LevelCards.astro';
+import { site, path, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const s = site(lang);
+const home = s.home;
+const counts = [
+  s.counts.rubrics,
+  s.counts.competences,
+  s.counts.threads,
+  s.counts.levels,
+  s.counts.descriptors,
+];
+---
+
+<Base lang={lang} page="home">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero__inner">
+      <p class="hero__eyebrow">{home.hero.eyebrow}</p>
+      <h1 class="hero__title">{home.hero.title}</h1>
+      <p class="hero__lead">{home.hero.lead}</p>
+
+      <div class="hero__actions">
+        <a class="btn" href={path(lang, 'framework')}>
+          {home.hero.primaryCta}
+          <span class="btn__arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="btn btn--ghost" href={path(lang, 'foundations')}>{home.hero.secondaryCta}</a>
+      </div>
+
+      <ul class="hero__counts">
+        {counts.map((count) => <li>{count}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <!-- L'avertissement : ce que le référentiel est, ce qu'il n'est pas -->
+  <section class="section section--sunken section--ruled">
+    <div class="wrap">
+      <div class="warning__head">
+        <h2 class="title-2">{home.warning.title}</h2>
+        <p class="lead">{home.warning.lead}</p>
+      </div>
+      <ul class="warning__grid">
+        {
+          home.warning.pairs.map((pair) => (
+            <li class="warning__item">
+              <p class="warning__is">{pair.is}</p>
+              <p class="warning__isnot">{pair.isNot}</p>
+              <p class="warning__body">{pair.body}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <!-- Pourquoi : le basculement et le déplacement de la valeur -->
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">{home.why.eyebrow}</p>
+      <h2 class="title-2 why__title">{home.why.title}</h2>
+
+      <div class="shift">
+        <div class="shift__text prose">
+          <h3 class="title-3">{home.why.shift.title}</h3>
+          {home.why.shift.body.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+
+        <figure class="scale">
+          <div class="scale__pan scale__pan--from">
+            <p class="scale__label">{home.why.shift.fromLabel}</p>
+            <p class="scale__body">{home.why.shift.fromBody}</p>
+          </div>
+          <p class="scale__arrow" aria-hidden="true">↓</p>
+          <div class="scale__pan scale__pan--to">
+            <p class="scale__label">{home.why.shift.toLabel}</p>
+            <p class="scale__body">{home.why.shift.toBody}</p>
+          </div>
+        </figure>
+      </div>
+
+      <div class="chain">
+        <div class="chain__text prose">
+          <h3 class="title-3">{home.why.chain.title}</h3>
+          {home.why.chain.body.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+
+        <figure class="curve">
+          <figcaption class="curve__caption">{home.why.chain.caption}</figcaption>
+          <ol class="curve__stages">
+            {
+              home.why.chain.stages.map((stage) => (
+                <li class="stage" data-value={stage.value}>
+                  <div class="stage__bar" aria-hidden="true">
+                    <span class="stage__fill" />
+                  </div>
+                  <p class="stage__label">{stage.label}</p>
+                  <p class="stage__name">{stage.name}</p>
+                  <p class="stage__body">{stage.body}</p>
+                  <p class="stage__rubrics">{stage.rubrics}</p>
+                </li>
+              ))
+            }
+          </ol>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- La carte des sept rubriques -->
+  <section class="section section--sunken section--ruled">
+    <div class="wrap">
+      <div class="map__head">
+        <div>
+          <p class="eyebrow">{home.map.eyebrow}</p>
+          <h2 class="title-2">{home.map.title}</h2>
+        </div>
+        <p class="lead map__lead">{home.map.lead}</p>
+      </div>
+      <RubricMap lang={lang} />
+      <p class="map__cta">
+        <a class="btn" href={path(lang, 'framework')}>
+          {home.map.cta}
+          <span class="btn__arrow" aria-hidden="true">→</span>
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Les quatre niveaux -->
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">{home.levels.eyebrow}</p>
+      <h2 class="title-2">{home.levels.title}</h2>
+      <p class="lead levels__lead">{home.levels.lead}</p>
+      <LevelCards lang={lang} />
+      <p class="rule-gold">{home.levels.goldenRule}</p>
+    </div>
+  </section>
+
+  <!-- À qui ça sert -->
+  <section class="section section--sunken section--ruled">
+    <div class="wrap">
+      <p class="eyebrow">{home.audiences.eyebrow}</p>
+      <h2 class="title-2">{home.audiences.title}</h2>
+      <ul class="audiences">
+        {
+          home.audiences.items.map((item, index) => (
+            <li class="audience">
+              <p class="audience__index" aria-hidden="true">
+                {String(index + 1).padStart(2, '0')}
+              </p>
+              <h3 class="audience__name">{item.name}</h3>
+              <p class="audience__body">{item.body}</p>
+            </li>
+          ))
+        }
+      </ul>
+      <p class="audiences__cta">
+        <a class="btn btn--ghost" href={path(lang, 'use')}>
+          {home.audiences.cta}
+          <span class="btn__arrow" aria-hidden="true">→</span>
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Clôture : le commun -->
+  <section class="section closing">
+    <div class="wrap closing__inner">
+      <h2 class="title-2">{home.closing.title}</h2>
+      <p class="closing__body">{home.closing.body}</p>
+      <div class="closing__actions">
+        <a class="btn" href={path(lang, 'use')}>{home.closing.primaryCta}</a>
+        <a class="btn btn--ghost" href={path(lang, 'contact')}>{home.closing.secondaryCta}</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  /* --- Hero ----------------------------------------------------------------- */
+
+  .hero {
+    position: relative;
+    padding-block: clamp(3.5rem, 11vw, 8.5rem) clamp(3rem, 8vw, 6rem);
+    overflow: hidden;
+  }
+  /* Trame typographique discrète : une grille d'imprimeur, à peine perceptible. */
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, var(--rule) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--rule) 1px, transparent 1px);
+    background-size: clamp(3rem, 8vw, 6rem) clamp(3rem, 8vw, 6rem);
+    opacity: 0.42;
+    mask-image: radial-gradient(115% 85% at 78% 8%, #000 0%, transparent 68%);
+    pointer-events: none;
+  }
+
+  .hero__inner { position: relative; }
+
+  .hero__eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.6rem;
+  }
+
+  .hero__title {
+    font-size: var(--step-5);
+    font-variation-settings: 'SOFT' 30, 'WONK' 1, 'opsz' 144;
+    font-weight: 400;
+    letter-spacing: -0.032em;
+    max-width: 17ch;
+  }
+
+  .hero__lead {
+    margin-top: clamp(1.5rem, 3vw, 2.2rem);
+    max-width: 46rem;
+    font-size: var(--step-1);
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: clamp(1.8rem, 3.5vw, 2.6rem);
+  }
+
+  .hero__counts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem 1.4rem;
+    list-style: none;
+    margin-top: clamp(2.5rem, 5vw, 4rem);
+    padding-top: 1.3rem;
+    border-top: 1px solid var(--rule);
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    letter-spacing: 0.05em;
+    color: var(--ink-faint);
+  }
+  .hero__counts li { position: relative; }
+  .hero__counts li + li::before {
+    content: '·';
+    position: absolute;
+    left: -0.85rem;
+    color: var(--accent);
+  }
+
+  /* --- Avertissement --------------------------------------------------------- */
+
+  .warning__head { max-width: 44rem; margin-bottom: clamp(2rem, 4vw, 3rem); }
+  .warning__head .lead { margin-top: 0.9rem; }
+
+  .warning__grid {
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    list-style: none;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .warning__item {
+    background: var(--paper-raised);
+    padding: 1.6rem 1.5rem 1.8rem;
+  }
+  .warning__is {
+    font-family: var(--font-display);
+    font-variation-settings: 'SOFT' 20, 'WONK' 1, 'opsz' 24;
+    font-size: 1.16rem;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.012em;
+    color: var(--accent);
+    text-wrap: balance;
+  }
+  .warning__isnot {
+    display: flex;
+    align-items: baseline;
+    gap: 0.45rem;
+    margin-top: 0.55rem;
+    font-size: 0.86rem;
+    color: var(--ink-faint);
+  }
+  .warning__isnot::before {
+    content: '';
+    flex: none;
+    width: 0.85rem;
+    height: 1px;
+    background: var(--ink-faint);
+    transform: translateY(-0.28em);
+  }
+  .warning__body {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+
+  /* --- Pourquoi -------------------------------------------------------------- */
+
+  .why__title { max-width: 20ch; }
+
+  .shift,
+  .chain {
+    display: grid;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+    margin-top: clamp(2.2rem, 5vw, 3.5rem);
+  }
+  @media (min-width: 60rem) {
+    .shift { grid-template-columns: 1.35fr 1fr; }
+    .chain { grid-template-columns: 1fr 1.35fr; }
+    .chain__text { order: -1; }
+  }
+
+  .chain { margin-top: clamp(3.5rem, 8vw, 6rem); }
+
+  .scale {
+    margin: 0;
+    display: grid;
+    justify-items: stretch;
+    gap: 0.5rem;
+    padding: 1.6rem;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    background: var(--paper-raised);
+  }
+  .scale__pan { padding: 1.1rem 1.2rem; border-radius: var(--radius); }
+  .scale__pan--from {
+    background: var(--paper-sunken);
+    border: 1px dashed var(--rule-strong);
+  }
+  .scale__pan--to {
+    background: var(--accent-wash);
+    border: 1px solid var(--accent-edge);
+  }
+  .scale__label {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .scale__pan--to .scale__label { color: var(--accent); }
+  .scale__body {
+    margin-top: 0.4rem;
+    font-family: var(--font-display);
+    font-variation-settings: 'SOFT' 30, 'WONK' 1, 'opsz' 20;
+    font-size: 1.08rem;
+    line-height: 1.35;
+    text-wrap: balance;
+  }
+  .scale__arrow {
+    justify-self: center;
+    font-size: 1.15rem;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  /* --- La chaîne créative ---------------------------------------------------- */
+
+  .curve {
+    margin: 0;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    background: var(--paper-raised);
+    overflow: hidden;
+  }
+  .curve__caption {
+    padding: 0.9rem 1.3rem;
+    border-bottom: 1px solid var(--rule);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .curve__stages {
+    display: grid;
+    gap: 1px;
+    background: var(--rule);
+    list-style: none;
+  }
+  @media (min-width: 46rem) {
+    .curve__stages { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .stage {
+    background: var(--paper-raised);
+    padding: 1.3rem 1.25rem 1.5rem;
+    display: grid;
+    align-content: start;
+    gap: 0.3rem;
+  }
+  .stage__bar {
+    height: 4.5rem;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .stage__fill {
+    display: block;
+    width: 100%;
+    border-radius: 2px 2px 0 0;
+    background: var(--accent);
+  }
+  .stage[data-value='high'] .stage__fill { height: 100%; }
+  .stage[data-value='low'] .stage__fill {
+    height: 22%;
+    background: var(--rule-strong);
+  }
+
+  .stage__label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .stage__name {
+    font-family: var(--font-display);
+    font-variation-settings: 'SOFT' 30, 'WONK' 1, 'opsz' 30;
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+  }
+  .stage[data-value='low'] .stage__name { color: var(--ink-faint); }
+  .stage__body {
+    margin-top: 0.3rem;
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+  .stage__rubrics {
+    margin-top: 0.75rem;
+    padding-top: 0.7rem;
+    border-top: 1px solid var(--rule);
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.05em;
+    color: var(--ink-faint);
+  }
+
+  /* --- Carte ----------------------------------------------------------------- */
+
+  .map__head {
+    display: grid;
+    gap: 1rem clamp(2rem, 5vw, 4rem);
+    align-items: end;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+  }
+  @media (min-width: 60rem) {
+    .map__head { grid-template-columns: 1fr 1fr; }
+  }
+  .map__lead { font-size: 1rem; }
+  .map__cta { margin-top: 2.2rem; }
+
+  /* --- Niveaux ---------------------------------------------------------------- */
+
+  .levels__lead { margin: 0.9rem 0 clamp(1.8rem, 4vw, 2.8rem); }
+
+  .rule-gold {
+    margin-top: 1.6rem;
+    padding: 1.05rem 1.3rem;
+    border-left: 3px solid var(--accent);
+    background: var(--accent-wash);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 54rem;
+  }
+
+  /* --- Publics ---------------------------------------------------------------- */
+
+  .audiences {
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    list-style: none;
+    margin-top: clamp(1.8rem, 4vw, 2.8rem);
+    background: var(--rule);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .audience {
+    background: var(--paper-sunken);
+    padding: 1.6rem 1.4rem 1.8rem;
+  }
+  .audience__index {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+  }
+  .audience__name {
+    margin-top: 0.5rem;
+    font-size: 1.22rem;
+    letter-spacing: -0.012em;
+  }
+  .audience__body {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+  .audiences__cta { margin-top: 2rem; }
+
+  /* --- Clôture ----------------------------------------------------------------- */
+
+  .closing__inner {
+    max-width: 46rem;
+    text-align: center;
+    margin-inline: auto;
+  }
+  .closing__body {
+    margin-top: 1.1rem;
+    font-size: var(--step-1);
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+  .closing__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+</style>

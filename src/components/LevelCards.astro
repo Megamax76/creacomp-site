@@ -1,0 +1,116 @@
+---
+import { site, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const s = site(lang);
+---
+
+<ol class="levels">
+  {
+    s.levels.map((level, index) => (
+      <li class="level" style={`--rank: ${index + 1}`}>
+        <div class="level__meter" aria-hidden="true">
+          {[0, 1, 2, 3].map((slot) => (
+            <span class="level__notch" data-filled={slot <= index ? 'true' : 'false'} />
+          ))}
+        </div>
+        <p class="level__id">{level.id}</p>
+        <h3 class="level__name">{level.name}</h3>
+        <p class="level__posture">{level.posture}</p>
+        <dl class="level__meta">
+          <div>
+            <dt>{s.ui.level}</dt>
+            <dd>{level.landmark}</dd>
+          </div>
+          <div>
+            <dt>DigComp</dt>
+            <dd>{level.digcomp}</dd>
+          </div>
+        </dl>
+      </li>
+    ))
+  }
+</ol>
+
+<style>
+  .levels {
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    list-style: none;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .level {
+    display: grid;
+    align-content: start;
+    gap: 0.35rem;
+    padding: 1.5rem 1.4rem 1.7rem;
+    background: var(--paper-raised);
+  }
+
+  .level__meter {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 1rem;
+  }
+  .level__notch {
+    height: 3px;
+    flex: 1;
+    background: var(--rule-strong);
+    border-radius: 2px;
+  }
+  .level__notch[data-filled='true'] { background: var(--accent); }
+
+  .level__id {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    color: var(--ink-faint);
+  }
+
+  .level__name {
+    font-size: 1.35rem;
+    letter-spacing: -0.012em;
+  }
+
+  .level__posture {
+    margin-top: 0.4rem;
+    font-family: var(--font-display);
+    font-variation-settings: 'SOFT' 40, 'WONK' 1, 'opsz' 14;
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.45;
+    color: var(--accent);
+    text-wrap: pretty;
+  }
+
+  .level__meta {
+    margin: 1.1rem 0 0;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--rule);
+    display: grid;
+    gap: 0.5rem;
+  }
+  .level__meta div { display: grid; gap: 0.1rem; }
+  .level__meta dt {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .level__meta dd {
+    margin: 0;
+    font-size: 0.83rem;
+    color: var(--ink-soft);
+  }
+</style>

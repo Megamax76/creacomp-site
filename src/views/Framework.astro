@@ -1,0 +1,59 @@
+---
+import Base from '../layouts/Base.astro';
+import FrameworkGrid from '../components/FrameworkGrid.astro';
+import { site, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const s = site(lang);
+---
+
+<Base
+  lang={lang}
+  page="framework"
+  title={s.framework.title}
+  description={s.framework.lead}
+>
+  <section class="head">
+    <div class="wrap">
+      <p class="eyebrow">{s.framework.eyebrow}</p>
+      <h1 class="head__title">{s.framework.title}</h1>
+      <p class="lead head__lead">{s.framework.lead}</p>
+      <p class="reminder">{s.framework.reminder}</p>
+    </div>
+  </section>
+
+  <section class="body">
+    <div class="wrap">
+      <FrameworkGrid lang={lang} />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .head {
+    padding-block: clamp(2.8rem, 7vw, 5rem) clamp(2rem, 4vw, 3rem);
+    border-bottom: 1px solid var(--rule);
+  }
+  .head__title {
+    font-size: var(--step-4);
+    max-width: 18ch;
+  }
+  .head__lead { margin-top: 1.1rem; }
+
+  .reminder {
+    margin-top: 1.8rem;
+    padding: 0.95rem 1.2rem;
+    border-left: 3px solid var(--accent);
+    background: var(--accent-wash);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 52rem;
+  }
+
+  .body { padding-block: clamp(2.2rem, 5vw, 3.5rem) clamp(4rem, 9vw, 7rem); }
+</style>

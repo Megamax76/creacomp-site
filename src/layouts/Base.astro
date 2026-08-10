@@ -1,0 +1,70 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { site, other, alternatePath, path, type Lang, type PageKey } from '../lib/i18n';
+import { siteUrl } from '../config';
+
+interface Props {
+  lang: Lang;
+  page: PageKey;
+  title?: string;
+  description?: string;
+  /** Code d'une entrée du référentiel, pour que le sélecteur de langue vise sa jumelle. */
+  code?: string;
+  accent?: string;
+}
+
+const { lang, page, title, description, code, accent = 'petrole' } = Astro.props;
+const s = site(lang);
+const pageTitle = title ? `${title} · ${s.meta.name}` : `${s.meta.name} — ${s.meta.tagline}`;
+const pageDescription = description ?? s.meta.description;
+const alternate = alternatePath(lang, page, code);
+const self = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang={lang} data-accent={accent}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    <meta name="author" content={s.meta.author} />
+    <link rel="alternate" hreflang={lang} href={self} />
+    <link rel="alternate" hreflang={other(lang)} href={alternate} />
+    <link rel="alternate" hreflang="x-default" href={path('fr', 'home')} />
+    {siteUrl && <link rel="canonical" href={new URL(self, siteUrl).href} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:locale" content={s.locale.replace('-', '_')} />
+    <meta property="og:site_name" content={s.meta.name} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%231b5068'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' fill='%23fbf9f5' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E"
+    />
+    <script is:inline>
+      // Applique le thème avant le premier rendu : évite le clignotement clair/sombre.
+      (() => {
+        try {
+          const saved = localStorage.getItem('creacomp-theme');
+          if (saved === 'light' || saved === 'dark') {
+            document.documentElement.dataset.theme = saved;
+          }
+        } catch {
+          /* stockage indisponible : on garde la préférence système */
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#contenu">{s.nav.skipToContent}</a>
+    <Header lang={lang} page={page} code={code} />
+    <main id="contenu">
+      <slot />
+    </main>
+    <Footer lang={lang} />
+  </body>
+</html>

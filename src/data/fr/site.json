@@ -1,0 +1,497 @@
+{
+  "lang": "fr",
+  "locale": "fr-FR",
+  "langName": "Français",
+  "otherLangName": "English",
+  "meta": {
+    "name": "CréaComp",
+    "version": "1.0",
+    "edition": "2026",
+    "versionLabel": "CréaComp 1.0 — édition 2026",
+    "author": "Maxime Hébert",
+    "email": "maxime.hebert76@gmail.com",
+    "license": "CC BY-SA 4.0",
+    "licenseName": "Creative Commons Attribution – Partage dans les mêmes conditions 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.fr",
+    "subtitle": "Référentiel de littératie créative numérique",
+    "tagline": "Le référentiel de compétences pour l'ère des créateurs",
+    "description": "CréaComp cartographie la littératie créative numérique : 7 rubriques, 28 compétences, 3 fils transversaux, 4 niveaux, 124 descripteurs observables. Un référentiel ouvert sous licence CC BY-SA 4.0."
+  },
+  "counts": {
+    "rubrics": "7 rubriques",
+    "competences": "28 compétences",
+    "threads": "3 fils transversaux",
+    "levels": "4 niveaux",
+    "descriptors": "124 descripteurs observables"
+  },
+  "routes": {
+    "home": "",
+    "framework": "referentiel",
+    "foundations": "cadre",
+    "use": "utiliser",
+    "contact": "contact"
+  },
+  "nav": {
+    "home": "Accueil",
+    "framework": "Le référentiel",
+    "foundations": "Le cadre",
+    "use": "Utiliser & citer",
+    "contact": "Contact",
+    "skipToContent": "Aller au contenu",
+    "menu": "Menu",
+    "close": "Fermer",
+    "theme": "Changer de thème",
+    "switchLang": "English"
+  },
+  "levels": [
+    {
+      "id": "N1",
+      "name": "Découverte",
+      "posture": "Je découvre et je comprends en pratiquant à petite échelle.",
+      "landmark": "Collège · grand débutant",
+      "digcomp": "DigComp 1–2"
+    },
+    {
+      "id": "N2",
+      "name": "Application",
+      "posture": "J'applique consciemment dans une pratique régulière.",
+      "landmark": "Lycée · débutant avancé",
+      "digcomp": "DigComp 3–4"
+    },
+    {
+      "id": "N3",
+      "name": "Autonomie",
+      "posture": "J'expérimente, je mesure et j'améliore en autonomie.",
+      "landmark": "Post-bac · professionnel junior",
+      "digcomp": "DigComp 5–6"
+    },
+    {
+      "id": "N4",
+      "name": "Expertise",
+      "posture": "Je systématise et je maîtrise au bénéfice d'autrui.",
+      "landmark": "Professionnel confirmé · formateur",
+      "digcomp": "DigComp 7–8"
+    }
+  ],
+  "ui": {
+    "rubric": "Rubrique",
+    "rubrics": "Rubriques",
+    "competence": "Compétence",
+    "competences": "Compétences",
+    "thread": "Fil transversal",
+    "threads": "Fils transversaux",
+    "definition": "Définition",
+    "components": "Composantes",
+    "levelsHeading": "Les quatre niveaux",
+    "descriptor": "Descripteur observable",
+    "evidence": "Preuve d'évaluation",
+    "boundary": "Frontière",
+    "object": "Objet",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "backToFramework": "Retour au référentiel",
+    "cite": "Citer cette compétence",
+    "copied": "Copié",
+    "copy": "Copier",
+    "search": "Rechercher une compétence",
+    "searchPlaceholder": "Chercher un mot : récit, IA, veille, droits…",
+    "noResults": "Aucune compétence ne correspond à cette recherche.",
+    "showLevel": "Afficher le niveau",
+    "levelSelectorHint": "Changez de niveau pour lire le descripteur correspondant dans chaque compétence.",
+    "readMore": "Lire la compétence",
+    "onThisPage": "Sur cette page",
+    "level": "Niveau"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "CréaComp 1.0 — édition 2026",
+      "title": "Le référentiel de compétences pour l'ère des créateurs",
+      "lead": "CréaComp cartographie la littératie créative numérique : l'ensemble des savoirs qui permettent de recevoir de façon critique, comprendre, imaginer, fabriquer, diffuser et valoriser dans les environnements numériques.",
+      "primaryCta": "Explorer les 31 compétences",
+      "secondaryCta": "Comprendre le cadre"
+    },
+    "warning": {
+      "title": "Ce que CréaComp est, ce qu'il n'est pas",
+      "lead": "Quatre malentendus valent d'être écartés avant toute lecture.",
+      "pairs": [
+        {
+          "is": "Une cartographie",
+          "isNot": "Pas un programme de formation",
+          "body": "Le référentiel décrit des savoirs et permet de les évaluer. Il ne prescrit ni parcours, ni méthode, ni contenu. Toute ingénierie pédagogique peut s'y adosser ; aucune n'en découle mécaniquement."
+        },
+        {
+          "is": "Un territoire où chacun dessine son profil",
+          "isNot": "Pas un socle que tout le monde devrait maîtriser",
+          "body": "Il n'existe ni hiérarchie entre les rubriques, ni ordre imposé de progression. Une même personne peut être experte d'une compétence et débutante d'une autre. Nul n'est censé tout maîtriser."
+        },
+        {
+          "is": "Des preuves de création",
+          "isNot": "Pas de questionnaire, pas de note globale",
+          "body": "Une compétence se valide par un artefact réel — contenu publié, projet mené, dispositif construit — accompagné d'une analyse réflexive. Le référentiel ne produit ni moyenne, ni score agrégé."
+        },
+        {
+          "is": "Des capacités de jugement",
+          "isNot": "Pas une liste de logiciels",
+          "body": "Aucun descripteur ne nomme un outil, une plateforme ou un modèle. Les outils se renouvellent tous les six mois ; les capacités de jugement, de direction et de méthode qui les gouvernent demeurent."
+        }
+      ]
+    },
+    "why": {
+      "eyebrow": "Pourquoi ce référentiel",
+      "title": "La valeur a changé de place",
+      "shift": {
+        "title": "De l'économie de l'attention à l'économie de l'intention",
+        "body": [
+          "L'économie numérique dominante capture l'attention : elle optimise le temps passé, l'engagement réflexe, la consommation subie. CréaComp défend un basculement — passer d'une économie où les personnes sont la ressource extraite à une économie où elles redeviennent les auteurs de ce qu'elles consultent, de ce qu'elles créent, de ce qu'elles construisent.",
+          "Chaque rubrique se relit à travers ce basculement : comprendre les algorithmes non pour les flatter mais pour choisir ce qu'on nourrit ; construire une communauté qu'on possède plutôt qu'une audience qu'on loue ; créer avec l'IA en dirigeant, plutôt qu'en déléguant son jugement."
+        ],
+        "fromLabel": "Économie de l'attention",
+        "fromBody": "La personne est la ressource extraite.",
+        "toLabel": "Économie de l'intention",
+        "toBody": "La personne redevient l'auteur."
+      },
+      "chain": {
+        "title": "L'ère des créateurs et le déplacement de la valeur",
+        "body": [
+          "L'intelligence artificielle générative a effondré le coût de la production : un texte correct, un visuel propre, une vidéo montée sont en passe de devenir universellement accessibles. Ce qui se banalise se dévalue, et la valeur se déplace vers les deux extrémités de la chaîne créative.",
+          "Cette thèse ne modifie pas l'architecture du référentiel, qui demeure une cartographie complète. Elle en constitue la clé de lecture : elle explique pourquoi les rubriques d'amont et d'aval pèsent autant que la fabrication elle-même."
+        ],
+        "caption": "Où se loge la valeur dans la chaîne créative",
+        "stages": [
+          {
+            "label": "En amont",
+            "name": "Le regard",
+            "body": "Savoir quoi créer, pourquoi, avec quel point de vue.",
+            "value": "high",
+            "rubrics": "S'informer · Analyser · Créer"
+          },
+          {
+            "label": "Au milieu",
+            "name": "La fabrication",
+            "body": "Produire une forme correcte. Coût effondré, valeur diluée.",
+            "value": "low",
+            "rubrics": "Faire"
+          },
+          {
+            "label": "En aval",
+            "name": "La relation",
+            "body": "La confiance, la communauté, les actifs que l'on possède.",
+            "value": "high",
+            "rubrics": "Collaborer · Entreprendre · Rentabiliser"
+          }
+        ]
+      }
+    },
+    "map": {
+      "eyebrow": "Aperçu",
+      "title": "Sept rubriques d'action, nommées par des verbes",
+      "lead": "Chaque rubrique regroupe quatre compétences. Trois fils transversaux les traversent toutes. Survolez une rubrique pour en découvrir le contenu.",
+      "cta": "Ouvrir la carte complète"
+    },
+    "levels": {
+      "eyebrow": "La grammaire commune",
+      "title": "Quatre niveaux, des postures et non des âges",
+      "lead": "Les mêmes quatre niveaux s'appliquent identiquement aux trente et une entrées du référentiel : c'est ce qui lui donne sa cohérence interne. Les repères scolaires et l'équivalence DigComp sont indicatifs.",
+      "goldenRule": "Règle d'or de calibrage : tout descripteur de niveau Découverte est atteignable par un collégien équipé d'un simple smartphone. Aucun ne présuppose de matériel professionnel, d'audience existante ou d'activité établie."
+    },
+    "audiences": {
+      "eyebrow": "Usages",
+      "title": "À qui ce référentiel sert-il ?",
+      "items": [
+        {
+          "name": "Enseignants",
+          "body": "Adosser une progression à des descripteurs observables plutôt qu'à des intentions, du collège au supérieur. La rubrique S'informer prolonge naturellement l'éducation aux médias et à l'information."
+        },
+        {
+          "name": "Organismes de formation",
+          "body": "Construire une offre lisible, alignée sur un cadre public, et l'évaluer par des preuves de création plutôt que par des questionnaires."
+        },
+        {
+          "name": "Créateurs et indépendants",
+          "body": "Situer sa pratique sur une carte, repérer ses angles morts, et choisir en connaissance de cause ce qu'on veut apprendre ensuite."
+        },
+        {
+          "name": "Institutions et chercheurs",
+          "body": "Disposer d'un cadre ouvert et citable, complémentaire de DigComp, pour outiller des politiques publiques ou des travaux de recherche."
+        }
+      ],
+      "cta": "Comment utiliser le référentiel"
+    },
+    "closing": {
+      "title": "Un bien commun",
+      "body": "CréaComp est publié sous licence Creative Commons Attribution – Partage dans les mêmes conditions 4.0. Vous pouvez le reprendre, le traduire, l'adapter et l'intégrer à vos propres dispositifs, à condition d'en citer l'origine et de partager vos adaptations aux mêmes conditions.",
+      "primaryCta": "Utiliser & citer",
+      "secondaryCta": "Écrire à l'auteur"
+    }
+  },
+  "framework": {
+    "eyebrow": "La carte",
+    "title": "Le référentiel, d'un seul regard",
+    "lead": "Vingt-huit compétences réparties en sept rubriques, traversées par trois fils. Déplacez le sélecteur de niveau pour lire, sur l'ensemble de la carte, ce que chaque compétence signifie à ce niveau de maîtrise.",
+    "reminder": "Rappel : cette carte décrit un territoire, pas un parcours. Nul n'est censé tout maîtriser, et il n'existe aucun ordre imposé de progression.",
+    "threadsTitle": "Les trois fils transversaux",
+    "threadsLead": "Les fils ne s'ajoutent pas aux vingt-huit compétences : ils qualifient la manière de les exercer toutes. Discerner, Durer et Se réinventer traversent les sept rubriques comme l'éthique, l'endurance et l'adaptabilité traversent toute pratique.",
+    "resultsSingular": "compétence trouvée",
+    "resultsPlural": "compétences trouvées"
+  },
+  "foundations": {
+    "eyebrow": "Le cadre",
+    "title": "Fondements, principes et méthode",
+    "lead": "Ce que le référentiel décrit, sur quels principes il repose, comment il s'organise et comment il s'évalue.",
+    "sections": [
+      {
+        "id": "preambule",
+        "title": "La littératie créative numérique",
+        "body": [
+          "La littératie créative numérique désigne l'ensemble des connaissances, des savoir-faire et des dispositions permettant à une personne de recevoir de manière critique, de comprendre, d'imaginer, de fabriquer, de diffuser et de valoriser des contenus et des projets dans les environnements numériques — de façon autonome, éthique et durable.",
+          "Comme la lecture, l'écriture et le calcul l'ont été pour la civilisation de l'imprimé, elle constitue un socle : un ensemble de savoirs que la société a intérêt à voir partagés par le plus grand nombre, cartographiables, observables et mesurables par niveaux — sans que quiconque soit censé en maîtriser l'intégralité. CréaComp en est la cartographie."
+        ]
+      },
+      {
+        "id": "intention",
+        "title": "De l'économie de l'attention à l'économie de l'intention",
+        "body": [
+          "L'économie numérique dominante capture l'attention : elle optimise le temps passé, l'engagement réflexe, la consommation subie. CréaComp défend un basculement : passer d'une économie de l'attention, où les personnes sont la ressource extraite, à une économie de l'intention, où elles redeviennent les auteurs — de ce qu'elles consultent, de ce qu'elles créent, de ce qu'elles construisent.",
+          "Chaque rubrique du référentiel peut se relire à travers ce basculement : comprendre les algorithmes non pour les flatter mais pour choisir ce qu'on nourrit ; construire une communauté qu'on possède plutôt qu'une audience qu'on loue ; créer avec l'IA en dirigeant, plutôt qu'en déléguant son jugement."
+        ]
+      },
+      {
+        "id": "ere-des-createurs",
+        "title": "L'ère des créateurs et le déplacement de la valeur",
+        "body": [
+          "L'intelligence artificielle générative a effondré le coût de la production : un texte correct, un visuel propre, une vidéo montée sont en passe de devenir universellement accessibles. Ce qui se banalise se dévalue ; la valeur se déplace vers les deux extrémités de la chaîne créative. En amont : le regard — savoir quoi créer, pourquoi, avec quel point de vue. En aval : la relation — la confiance, la communauté, la capacité à transformer l'attention reçue en actifs possédés.",
+          "Cette thèse ne modifie pas l'architecture du référentiel, qui demeure une cartographie complète ; elle en constitue la clé de lecture : elle explique pourquoi les rubriques d'amont (S'informer, Analyser, Créer) et d'aval (Collaborer, Rentabiliser) pèsent autant que la fabrication elle-même."
+        ]
+      }
+    ],
+    "principles": {
+      "id": "principes",
+      "title": "Les sept principes directeurs",
+      "items": [
+        {
+          "id": "P1",
+          "title": "Une cartographie, non un programme",
+          "body": "CréaComp décrit et permet d'évaluer des savoirs ; il ne prescrit ni parcours, ni méthode, ni contenu de formation. Toute ingénierie pédagogique peut s'y adosser ; aucune n'en découle mécaniquement."
+        },
+        {
+          "id": "P2",
+          "title": "Universalité d'entrée",
+          "body": "Chaque compétence est accessible dès le niveau Découverte à un collégien équipé d'un simple smartphone. C'est la règle d'or de calibrage du référentiel : aucun descripteur de niveau 1 ne présuppose de matériel professionnel, d'audience existante ou d'activité établie."
+        },
+        {
+          "id": "P3",
+          "title": "Nul n'est censé tout maîtriser",
+          "body": "Le référentiel cartographie un territoire ; chacun y dessine son profil. Il n'existe ni hiérarchie entre rubriques, ni ordre imposé de progression : un même individu peut être expert d'une compétence et débutant d'une autre."
+        },
+        {
+          "id": "P4",
+          "title": "Des descripteurs observables",
+          "body": "Chaque niveau de chaque compétence est décrit par ce que la personne est capable de faire, vérifiable par un évaluateur tiers, et assorti d'une preuve d'évaluation concrète. Le référentiel ne mesure ni intentions, ni connaissances déclaratives isolées."
+        },
+        {
+          "id": "P5",
+          "title": "Des preuves de création, jamais de questionnaires",
+          "body": "Un référentiel de créateurs s'évalue par des artefacts : contenus publiés, projets menés, dispositifs construits, accompagnés d'une analyse réflexive. Le portfolio de preuves est l'instrument central de la validation."
+        },
+        {
+          "id": "P6",
+          "title": "Longévité par le jugement",
+          "body": "Aucun descripteur ne nomme un logiciel, une plateforme ou un modèle : le référentiel décrit des capacités de jugement, de direction et de méthode, qui survivent au renouvellement permanent des outils."
+        },
+        {
+          "id": "P7",
+          "title": "Complémentarité avec DigComp",
+          "body": "CréaComp présuppose et complète le cadre européen DigComp : la sécurité des comptes, la protection défensive des données personnelles et la bureautique en sont délibérément exclues. DigComp outille le citoyen numérique ; CréaComp outille le créateur."
+        }
+      ]
+    },
+    "architecture": {
+      "id": "architecture",
+      "title": "L'architecture",
+      "body": [
+        "Le référentiel s'organise en sept rubriques d'action — nommées par des verbes — regroupant chacune quatre compétences, traversées par trois fils transversaux. Chaque compétence est décrite à quatre niveaux, soit 124 descripteurs observables (28 compétences et 3 fils, multipliés par 4 niveaux), chacun assorti d'une preuve d'évaluation."
+      ]
+    },
+    "levels": {
+      "id": "niveaux",
+      "title": "La grammaire des quatre niveaux",
+      "body": [
+        "Les niveaux décrivent des postures, non des âges : ils s'appliquent identiquement à toutes les compétences, ce qui donne au référentiel sa cohérence interne. Les repères scolaires et la correspondance avec les huit niveaux de DigComp sont indicatifs."
+      ],
+      "goldenRule": "Règle d'or : tout descripteur de niveau Découverte est atteignable par un collégien équipé d'un simple smartphone. Cette règle garantit que le référentiel couvre réellement l'ensemble des publics, du collège au monde professionnel."
+    },
+    "assessment": {
+      "id": "evaluation",
+      "title": "Méthodologie d'évaluation",
+      "items": [
+        {
+          "title": "La preuve de création",
+          "body": "Une compétence est validée à un niveau donné lorsque la personne produit la preuve d'évaluation correspondante — un artefact réel : contenu publié, projet mené, dispositif construit, analyse rédigée — accompagnée d'une analyse réflexive courte (ce que j'ai fait, pourquoi, ce que j'en retiens), et que cette preuve est vérifiée par un évaluateur tiers au regard du descripteur. La validation d'un niveau emporte celle des niveaux inférieurs de la même compétence."
+        },
+        {
+          "title": "Le portfolio",
+          "body": "L'instrument central est le portfolio de preuves : un même artefact peut attester plusieurs compétences — une série vidéo publiée peut prouver 3.3, 4.1 et 4.4 simultanément — et le portfolio dessine le profil de littératie de la personne, jamais un score global, toujours une cartographie individuelle. Le référentiel ne produit ni moyenne, ni note agrégée : additionner des compétences hétérogènes n'aurait aucun sens."
+        },
+        {
+          "title": "Exigences de validité",
+          "body": "Pour prétendre à un usage scientifique et certifiant, l'évaluation adossée à CréaComp respecte trois exigences : la vérifiabilité (tout descripteur s'observe sur la preuve produite, sans interprétation extensive), la fidélité inter-évaluateurs (deux évaluateurs formés parviennent au même verdict sur la même preuve) et la traçabilité (chaque validation référence la preuve, la date et l'évaluateur). Le référentiel fait l'objet d'un protocole de validation empirique — étude pilote sur cohortes réelles, mesure d'accord inter-juges, révision annuelle des descripteurs ambigus — préalable à toute prétention certifiante."
+        }
+      ]
+    },
+    "digcomp": {
+      "id": "digcomp",
+      "title": "Interface avec DigComp et périmètre d'exclusion",
+      "body": [
+        "CréaComp présuppose et complète DigComp ; il ne le remplace pas. Le cadre européen couvre la littératie numérique citoyenne — dont sa dimension défensive : sécurité des équipements et des comptes, protection des données personnelles, résolution de problèmes techniques, bureautique et communication administrative. CréaComp considère ces acquis comme son socle et n'en duplique aucun : il commence là où DigComp s'arrête, sur le versant offensif — créer, comprendre les systèmes, entreprendre, valoriser.",
+        "Trois zones de contact méritent d'être explicitées. La compétence 1.2 (fiabilité et manipulation) prolonge la zone « littératie informationnelle » de DigComp vers la détection des contenus synthétiques et des techniques d'influence propres aux espaces de création. La compétence 5.3 (conduite en ligne) prolonge la zone « communication et collaboration » vers la modération et la gestion publique de la critique. La compétence 7.4 (actifs indépendants) reprend la question des données sous un angle patrimonial — posséder son audience et ses contenus — là où DigComp la traite sous l'angle défensif de la protection. Dans les trois cas, CréaComp suppose les bases DigComp acquises et décrit exclusivement le prolongement créatif.",
+        "Enfin, l'éducation aux médias et à l'information (EMI), inscrite dans les programmes scolaires français, trouve dans la rubrique S'informer son prolongement naturel : CréaComp offre aux enseignants d'EMI une trajectoire qui mène de la réception critique — leur territoire — vers la création assumée, qui est le sien."
+      ]
+    }
+  },
+  "use": {
+    "eyebrow": "Utiliser & citer",
+    "title": "Un bien commun, à reprendre",
+    "lead": "CréaComp est publié sous licence libre pour être utilisé, traduit, adapté et intégré. Voici ce que cela autorise, ce que cela demande, et comment le citer correctement.",
+    "profiles": {
+      "title": "Quatre manières de s'en servir",
+      "items": [
+        {
+          "name": "Enseigner",
+          "body": "Adosser une séquence, une progression annuelle ou un projet de classe à des descripteurs observables. Le niveau Découverte est calibré pour être atteignable avec un simple smartphone, ce qui rend le référentiel utilisable dès le collège.",
+          "how": "Sélectionnez les compétences pertinentes, retenez le niveau visé, et faites produire la preuve d'évaluation associée."
+        },
+        {
+          "name": "Former et certifier",
+          "body": "Construire une offre de formation lisible, alignée sur un cadre public et citable, et l'évaluer par des preuves de création. Les exigences de validité — vérifiabilité, fidélité inter-évaluateurs, traçabilité — sont décrites dans le cadre.",
+          "how": "Cartographiez votre offre sur les 31 entrées, puis définissez pour chacune le niveau de sortie visé."
+        },
+        {
+          "name": "Se situer",
+          "body": "Un créateur, un indépendant ou une équipe peut se servir de la carte comme d'un miroir : où suis-je expert, où suis-je débutant, quel angle mort mérite d'être travaillé maintenant.",
+          "how": "Parcourez la carte niveau par niveau et repérez les compétences où votre pratique réelle décroche."
+        },
+        {
+          "name": "Rechercher et outiller une politique",
+          "body": "Le référentiel est ouvert, daté et citable. Il se prête à l'analyse, à la comparaison avec d'autres cadres, à l'adaptation nationale ou sectorielle, et à la critique argumentée.",
+          "how": "Citez la version et l'édition, et signalez vos adaptations : elles enrichissent le commun."
+        }
+      ]
+    },
+    "notPrescriptive": {
+      "title": "Ce que le référentiel ne prescrit pas",
+      "body": "CréaComp ne prescrit ni parcours, ni méthode, ni contenu de formation, ni durée, ni outil. Il ne définit aucun seuil d'entrée sur le marché du travail et ne produit aucune note globale. Toute ingénierie pédagogique peut s'y adosser ; aucune n'en découle mécaniquement. Cette réserve n'est pas une modestie de façade : c'est la condition pour qu'un même référentiel serve un collège, un organisme de formation professionnelle et un créateur indépendant sans en trahir aucun."
+    },
+    "license": {
+      "title": "La licence",
+      "lead": "CréaComp est publié sous licence Creative Commons Attribution – Partage dans les mêmes conditions 4.0 (CC BY-SA 4.0).",
+      "allowed": {
+        "title": "Vous pouvez",
+        "items": [
+          "Partager le référentiel, le copier et le redistribuer sur tout support et sous tout format.",
+          "L'adapter : le remixer, le transformer, le traduire, et créer à partir de lui.",
+          "L'utiliser à des fins commerciales, y compris dans une offre de formation payante."
+        ]
+      },
+      "required": {
+        "title": "À deux conditions",
+        "items": [
+          "Attribution — citer l'auteur, la version et l'édition, indiquer si des modifications ont été apportées, et fournir un lien vers la licence.",
+          "Partage dans les mêmes conditions — si vous adaptez ou traduisez le référentiel, diffuser votre version sous la même licence CC BY-SA 4.0."
+        ]
+      },
+      "note": "Aucune restriction supplémentaire ne peut être ajoutée : vous ne pouvez appliquer ni dispositif juridique, ni mesure technique qui restreindrait légalement autrui à faire ce que la licence permet.",
+      "linkLabel": "Lire le texte complet de la licence"
+    },
+    "citation": {
+      "title": "Citer CréaComp",
+      "lead": "Trois formats selon le contexte. Chacun est copiable en un clic.",
+      "formats": [
+        {
+          "label": "Citation courte",
+          "hint": "Dans un support pédagogique, une présentation, un site.",
+          "value": "Hébert, M. (2026). CréaComp 1.0 — Référentiel de littératie créative numérique. CC BY-SA 4.0."
+        },
+        {
+          "label": "Référence académique (APA)",
+          "hint": "Dans un article, un mémoire, un rapport.",
+          "value": "Hébert, M. (2026). CréaComp 1.0 : Référentiel de littératie créative numérique (édition 2026). Publié sous licence Creative Commons Attribution – Partage dans les mêmes conditions 4.0."
+        },
+        {
+          "label": "BibTeX",
+          "hint": "Dans une bibliographie LaTeX.",
+          "value": "@misc{hebert2026creacomp,\n  author  = {H{\\'e}bert, Maxime},\n  title   = {Cr{\\'e}aComp 1.0 : R{\\'e}f{\\'e}rentiel de litt{\\'e}ratie cr{\\'e}ative num{\\'e}rique},\n  year    = {2026},\n  edition = {2026},\n  note    = {Licence CC BY-SA 4.0}\n}"
+        }
+      ],
+      "competenceNote": "Pour citer une compétence précise, ajoutez son code et son intitulé — par exemple : CréaComp 1.0, compétence 3.3 « Maîtriser le récit ». Chaque page de compétence propose sa référence prête à copier."
+    },
+    "closing": {
+      "title": "Vous l'utilisez ?",
+      "body": "Signaler un usage, une traduction ou une adaptation n'est pas une obligation de la licence, mais cela aide à faire vivre le référentiel et à en préparer les révisions.",
+      "cta": "Écrire à l'auteur"
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Écrire à l'auteur",
+    "lead": "CréaComp est conçu et maintenu par Maxime Hébert. Le référentiel est un travail ouvert : les retours, les usages signalés et les objections argumentées en nourrissent les révisions.",
+    "reasons": {
+      "title": "Quelques bonnes raisons d'écrire",
+      "items": [
+        {
+          "name": "Un usage pédagogique",
+          "body": "Vous adossez une formation, une progression ou un dispositif d'évaluation au référentiel et souhaitez le signaler ou en discuter."
+        },
+        {
+          "name": "Une traduction",
+          "body": "Vous envisagez une traduction dans une autre langue, ou une adaptation à un contexte national ou sectoriel."
+        },
+        {
+          "name": "Un travail de recherche",
+          "body": "Vous étudiez le référentiel, souhaitez participer au protocole de validation empirique ou proposer une critique argumentée d'un descripteur."
+        },
+        {
+          "name": "Un partenariat institutionnel",
+          "body": "Vous représentez une institution, un réseau ou une organisation intéressée par un déploiement à plus grande échelle."
+        }
+      ]
+    },
+    "form": {
+      "title": "Formulaire",
+      "name": "Votre nom",
+      "email": "Votre adresse e-mail",
+      "organisation": "Organisation (facultatif)",
+      "subject": "Objet",
+      "subjectOptions": [
+        "Usage pédagogique",
+        "Traduction ou adaptation",
+        "Recherche",
+        "Partenariat institutionnel",
+        "Autre"
+      ],
+      "message": "Votre message",
+      "submit": "Envoyer",
+      "sending": "Envoi en cours…",
+      "success": "Message envoyé. Merci — une réponse suivra dès que possible.",
+      "error": "L'envoi a échoué. Vous pouvez écrire directement à l'adresse ci-dessous.",
+      "required": "Champ obligatoire"
+    },
+    "direct": {
+      "title": "Par courrier électronique",
+      "body": "Le formulaire n'est pas encore configuré. Écrivez directement à l'adresse suivante :",
+      "bodyConfigured": "Vous préférez votre propre messagerie ? Écrivez directement à :"
+    }
+  },
+  "footer": {
+    "about": "CréaComp est un référentiel ouvert de littératie créative numérique, conçu pour cartographier les savoirs de la création à l'ère des créateurs.",
+    "navTitle": "Naviguer",
+    "licenseTitle": "Licence",
+    "licenseBody": "Contenu publié sous licence Creative Commons Attribution – Partage dans les mêmes conditions 4.0. Réutilisation libre avec citation.",
+    "authorTitle": "Auteur",
+    "credit": "CréaComp 1.0 — édition 2026 · Maxime Hébert"
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "body": "Cette page n'existe pas ou a été déplacée.",
+    "cta": "Retour à l'accueil"
+  }
+}

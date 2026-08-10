@@ -1,0 +1,133 @@
+---
+import { framework, competencesOf, path, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const data = framework(lang);
+---
+
+<ol class="bands">
+  {
+    data.rubrics.map((rubric) => (
+      <li class="band" data-accent={rubric.color}>
+        <a class="band__link" href={`${path(lang, 'framework')}#${rubric.slug}`}>
+          <span class="band__number" aria-hidden="true">
+            {String(rubric.id).padStart(2, '0')}
+          </span>
+          <span class="band__body">
+            <span class="band__title">{rubric.title}</span>
+            <span class="band__object">{rubric.object}</span>
+            <span class="band__competences">
+              {competencesOf(lang, rubric.id).map((competence, index) => (
+                <>
+                  {index > 0 && <span class="band__dot" aria-hidden="true"> · </span>}
+                  <span class="band__competence">{competence.title}</span>
+                </>
+              ))}
+            </span>
+          </span>
+          <span class="band__arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+    ))
+  }
+</ol>
+
+<style>
+  .bands {
+    list-style: none;
+    border-top: 1px solid var(--rule);
+  }
+
+  .band { border-bottom: 1px solid var(--rule); }
+
+  .band__link {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: baseline;
+    gap: clamp(0.9rem, 3vw, 2.2rem);
+    padding: clamp(1.1rem, 2.4vw, 1.7rem) 0;
+    text-decoration: none;
+    transition: padding-inline 0.22s ease;
+  }
+
+  /* Le lavis coloré déborde la grille : la bande entière s'allume au survol. */
+  .band__link::before {
+    content: '';
+    position: absolute;
+    inset: 0 calc(var(--gutter) * -0.5);
+    background: var(--accent-wash);
+    opacity: 0;
+    transition: opacity 0.22s ease;
+    z-index: -1;
+  }
+  .band__link:hover::before,
+  .band__link:focus-visible::before { opacity: 1; }
+  .band__link:hover { padding-inline: 0.75rem; }
+
+  .band__number {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--ink-faint);
+    transition: color 0.22s ease;
+  }
+  .band__link:hover .band__number { color: var(--accent); }
+
+  .band__body { display: grid; gap: 0.3rem; }
+
+  .band__title {
+    font-family: var(--font-display);
+    font-variation-settings: 'SOFT' 30, 'WONK' 1, 'opsz' 60;
+    font-size: clamp(1.5rem, 4.2vw, 2.3rem);
+    font-weight: 500;
+    line-height: 1.02;
+    letter-spacing: -0.022em;
+    color: var(--ink);
+    transition: color 0.22s ease;
+  }
+  .band__link:hover .band__title { color: var(--accent); }
+
+  .band__object {
+    font-size: 0.92rem;
+    line-height: 1.45;
+    color: var(--ink-soft);
+    max-width: 40rem;
+  }
+
+  .band__competences {
+    margin-top: 0.35rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    line-height: 1.75;
+    letter-spacing: 0.03em;
+    color: var(--ink-faint);
+    transition: color 0.22s ease;
+  }
+  .band__link:hover .band__competences { color: var(--ink-soft); }
+  .band__dot { color: var(--accent); }
+
+  .band__arrow {
+    align-self: center;
+    font-size: 1.1rem;
+    color: var(--ink-faint);
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: opacity 0.22s ease, transform 0.22s ease, color 0.22s ease;
+  }
+  .band__link:hover .band__arrow,
+  .band__link:focus-visible .band__arrow {
+    opacity: 1;
+    transform: none;
+    color: var(--accent);
+  }
+
+  @media (max-width: 40rem) {
+    .band__link { grid-template-columns: auto 1fr; }
+    .band__arrow { display: none; }
+  }
+</style>

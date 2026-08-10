@@ -1,0 +1,332 @@
+---
+import Base from '../layouts/Base.astro';
+import LevelCards from '../components/LevelCards.astro';
+import { site, framework, path, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const s = site(lang);
+const f = s.foundations;
+const data = framework(lang);
+
+const toc = [
+  ...f.sections.map((section) => ({ id: section.id, title: section.title })),
+  { id: f.principles.id, title: f.principles.title },
+  { id: f.architecture.id, title: f.architecture.title },
+  { id: f.levels.id, title: f.levels.title },
+  { id: f.assessment.id, title: f.assessment.title },
+  { id: f.digcomp.id, title: f.digcomp.title },
+];
+---
+
+<Base lang={lang} page="foundations" title={f.title} description={f.lead}>
+  <section class="head">
+    <div class="wrap">
+      <p class="eyebrow">{f.eyebrow}</p>
+      <h1 class="head__title">{f.title}</h1>
+      <p class="lead">{f.lead}</p>
+    </div>
+  </section>
+
+  <div class="wrap layout">
+    <nav class="toc" aria-label={s.ui.onThisPage}>
+      <p class="toc__label">{s.ui.onThisPage}</p>
+      <ol>
+        {toc.map((item) => <li><a href={`#${item.id}`}>{item.title}</a></li>)}
+      </ol>
+    </nav>
+
+    <div class="doc">
+      {
+        f.sections.map((section) => (
+          <section id={section.id} class="chapter">
+            <h2 class="chapter__title">{section.title}</h2>
+            <div class="prose">
+              {section.body.map((paragraph) => <p>{paragraph}</p>)}
+            </div>
+          </section>
+        ))
+      }
+
+      <section id={f.principles.id} class="chapter">
+        <h2 class="chapter__title">{f.principles.title}</h2>
+        <ol class="principles">
+          {
+            f.principles.items.map((principle) => (
+              <li class="principle">
+                <p class="principle__id">{principle.id}</p>
+                <h3 class="principle__title">{principle.title}</h3>
+                <p class="principle__body">{principle.body}</p>
+              </li>
+            ))
+          }
+        </ol>
+      </section>
+
+      <section id={f.architecture.id} class="chapter">
+        <h2 class="chapter__title">{f.architecture.title}</h2>
+        <div class="prose">
+          {f.architecture.body.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+
+        <div class="table-scroll">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">{s.ui.rubric}</th>
+                <th scope="col">{s.ui.object}</th>
+                <th scope="col">{s.ui.competences}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                data.rubrics.map((rubric) => (
+                  <tr data-accent={rubric.color}>
+                    <th scope="row">
+                      <a href={`${path(lang, 'framework')}#${rubric.slug}`}>
+                        <span class="table__num">{rubric.id}</span> {rubric.title}
+                      </a>
+                    </th>
+                    <td>{rubric.object}</td>
+                    <td class="table__codes">
+                      {data.competences
+                        .filter((competence) => competence.rubricId === rubric.id)
+                        .map((competence) => competence.code)
+                        .join(' · ')}
+                    </td>
+                  </tr>
+                ))
+              }
+              <tr data-accent="graphite">
+                <th scope="row">{s.ui.threads}</th>
+                <td>
+                  {data.threads
+                    .map((thread) => `${thread.title} (${thread.subtitle})`)
+                    .join(' · ')}
+                </td>
+                <td class="table__codes">
+                  {data.threads.map((thread) => thread.code).join(' · ')}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id={f.levels.id} class="chapter">
+        <h2 class="chapter__title">{f.levels.title}</h2>
+        <div class="prose">
+          {f.levels.body.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+        <div class="chapter__wide">
+          <LevelCards lang={lang} />
+        </div>
+        <p class="callout">{f.levels.goldenRule}</p>
+      </section>
+
+      <section id={f.assessment.id} class="chapter">
+        <h2 class="chapter__title">{f.assessment.title}</h2>
+        {
+          f.assessment.items.map((item) => (
+            <div class="sub">
+              <h3 class="sub__title">{item.title}</h3>
+              <p class="sub__body">{item.body}</p>
+            </div>
+          ))
+        }
+      </section>
+
+      <section id={f.digcomp.id} class="chapter">
+        <h2 class="chapter__title">{f.digcomp.title}</h2>
+        <div class="prose">
+          {f.digcomp.body.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+      </section>
+
+      <p class="doc__cta">
+        <a class="btn" href={path(lang, 'framework')}>
+          {s.nav.framework}
+          <span class="btn__arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="btn btn--ghost" href={path(lang, 'use')}>{s.nav.use}</a>
+      </p>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .head {
+    padding-block: clamp(2.8rem, 7vw, 5rem) clamp(2rem, 4vw, 3rem);
+    border-bottom: 1px solid var(--rule);
+  }
+  .head__title { font-size: var(--step-4); max-width: 18ch; margin-bottom: 1.1rem; }
+
+  .layout {
+    display: grid;
+    gap: clamp(2.5rem, 5vw, 4.5rem);
+    align-items: start;
+    padding-block: clamp(2.5rem, 6vw, 4rem) clamp(4rem, 9vw, 7rem);
+  }
+  @media (min-width: 64rem) {
+    .layout { grid-template-columns: 15rem minmax(0, 1fr); }
+    .toc { position: sticky; top: 6rem; }
+  }
+
+  .toc__label {
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 0.8rem;
+  }
+  .toc ol { list-style: none; counter-reset: toc; }
+  .toc li { counter-increment: toc; }
+  .toc li + li { margin-top: 0.35rem; }
+  .toc a {
+    display: grid;
+    grid-template-columns: 1.6rem 1fr;
+    gap: 0.2rem;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    text-decoration: none;
+    color: var(--ink-soft);
+    padding-block: 0.22rem;
+  }
+  .toc a::before {
+    content: counter(toc, decimal-leading-zero);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--ink-faint);
+  }
+  .toc a:hover { color: var(--accent); }
+
+  .chapter + .chapter {
+    margin-top: clamp(3rem, 6vw, 4.5rem);
+    padding-top: clamp(3rem, 6vw, 4.5rem);
+    border-top: 1px solid var(--rule);
+  }
+
+  .chapter__title {
+    font-size: var(--step-3);
+    max-width: 22ch;
+    margin-bottom: 1.3rem;
+  }
+  .chapter__wide { margin-top: 1.8rem; }
+
+  .principles {
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    list-style: none;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .principle {
+    background: var(--paper-raised);
+    padding: 1.4rem 1.35rem 1.6rem;
+  }
+  .principle__id {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+  }
+  .principle__title {
+    margin-top: 0.45rem;
+    font-size: 1.14rem;
+    letter-spacing: -0.012em;
+  }
+  .principle__body {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+
+  .table-scroll { overflow-x: auto; margin-top: 1.8rem; }
+  .table {
+    width: 100%;
+    min-width: 40rem;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+  }
+  .table th,
+  .table td {
+    text-align: left;
+    vertical-align: top;
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .table thead th {
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    font-weight: 500;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    border-bottom-color: var(--rule-strong);
+  }
+  .table tbody th {
+    font-family: var(--font-display);
+    font-variation-settings: 'SOFT' 20, 'WONK' 1, 'opsz' 18;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+  .table tbody th a { text-decoration: none; }
+  .table tbody th a:hover { text-decoration: underline; }
+  .table__num {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--ink-faint);
+  }
+  .table td { color: var(--ink-soft); }
+  .table__codes {
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    white-space: nowrap;
+    color: var(--ink-faint) !important;
+  }
+
+  .callout {
+    margin-top: 1.6rem;
+    padding: 1.05rem 1.3rem;
+    border-left: 3px solid var(--accent);
+    background: var(--accent-wash);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+
+  .sub + .sub { margin-top: 1.8rem; }
+  .sub__title {
+    font-size: 1.2rem;
+    letter-spacing: -0.012em;
+    margin-bottom: 0.55rem;
+  }
+  .sub__body {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    max-width: 46rem;
+  }
+
+  .doc__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: clamp(3rem, 6vw, 4.5rem);
+    padding-top: clamp(2rem, 4vw, 3rem);
+    border-top: 1px solid var(--rule);
+  }
+</style>

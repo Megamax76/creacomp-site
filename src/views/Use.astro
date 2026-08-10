@@ -1,0 +1,313 @@
+---
+import Base from '../layouts/Base.astro';
+import CopyButton from '../components/CopyButton.astro';
+import { site, path, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const s = site(lang);
+const u = s.use;
+---
+
+<Base lang={lang} page="use" title={u.title} description={u.lead}>
+  <section class="head">
+    <div class="wrap">
+      <p class="eyebrow">{u.eyebrow}</p>
+      <h1 class="head__title">{u.title}</h1>
+      <p class="lead">{u.lead}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2 class="title-2">{u.profiles.title}</h2>
+      <ol class="profiles">
+        {
+          u.profiles.items.map((item, index) => (
+            <li class="profile">
+              <p class="profile__index" aria-hidden="true">
+                {String(index + 1).padStart(2, '0')}
+              </p>
+              <h3 class="profile__name">{item.name}</h3>
+              <p class="profile__body">{item.body}</p>
+              <p class="profile__how">{item.how}</p>
+            </li>
+          ))
+        }
+      </ol>
+
+      <div class="reserve">
+        <h2 class="reserve__title">{u.notPrescriptive.title}</h2>
+        <p class="reserve__body">{u.notPrescriptive.body}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--sunken section--ruled">
+    <div class="wrap licence">
+      <div class="licence__intro">
+        <h2 class="title-2">{u.license.title}</h2>
+        <p class="lead">{u.license.lead}</p>
+        <p class="licence__badge" aria-hidden="true">CC BY-SA 4.0</p>
+        <p>
+          <a class="licence__link" href={s.meta.licenseUrl} rel="license noopener noreferrer" target="_blank">
+            {u.license.linkLabel} →
+          </a>
+        </p>
+      </div>
+
+      <div class="licence__terms">
+        <div class="term">
+          <h3 class="term__title">{u.license.allowed.title}</h3>
+          <ul class="term__list term__list--yes">
+            {u.license.allowed.items.map((item) => <li>{item}</li>)}
+          </ul>
+        </div>
+        <div class="term">
+          <h3 class="term__title">{u.license.required.title}</h3>
+          <ul class="term__list term__list--must">
+            {u.license.required.items.map((item) => <li>{item}</li>)}
+          </ul>
+        </div>
+        <p class="term__note">{u.license.note}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2 class="title-2">{u.citation.title}</h2>
+      <p class="lead citation__lead">{u.citation.lead}</p>
+
+      <div class="citations">
+        {
+          u.citation.formats.map((format) => (
+            <article class="citation">
+              <header class="citation__head">
+                <div>
+                  <h3 class="citation__label">{format.label}</h3>
+                  <p class="citation__hint">{format.hint}</p>
+                </div>
+                <CopyButton value={format.value} label={s.ui.copy} copiedLabel={s.ui.copied} />
+              </header>
+              <pre class="citation__value"><code>{format.value}</code></pre>
+            </article>
+          ))
+        }
+      </div>
+
+      <p class="citation__note">{u.citation.competenceNote}</p>
+    </div>
+  </section>
+
+  <section class="section section--sunken section--ruled">
+    <div class="wrap closing">
+      <h2 class="title-2">{u.closing.title}</h2>
+      <p class="closing__body">{u.closing.body}</p>
+      <p>
+        <a class="btn" href={path(lang, 'contact')}>
+          {u.closing.cta}
+          <span class="btn__arrow" aria-hidden="true">→</span>
+        </a>
+      </p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .head {
+    padding-block: clamp(2.8rem, 7vw, 5rem) clamp(2rem, 4vw, 3rem);
+    border-bottom: 1px solid var(--rule);
+  }
+  .head__title { font-size: var(--step-4); max-width: 18ch; margin-bottom: 1.1rem; }
+
+  .profiles {
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    list-style: none;
+    margin-top: clamp(1.8rem, 4vw, 2.8rem);
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .profile {
+    background: var(--paper-raised);
+    padding: 1.5rem 1.4rem 1.7rem;
+    display: grid;
+    align-content: start;
+  }
+  .profile__index {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+  }
+  .profile__name {
+    margin-top: 0.5rem;
+    font-size: 1.28rem;
+    letter-spacing: -0.014em;
+  }
+  .profile__body {
+    margin-top: 0.65rem;
+    font-size: 0.91rem;
+    line-height: 1.62;
+    color: var(--ink-soft);
+  }
+  .profile__how {
+    margin-top: 1rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: var(--ink-faint);
+  }
+
+  .reserve {
+    margin-top: clamp(2.5rem, 5vw, 3.5rem);
+    padding: clamp(1.5rem, 3vw, 2.2rem);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius);
+    background: var(--accent-wash);
+    max-width: 58rem;
+  }
+  .reserve__title { font-size: 1.28rem; letter-spacing: -0.014em; }
+  .reserve__body {
+    margin-top: 0.7rem;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--ink-soft);
+  }
+
+  /* --- Licence ---------------------------------------------------------------- */
+
+  .licence {
+    display: grid;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+  }
+  @media (min-width: 60rem) {
+    .licence { grid-template-columns: 1fr 1.25fr; }
+  }
+
+  .licence__badge {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.5rem 0.9rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    border: 1px solid var(--accent-edge);
+    border-radius: var(--radius);
+    background: var(--accent-wash);
+  }
+  .licence__link {
+    display: inline-block;
+    margin-top: 1.1rem;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--accent);
+  }
+  .licence__link:hover { text-decoration: underline; }
+
+  .term + .term { margin-top: 1.8rem; }
+  .term__title {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 1rem;
+  }
+  .term__list { list-style: none; display: grid; gap: 0.8rem; }
+  .term__list li {
+    position: relative;
+    padding-left: 1.7rem;
+    font-size: 0.93rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+  .term__list li::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--accent);
+  }
+  .term__list--yes li::before { content: '✓'; }
+  .term__list--must li::before { content: '!'; font-weight: 700; }
+  .term__note {
+    margin-top: 1.6rem;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--ink-faint);
+  }
+
+  /* --- Citations ---------------------------------------------------------------- */
+
+  .citation__lead { margin: 0.9rem 0 clamp(1.8rem, 4vw, 2.5rem); }
+
+  .citations { display: grid; gap: 1.2rem; }
+  .citation {
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    background: var(--paper-raised);
+    overflow: hidden;
+  }
+  .citation__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.2rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .citation__label { font-size: 1.02rem; letter-spacing: -0.01em; }
+  .citation__hint {
+    margin-top: 0.2rem;
+    font-size: 0.82rem;
+    color: var(--ink-faint);
+  }
+  .citation__value {
+    margin: 0;
+    padding: 1.1rem 1.2rem;
+    overflow-x: auto;
+    background: var(--paper-sunken);
+    font-family: var(--font-mono);
+    font-size: 0.79rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  .citation__note {
+    margin-top: 1.5rem;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--ink-faint);
+    max-width: 50rem;
+  }
+
+  /* --- Clôture ------------------------------------------------------------------- */
+
+  .closing { max-width: 44rem; }
+  .closing__body {
+    margin: 0.9rem 0 1.8rem;
+    font-size: var(--step-1);
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+</style>

@@ -1,0 +1,255 @@
+---
+import Base from '../layouts/Base.astro';
+import { site, type Lang } from '../lib/i18n';
+import { formspreeId } from '../config';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const s = site(lang);
+const c = s.contact;
+const configured = formspreeId.trim().length > 0;
+const endpoint = `https://formspree.io/f/${formspreeId.trim()}`;
+---
+
+<Base lang={lang} page="contact" title={c.title} description={c.lead}>
+  <section class="head">
+    <div class="wrap">
+      <p class="eyebrow">{c.eyebrow}</p>
+      <h1 class="head__title">{c.title}</h1>
+      <p class="lead">{c.lead}</p>
+    </div>
+  </section>
+
+  <div class:list={['wrap', 'layout', !configured && 'layout--single']}>
+    <section class="reasons">
+      <h2 class="reasons__title">{c.reasons.title}</h2>
+      <ul class="reasons__list">
+        {
+          c.reasons.items.map((item) => (
+            <li class="reason">
+              <h3 class="reason__name">{item.name}</h3>
+              <p class="reason__body">{item.body}</p>
+            </li>
+          ))
+        }
+      </ul>
+
+      <div class="direct">
+        <p class="direct__label">{c.direct.title}</p>
+        <p class="direct__body">
+          {configured ? c.direct.bodyConfigured : c.direct.body}
+        </p>
+        <a class="direct__mail" href={`mailto:${s.meta.email}`}>{s.meta.email}</a>
+      </div>
+    </section>
+
+    {
+      configured && (
+        <section class="formwrap">
+          <h2 class="formwrap__title">{c.form.title}</h2>
+          <form class="form" action={endpoint} method="POST" data-contact-form>
+            <div class="field">
+              <label for="name">{c.form.name}</label>
+              <input type="text" id="name" name="name" required autocomplete="name" />
+            </div>
+
+            <div class="field">
+              <label for="email">{c.form.email}</label>
+              <input type="email" id="email" name="email" required autocomplete="email" />
+            </div>
+
+            <div class="field">
+              <label for="organisation">{c.form.organisation}</label>
+              <input type="text" id="organisation" name="organisation" autocomplete="organization" />
+            </div>
+
+            <div class="field">
+              <label for="subject">{c.form.subject}</label>
+              <select id="subject" name="subject" required>
+                {c.form.subjectOptions.map((option) => (
+                  <option value={option}>{option}</option>
+                ))}
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">{c.form.message}</label>
+              <textarea id="message" name="message" rows="7" required />
+            </div>
+
+            <input type="hidden" name="_language" value={lang} />
+
+            <button class="btn" type="submit" data-submit>{c.form.submit}</button>
+
+            <p class="form__status" role="status" aria-live="polite" data-status hidden></p>
+          </form>
+        </section>
+      )
+    }
+  </div>
+</Base>
+
+<script
+  is:inline
+  define:vars={{
+    sending: s.contact.form.sending,
+    submitLabel: s.contact.form.submit,
+    success: s.contact.form.success,
+    failure: s.contact.form.error,
+  }}
+>
+  const form = document.querySelector('[data-contact-form]');
+  if (form) {
+    const status = form.querySelector('[data-status]');
+    const submit = form.querySelector('[data-submit]');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      submit.disabled = true;
+      submit.textContent = sending;
+      status.hidden = true;
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+        if (!response.ok) throw new Error(String(response.status));
+        form.reset();
+        status.textContent = success;
+        status.dataset.state = 'ok';
+      } catch {
+        status.textContent = failure;
+        status.dataset.state = 'error';
+      } finally {
+        status.hidden = false;
+        submit.disabled = false;
+        submit.textContent = submitLabel;
+      }
+    });
+  }
+</script>
+
+<style>
+  .head {
+    padding-block: clamp(2.8rem, 7vw, 5rem) clamp(2rem, 4vw, 3rem);
+    border-bottom: 1px solid var(--rule);
+  }
+  .head__title { font-size: var(--step-4); max-width: 16ch; margin-bottom: 1.1rem; }
+
+  .layout {
+    display: grid;
+    gap: clamp(2.5rem, 5vw, 4.5rem);
+    align-items: start;
+    padding-block: clamp(2.5rem, 6vw, 4rem) clamp(4rem, 9vw, 7rem);
+  }
+  @media (min-width: 62rem) {
+    .layout { grid-template-columns: 1fr 1.1fr; }
+  }
+
+  /* Sans formulaire configuré, la colonne unique ne doit pas flotter dans le vide. */
+  .layout--single { grid-template-columns: minmax(0, 46rem); }
+
+  .reasons__title,
+  .formwrap__title {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 1.3rem;
+  }
+
+  .reasons__list { list-style: none; display: grid; gap: 1.4rem; }
+  .reason__name {
+    font-size: 1.08rem;
+    letter-spacing: -0.012em;
+  }
+  .reason__body {
+    margin-top: 0.35rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+
+  .direct {
+    margin-top: 2.2rem;
+    padding: 1.3rem 1.4rem 1.5rem;
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius);
+    background: var(--paper-sunken);
+  }
+  .direct__label {
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .direct__body {
+    margin-top: 0.5rem;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+  .direct__mail {
+    display: inline-block;
+    margin-top: 0.8rem;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--accent);
+    text-decoration: none;
+    word-break: break-all;
+  }
+  .direct__mail:hover { text-decoration: underline; }
+
+  .form { display: grid; gap: 1.1rem; }
+  .field { display: grid; gap: 0.4rem; }
+  .field label {
+    font-size: 0.84rem;
+    color: var(--ink-soft);
+  }
+  .field input,
+  .field select,
+  .field textarea {
+    width: 100%;
+    padding: 0.7rem 0.85rem;
+    font: inherit;
+    font-size: 0.93rem;
+    color: var(--ink);
+    background: var(--paper-raised);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+  }
+  .field textarea { resize: vertical; line-height: 1.6; }
+  .field input:focus-visible,
+  .field select:focus-visible,
+  .field textarea:focus-visible { border-color: var(--accent); }
+
+  .form .btn { justify-self: start; margin-top: 0.4rem; }
+
+  .form__status {
+    padding: 0.8rem 1rem;
+    border-radius: var(--radius);
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+  .form__status[data-state='ok'] {
+    background: var(--accent-wash);
+    border: 1px solid var(--accent-edge);
+    color: var(--ink);
+  }
+  .form__status[data-state='error'] {
+    background: var(--paper-sunken);
+    border: 1px solid var(--rule-strong);
+    color: var(--ink-soft);
+  }
+</style>

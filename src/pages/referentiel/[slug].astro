@@ -1,0 +1,15 @@
+---
+import Competence from '../../views/Competence.astro';
+import { entries } from '../../lib/i18n';
+
+export function getStaticPaths() {
+  return entries('fr').map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+---
+
+<Competence lang="fr" entry={entry} />

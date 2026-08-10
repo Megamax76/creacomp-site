@@ -1,0 +1,1086 @@
+{
+  "rubrics": [
+    {
+      "id": 1,
+      "slug": "s-informer",
+      "title": "S'INFORMER",
+      "color": "petrole",
+      "object": "Recevoir, évaluer et organiser l'information et les cultures numériques",
+      "intro": "La littératie créative commence par la réception. Avant d'émettre, un créateur est un récepteur : la qualité de ce qu'il produit dépend de la qualité de ce qu'il laisse entrer, de sa capacité à en juger la fiabilité et à en décoder le contexte culturel. Cette rubrique prolonge l'éducation aux médias et à l'information (EMI) vers une posture active : choisir ses flux plutôt que les subir.",
+      "boundary": "cette rubrique porte sur le rapport aux contenus que l'on reçoit. On y juge des contenus et des cultures, jamais des systèmes techniques — la compréhension des algorithmes, des plateformes et des données relève de la rubrique Analyser."
+    },
+    {
+      "id": 2,
+      "slug": "analyser",
+      "title": "ANALYSER",
+      "color": "indigo",
+      "object": "Comprendre les systèmes qui distribuent, mesurent et génèrent les contenus",
+      "intro": "On quitte ici le jugement des contenus pour la compréhension des machines. Algorithmes de recommandation, économie des plateformes, données de performance, systèmes d'intelligence artificielle : ces infrastructures invisibles déterminent ce qui est vu, par qui, et qui en capte la valeur. Les comprendre est la condition d'une pratique créative lucide — celle qui choisit ce qu'elle nourrit au lieu de subir ce qu'on lui montre.",
+      "boundary": "cette rubrique porte sur la compréhension des systèmes, jamais sur leur usage productif. Comprendre un algorithme relève d'Analyser ; publier en exploitant ses logiques relève de Faire. Comprendre l'IA relève d'Analyser ; créer avec l'IA relève de Faire."
+    },
+    {
+      "id": 3,
+      "slug": "creer",
+      "title": "CRÉER",
+      "color": "carmin",
+      "object": "Imaginer, concevoir et donner une forme singulière à une intention",
+      "intro": "L'amont de toute fabrication. À l'heure où la production se banalise, la valeur remonte vers ce qui la précède : l'idée, le point de vue, le récit, l'intention. Cette rubrique rassemble les compétences de conception — celles qui existent avant qu'un seul fichier ne soit produit — et cultive ce qu'aucune machine ne génère : un regard singulier issu d'une expérience vécue.",
+      "boundary": "tout ce qui précède la fabrication. Dès qu'il s'agit d'exécuter, de produire ou de publier, on bascule dans la rubrique Faire."
+    },
+    {
+      "id": 4,
+      "slug": "faire",
+      "title": "FAIRE",
+      "color": "terre",
+      "object": "Fabriquer, augmenter et publier avec un niveau de qualité conscient",
+      "intro": "La fabrique. Produire des contenus enregistrés, s'exprimer en direct, créer avec l'intelligence artificielle, systématiser sa production : quatre compétences d'exécution où la valeur ne réside plus dans l'accès aux outils — désormais universel — mais dans le jugement de qualité, la direction et la constance.",
+      "boundary": "cette rubrique décrit des capacités de jugement et de direction, jamais des logiciels. Aucun nom d'outil ne figure dans ses descripteurs : les outils changent tous les six mois, les capacités qui les gouvernent demeurent."
+    },
+    {
+      "id": 5,
+      "slug": "collaborer",
+      "title": "COLLABORER",
+      "color": "foret",
+      "object": "Créer avec les autres et construire des relations de confiance",
+      "intro": "La création numérique est sociale de bout en bout : on crée avec des pairs, à partir des œuvres d'autrui, devant des publics, au sein de communautés. Cette rubrique rassemble les compétences relationnelles — de la co-création en équipe à l'animation d'une communauté possédée — et porte le basculement central du référentiel : passer d'une audience qu'on loue aux plateformes à une communauté qu'on construit et qu'on possède.",
+      "boundary": "tout ce qui implique les autres — pairs, ayants droit, publics, communautés. La dimension économique des partenariats (négociation, contrats) relève de la rubrique Rentabiliser."
+    },
+    {
+      "id": 6,
+      "slug": "entreprendre",
+      "title": "ENTREPRENDRE",
+      "color": "sarcelle",
+      "object": "Transformer une idée en projet qui existe",
+      "intro": "Entreprendre, ici, ne signifie pas créer une entreprise : c'est la capacité à faire exister un projet — un club au collège, une chaîne, un fanzine, une association, un produit. Cadrer, prototyper, itérer, gérer, oser, rebondir : ces gestes s'appliquent à tout projet créatif, bien avant toute dimension commerciale.",
+      "boundary": "cette rubrique est délibérément non monétaire. Tout ce qui touche aux revenus, aux prix, aux contrats et aux actifs relève de la rubrique Rentabiliser. Un projet peut relever pleinement d'Entreprendre sans jamais générer un euro."
+    },
+    {
+      "id": 7,
+      "slug": "rentabiliser",
+      "title": "RENTABILISER",
+      "color": "bronze",
+      "object": "Transformer un projet créatif en économie et en actifs durables",
+      "intro": "Le créateur qui ne comprend pas la capitalisation reste un fournisseur de contenu gratuit pour des plateformes qui, elles, capitalisent. Cette rubrique couvre le versant économique de la création : modèles de revenus, propriété intellectuelle, négociation et gestion, et — couronnement du référentiel — la construction d'actifs qui survivent aux plateformes.",
+      "boundary": "tout ce qui touche à la valeur économique et patrimoniale. La conduite de projet sans dimension monétaire relève d'Entreprendre ; le respect des droits d'autrui relève de Collaborer (5.2), dont la compétence 7.2 est le miroir."
+    }
+  ],
+  "competences": [
+    {
+      "code": "1.1",
+      "slug": "1-1-rechercher-et-sourcer-l-information",
+      "title": "Rechercher et sourcer l'information",
+      "definition": "Mettre en œuvre des stratégies de recherche efficaces dans des environnements variés (moteurs, plateformes sociales, bases documentaires, IA conversationnelles), identifier la nature et l'origine des sources, et remonter systématiquement à l'information primaire. Cette compétence fonde toutes les autres : on ne crée pas juste à partir d'un matériau faux ou de seconde main non identifiée.",
+      "components": [
+        "Formulation et reformulation de requêtes selon l'outil (moteur de recherche, recherche interne d'une plateforme, requête adressée à une IA)",
+        "Typologie des sources : primaire, secondaire, tertiaire ; source d'autorité, source engagée, source anonyme",
+        "Remontée à l'origine d'une information virale : premier émetteur, date, contexte initial",
+        "Techniques de recherche inversée (image, extrait, citation) pour retrouver une provenance",
+        "Constitution d'un corpus documentaire cohérent en préparation d'une création"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable de formuler une recherche en variant les mots-clés et d'identifier l'auteur, la date et le support d'un contenu trouvé.",
+          "evidence": "Retrouver l'origine (auteur, date, contexte initial) d'une image ou d'une information virale simple."
+        },
+        "N2": {
+          "descriptor": "Est capable de croiser au moins trois sources indépendantes sur un même sujet et de distinguer une source primaire d'une reprise.",
+          "evidence": "Constituer un dossier sourcé sur un sujet d'actualité, avec hiérarchisation explicite des sources."
+        },
+        "N3": {
+          "descriptor": "Est capable de construire une stratégie de recherche multi-outils (moteurs, bases spécialisées, IA, archives) adaptée à un objectif de création précis.",
+          "evidence": "Produire la note méthodologique de recherche ayant préparé un contenu effectivement publié."
+        },
+        "N4": {
+          "descriptor": "Est capable de concevoir et de transmettre une méthodologie de sourcing pour un collectif, une rédaction ou une équipe créative.",
+          "evidence": "Produire un guide de sourcing effectivement utilisé par des tiers, illustré de cas traités."
+        }
+      },
+      "rubricId": 1
+    },
+    {
+      "code": "1.2",
+      "slug": "1-2-evaluer-la-fiabilite-et-detecter-la-manipulation",
+      "title": "Évaluer la fiabilité et détecter la manipulation",
+      "definition": "Juger la crédibilité d'un contenu, repérer la désinformation, les contenus synthétiques et les techniques d'influence. C'est le cœur de l'hygiène intellectuelle : la capacité à suspendre son jugement, à vérifier avant de partager, et à reconnaître les mécanismes — cognitifs et rhétoriques — par lesquels on cherche à nous faire croire ou agir.",
+      "components": [
+        "Critères de crédibilité d'un contenu : auteur identifiable, date, intention, preuves apportées, traçabilité",
+        "Biais cognitifs exploités par les contenus (confirmation, disponibilité, ancrage, appel à l'émotion)",
+        "Détection des contenus synthétiques (images, voix, vidéos, textes générés) par indices contextuels et outils de vérification",
+        "Techniques de manipulation : sophismes, cadrage, faux experts, faux consensus, astroturfing, titres trompeurs",
+        "Pratiques de vérification (fact-checking) : méthode, outils, limites"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable d'expliquer pourquoi un contenu peut être faux ou trompeur et de citer au moins deux indices de non-fiabilité.",
+          "evidence": "Analyser trois contenus, dont un trompeur, et justifier son jugement sur chacun."
+        },
+        "N2": {
+          "descriptor": "Est capable d'appliquer une grille de vérification systématique et de repérer un contenu synthétique plausible.",
+          "evidence": "Réaliser le fact-check documenté d'une affirmation virale, en explicitant la méthode suivie."
+        },
+        "N3": {
+          "descriptor": "Est capable d'évaluer des sources contradictoires sur un sujet polémique et de produire une synthèse honnête, incertitudes comprises.",
+          "evidence": "Publier (ou rendre publiable) une synthèse contradictoire avec cartographie des positions en présence."
+        },
+        "N4": {
+          "descriptor": "Est capable de former autrui à l'évaluation de l'information et de concevoir des dispositifs de vérification.",
+          "evidence": "Concevoir et animer un atelier ou une ressource pédagogique de vérification, testés sur un public réel."
+        }
+      },
+      "rubricId": 1
+    },
+    {
+      "code": "1.3",
+      "slug": "1-3-organiser-sa-veille-et-sa-diete-informationnelle",
+      "title": "Organiser sa veille et sa diète informationnelle",
+      "definition": "Choisir consciemment ses flux entrants, structurer une veille réactivable et gérer son attention comme une ressource rare. Au niveau expert, cette compétence culmine dans un système de gestion des connaissances personnel (PKM) où ce qui est capté nourrit effectivement ce qui est créé. Elle transforme la consommation subie en alimentation choisie.",
+      "components": [
+        "Audit de sa propre consommation informationnelle : volumes, sources, part choisie contre part subie",
+        "Sélection et curation de sources : critères d'entrée et de sortie d'un panier de veille",
+        "Outils et dispositifs de veille : flux, alertes, newsletters, listes, agrégateurs",
+        "Capture et organisation des connaissances : prise de notes, étiquetage, liaison entre idées",
+        "Réactivation en production : le chemin veille → note → création (système de gestion des connaissances personnel)",
+        "Équilibre attentionnel : proportion, déconnexion, choix de ce qu'on ne suit pas"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable de décrire ce qu'il consomme en ligne et de distinguer contenus choisis et contenus subis.",
+          "evidence": "Tenir un journal de consommation sur sept jours et en analyser la part choisie et la part subie."
+        },
+        "N2": {
+          "descriptor": "Est capable de composer un panier de sources délibéré et d'en retirer ou d'y ajouter des éléments selon des critères explicites.",
+          "evidence": "Présenter un dispositif de veille (liste de sources, rythme, outil) avec justification de chaque choix."
+        },
+        "N3": {
+          "descriptor": "Est capable de maintenir un système de veille organisé dont les captures nourrissent démontrablement ses créations.",
+          "evidence": "Démontrer le chemin veille → note → contenu publié sur au moins trois exemples réels."
+        },
+        "N4": {
+          "descriptor": "Est capable de gérer un système de connaissance personnel documenté, utilisé quotidiennement, et de concevoir la veille partagée d'une équipe.",
+          "evidence": "Présenter son système de gestion des connaissances en usage réel et le dispositif de veille mis en place pour un collectif."
+        }
+      },
+      "rubricId": 1
+    },
+    {
+      "code": "1.4",
+      "slug": "1-4-lire-les-cultures-et-les-codes-numeriques",
+      "title": "Lire les cultures et les codes numériques",
+      "definition": "Comprendre les logiques de production des médias et décoder les cultures en ligne — mèmes, niches, sous-cultures, esthétiques, langages — afin de situer tout contenu dans son contexte culturel. Compétence de lecture unique à Créacompe : elle traite la culture numérique comme une langue vivante dont la maîtrise conditionne la pertinence de toute création.",
+      "components": [
+        "Logiques médiatiques : qui produit, qui finance, comment le format façonne le message",
+        "Grammaire des mèmes et des références : origine, mutation, cycle de vie",
+        "Codes esthétiques et discursifs des communautés en ligne : langage, formats, tabous, marqueurs d'appartenance",
+        "Cycles des tendances : émergence, adoption, saturation, ringardisation",
+        "Pertinence culturelle d'un contenu : justesse de ton, légitimité à parler, risques d'appropriation maladroite"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable d'expliquer un mème ou un code d'une communauté qu'il fréquente, et d'identifier qui produit et finance un média qu'il consomme.",
+          "evidence": "Déconstruire l'origine, le sens et les variations d'un mème ou d'un code culturel de sa génération."
+        },
+        "N2": {
+          "descriptor": "Est capable d'identifier les codes esthétiques et discursifs d'une communauté donnée et de repérer un contenu qui les enfreint.",
+          "evidence": "Rédiger la fiche des codes d'une communauté fréquentée : langage, formats, références, tabous."
+        },
+        "N3": {
+          "descriptor": "Est capable de décoder une communauté qui lui est inconnue et d'en restituer les codes implicites.",
+          "evidence": "Déconstruire le langage, l'esthétique et les codes implicites d'une communauté en ligne inconnue en moins d'une heure."
+        },
+        "N4": {
+          "descriptor": "Est capable d'anticiper les évolutions culturelles et d'identifier des formats émergents avant leur généralisation.",
+          "evidence": "Produire une note de tendance datée vérifiée a posteriori, ou créer un format repris par d'autres."
+        }
+      },
+      "rubricId": 1
+    },
+    {
+      "code": "2.1",
+      "slug": "2-1-comprendre-les-algorithmes-de-recommandation",
+      "title": "Comprendre les algorithmes de recommandation",
+      "definition": "Comprendre ce que les systèmes de recommandation optimisent, les signaux qu'ils lisent, la manière dont ils distribuent les contenus, et leurs effets sur les individus comme sur la visibilité des créations. Cette compétence fonde la littératie algorithmique offensive : non pas « comment percer », mais « que se passe-t-il sous le capot, et qu'est-ce que je choisis d'en faire ».",
+      "components": [
+        "Notion de signal : temps de visionnage, engagement précoce, complétion, récence, régularité",
+        "Personnalisation : pourquoi deux personnes ne voient pas le même monde ; bulles et boucles de renforcement",
+        "Distribution d'un contenu : test initial, paliers d'audience, effets de format natif",
+        "Différences de logique entre plateformes (graphe social, graphe d'intérêt, recherche)",
+        "Effets individuels et sociétaux : capture attentionnelle, polarisation, uniformisation des formats"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable d'expliquer avec ses mots pourquoi deux personnes ne voient pas le même fil, et de reconnaître qu'un contenu lui a été recommandé et non choisi.",
+          "evidence": "Comparer et expliquer les fils de deux comptes différents sur une même plateforme."
+        },
+        "N2": {
+          "descriptor": "Est capable de nommer les principaux signaux lus par un algorithme et d'ajuster consciemment une consommation ou une publication en conséquence.",
+          "evidence": "Modifier volontairement ses recommandations sur une plateforme et documenter la démarche et l'effet."
+        },
+        "N3": {
+          "descriptor": "Est capable d'analyser la distribution de ses propres contenus à partir de métriques réelles, de formuler une hypothèse d'amélioration et de la tester.",
+          "evidence": "Publier deux versions d'un même contenu avec des stratégies de distribution différentes et analyser l'écart de performance à J+7."
+        },
+        "N4": {
+          "descriptor": "Est capable de comparer les logiques de recommandation de plusieurs plateformes, d'anticiper l'effet d'un changement d'algorithme sur une stratégie, et de conseiller des tiers.",
+          "evidence": "Produire un audit algorithmique multi-plateforme avec recommandations suivies d'effet mesurable."
+        }
+      },
+      "rubricId": 2
+    },
+    {
+      "code": "2.2",
+      "slug": "2-2-comprendre-l-economie-des-plateformes-et-de-l-attention",
+      "title": "Comprendre l'économie des plateformes et de l'attention",
+      "definition": "Comprendre qui paie quoi dans l'écosystème numérique, quelles données sont extraites et valorisées, quelle part de la valeur est captée par qui, et quelles incitations en découlent pour les plateformes comme pour les créateurs. C'est la clé de lecture du passage d'une économie de l'attention à une économie de l'intention.",
+      "components": [
+        "Modèles économiques des plateformes : publicité, abonnement, commission, exploitation des données",
+        "L'attention comme ressource rare : mécanismes de captation, coût cognitif de la gratuité",
+        "Répartition de la valeur entre créateurs et plateformes : monétisation, fonds créateurs, asymétries",
+        "Dépendances structurelles : ce que la plateforme donne, ce qu'elle peut retirer",
+        "Grandes logiques de régulation (concurrence, données, transparence publicitaire) et leurs effets concrets"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable d'expliquer comment une application gratuite gagne de l'argent.",
+          "evidence": "Expliquer le modèle économique de deux services numériques qu'il utilise quotidiennement."
+        },
+        "N2": {
+          "descriptor": "Est capable d'analyser les incitations économiques derrière une fonctionnalité ou une décision de plateforme.",
+          "evidence": "Analyser un changement récent d'une plateforme (fonctionnalité, règle, format) sous l'angle de ses incitations économiques."
+        },
+        "N3": {
+          "descriptor": "Est capable de produire une analyse structurée du modèle économique et des biais d'une plateforme majeure.",
+          "evidence": "Produire une analyse en dix points du modèle économique et des biais d'une plateforme numérique majeure."
+        },
+        "N4": {
+          "descriptor": "Est capable d'évaluer les effets systémiques d'une évolution de l'économie de l'attention et d'orienter des stratégies en conséquence.",
+          "evidence": "Produire une note stratégique reliant une évolution du marché de l'attention à des décisions concrètes d'un projet réel."
+        }
+      },
+      "rubricId": 2
+    },
+    {
+      "code": "2.3",
+      "slug": "2-3-lire-et-interpreter-les-donnees",
+      "title": "Lire et interpréter les données",
+      "definition": "Lire des métriques de performance, distinguer les indicateurs pertinents des métriques de vanité, formuler des hypothèses testables et intégrer la donnée comme feedback dans le processus créatif — sans jamais s'y soumettre. La donnée éclaire la décision créative ; elle ne la remplace pas.",
+      "components": [
+        "Métriques de base par format : portée, engagement, rétention, complétion, clics, conversion",
+        "Taux contre volumes : lire en proportion, comparer ce qui est comparable",
+        "Corrélation et causalité : les pièges d'interprétation les plus courants",
+        "Tests comparatifs (A/B) : protocole simple, taille d'échantillon, honnêteté du verdict",
+        "Tableaux de bord : choisir peu d'indicateurs, alignés sur un objectif",
+        "Limites de la mesure : ce que les chiffres ne disent pas, effets de Goodhart"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable de lire les statistiques simples d'un contenu et d'expliquer ce que chaque métrique mesure réellement.",
+          "evidence": "Commenter les statistiques d'un contenu (vues, mentions J'aime, partages, rétention) en expliquant chaque indicateur."
+        },
+        "N2": {
+          "descriptor": "Est capable de distinguer un indicateur pertinent d'une métrique de vanité pour un objectif donné.",
+          "evidence": "Choisir et justifier trois indicateurs de suivi pour un objectif défini, en écartant explicitement les métriques de vanité."
+        },
+        "N3": {
+          "descriptor": "Est capable de mener un test comparatif et d'en tirer une amélioration mesurable de sa création.",
+          "evidence": "Identifier trois enseignements actionnables dans les données d'un contenu et produire une version améliorée."
+        },
+        "N4": {
+          "descriptor": "Est capable de construire un tableau de bord de pilotage créatif et d'installer une culture de décision éclairée par les données dans un collectif.",
+          "evidence": "Présenter un tableau de bord personnalisé utilisé sur trois mois, avec les décisions prises et leurs effets."
+        }
+      },
+      "rubricId": 2
+    },
+    {
+      "code": "2.4",
+      "slug": "2-4-comprendre-les-systemes-d-intelligence-artificielle",
+      "title": "Comprendre les systèmes d'intelligence artificielle",
+      "definition": "Comprendre le fonctionnement de principe des systèmes d'IA générative, leurs biais, leurs limites et leurs effets sur la chaîne de valeur créative. Cette compétence est le versant compréhension de l'IA ; son usage productif relève de la compétence 4.3. On ne dirige bien que ce qu'on comprend.",
+      "components": [
+        "Principe statistique des modèles génératifs : prédiction de sorties probables, non production de vérités",
+        "Données d'entraînement : provenance, biais incorporés, zones aveugles",
+        "Limites structurelles : hallucinations, sycophantie, sensibilité à la formulation",
+        "Cartographie des capacités : ce que les systèmes font bien, mal, ou de façon trompeusement plausible",
+        "Effets sur les métiers créatifs : effondrement du coût de production, déplacement de la valeur vers l'amont (le regard) et l'aval (la relation)",
+        "Enjeux systémiques : droits des œuvres d'entraînement, empreinte énergétique, concentration des acteurs"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable d'expliquer qu'une IA générative produit des sorties probables et non des vérités, et de citer un cas d'erreur constaté.",
+          "evidence": "Montrer et expliquer une hallucination ou un biais rencontré dans un usage réel."
+        },
+        "N2": {
+          "descriptor": "Est capable d'anticiper les types de tâches pour lesquelles une IA est fiable, risquée ou inadaptée.",
+          "evidence": "Construire une grille personnelle « tâches délégables / tâches à vérifier / tâches à garder », argumentée sur des essais réels."
+        },
+        "N3": {
+          "descriptor": "Est capable d'analyser les effets d'un système d'IA sur une pratique créative donnée : qualité, coûts, délais, droits.",
+          "evidence": "Réaliser l'étude d'impact de l'introduction d'un outil d'IA dans un processus créatif réel."
+        },
+        "N4": {
+          "descriptor": "Est capable d'éclairer des choix collectifs relatifs à l'IA : adoption, charte d'usage, besoins de formation.",
+          "evidence": "Produire une recommandation d'adoption ou une charte d'usage de l'IA effectivement appliquée par une équipe ou une organisation."
+        }
+      },
+      "rubricId": 2
+    },
+    {
+      "code": "3.1",
+      "slug": "3-1-generer-et-developper-des-idees",
+      "title": "Générer et développer des idées",
+      "definition": "Produire des idées en quantité et en qualité, les sélectionner, les faire évoluer et utiliser les contraintes comme moteur créatif plutôt que comme obstacle. L'idéation est une pratique outillée et entraînable, non un don : cette compétence en établit les gestes.",
+      "components": [
+        "Techniques d'idéation : association, inversion, combinaison, transposition, variation systématique",
+        "Capture : carnet d'idées, réservoir permanent, notation immédiate",
+        "La contrainte comme moteur : format imposé, durée, ton, matériau limité",
+        "Sélection et développement : passer de dix idées brutes à une idée travaillée",
+        "Combinaison de références : nourrir l'originalité par le croisement de champs éloignés"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable de produire plusieurs idées distinctes sur un sujet donné et d'en choisir une en expliquant son choix.",
+          "evidence": "Produire dix idées sur un thème imposé et en développer une, choix argumenté."
+        },
+        "N2": {
+          "descriptor": "Est capable d'utiliser une contrainte (format, durée, ton) pour renouveler le traitement d'un sujet banal.",
+          "evidence": "Décliner un même sujet sous trois contraintes créatives différentes."
+        },
+        "N3": {
+          "descriptor": "Est capable d'alimenter une pratique régulière par un système personnel de capture et de développement d'idées.",
+          "evidence": "Présenter un carnet ou réservoir d'idées daté et démontrer son lien avec des créations abouties."
+        },
+        "N4": {
+          "descriptor": "Est capable d'animer l'idéation d'un collectif et de faire émerger des concepts originaux.",
+          "evidence": "Animer une séance d'idéation documentée, avec production collective et concept retenu."
+        }
+      },
+      "rubricId": 3
+    },
+    {
+      "code": "3.2",
+      "slug": "3-2-construire-une-voix-et-une-identite-narrative",
+      "title": "Construire une voix et une identité narrative",
+      "definition": "Développer un point de vue singulier et une identité éditoriale cohérente, reconnaissable dans la durée — ce qui distingue un créateur d'un simple producteur de contenu. Dans un espace saturé de contenus statistiquement moyens, la voix est le seul avantage qui se renforce à mesure que les outils se banalisent.",
+      "components": [
+        "Identification de ses thèmes, valeurs et ton distinctifs",
+        "La « phrase créatrice » : qui je suis, pour qui je crée, sur quoi, avec quelle perspective unique",
+        "Cohérence temporelle : tenir un point de vue sur la durée sans se figer",
+        "Différenciation : exister dans un espace saturé sans surenchère",
+        "Distinction entre voix authentique et personnage de façade ; évolution sans rupture"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable d'identifier ce qui distingue les créateurs qu'il apprécie et de nommer ses propres centres d'intérêt, valeurs et ton.",
+          "evidence": "Rédiger le portrait comparé de deux créateurs suivis et son propre autoportrait en cinq lignes."
+        },
+        "N2": {
+          "descriptor": "Est capable de rédiger sa phrase créatrice et de produire des contenus qui s'y conforment.",
+          "evidence": "Rédiger sa phrase créatrice et produire trois contenus démontrant l'alignement."
+        },
+        "N3": {
+          "descriptor": "Est capable de maintenir une cohérence de point de vue sur plusieurs mois, perceptible par son public.",
+          "evidence": "Soumettre un corpus de trois mois de créations ; cohérence attestée par l'analyse et par des retours de tiers."
+        },
+        "N4": {
+          "descriptor": "Est capable d'être identifiable par son audience sans signature, et d'aider autrui à construire sa propre voix.",
+          "evidence": "Réussir un test d'attribution (créations reconnues sans signature) et documenter l'accompagnement éditorial d'un tiers."
+        }
+      },
+      "rubricId": 3
+    },
+    {
+      "code": "3.3",
+      "slug": "3-3-maitriser-le-recit",
+      "title": "Maîtriser le récit",
+      "definition": "Structurer toute communication sous forme de récit — accroche, tension, progression, résolution — et adapter l'arc narratif au format, au canal et à l'audience. Le récit est la technologie cognitive la plus ancienne et la plus puissante de captation d'une attention librement donnée : la maîtriser, c'est pouvoir être entendu sans manipuler.",
+      "components": [
+        "Structures narratives : accroche/tension/résolution, entrée dans l'action, boucles ouvertes, chute",
+        "Rythme selon le format : de la vidéo de quinze secondes au format long",
+        "Accroche et rétention : les premières secondes, la promesse tenue",
+        "Registres : narration factuelle, témoignage, fiction, démonstration racontée",
+        "Transposition : décliner un même arc narratif sur des formats hétérogènes"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable d'identifier accroche, tension et résolution dans un contenu qu'il apprécie, et de raconter une anecdote de manière structurée.",
+          "evidence": "Analyser la structure narrative d'un contenu court et raconter une anecdote structurée en soixante secondes."
+        },
+        "N2": {
+          "descriptor": "Est capable de produire un contenu narratif cohérent sur au moins deux formats différents.",
+          "evidence": "Raconter une même histoire dans deux formats distincts avec une structure adaptée à chacun."
+        },
+        "N3": {
+          "descriptor": "Est capable d'adapter un arc narratif à l'audience et au canal avec un effet mesurable.",
+          "evidence": "Transformer un sujet technique en trois formats (vidéo courte, fil de publications, infographie) avec une logique narrative distincte dans chacun."
+        },
+        "N4": {
+          "descriptor": "Est capable de concevoir des architectures narratives (séries, univers, formats récurrents) et de diriger la narration d'autrui.",
+          "evidence": "Produire la bible narrative d'une série ou d'un format, avec des épisodes réalisés par des tiers sous sa direction."
+        }
+      },
+      "rubricId": 3
+    },
+    {
+      "code": "3.4",
+      "slug": "3-4-concevoir-pour-un-public",
+      "title": "Concevoir pour un public",
+      "definition": "Concevoir un contenu ou un dispositif à partir d'une intention explicite et d'une connaissance réelle du public destinataire : empathie, adéquation entre message, format et canal, attention portée à l'expérience de réception. Créer pour quelqu'un, et non seulement devant quelqu'un.",
+      "components": [
+        "Définition d'intention : informer, émouvoir, faire comprendre, faire agir — et le vérifier",
+        "Connaissance du public : attentes, niveau, contexte et conditions de réception",
+        "Choix du couple format/canal en fonction du message et du destinataire",
+        "Clarté et charge cognitive : hiérarchiser, élaguer, tester la compréhension",
+        "Boucle de réception : recueillir l'effet réel produit et ajuster",
+        "Conception inclusive : penser dès l'amont les publics éloignés ou empêchés"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable de dire à qui s'adresse un contenu et ce qu'il cherche à produire chez son destinataire.",
+          "evidence": "Analyser deux contenus (public visé, intention, moyens employés) et créer un contenu avec intention explicitée."
+        },
+        "N2": {
+          "descriptor": "Est capable d'adapter un même message à deux publics différents.",
+          "evidence": "Décliner un même message pour deux publics distincts, avec choix de forme justifiés."
+        },
+        "N3": {
+          "descriptor": "Est capable de tester la réception réelle d'un contenu et de l'ajuster en conséquence.",
+          "evidence": "Produire une première version, recueillir les retours de destinataires réels, livrer une seconde version avec écarts documentés."
+        },
+        "N4": {
+          "descriptor": "Est capable de formaliser la conception orientée public en méthode transmissible.",
+          "evidence": "Documenter une méthode de conception (profils types, parcours de réception) appliquée avec succès par un tiers."
+        }
+      },
+      "rubricId": 3
+    },
+    {
+      "code": "4.1",
+      "slug": "4-1-produire-des-contenus-enregistres",
+      "title": "Produire des contenus enregistrés",
+      "definition": "Produire des contenus écrits, visuels, audio et vidéo en appliquant les fondamentaux de qualité de chaque médium : structure éditoriale, hiérarchie visuelle, prise de son, rythme et montage, finitions. Cette compétence intègre la tenue de dispositifs éditoriaux réguliers (newsletter, blog, série), où la constance vaut autant que la qualité unitaire.",
+      "components": [
+        "Écriture numérique : structure, lisibilité, titraille, adaptation au support de lecture",
+        "Fondamentaux visuels : hiérarchie, couleur, typographie ; cohérence d'une identité graphique",
+        "Vidéo : cadrage, lumière, montage, rythme, sous-titrage",
+        "Audio : prise de son, mixage élémentaire, confort d'écoute",
+        "Qualité perçue : finitions, détails, seuil de publication",
+        "Dispositifs éditoriaux réguliers : newsletter, blog, série — tenir un rendez-vous avec une audience"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable de produire, avec un simple téléphone, un contenu soigné dans au moins deux médiums différents.",
+          "evidence": "Produire un écrit structuré et une vidéo de moins de soixante secondes au son audible et au cadrage volontaire."
+        },
+        "N2": {
+          "descriptor": "Est capable de produire des contenus finis appliquant les fondamentaux de qualité de chaque médium.",
+          "evidence": "Produire une vidéo de moins de quatre-vingt-dix secondes avec son mixé, sous-titres et format adapté à une plateforme cible."
+        },
+        "N3": {
+          "descriptor": "Est capable de tenir une qualité constante dans un dispositif régulier et une identité visuelle cohérente.",
+          "evidence": "Publier quatre éditions d'une newsletter avec audience réelle, ou produire cinq visuels distincts partageant une identité graphique identifiable sans gabarit imposé."
+        },
+        "N4": {
+          "descriptor": "Est capable de diriger une production multiformat avec une direction artistique cohérente.",
+          "evidence": "Livrer une production multiformat avec direction artistique documentée et contributeurs coordonnés."
+        }
+      },
+      "rubricId": 4
+    },
+    {
+      "code": "4.2",
+      "slug": "4-2-s-exprimer-en-direct",
+      "title": "S'exprimer en direct",
+      "definition": "Parler, improviser et engager en situation directe : diffusion en direct, podcast, webinaire, prise de parole publique. Le direct est un format à part entière, irréductible à la vidéo enregistrée : il expose sans possibilité de reprise et crée, précisément pour cela, un lien d'authenticité qu'aucun montage ne remplace.",
+      "components": [
+        "Structuration d'une prise de parole : préparation rapide, plan mental, gestion du temps",
+        "Voix et présence : débit, regard, posture, adresse à la caméra ou au public",
+        "Interaction avec l'audience : messages, questions, rebonds en direct",
+        "Improvisation : rebondir sur l'imprévu, transformer l'incident en moment",
+        "Gestion du trac et de l'exposition",
+        "Spécificités des formats en direct : rythme, rituels, co-animation"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable de s'exprimer clairement pendant deux minutes sur un sujet préparé, face caméra ou face à un public.",
+          "evidence": "Réaliser une capsule de deux minutes structurée : accroche, idée centrale, conclusion."
+        },
+        "N2": {
+          "descriptor": "Est capable d'animer un format oral structuré comprenant de l'interaction.",
+          "evidence": "Animer un épisode de podcast, un exposé ou un direct de dix minutes avec au moins un moment d'interaction géré."
+        },
+        "N3": {
+          "descriptor": "Est capable d'animer un direct avec engagement de l'audience et de rebondir face aux imprévus.",
+          "evidence": "Animer un direct de vingt minutes sur un sujet préparé en trente minutes maximum."
+        },
+        "N4": {
+          "descriptor": "Est capable d'improviser avec aisance, de tenir des formats longs et de faire progresser la prise de parole d'autrui.",
+          "evidence": "Animer un format long (table ronde, émission) et documenter la progression d'une personne accompagnée."
+        }
+      },
+      "rubricId": 4
+    },
+    {
+      "code": "4.3",
+      "slug": "4-3-creer-avec-l-intelligence-artificielle",
+      "title": "Créer avec l'intelligence artificielle",
+      "definition": "Diriger les systèmes génératifs comme un directeur artistique dirige un prestataire : instructions précises et itératives, jugement qualitatif des sorties, choix raisonné de ce qui est délégué et de ce qui reste humain. La compétence décisive n'est pas de savoir produire avec l'IA — tout le monde le peut — mais de savoir juger et diriger ce qu'elle produit.",
+      "components": [
+        "Formulation d'instructions : contexte, contraintes, exemples, critères de réussite",
+        "Itération : critiquer une sortie, préciser, reformuler jusqu'au niveau visé",
+        "Jugement qualitatif : distinguer une sortie médiocre sans erreur apparente d'une sortie réellement bonne",
+        "Partage humain/machine : décider ce qu'on délègue, ce qu'on garde, ce qu'on vérifie",
+        "Techniques avancées : décomposition en étapes, exemples types, chaînage d'instructions",
+        "Traçabilité : documenter ses choix pour les assumer et les transmettre"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable d'obtenir d'une IA un résultat utilisable en précisant contexte et contraintes, et de corriger une sortie insuffisante.",
+          "evidence": "Présenter l'avant/après d'une instruction améliorée, avec explication des changements et de leurs effets."
+        },
+        "N2": {
+          "descriptor": "Est capable de distinguer une bonne sortie d'une sortie médiocre sans erreur apparente, et de retravailler jusqu'au niveau visé.",
+          "evidence": "Classer et justifier trois sorties d'IA de qualités différentes, puis livrer une version finale éditée."
+        },
+        "N3": {
+          "descriptor": "Est capable de produire un contenu complet en pilotant l'IA et en justifiant chaque partage entre l'humain et la machine.",
+          "evidence": "Produire un contenu complet en documentant chaque décision — réalisée à la main ou déléguée à l'IA — et en justifiant les choix."
+        },
+        "N4": {
+          "descriptor": "Est capable de concevoir des systèmes d'instructions réutilisables et de former autrui à la direction de l'IA.",
+          "evidence": "Concevoir un système de cinq instructions chaînées produisant un contenu de bout en bout, documenté et utilisé par des tiers."
+        }
+      },
+      "rubricId": 4
+    },
+    {
+      "code": "4.4",
+      "slug": "4-4-systematiser-sa-production-et-sa-publication",
+      "title": "Systématiser sa production et sa publication",
+      "definition": "Organiser des flux de production reproductibles : déclinaison d'une matière première en formats multiples, publication native par plateforme, régularité tenue, accessibilité et sobriété intégrées, droits d'usage vérifiés, automatisation sous supervision humaine. C'est la compétence qui permet de produire davantage sans dégrader la qualité — ni s'épuiser.",
+      "components": [
+        "Chaîne de production : de l'idée brute au contenu publié, étapes et points de contrôle",
+        "Déclinaison un-vers-plusieurs : d'une matière première vers des formats multiples et cohérents",
+        "Publication native : formats, codes et usages propres à chaque plateforme",
+        "Calendrier éditorial : régularité, anticipation, gestion des stocks de contenus",
+        "Accessibilité (textes alternatifs, sous-titres, contrastes) et éco-conception intégrées à la chaîne",
+        "Droits d'usage : vérification des licences des éléments employés (musiques, images, extraits)",
+        "Automatisation : déléguer les tâches répétitives en gardant le contrôle qualité humain"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable de publier correctement un contenu sur une plateforme : format adapté, description, droits respectés, accessibilité de base.",
+          "evidence": "Réaliser une publication conforme, avec vérification documentée des droits des éléments utilisés et sous-titres ou texte alternatif."
+        },
+        "N2": {
+          "descriptor": "Est capable de décliner un contenu en plusieurs formats natifs et de tenir un rythme de publication sur plusieurs semaines.",
+          "evidence": "Décliner un contenu en trois formats natifs et tenir un calendrier éditorial pendant quatre semaines."
+        },
+        "N3": {
+          "descriptor": "Est capable de construire une chaîne de production reproductible, partiellement automatisée, accessible et documentée.",
+          "evidence": "Présenter un flux de travail transformant une idée brute en contenu publié avec moins de vingt minutes d'intervention humaine, accessibilité vérifiée."
+        },
+        "N4": {
+          "descriptor": "Est capable de concevoir une architecture de contenu un-vers-plusieurs entièrement systématisée, avec supervision qualité.",
+          "evidence": "À partir d'un seul contenu long, générer huit formats distincts cohérents via un système documenté et transmissible."
+        }
+      },
+      "rubricId": 4
+    },
+    {
+      "code": "5.1",
+      "slug": "5-1-co-creer-en-equipe",
+      "title": "Co-créer en équipe",
+      "definition": "Contribuer efficacement à des projets créatifs collectifs, puis les coordonner : répartition des rôles, culture du feedback, rituels de travail, documentation partagée. La création collective obéit à des règles apprenables, qui transforment la somme d'individualités en œuvre commune.",
+      "components": [
+        "Rôles et responsabilités : qui décide de quoi, qui fait quoi, qui valide",
+        "Feedback : donner une critique utile et précise, recevoir sans se braquer, trier les retours",
+        "Rituels et outils : points d'avancement, espaces partagés, conventions communes",
+        "Versionnage et documentation : garder trace, permettre la reprise par un autre",
+        "Coordination de contributeurs hétérogènes : pairs, indépendants, prestataires",
+        "Gestion des désaccords créatifs : trancher sans écraser"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable de tenir un rôle défini dans un projet collectif et de formuler un retour respectueux et précis sur le travail d'un pair.",
+          "evidence": "Contribuer de manière identifiée à un projet de groupe et produire un feedback structuré selon une grille simple."
+        },
+        "N2": {
+          "descriptor": "Est capable d'intégrer des retours contradictoires et de faire évoluer une production commune.",
+          "evidence": "Livrer une production collective avec journal des retours reçus, intégrés ou écartés, et justification."
+        },
+        "N3": {
+          "descriptor": "Est capable de coordonner un projet réunissant plusieurs contributeurs jusqu'à la livraison.",
+          "evidence": "Livrer un projet créatif impliquant au moins trois contributeurs, avec documentation du processus."
+        },
+        "N4": {
+          "descriptor": "Est capable de diriger un écosystème créatif complexe — équipe, prestataires, systèmes d'IA — et d'en faire progresser les membres.",
+          "evidence": "Diriger un projet complexe multi-intervenants, avec bilan documenté des contributions et actions de progression."
+        }
+      },
+      "rubricId": 5
+    },
+    {
+      "code": "5.2",
+      "slug": "5-2-crediter-et-respecter-les-droits-des-autres",
+      "title": "Créditer et respecter les droits des autres",
+      "definition": "Utiliser les œuvres d'autrui de manière légale et loyale : citation, licences, remix, crédit systématique. Le miroir de la compétence 7.2 (protéger ses propres droits) : on ne peut exiger le respect de ses créations qu'en respectant celles des autres. Compétence fondatrice d'une culture du remix juridiquement et éthiquement soutenable.",
+      "components": [
+        "Droit de citation : conditions, limites, différences selon les médias",
+        "Licences d'utilisation : Creative Commons, banques libres de droits, licences commerciales",
+        "Culture du remix : transformation, parodie, inspiration — et leurs limites juridiques",
+        "Crédit et mention : créditer systématiquement, correctement, visiblement",
+        "Plagiat contre inspiration : où passe la ligne",
+        "Créations générées par IA à partir d'œuvres existantes : vigilances spécifiques"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable de créditer correctement une source, une image ou une musique dans ses propres contenus.",
+          "evidence": "Publier un contenu avec crédits complets et vérifiables de tous les éléments tiers utilisés."
+        },
+        "N2": {
+          "descriptor": "Est capable de choisir des ressources dont la licence est compatible avec l'usage prévu, et de l'expliquer.",
+          "evidence": "Constituer le dossier de ressources d'un projet, avec licence et justification de compatibilité pour chacune."
+        },
+        "N3": {
+          "descriptor": "Est capable de pratiquer un remix créatif juridiquement fondé et loyal envers les œuvres sources.",
+          "evidence": "Réaliser une création transformative accompagnée d'une analyse écrite de sa licéité et de ses crédits."
+        },
+        "N4": {
+          "descriptor": "Est capable de définir la politique de droits et de crédits d'un projet collectif et d'arbitrer les cas limites.",
+          "evidence": "Rédiger une charte de droits appliquée par un collectif et documenter l'arbitrage d'un cas limite réel."
+        }
+      },
+      "rubricId": 5
+    },
+    {
+      "code": "5.3",
+      "slug": "5-3-interagir-et-se-conduire-en-ligne",
+      "title": "Interagir et se conduire en ligne",
+      "definition": "Interagir de manière constructive dans les espaces numériques : adaptation aux codes de chaque espace, réponse à la critique, désescalade des conflits, modération, conscience de l'empreinte relationnelle laissée. Chaque interaction publique est une création qui dit quelque chose de son auteur.",
+      "components": [
+        "Codes de conversation propres à chaque espace : commentaire public, groupe, message privé, forum",
+        "Réponse à la critique : distinguer critique fondée et attaque, répondre à l'une, gérer l'autre",
+        "Désescalade : ne pas nourrir les provocations, sortir d'un conflit par le haut",
+        "Modération d'un espace : règles explicites, application équitable, protection des membres",
+        "Empreinte relationnelle : ce que l'historique de nos interactions construit ou détruit",
+        "Signalement et protection : réagir face au harcèlement, se protéger et protéger autrui"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable d'adapter son expression à l'espace d'échange et d'identifier un comportement toxique.",
+          "evidence": "Réécrire trois messages inadaptés à leur contexte et repérer, en justifiant, les comportements à signaler dans un fil de discussion."
+        },
+        "N2": {
+          "descriptor": "Est capable de répondre publiquement à une critique de manière constructive.",
+          "evidence": "Répondre — en situation réelle ou simulée — à une critique fondée et à une critique hostile, avec des stratégies distinctes et justifiées."
+        },
+        "N3": {
+          "descriptor": "Est capable de modérer un espace d'échanges et de désamorcer un conflit naissant.",
+          "evidence": "Documenter la modération d'un espace sur une période donnée : règles posées, cas traités, décisions prises."
+        },
+        "N4": {
+          "descriptor": "Est capable de définir la politique de conversation d'une marque ou d'une communauté et de gérer une situation sensible.",
+          "evidence": "Rédiger une charte de modération et documenter la gestion complète d'une situation conflictuelle à enjeu."
+        }
+      },
+      "rubricId": 5
+    },
+    {
+      "code": "5.4",
+      "slug": "5-4-construire-et-animer-une-communaute",
+      "title": "Construire et animer une communauté",
+      "definition": "Passer de l'audience louée à la communauté possédée : construire un lien direct fondé sur la permission et la confiance, animer par des rituels et des formats participatifs, mesurer la santé communautaire au-delà des volumes. C'est ici que le passage de l'économie de l'attention à l'économie de l'intention devient un savoir-faire concret.",
+      "components": [
+        "Distinction audience/communauté : spectateurs agrégés contre membres reliés entre eux",
+        "Canaux directs : courriel, groupes, espaces propres — le lien qui survit aux plateformes",
+        "Rituels et formats participatifs : rendez-vous, contributions, co-construction",
+        "Confiance et permission : promesse tenue, respect du consentement, non-exploitation du lien",
+        "Gouvernance : règles, rôles, membres moteurs, délégation progressive",
+        "Santé communautaire : mesurer la participation et la rétention plutôt que le volume brut"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable de participer activement à une communauté et d'expliquer ce qui la fait tenir.",
+          "evidence": "Analyser une communauté vécue de l'intérieur : rituels, rôles, règles implicites, ce qui crée l'appartenance."
+        },
+        "N2": {
+          "descriptor": "Est capable d'engager une audience existante avec des formats participatifs.",
+          "evidence": "Tester trois formats participatifs auprès d'une audience réelle et analyser les réponses obtenues."
+        },
+        "N3": {
+          "descriptor": "Est capable de construire une communauté et de l'animer dans la durée avec un engagement mesurable.",
+          "evidence": "Animer une communauté pendant trente jours consécutifs avec un taux d'engagement stable ou croissant."
+        },
+        "N4": {
+          "descriptor": "Est capable de créer un écosystème communautaire auto-alimenté doté d'une gouvernance partagée.",
+          "evidence": "Présenter une communauté où des membres animent sans l'intervention du créateur, gouvernance documentée."
+        }
+      },
+      "rubricId": 5
+    },
+    {
+      "code": "6.1",
+      "slug": "6-1-cadrer-et-presenter-un-projet-creatif",
+      "title": "Cadrer et présenter un projet créatif",
+      "definition": "Passer de l'envie au projet formulé — objectif, public, première version minimale, moyens — et savoir le présenter pour embarquer : le pitch comme outil de clarification autant que de conviction. Un projet qui ne peut pas être dit en une minute n'est pas encore un projet.",
+      "components": [
+        "Formulation : transformer une envie ou un problème en projet énonçable (quoi, pour qui, pourquoi)",
+        "Objectifs et critères de réussite : à quoi verra-t-on que ça a marché",
+        "Définition d'une première version minimale : la plus petite chose qui prouve l'idée",
+        "Structure du pitch : de la minute orale au dossier écrit",
+        "Adaptation à l'interlocuteur : pair, enseignant, partenaire, financeur",
+        "Obtention d'un soutien : transformer l'intérêt en engagement concret"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable de formuler un projet en une phrase (quoi, pour qui, pourquoi) et de le présenter en une minute.",
+          "evidence": "Présenter en soixante secondes un projet personnel : club, chaîne, fanzine, événement."
+        },
+        "N2": {
+          "descriptor": "Est capable de cadrer un projet par écrit : objectif, public, première version, moyens nécessaires.",
+          "evidence": "Rédiger le document de cadrage d'une page d'un projet réellement envisagé."
+        },
+        "N3": {
+          "descriptor": "Est capable de définir une version minimale pertinente et de présenter le projet jusqu'à obtenir un soutien réel.",
+          "evidence": "Lancer une version minimale et obtenir un soutien concret : partenaire, relais, budget, accompagnement."
+        },
+        "N4": {
+          "descriptor": "Est capable de structurer des projets d'ampleur et de faire adhérer des parties prenantes exigeantes.",
+          "evidence": "Présenter un dossier de projet complet ayant convaincu un comité ou un partenaire, avec engagement obtenu."
+        }
+      },
+      "rubricId": 6
+    },
+    {
+      "code": "6.2",
+      "slug": "6-2-prototyper-tester-iterer",
+      "title": "Prototyper, tester, itérer",
+      "definition": "Confronter rapidement une version imparfaite à un public réel, recueillir un signal exploitable, améliorer par cycles courts et savoir décider — persévérer, ajuster ou pivoter. L'itération est l'antidote au perfectionnisme paralysant comme à l'entêtement aveugle.",
+      "components": [
+        "Prototype minimal : montrer tôt, montrer imparfait, montrer quand même",
+        "Test auprès d'utilisateurs ou de destinataires réels, hors du cercle de complaisance",
+        "Collecte de feedback exploitable : questions ouvertes, observation, signaux d'usage",
+        "Cycles courts : améliorer par petites boucles plutôt que par grandes refontes",
+        "Critères de décision : persévérer, ajuster ou pivoter — décidé avant, pas sous le coup de l'émotion",
+        "Documentation des apprentissages : capitaliser ce que chaque cycle enseigne"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable de montrer une première version imparfaite de sa création et de recueillir des avis.",
+          "evidence": "Montrer un prototype à cinq personnes et consigner leurs retours."
+        },
+        "N2": {
+          "descriptor": "Est capable de transformer des retours en améliorations concrètes.",
+          "evidence": "Présenter une version 1, les retours recueillis, et une version 2 avec la liste des changements et leur origine."
+        },
+        "N3": {
+          "descriptor": "Est capable de conduire des cycles d'itération avec des critères de décision explicites.",
+          "evidence": "Documenter trois cycles d'itération avec mesures et décisions prises : continuer, ajuster ou pivoter."
+        },
+        "N4": {
+          "descriptor": "Est capable d'installer une culture d'expérimentation dans un projet collectif.",
+          "evidence": "Mettre en place un dispositif de test permanent pour une équipe, illustré de décisions issues du terrain."
+        }
+      },
+      "rubricId": 6
+    },
+    {
+      "code": "6.3",
+      "slug": "6-3-gerer-ressources-et-priorites",
+      "title": "Gérer ressources et priorités",
+      "definition": "Mener un projet à son terme avec des ressources limitées — temps, moyens, énergie — grâce au découpage, à la planification réaliste, à la priorisation et à l'arbitrage. La compétence discrète qui sépare les projets finis des éternels brouillons.",
+      "components": [
+        "Découpage en jalons : transformer un objectif lointain en étapes datées",
+        "Estimation réaliste : combien de temps les choses prennent vraiment",
+        "Priorisation : important contre urgent, coût contre impact",
+        "Suivi d'avancement : savoir où on en est sans se mentir",
+        "Gestion des imprévus : replanifier sans tout abandonner",
+        "Renoncement : dire non, dé-prioriser, abandonner ce qui doit l'être"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable de découper un projet en étapes datées et de tenir la première échéance.",
+          "evidence": "Établir le rétro-planning simple d'un projet et livrer la première étape à la date prévue."
+        },
+        "N2": {
+          "descriptor": "Est capable de prioriser entre plusieurs tâches concurrentes et de justifier ses arbitrages.",
+          "evidence": "Appliquer une matrice de priorisation à un projet réel et expliquer les arbitrages rendus."
+        },
+        "N3": {
+          "descriptor": "Est capable de piloter un projet complet dans ses contraintes et de replanifier face aux imprévus.",
+          "evidence": "Livrer un projet avec suivi d'avancement et au moins une replanification documentée."
+        },
+        "N4": {
+          "descriptor": "Est capable de piloter plusieurs projets et contributeurs en parallèle avec des outils de gestion partagés.",
+          "evidence": "Présenter un tableau de bord de gestion multi-projets tenu sur trois mois."
+        }
+      },
+      "rubricId": 6
+    },
+    {
+      "code": "6.4",
+      "slug": "6-4-prendre-des-risques-et-rebondir",
+      "title": "Prendre des risques et rebondir",
+      "definition": "Oser exposer sa création malgré l'appréhension, encaisser l'échec sans s'y réduire, et le transformer en apprentissage. La résilience créative — distinguer l'échec du projet de l'échec de la personne — est ce qui permet de durer là où le talent seul ne suffit pas.",
+      "components": [
+        "Passage à l'acte : publier malgré la peur du jugement",
+        "L'échec comme donnée : ce qui n'a pas marché est une information, pas une sentence",
+        "Analyse à froid : bilan honnête d'un projet raté, sans complaisance ni flagellation",
+        "Distinction personne/projet : ce qui a échoué, c'est la tentative",
+        "Persévérance contre acharnement : savoir quand insister et quand arrêter",
+        "Rebond : relancer après un revers, en tirant parti de ce qu'il a appris"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable de publier ou d'exposer une création malgré l'appréhension, et de décrire ce que l'expérience lui a appris.",
+          "evidence": "Réaliser une première publication assumée, accompagnée d'un court retour réflexif."
+        },
+        "N2": {
+          "descriptor": "Est capable d'analyser un échec ou un insuccès sans s'y réduire, et d'en tirer une action concrète.",
+          "evidence": "Rédiger le bilan d'un contenu ou projet raté et appliquer un changement qui en découle."
+        },
+        "N3": {
+          "descriptor": "Est capable de prendre un risque calculé — nouveau format, nouveau public — et d'en gérer les conséquences.",
+          "evidence": "Documenter une prise de risque : enjeux et critères posés avant, bilan honnête après."
+        },
+        "N4": {
+          "descriptor": "Est capable d'accompagner autrui dans l'échec et d'instaurer un rapport sain au risque dans un collectif.",
+          "evidence": "Instaurer un rituel de bilan post-projet dans une équipe et documenter un accompagnement individuel."
+        }
+      },
+      "rubricId": 6
+    },
+    {
+      "code": "7.1",
+      "slug": "7-1-comprendre-et-choisir-des-modeles-de-revenus",
+      "title": "Comprendre et choisir des modèles de revenus",
+      "definition": "Connaître le panorama des sources de revenus de la création, les comparer selon son activité et son public, tester un premier modèle puis construire une architecture diversifiée et résiliente. Un modèle de revenus est un choix de conception, pas une fatalité de plateforme.",
+      "components": [
+        "Panorama des modèles : publicité, parrainage, produits, services, abonnement, licence, dons, affiliation, financement participatif",
+        "Adéquation modèle/activité/public : ce que chaque modèle exige et ce qu'il abîme",
+        "Économie unitaire simple : que rapporte et que coûte une unité (vente, abonné, prestation)",
+        "Diversification : ne pas dépendre d'une source unique",
+        "Scénarios de revenus : projeter prudemment, comparer des architectures"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable d'expliquer comment les créateurs qu'il suit gagnent leur vie.",
+          "evidence": "Cartographier les sources de revenus visibles de trois créateurs aux modèles différents."
+        },
+        "N2": {
+          "descriptor": "Est capable de comparer plusieurs modèles de revenus pour un projet donné, avec leurs avantages et leurs risques.",
+          "evidence": "Produire le tableau comparatif de trois modèles pour un projet précis."
+        },
+        "N3": {
+          "descriptor": "Est capable de tester et de valider un premier modèle de revenu sur sa propre activité.",
+          "evidence": "Documenter un premier revenu réel (vente, prestation, parrainage) avec analyse de l'expérience."
+        },
+        "N4": {
+          "descriptor": "Est capable de gérer un ensemble diversifié de revenus et d'en modéliser les évolutions.",
+          "evidence": "Modéliser trois architectures économiques avec scénarios de revenus à douze mois, et présenter le panier de revenus réellement en place."
+        }
+      },
+      "rubricId": 7
+    },
+    {
+      "code": "7.2",
+      "slug": "7-2-proteger-et-valoriser-la-propriete-intellectuelle",
+      "title": "Protéger et valoriser la propriété intellectuelle",
+      "definition": "Comprendre et gérer ses propres droits : droit d'auteur appliqué au numérique, licences accordées, clauses contractuelles, preuve d'antériorité, statut des créations impliquant l'IA. La propriété intellectuelle est le premier actif d'un créateur — souvent le seul à ses débuts.",
+      "components": [
+        "Droit d'auteur : naissance automatique des droits, droits moraux et patrimoniaux",
+        "Ce qui est protégeable et ce qui ne l'est pas : œuvres, idées, formats, noms",
+        "Licences qu'on accorde : choisir consciemment ce qu'on autorise (dont licences ouvertes)",
+        "Cession contre licence dans les contrats : ce qu'on donne, ce qu'on loue, ce qu'on garde",
+        "Créations et IA : statut des œuvres co-générées, vigilances contractuelles émergentes",
+        "Preuve d'antériorité et protection des signes distinctifs (noms, marques)"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable d'expliquer qu'une création lui appartient dès sa réalisation, et ce que d'autres peuvent ou non en faire.",
+          "evidence": "Expliquer les droits attachés à l'une de ses propres créations et ce qu'un tiers devrait faire pour la réutiliser."
+        },
+        "N2": {
+          "descriptor": "Est capable de choisir la licence sous laquelle il partage une création et d'en mesurer les conséquences.",
+          "evidence": "Partager une création sous une licence choisie, avec justification écrite du choix."
+        },
+        "N3": {
+          "descriptor": "Est capable de sécuriser ses créations et de repérer les clauses de propriété intellectuelle dans un contrat simple.",
+          "evidence": "Réaliser l'audit de propriété intellectuelle de ses créations et analyser les clauses d'un contrat type."
+        },
+        "N4": {
+          "descriptor": "Est capable de structurer une propriété intellectuelle valorisable et de gérer activement ses droits.",
+          "evidence": "Cartographier ses actifs créatifs et leur valeur potentielle, avec au moins une exploitation réalisée : licence, cession, produit dérivé."
+        }
+      },
+      "rubricId": 7
+    },
+    {
+      "code": "7.3",
+      "slug": "7-3-negocier-et-gerer-son-activite",
+      "title": "Négocier et gérer son activité",
+      "definition": "Chiffrer et défendre la valeur de son travail, mener une négociation de l'offre à l'accord, et tenir les fondamentaux juridiques, fiscaux et financiers d'une activité créative indépendante ou hybride. Savoir dire son prix est une compétence qui s'apprend — et qui protège de l'auto-exploitation.",
+      "components": [
+        "Fixation d'un prix : coûts réels, valeur produite, références de marché",
+        "Dire son prix : présenter, argumenter, ne pas s'excuser",
+        "Négociation : préparation, concessions planifiées, conclusion d'un accord",
+        "Documents de l'activité : devis, facture, contrat — rôles et mentions essentielles",
+        "Statuts et obligations : formes d'exercice, déclarations, seuils, protection sociale",
+        "Trésorerie : gérer des revenus irréguliers, provisionner, relancer les impayés"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable d'expliquer ce que coûte réellement une création — temps, matériel, savoir-faire — et pourquoi le gratuit a un prix.",
+          "evidence": "Chiffrer complètement l'une de ses créations en temps passé et en coûts."
+        },
+        "N2": {
+          "descriptor": "Est capable d'établir un devis simple et de présenter la valeur de son travail.",
+          "evidence": "Établir un devis réaliste pour une prestation, réelle ou fictive, avec argumentaire de valeur."
+        },
+        "N3": {
+          "descriptor": "Est capable de mener une négociation complète, de l'offre à l'accord.",
+          "evidence": "Mener une négociation de bout en bout — de l'offre à la signature — en situation réelle ou simulée avec un professionnel."
+        },
+        "N4": {
+          "descriptor": "Est capable de gérer une activité complexe — sous-traitance, comptabilité, planification — et des partenariats de long terme.",
+          "evidence": "Présenter la gestion documentée de son activité sur trois mois et un accord de long terme structuré avec un partenaire."
+        }
+      },
+      "rubricId": 7
+    },
+    {
+      "code": "7.4",
+      "slug": "7-4-construire-des-actifs-independants-des-plateformes",
+      "title": "Construire des actifs indépendants des plateformes",
+      "definition": "Bâtir ce qui reste quand une plateforme change ses règles ou disparaît : audience propriétaire, marque, contenus et données portables, dépendances cartographiées et maîtrisées. Le test ultime de solidité d'un créateur n'est pas sa taille, mais sa capacité à survivre à la mort de son canal principal.",
+      "components": [
+        "Audience louée contre audience possédée : ce que la plateforme prête, ce qui nous appartient",
+        "Canaux propriétaires : liste de diffusion, site, communauté hébergée en propre",
+        "Portabilité : exports, sauvegardes, capacité à migrer contenus et contacts",
+        "Cartographie des dépendances : outils, canaux, revenus — identifier les points de défaillance uniques",
+        "La marque comme actif : nom, réputation, reconnaissance transférables d'un canal à l'autre",
+        "Répartition raisonnée : présence multi-plateforme pensée comme gestion de risque"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable d'expliquer ce qu'il perdrait si sa plateforme principale fermait demain.",
+          "evidence": "Analyser sa propre présence en ligne selon le scénario « si ma plateforme principale ferme »."
+        },
+        "N2": {
+          "descriptor": "Est capable d'ouvrir et d'alimenter un canal propriétaire en complément des plateformes.",
+          "evidence": "Tenir un canal direct actif — liste de diffusion, site, groupe propre — alimenté pendant deux mois."
+        },
+        "N3": {
+          "descriptor": "Est capable de cartographier ses dépendances numériques et de sécuriser les plus critiques.",
+          "evidence": "Cartographier toutes ses dépendances numériques et sécuriser les trois plus critiques."
+        },
+        "N4": {
+          "descriptor": "Est capable de construire une présence résiliente où l'essentiel de la valeur repose sur des actifs possédés.",
+          "evidence": "Démontrer, chiffres à l'appui, la part de son audience et de ses revenus reposant sur des actifs propres, avec plan de continuité."
+        }
+      },
+      "rubricId": 7
+    }
+  ],
+  "threads": [
+    {
+      "code": "T1",
+      "slug": "t1-discerner",
+      "title": "Discerner",
+      "definition": "Créer de manière transparente, loyale et non manipulatoire ; mesurer l'impact — social, culturel, environnemental — de ce qu'on met en circulation, et en répondre. Le fil Discerner traverse les sept rubriques : il ne s'ajoute pas aux compétences, il qualifie la manière de les exercer toutes.",
+      "components": [
+        "Transparence : signaler ce qui est sponsorisé, généré par IA, retouché ou mis en scène",
+        "Non-manipulation : refus des interfaces trompeuses, des promesses mensongères, de l'exploitation des vulnérabilités",
+        "Responsabilité de diffusion : ce qu'on amplifie, ce qu'on sort de son contexte, ce qu'on rend viral",
+        "Impact environnemental des pratiques de création et de diffusion : sobriété des choix",
+        "Représentations : ce que nos contenus normalisent, invisibilisent ou caricaturent",
+        "Charte personnelle : expliciter ses lignes rouges avant d'y être confronté"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable d'identifier un contenu manipulatoire ou trompeur et d'expliquer en quoi il pose problème.",
+          "evidence": "Analyser de manière critique deux contenus problématiques : procédés employés, effets produits."
+        },
+        "N2": {
+          "descriptor": "Est capable d'appliquer des règles de transparence systématiques dans ses propres contenus.",
+          "evidence": "Présenter des contenus comportant des mentions loyales systématiques : parrainage, usage d'IA, retouche."
+        },
+        "N3": {
+          "descriptor": "Est capable de passer ses créations au crible d'une grille éthique avant publication, et d'arbitrer les cas ambigus.",
+          "evidence": "Rédiger une charte éthique personnelle de création numérique, l'appliquer, et documenter un cas d'arbitrage réel."
+        },
+        "N4": {
+          "descriptor": "Est capable de concevoir les standards éthiques d'un collectif et de former d'autres créateurs à ces enjeux.",
+          "evidence": "Déployer une charte collective ou une formation à l'éthique de la création, avec preuve d'appropriation par des tiers."
+        }
+      },
+      "subtitle": "Éthique et responsabilité créative"
+    },
+    {
+      "code": "T2",
+      "slug": "t2-durer",
+      "title": "Durer",
+      "definition": "Préserver son énergie, son attention et son équilibre dans un environnement conçu pour capter et disperser ; installer un rapport soutenable à la création, aux métriques et à l'exposition publique. Le cimetière des créateurs est rempli de talents : ce fil porte la compétence que personne n'enseigne et qui explique la majorité des abandons.",
+      "components": [
+        "Connaissance de soi attentionnelle : repérer ses déclencheurs de dispersion et ses conditions de concentration",
+        "Rituels de protection : plages sans sollicitation, déconnexions choisies, sanctuarisation du temps de création",
+        "Rapport aux métriques : se mesurer sans se juger, refuser la tyrannie du chiffre quotidien",
+        "Exposition : encaisser la critique publique, séparer la personne de l'œuvre",
+        "Rythmes soutenables : cadence tenable dans la durée, pauses assumées, saisons de création",
+        "Signaux d'alerte : reconnaître les marqueurs d'épuisement, chez soi et chez les autres"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable d'identifier ce qui capte et disperse son attention, et d'expérimenter une règle d'hygiène numérique personnelle.",
+          "evidence": "Mener une auto-observation d'une semaine et tester une règle choisie, avec bilan."
+        },
+        "N2": {
+          "descriptor": "Est capable de mettre en place des rituels durables de protection de son attention et de son énergie.",
+          "evidence": "Présenter des rituels installés depuis au moins un mois et leurs effets constatés."
+        },
+        "N3": {
+          "descriptor": "Est capable de réguler son rapport aux métriques et à l'exposition, et de tenir un rythme de création soutenable.",
+          "evidence": "Tenir un journal d'énergie créative sur trente jours et identifier ses moteurs et ses fuites d'énergie."
+        },
+        "N4": {
+          "descriptor": "Est capable de durer sans épuisement sur le temps long et de veiller à la santé créative d'un collectif.",
+          "evidence": "Documenter ses pratiques de durabilité sur douze mois et un dispositif de prévention mis en place pour une équipe."
+        }
+      },
+      "subtitle": "Énergie, attention et santé créative"
+    },
+    {
+      "code": "T3",
+      "slug": "t3-se-reinventer",
+      "title": "Se réinventer",
+      "definition": "Acquérir rapidement des compétences nouvelles, abandonner ce qui ne fonctionne plus, lire les signaux faibles de son écosystème et ajuster sa trajectoire — dans un environnement où les outils, les formats et les plateformes se renouvellent plus vite que les carrières. La méta-compétence de l'ère des créateurs : celle qui garantit que toutes les autres restent vivantes.",
+      "components": [
+        "Apprentissage autodirigé : se fixer un objectif, trouver les ressources, pratiquer, obtenir du feedback",
+        "Désapprentissage : identifier et abandonner les réflexes devenus contre-productifs",
+        "Apprentissage en public : documenter sa progression, en faire un matériau de création",
+        "Lecture des signaux faibles : détecter tôt les évolutions de son écosystème",
+        "Décision de pivot : critères explicites, courage d'exécution, honnêteté du bilan",
+        "Trajectoire de long terme : feuille de route, scénarios, critères de révision"
+      ],
+      "levels": {
+        "N1": {
+          "descriptor": "Est capable d'apprendre seul un geste créatif nouveau à partir de ressources en ligne.",
+          "evidence": "Démontrer une capacité nouvelle acquise en autonomie, en présentant les ressources et étapes suivies."
+        },
+        "N2": {
+          "descriptor": "Est capable de conduire un apprentissage structuré et d'en documenter le processus.",
+          "evidence": "Avoir acquis une compétence significativement nouvelle dans les six derniers mois, processus d'apprentissage documenté."
+        },
+        "N3": {
+          "descriptor": "Est capable de détecter un essoufflement, de décider un ajustement de trajectoire et de l'exécuter.",
+          "evidence": "Documenter un pivot réalisé : signaux détectés, critères de décision, exécution, bilan."
+        },
+        "N4": {
+          "descriptor": "Est capable de construire une trajectoire à douze-trente-six mois avec scénarios, et de guider la réinvention d'autrui.",
+          "evidence": "Produire une feuille de route à douze mois avec trois scénarios et critères de décision, et documenter l'accompagnement d'un tiers."
+        }
+      },
+      "subtitle": "Apprendre, désapprendre, pivoter"
+    }
+  ]
+}

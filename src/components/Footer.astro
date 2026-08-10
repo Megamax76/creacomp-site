@@ -1,0 +1,116 @@
+---
+import { site, path, type Lang, type PageKey } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const s = site(lang);
+const links: { key: PageKey; label: string }[] = [
+  { key: 'framework', label: s.nav.framework },
+  { key: 'foundations', label: s.nav.foundations },
+  { key: 'use', label: s.nav.use },
+  { key: 'contact', label: s.nav.contact },
+];
+---
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <p class="footer__name">CréaComp</p>
+      <p class="footer__about">{s.footer.about}</p>
+    </div>
+
+    <nav class="footer__col" aria-label={s.footer.navTitle}>
+      <h2 class="footer__heading">{s.footer.navTitle}</h2>
+      <ul>
+        {links.map((link) => <li><a href={path(lang, link.key)}>{link.label}</a></li>)}
+      </ul>
+    </nav>
+
+    <div class="footer__col">
+      <h2 class="footer__heading">{s.footer.licenseTitle}</h2>
+      <p>{s.footer.licenseBody}</p>
+      <p>
+        <a href={s.meta.licenseUrl} rel="license noopener noreferrer" target="_blank">
+          {s.meta.license}
+        </a>
+      </p>
+    </div>
+
+    <div class="footer__col">
+      <h2 class="footer__heading">{s.footer.authorTitle}</h2>
+      <p>{s.meta.author}</p>
+      <p><a href={path(lang, 'contact')}>{s.nav.contact}</a></p>
+    </div>
+  </div>
+
+  <div class="wrap footer__base">
+    <p>{s.footer.credit}</p>
+    <p class="footer__counts">
+      {s.counts.rubrics} · {s.counts.competences} · {s.counts.threads} · {s.counts.descriptors}
+    </p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--rule);
+    background: var(--paper-sunken);
+    padding-block: clamp(3rem, 6vw, 4.5rem) 2rem;
+    font-size: 0.9rem;
+  }
+
+  .footer__grid {
+    display: grid;
+    gap: 2.5rem clamp(1.5rem, 4vw, 3.5rem);
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    align-items: start;
+  }
+
+  .footer__brand { grid-column: span 1; max-width: 22rem; }
+  @media (min-width: 60rem) {
+    .footer__grid { grid-template-columns: 1.6fr 1fr 1.3fr 1fr; }
+  }
+
+  .footer__name {
+    font-family: var(--font-display);
+    font-variation-settings: 'SOFT' 20, 'WONK' 1, 'opsz' 20;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.6rem;
+  }
+  .footer__about { color: var(--ink-faint); line-height: 1.6; }
+
+  .footer__heading {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 0.9rem;
+  }
+
+  .footer__col ul { list-style: none; }
+  .footer__col li + li { margin-top: 0.42rem; }
+  .footer__col p { color: var(--ink-soft); line-height: 1.6; }
+  .footer__col p + p { margin-top: 0.6rem; }
+  .footer__col a { text-decoration: none; color: var(--ink-soft); }
+  .footer__col a:hover { color: var(--accent); text-decoration: underline; }
+
+  .footer__base {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-top: clamp(2.5rem, 5vw, 4rem);
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--rule);
+    color: var(--ink-faint);
+    font-size: 0.82rem;
+  }
+  .footer__counts { font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.02em; }
+</style>
