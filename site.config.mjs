@@ -12,7 +12,7 @@
  * et se déploie n'importe où ; le plan du site (sitemap.xml) et les URL
  * canoniques n'apparaissent qu'une fois cette adresse renseignée.
  */
-export const siteUrl = '';
+export const siteUrl = 'https://creacomp.org';
 
 /**
  * Identifiant du formulaire Formspree (https://formspree.io).
