@@ -12,7 +12,7 @@ const s = site(lang);
 <ol class="levels">
   {
     s.levels.map((level, index) => (
-      <li class="level" style={`--rank: ${index + 1}`}>
+      <li class="level">
         <div class="level__meter" aria-hidden="true">
           {[0, 1, 2, 3].map((slot) => (
             <span class="level__notch" data-filled={slot <= index ? 'true' : 'false'} />

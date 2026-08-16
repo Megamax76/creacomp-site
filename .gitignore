@@ -6,3 +6,6 @@ dist/
 .env
 .env.*
 !.env.example
+
+# Réglages Claude Code propres à cette machine — hors du dépôt public.
+.claude/settings.local.json

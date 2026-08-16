@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import { site, type Lang } from '../lib/i18n';
-import { formspreeId } from '../config';
+import { formspreeId, contactEmail } from '../config';
 import { image, credit, creditSource } from '../lib/images';
 
 interface Props {
@@ -74,7 +74,7 @@ const illustrationCredit = credit('contact');
         <p class="direct__body">
           {configured ? c.direct.bodyConfigured : c.direct.body}
         </p>
-        <a class="direct__mail" href={`mailto:${s.meta.email}`}>{s.meta.email}</a>
+        <a class="direct__mail" href={`mailto:${contactEmail}`}>{contactEmail}</a>
       </div>
     </section>
 

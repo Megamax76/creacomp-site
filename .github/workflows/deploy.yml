@@ -1,4 +1,9 @@
 # Construit le site à chaque poussée sur `main` et le publie sur GitHub Pages.
+#
+# Les actions sont épinglées à une empreinte de commit, pas à une étiquette :
+# une étiquette comme `v5` peut être redirigée vers un autre code par qui
+# publie l'action, une empreinte non. Le commentaire garde la version lisible.
+# Pour mettre à jour, relever la nouvelle empreinte plutôt que l'étiquette.
 name: Déploiement
 
 on:
@@ -6,11 +11,9 @@ on:
     branches: [main]
   workflow_dispatch:
 
-# Autorisations nécessaires au dépôt de l'artefact et à sa publication.
+# Le strict nécessaire : le dépôt est lu, jamais écrit.
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 # Une seule publication à la fois ; les poussées suivantes attendent leur tour.
 concurrency:
@@ -20,24 +23,34 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: 22
           cache: npm
+      # `npm ci` installe exactement ce que décrit package-lock.json et refuse
+      # de s'en écarter : aucune version inattendue ne peut entrer à la faveur
+      # d'une construction.
       - run: npm ci
       - run: npm run build
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: dist
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0

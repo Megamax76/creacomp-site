@@ -1,0 +1,22 @@
+# Surveille les dépendances et ouvre une demande de fusion quand une faille
+# est publiée ou qu'une version paraît. Rien n'est fusionné automatiquement :
+# les mises à jour restent une décision, mais elles cessent d'être une veille.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      # Les montées de version mineures arrivent groupées plutôt qu'une par
+      # demande : moins de bruit, et un seul examen à faire.
+      mineures:
+        update-types: [minor, patch]
+
+  # Les actions du workflow sont épinglées à une empreinte : sans cette
+  # surveillance, elles resteraient figées sans qu'on le remarque.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
