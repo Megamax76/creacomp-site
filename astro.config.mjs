@@ -25,7 +25,7 @@ export default defineConfig({
     locales: ['fr', 'en'],
     routing: { prefixDefaultLocale: false },
   },
-  experimental: {
+  security: {
     csp: {
       algorithm: 'SHA-256',
       directives: [

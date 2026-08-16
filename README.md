@@ -112,6 +112,33 @@ et ne pèse rien puisqu'il est écrit dans le HTML.
 - **Sept encres de rubriques** portées par une variable CSS `--accent`, héritée
   par tous les composants d'une page.
 
+## Sécurité
+
+Le site est statique : ni serveur, ni base de données, ni session, ni cookie.
+La surface d'attaque tient donc à ce qu'il charge et à ce qui le construit.
+
+- **Politique de sécurité du contenu à empreintes.** Elle part de
+  `default-src 'none'` ; Astro y ajoute les empreintes SHA-256 de ses propres
+  scripts et feuilles de style. Aucun script étranger ne peut s'exécuter, même
+  injecté dans le HTML, et aucun `unsafe-inline` n'est accordé. C'est pourquoi
+  le code ne doit contenir **aucun attribut `style=` en ligne** : la politique
+  les bloque. Passer par une classe ou un attribut de données.
+- **Rien ne sort, rien n'entre.** `connect-src` et `form-action` restent à
+  `'none'` tant que Formspree n'est pas configuré ; les renseigner ouvre la
+  politique pour ce seul domaine, automatiquement.
+- **`frame-ancestors` est absent à dessein.** Les navigateurs l'ignorent dans
+  une balise `<meta>`, et GitHub Pages n'admet pas d'en-têtes HTTP. Sur un
+  hébergeur qui les accepte, ajouter `frame-ancestors 'none'` et
+  `X-Content-Type-Options: nosniff` en en-têtes.
+- **Chaîne d'approvisionnement.** Les actions du workflow sont épinglées à une
+  empreinte de commit, jamais à une étiquette — une étiquette peut être
+  redirigée, une empreinte non. Dependabot surveille npm et les actions.
+  `npm audit` doit rester à zéro : c'est la vérification à faire avant de
+  fusionner une montée de version.
+- **Données personnelles.** L'adresse de contact est publiée en clair et sera
+  moissonnée. Elle vit dans `site.config.mjs` pour qu'une adresse de fonction
+  sur le domaine puisse s'y substituer en une ligne.
+
 ## Licence
 
 Le **contenu du référentiel** est publié sous licence
