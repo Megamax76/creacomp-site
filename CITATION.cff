@@ -1,0 +1,38 @@
+# Ce fichier permet à GitHub d'afficher un bouton « Cite this repository »
+# en haut de la page du dépôt, et de produire la citation en BibTeX ou APA.
+# Format : https://citation-file-format.github.io
+cff-version: 1.2.0
+message: >-
+  Si vous utilisez, adaptez ou traduisez le référentiel CréaComp, merci de le
+  citer comme indiqué ci-dessous.
+type: dataset
+title: "CréaComp : référentiel de littératie créative numérique"
+abstract: >-
+  CréaComp cartographie la littératie créative numérique : l'ensemble des
+  savoirs qui permettent de recevoir de façon critique, comprendre, imaginer,
+  fabriquer, diffuser et valoriser dans les environnements numériques. Le
+  référentiel compte sept rubriques, vingt-huit compétences et trois fils
+  transversaux, décrits sur quatre niveaux de maîtrise alignés sur DigComp 1–8,
+  soit cent vingt-quatre descripteurs observables. Il est publié en français et
+  en anglais.
+authors:
+  - family-names: Hébert
+    given-names: Maxime
+version: "1.0"
+date-released: "2026-08-16"
+license: CC-BY-SA-4.0
+url: "https://creacomp.org"
+repository-code: "https://github.com/Megamax76/creacomp-site"
+languages:
+  - fra
+  - eng
+keywords:
+  - littératie numérique
+  - référentiel de compétences
+  - création de contenu
+  - économie des créateurs
+  - DigComp
+  - intelligence artificielle générative
+  - éducation aux médias
+  - digital creative literacy
+  - competence framework

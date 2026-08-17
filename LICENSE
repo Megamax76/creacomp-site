@@ -1,0 +1,63 @@
+Licence du contenu du référentiel CréaComp
+==========================================
+
+Le **contenu du référentiel CréaComp** — les fichiers du dossier `src/data/`,
+c'est-à-dire les rubriques, compétences, fils transversaux, définitions,
+composantes et 124 descripteurs, ainsi que les textes éditoriaux du site — est
+publié sous licence :
+
+    Creative Commons Attribution – Partage dans les mêmes conditions 4.0
+    International (CC BY-SA 4.0)
+
+Auteur du référentiel : Maxime Hébert
+Version : CréaComp 1.0 — édition 2026
+
+Texte légal complet de la licence :
+    https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr
+Résumé lisible :
+    https://creativecommons.org/licenses/by-sa/4.0/deed.fr
+
+
+Ce que cela vous autorise
+-------------------------
+
+- **Partager** — copier, distribuer et communiquer le référentiel par tous
+  moyens et sous tous formats.
+- **Adapter** — le remixer, le transformer, le traduire dans une autre langue,
+  l'adapter à un contexte national ou sectoriel, et créer à partir de lui.
+
+Pour toute utilisation, y compris commerciale.
+
+
+À deux conditions
+-----------------
+
+- **Attribution** — vous devez créditer l'auteur, indiquer la version reprise
+  et signaler si des modifications ont été apportées. La formulation
+  recommandée :
+
+      Hébert, M. (2026). CréaComp : référentiel de littératie créative
+      numérique (version 1.0, édition 2026). https://creacomp.org
+
+- **Partage dans les mêmes conditions** — si vous adaptez ou traduisez le
+  référentiel, vous devez diffuser votre version sous la même licence
+  CC BY-SA 4.0.
+
+Aucune restriction supplémentaire ne peut être ajoutée : vous ne pouvez pas
+appliquer de conditions légales ou de mesures techniques qui restreindraient
+légalement autrui à faire ce que la licence permet.
+
+
+Ce que cette licence ne couvre pas
+----------------------------------
+
+- **Le code du site** — composants, mises en page, styles, scripts et
+  configuration — est publié séparément sous licence MIT. Voir LICENSE-CODE.
+
+- **Les trois photographies** de `src/assets/images/` proviennent d'Unsplash et
+  relèvent de la licence Unsplash (https://unsplash.com/license). Leurs auteurs
+  sont crédités dans `src/data/credits.json` et sur la page « Utiliser & citer »
+  du site.
+
+- **Les polices de caractères** (Fraunces, Archivo, JetBrains Mono) sont
+  distribuées sous SIL Open Font License par leurs auteurs respectifs.

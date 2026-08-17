@@ -1,0 +1,69 @@
+name: Proposer une traduction ou une adaptation
+description: Traduire le référentiel dans une autre langue, ou l'adapter à un contexte national ou sectoriel.
+title: "[Traduction] "
+labels: ["traduction"]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Les traductions sont explicitement bienvenues et la structure des données
+        est faite pour elles. **Ouvrez cette issue avant de commencer** : une
+        traduction représente 124 descripteurs plus les textes éditoriaux, autant
+        ne pas découvrir à la fin que quelqu'un s'y était mis ou que le
+        référentiel était en révision.
+
+  - type: input
+    id: langue
+    attributes:
+      label: Quelle langue, ou quel contexte ?
+      placeholder: "espagnol · allemand · adaptation au secteur audiovisuel · contexte québécois…"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: nature
+    attributes:
+      label: Traduction ou adaptation ?
+      description: >-
+        Une traduction conserve la structure et le sens ; une adaptation modifie
+        des descripteurs pour un contexte donné. Les deux sont permises par la
+        licence, mais elles ne se relisent pas de la même façon.
+      options:
+        - traduction fidèle
+        - adaptation (des descripteurs seront modifiés)
+        - je ne sais pas encore
+    validations:
+      required: true
+
+  - type: textarea
+    id: portee
+    attributes:
+      label: Que comptez-vous traduire ?
+      description: >-
+        Tout le référentiel, ou une partie ? Les textes éditoriaux du site
+        aussi, ou seulement les données ?
+    validations:
+      required: true
+
+  - type: input
+    id: qui
+    attributes:
+      label: Qui traduit ?
+      description: >-
+        Facultatif. Utile pour savoir si la traduction est portée par une
+        personne, une équipe ou une institution.
+      placeholder: "moi seul · un groupe d'enseignants · un organisme…"
+
+  - type: checkboxes
+    id: licence
+    attributes:
+      label: Licence
+      options:
+        - label: >-
+            J'ai compris qu'une traduction est une adaptation, et qu'elle doit
+            donc être diffusée sous CC BY-SA 4.0 comme l'original.
+          required: true
+        - label: >-
+            J'ai compris que les champs `code` (1.1, T2…) doivent être conservés
+            à l'identique, puisqu'ils apparient les langues entre elles.
+          required: true

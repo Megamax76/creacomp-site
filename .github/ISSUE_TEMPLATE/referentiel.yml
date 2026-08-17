@@ -1,0 +1,77 @@
+name: Discuter le référentiel
+description: Un descripteur mal formulé, un niveau mal calibré, une compétence manquante ou redondante.
+title: "[Référentiel] "
+labels: ["référentiel"]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        C'est la contribution la plus utile au projet. Pour qu'elle soit
+        exploitable, il faut savoir **quoi** vous visez et **pourquoi** —
+        de préférence depuis un usage réel.
+
+  - type: input
+    id: code
+    attributes:
+      label: Quelle entrée ?
+      description: >-
+        Le code de la compétence ou du fil concerné, tel qu'il apparaît sur le
+        site.
+      placeholder: "1.2, 3.4, T2…"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: niveau
+    attributes:
+      label: Quel niveau ?
+      description: Laissez « toute l'entrée » si votre remarque ne porte pas sur un niveau précis.
+      options:
+        - toute l'entrée (définition, composantes, intitulé)
+        - N1 — Découverte
+        - N2 — Application
+        - N3 — Autonomie
+        - N4 — Expertise
+    validations:
+      required: true
+
+  - type: dropdown
+    id: langue
+    attributes:
+      label: Quelle version ?
+      options:
+        - française
+        - anglaise
+        - les deux
+    validations:
+      required: true
+
+  - type: textarea
+    id: probleme
+    attributes:
+      label: Qu'est-ce qui ne va pas ?
+      description: >-
+        Dites ce qui vous paraît faux, mal calibré, ambigu ou absent. Un cas
+        concret — une formation conduite, une évaluation qui n'a pas fonctionné,
+        une pratique que le descripteur décrit mal — pèse plus lourd qu'un
+        désaccord de principe, mais le désaccord de principe se discute aussi.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposition
+    attributes:
+      label: Que proposez-vous à la place ?
+      description: >-
+        Même imparfaite, une reformulation fait avancer la discussion. Les
+        descripteurs sont volontairement **observables** : ils commencent par
+        « Est capable de… » et décrivent une action constatable, pas une
+        intention.
+      placeholder: "Est capable de…"
+
+  - type: input
+    id: contexte
+    attributes:
+      label: Votre contexte
+      description: Facultatif, mais utile pour situer la remarque.
+      placeholder: "Formateur en BTS communication · organisme de formation · recherche…"

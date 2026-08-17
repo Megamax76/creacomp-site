@@ -1,0 +1,17 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Signaler une faille de sécurité
+    url: https://github.com/Megamax76/creacomp-site/security/advisories/new
+    about: >-
+      N'ouvrez pas d'issue publique pour une faille. Passez par le signalement
+      privé, ou écrivez à maxime.hebert76@gmail.com.
+  - name: Comment citer CréaComp
+    url: https://creacomp.org/utiliser/
+    about: >-
+      Les formulations de citation recommandées, dans les deux langues, et les
+      conditions de réutilisation.
+  - name: Lire le référentiel en ligne
+    url: https://creacomp.org/referentiel/
+    about: >-
+      La carte complète : 31 entrées, quatre niveaux de maîtrise, un sélecteur
+      pour lire tous les descripteurs à un niveau donné.
