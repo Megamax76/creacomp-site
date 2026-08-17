@@ -114,6 +114,19 @@ const illustrationCredit = credit('contact');
 
             <input type="hidden" name="_language" value={lang} />
 
+            {/* Piège à robots : le champ n'est ni visible, ni atteignable au
+                clavier, ni annoncé aux lecteurs d'écran — seul un automate le
+                remplit. Formspree écarte alors l'envoi sans rien signaler,
+                ce qui évite d'apprendre au robot à s'en passer. */}
+            <input
+              class="gotcha"
+              type="text"
+              name="_gotcha"
+              tabindex="-1"
+              autocomplete="off"
+              aria-hidden="true"
+            />
+
             <button class="btn" type="submit" data-submit>{c.form.submit}</button>
 
             <p class="form__status" role="status" aria-live="polite" data-status hidden></p>
@@ -274,6 +287,7 @@ const illustrationCredit = credit('contact');
   .direct__mail:hover { text-decoration: underline; }
 
   .form { display: grid; gap: 1.1rem; }
+  .gotcha { display: none; }
   .field { display: grid; gap: 0.4rem; }
   .field label {
     font-size: 0.84rem;

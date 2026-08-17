@@ -381,6 +381,13 @@ signaler une faille.
   dans le HTML ne s'exécuterait pas.
 - **`connect-src` et `form-action` restent à `'none'`** tant que Formspree n'est
   pas configuré ; les renseigner ouvre la politique pour ce seul domaine.
+- **Aucune adresse personnelle n'est publiée.** La page Contact, `SECURITY.md`,
+  le code de conduite et le gabarit d'issue affichent tous une adresse de
+  fonction sur le domaine du site, redirigée ailleurs : elle se filtre ou se
+  remplace sans toucher au dépôt.
+- **Le formulaire porte un champ-piège** (`_gotcha`), masqué en CSS et hors du
+  parcours de tabulation. Formspree écarte silencieusement tout envoi où il est
+  rempli.
 - **Les actions du workflow sont épinglées à une empreinte de commit**, jamais à
   une étiquette : une étiquette peut être redirigée vers un autre code, une
   empreinte non.

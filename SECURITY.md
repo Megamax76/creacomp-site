@@ -4,7 +4,7 @@
 
 **N'ouvrez pas d'issue publique pour une faille de sécurité.**
 
-Écrivez à **maxime.hebert76@gmail.com** avec, si possible : ce que vous avez
+Écrivez à **contact@creacomp.org** avec, si possible : ce que vous avez
 observé, comment le reproduire, et ce qu'un attaquant pourrait en tirer.
 Vous recevrez un accusé de réception sous quelques jours.
 

@@ -38,7 +38,7 @@ fusion, commentaires de commit, et toute communication se présentant comme lié
 
 Le projet est maintenu par une seule personne, qui tranche.
 
-Signalez un comportement problématique à **maxime.hebert76@gmail.com**. Les
+Signalez un comportement problématique à **contact@creacomp.org**. Les
 signalements sont traités discrètement ; ils ne sont pas rendus publics et
 l'identité du signalant n'est pas divulguée.
 

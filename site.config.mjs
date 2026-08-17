@@ -18,12 +18,15 @@ export const siteUrl = 'https://creacomp.org';
  * Adresse affichée sur la page Contact.
  *
  * Elle est publiée en clair sur une page publique : elle sera moissonnée par
- * des robots et recevra du courrier indésirable. Préférez donc une adresse de
- * fonction sur votre propre domaine — `contact@creacomp.org` — redirigée vers
- * votre boîte personnelle : vous pourrez la filtrer ou la remplacer sans jamais
- * exposer votre adresse privée, et sans toucher au site.
+ * des robots et recevra du courrier indésirable. C'est donc une adresse de
+ * fonction sur le domaine du site, redirigée vers la boîte personnelle de
+ * l'auteur : elle peut être filtrée, mise en quarantaine ou remplacée sans
+ * jamais exposer l'adresse privée, et sans toucher au site.
+ *
+ * La redirection se règle chez le bureau d'enregistrement du domaine ; aucune
+ * trace n'en subsiste ici. Ne jamais remettre d'adresse personnelle à sa place.
  */
-export const contactEmail = 'maxime.hebert76@gmail.com';
+export const contactEmail = 'contact@creacomp.org';
 
 /**
  * Identifiant du formulaire Formspree (https://formspree.io).
