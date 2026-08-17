@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import CopyButton from '../components/CopyButton.astro';
+import Motif from '../components/Motif.astro';
 import {
   site,
   path,
@@ -30,6 +31,12 @@ const next = index < all.length - 1 ? all[index + 1] : undefined;
 
 const citation = citationOf(lang, entry);
 const heading = rubric ? `${s.ui.competence} ${entry.code}` : `${s.ui.thread} ${entry.code}`;
+
+// La figure de la rubrique, déclinée par le code : même famille, silhouette propre.
+// Un fil transversal, lui, n'a qu'une page : sa figure reste celle de l'index,
+// sans quoi elle changerait sous les yeux du lecteur qui vient d'y cliquer.
+const motifKey = rubric ? `rubrique-${rubric.id}` : `fil-${entry.code.toLowerCase()}`;
+const motifVariant = rubric ? entry.code : undefined;
 ---
 
 <Base
@@ -42,31 +49,35 @@ const heading = rubric ? `${s.ui.competence} ${entry.code}` : `${s.ui.thread} ${
 >
   <article class="competence">
     <header class="head">
-      <div class="wrap">
-        <nav class="crumbs" aria-label={s.ui.backToFramework}>
-          <a href={path(lang, 'framework')}>{s.nav.framework}</a>
-          <span aria-hidden="true">/</span>
+      <div class="wrap head__inner">
+        <div class="head__text">
+          <nav class="crumbs" aria-label={s.ui.backToFramework}>
+            <a href={path(lang, 'framework')}>{s.nav.framework}</a>
+            <span aria-hidden="true">/</span>
+            {
+              rubric ? (
+                <a href={`${path(lang, 'framework')}#${rubric.slug}`}>{rubric.title}</a>
+              ) : (
+                <a href={path(lang, 'framework')}>{s.ui.threads}</a>
+              )
+            }
+          </nav>
+
+          <p class="head__kind">{heading}</p>
+          <h1 class="head__title">{entry.title}</h1>
+          {entry.subtitle && <p class="head__subtitle">{entry.subtitle}</p>}
+
           {
-            rubric ? (
-              <a href={`${path(lang, 'framework')}#${rubric.slug}`}>{rubric.title}</a>
-            ) : (
-              <a href={path(lang, 'framework')}>{s.ui.threads}</a>
+            rubric && (
+              <p class="head__boundary">
+                <span class="head__boundary-label">{s.ui.boundary}</span>
+                {rubric.boundary}
+              </p>
             )
           }
-        </nav>
+        </div>
 
-        <p class="head__kind">{heading}</p>
-        <h1 class="head__title">{entry.title}</h1>
-        {entry.subtitle && <p class="head__subtitle">{entry.subtitle}</p>}
-
-        {
-          rubric && (
-            <p class="head__boundary">
-              <span class="head__boundary-label">{s.ui.boundary}</span>
-              {rubric.boundary}
-            </p>
-          )
-        }
+        <Motif motifKey={motifKey} variant={motifVariant} class="head__motif" />
       </div>
     </header>
 
@@ -88,20 +99,21 @@ const heading = rubric ? `${s.ui.competence} ${entry.code}` : `${s.ui.thread} ${
           <h2 class="block__title">{s.ui.levelsHeading}</h2>
           <ol class="levels">
             {
-              s.levels.map((level) => (
-                <li class="lvl">
+              s.levels.map((level, rank) => (
+                <li class="lvl" data-rank={rank + 1}>
+                  <div class="lvl__rail" aria-hidden="true">
+                    <span class="lvl__node" />
+                  </div>
                   <div class="lvl__head">
                     <span class="lvl__id">{level.id}</span>
                     <span class="lvl__name">{level.name}</span>
+                    <span class="lvl__landmark">{level.landmark}</span>
                   </div>
                   <div class="lvl__body">
-                    <div class="lvl__field">
-                      <p class="lvl__label">{s.ui.descriptor}</p>
-                      <p class="lvl__descriptor">{entry.levels[level.id].descriptor}</p>
-                    </div>
-                    <div class="lvl__field">
+                    <p class="lvl__descriptor">{entry.levels[level.id].descriptor}</p>
+                    <div class="lvl__evidence">
                       <p class="lvl__label">{s.ui.evidence}</p>
-                      <p class="lvl__evidence">{entry.levels[level.id].evidence}</p>
+                      <p class="lvl__evidence-text">{entry.levels[level.id].evidence}</p>
                     </div>
                   </div>
                 </li>
@@ -172,6 +184,22 @@ const heading = rubric ? `${s.ui.competence} ${entry.code}` : `${s.ui.thread} ${
     padding-block: clamp(2rem, 5vw, 3.2rem) clamp(2rem, 4vw, 3rem);
     border-bottom: 1px solid var(--rule);
     background: var(--accent-wash);
+  }
+
+  .head__inner {
+    display: grid;
+    gap: clamp(1.5rem, 4vw, 2.6rem);
+    align-items: start;
+  }
+  @media (min-width: 52rem) {
+    .head__inner { grid-template-columns: minmax(0, 1fr) clamp(9rem, 15vw, 12.5rem); }
+  }
+
+  /* En colonne étroite la figure passe en bandeau : un carré repousserait le
+     texte hors de l'écran d'ouverture. */
+  .head__inner :global(.head__motif) { aspect-ratio: 16 / 6; }
+  @media (min-width: 52rem) {
+    .head__inner :global(.head__motif) { aspect-ratio: 1 / 1; }
   }
 
   .crumbs {
@@ -282,26 +310,79 @@ const heading = rubric ? `${s.ui.competence} ${entry.code}` : `${s.ui.thread} ${
     background: var(--accent);
   }
 
+  /* Les quatre niveaux forment une montée, pas une liste : un rail les relie et
+     l'encre de la rubrique s'y densifie de la découverte à l'expertise. Seuls le
+     rail et son nœud portent cette progression — les textes gardent un contraste
+     constant, sinon N1 deviendrait moins lisible que N4. */
   .levels {
     list-style: none;
     display: grid;
-    gap: 1px;
-    background: var(--rule);
-    border: 1px solid var(--rule);
-    border-radius: var(--radius);
-    overflow: hidden;
-  }
-  .lvl {
-    background: var(--paper-raised);
-    display: grid;
-    gap: 1rem;
-    padding: 1.3rem 1.4rem 1.5rem;
-  }
-  @media (min-width: 48rem) {
-    .lvl { grid-template-columns: 9rem minmax(0, 1fr); gap: 1.5rem; }
+    max-width: 46rem;
   }
 
-  .lvl__head { display: grid; align-content: start; gap: 0.15rem; }
+  .lvl {
+    display: grid;
+    grid-template-columns: 1.5rem minmax(0, 1fr);
+    column-gap: 1.1rem;
+    padding-bottom: 2.2rem;
+  }
+  .lvl:last-child { padding-bottom: 0; }
+  @media (min-width: 48rem) {
+    .lvl { grid-template-columns: 1.5rem 10rem minmax(0, 1fr); column-gap: 1.4rem; }
+  }
+
+  .lvl[data-rank='1'] { --fill: 0%; --grow: 0rem; }
+  .lvl[data-rank='2'] { --fill: 34%; --grow: 0.08rem; }
+  .lvl[data-rank='3'] { --fill: 67%; --grow: 0.17rem; }
+  .lvl[data-rank='4'] { --fill: 100%; --grow: 0.27rem; }
+
+  /* Les trois zones sont placées explicitement : en colonne étroite le corps
+     passe sous l'intitulé, et le rail doit couvrir les deux rangées. */
+  .lvl__rail { grid-column: 1; grid-row: 1 / span 2; }
+  .lvl__head { grid-column: 2; grid-row: 1; }
+  .lvl__body { grid-column: 2; grid-row: 2; }
+  @media (min-width: 48rem) {
+    .lvl__rail { grid-row: 1 / span 1; }
+    .lvl__body { grid-column: 3; grid-row: 1; }
+  }
+
+  .lvl__rail {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* Sans quoi le nœud s'étirerait sur toute la hauteur du palier. */
+    align-items: flex-start;
+  }
+  .lvl__rail::before {
+    content: '';
+    position: absolute;
+    inset-block: 0;
+    width: 2px;
+    background: var(--rule-strong);
+  }
+  /* Le rail naît au premier nœud et meurt au dernier. */
+  .lvl:first-child .lvl__rail::before { top: 0.66rem; }
+  .lvl:last-child .lvl__rail::before { bottom: auto; height: 0.66rem; }
+
+  .lvl__node {
+    position: relative;
+    margin-top: 0.32rem;
+    width: calc(0.68rem + var(--grow));
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    background: color-mix(in srgb, var(--accent) var(--fill), var(--paper));
+  }
+
+  .lvl__head {
+    display: grid;
+    align-content: start;
+    gap: 0.15rem;
+    padding-bottom: 0.85rem;
+  }
+  @media (min-width: 48rem) {
+    .lvl__head { padding-bottom: 0; }
+  }
   .lvl__id {
     font-family: var(--font-mono);
     font-size: 0.72rem;
@@ -316,27 +397,43 @@ const heading = rubric ? `${s.ui.competence} ${entry.code}` : `${s.ui.thread} ${
     font-weight: 600;
     letter-spacing: -0.012em;
   }
-
-  .lvl__body { display: grid; gap: 1rem; }
-  .lvl__label {
+  /* Le repère concret — « Collège · grand débutant » — dit à qui s'adresse le palier. */
+  .lvl__landmark {
+    margin-top: 0.25rem;
     font-family: var(--font-mono);
     font-size: 0.62rem;
-    letter-spacing: 0.13em;
-    text-transform: uppercase;
+    line-height: 1.45;
     color: var(--ink-faint);
-    margin-bottom: 0.35rem;
   }
+
   .lvl__descriptor {
-    font-size: 1rem;
+    font-size: 1.02rem;
     line-height: 1.55;
     color: var(--ink);
+    text-wrap: pretty;
   }
+
+  /* La preuve n'est plus une note en marge : c'est ce que le niveau donne à voir. */
   .lvl__evidence {
+    margin-top: 0.9rem;
+    padding: 0.7rem 0.95rem 0.8rem;
+    border-left: 2px solid var(--accent-edge);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    background: var(--accent-wash);
+  }
+  .lvl__label {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.35rem;
+  }
+  .lvl__evidence-text {
     font-size: 0.9rem;
     line-height: 1.55;
     color: var(--ink-soft);
-    padding-left: 0.9rem;
-    border-left: 2px solid var(--accent-edge);
+    text-wrap: pretty;
   }
 
   /* --- Colonne latérale ------------------------------------------------------- */
