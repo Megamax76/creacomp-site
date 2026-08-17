@@ -25,8 +25,8 @@ const heroImage = image('hero');
 const heroCredit = credit('hero');
 const heroAlt =
   lang === 'fr'
-    ? 'Une main filme une scène avec un téléphone.'
-    : 'A hand films a scene with a phone.';
+    ? "Deux silhouettes à contre-jour : une main tend un filtre devant l'objectif d'un photographe, dans des faisceaux bleus et magenta."
+    : "Two silhouettes against the light: a hand holds a filter in front of a photographer's lens, in blue and magenta beams.";
 ---
 
 <Base lang={lang} page="home">
@@ -276,6 +276,10 @@ const heroAlt =
     width: 100%;
     height: 100%;
     object-fit: cover;
+    /* Le cadre vertical taille dans une photographie horizontale : le point
+       d'ancrage est décalé vers la droite pour garder le photographe entier —
+       chapeau, appareil, mains — sans perdre le faisceau de lumière. */
+    object-position: 62% center;
     filter: saturate(0.62) contrast(1.04);
   }
 
