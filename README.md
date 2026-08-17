@@ -23,7 +23,7 @@ Bilingue français / anglais, librement réutilisable.
 ## Sommaire
 
 - [De quoi s'agit-il](#de-quoi-sagit-il)
-- [La littératie créative numérique](#la-littératie-créative-numérique) — le concept central
+- [La littératie numérique créative](#la-littératie-numérique-créative) — le concept central
 - [D'où vient le nom](#doù-vient-le-nom)
 - [Le référentiel en un coup d'œil](#le-référentiel-en-un-coup-dœil)
 - [Utiliser le référentiel](#utiliser-le-référentiel-sans-toucher-au-code)
@@ -44,7 +44,7 @@ Bilingue français / anglais, librement réutilisable.
 **CréaComp** — contraction de *Creative Competence* — **est un référentiel de
 compétences** : une description structurée de ce qu'il faut savoir faire pour
 créer, diffuser et vivre de contenus numériques. Son objet est un concept unique,
-la **littératie créative numérique**, qu'il a pour seule ambition de rendre
+la **littératie numérique créative**, qu'il a pour seule ambition de rendre
 enseignable et évaluable.
 
 Il couvre ce que les référentiels existants traitent mal ou pas du tout : la
@@ -65,7 +65,7 @@ données structurées réutilisables, et le site qui le publie.
 | **Version** | CréaComp 1.0 — édition 2026 |
 | **Auteur** | Maxime Hébert |
 | **Langues** | français (source), anglais (traduction maintenue à la main) |
-| **Objet** | la littératie créative numérique — [voir la définition](#la-littératie-créative-numérique) |
+| **Objet** | la littératie numérique créative — [voir la définition](#la-littératie-numérique-créative) |
 | **Filiation** | la famille européenne des référentiels *Comp — DigComp, EntreComp — sans affiliation institutionnelle |
 | **Contenu** | CC BY-SA 4.0 — réutilisation, traduction et adaptation libres |
 | **Statut** | publié ; le protocole de validation empirique est ouvert aux contributions |
@@ -74,12 +74,12 @@ données structurées réutilisables, et le site qui le publie.
 > Le référentiel décrit **un territoire, pas un parcours**. Nul n'est censé
 > tout maîtriser, et il n'existe aucun ordre imposé de progression.
 
-## La littératie créative numérique
+## La littératie numérique créative
 
 Tout, dans CréaComp, tourne autour d'un seul concept. Les sept rubriques n'en
 sont que la décomposition opératoire.
 
-> **La littératie créative numérique est la capacité d'une personne à naviguer
+> **La littératie numérique créative est la capacité d'une personne à naviguer
 > au cœur du web créatif et à y devenir actrice de la création plutôt que
 > destinataire de celle des autres.**
 >
@@ -111,7 +111,7 @@ mot engage trois choses qu'un référentiel de compétences logicielles ne dit p
 
 ### Lire et écrire le web créatif
 
-La littératie créative numérique se tient donc sur **deux jambes**, et l'ordre
+La littératie numérique créative se tient donc sur **deux jambes**, et l'ordre
 des rubriques suit ce partage :
 
 | | Ce que cela veut dire concrètement | Rubriques |
@@ -156,7 +156,7 @@ convention :
 |---|---|---|
 | **DigComp** | la compétence numérique du citoyen | JRC, première version en 2013, aujourd'hui en version 3.0 |
 | **EntreComp** | la compétence entrepreneuriale | JRC et DG Emploi, juin 2016 — 3 domaines, 15 compétences |
-| **CréaComp** | la littératie créative numérique | travail indépendant, 2026 |
+| **CréaComp** | la littératie numérique créative | travail indépendant, 2026 |
 
 Le nom situe donc une **parenté d'intention** : décrire une capacité en termes
 observables et graduels, pour qu'elle devienne enseignable et évaluable.
@@ -407,7 +407,7 @@ citation au format BibTeX ou APA.
 
 En clair :
 
-> Hébert, M. (2026). *CréaComp : référentiel de littératie créative numérique*
+> Hébert, M. (2026). *CréaComp : référentiel de littératie numérique créative*
 > (version 1.0, édition 2026). https://creacomp.org
 
 La page [« Utiliser & citer »](https://creacomp.org/utiliser/) du site donne les

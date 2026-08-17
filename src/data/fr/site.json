@@ -12,9 +12,9 @@
     "license": "CC BY-SA 4.0",
     "licenseName": "Creative Commons Attribution – Partage dans les mêmes conditions 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.fr",
-    "subtitle": "Référentiel de littératie créative numérique",
+    "subtitle": "Référentiel de littératie numérique créative",
     "tagline": "Le référentiel de compétences pour l'ère des créateurs",
-    "description": "CréaComp cartographie la littératie créative numérique : 7 rubriques, 28 compétences, 3 fils transversaux, 4 niveaux, 124 descripteurs observables. Un référentiel ouvert sous licence CC BY-SA 4.0."
+    "description": "CréaComp cartographie la littératie numérique créative : 7 rubriques, 28 compétences, 3 fils transversaux, 4 niveaux, 124 descripteurs observables. Un référentiel ouvert sous licence CC BY-SA 4.0."
   },
   "counts": {
     "rubrics": "7 rubriques",
@@ -47,29 +47,25 @@
       "id": "N1",
       "name": "Découverte",
       "posture": "Je découvre et je comprends en pratiquant à petite échelle.",
-      "landmark": "Collège · grand débutant",
-      "digcomp": "DigComp 1–2"
+      "landmark": "Collège · grand débutant"
     },
     {
       "id": "N2",
       "name": "Application",
       "posture": "J'applique consciemment dans une pratique régulière.",
-      "landmark": "Lycée · débutant avancé",
-      "digcomp": "DigComp 3–4"
+      "landmark": "Lycée · débutant avancé"
     },
     {
       "id": "N3",
       "name": "Autonomie",
       "posture": "J'expérimente, je mesure et j'améliore en autonomie.",
-      "landmark": "Post-bac · professionnel junior",
-      "digcomp": "DigComp 5–6"
+      "landmark": "Post-bac · professionnel junior"
     },
     {
       "id": "N4",
       "name": "Expertise",
       "posture": "Je systématise et je maîtrise au bénéfice d'autrui.",
-      "landmark": "Professionnel confirmé · formateur",
-      "digcomp": "DigComp 7–8"
+      "landmark": "Professionnel confirmé · formateur"
     }
   ],
   "ui": {
@@ -105,7 +101,7 @@
     "hero": {
       "eyebrow": "CréaComp 1.0 — édition 2026",
       "title": "Le référentiel de compétences pour l'ère des créateurs",
-      "lead": "CréaComp cartographie la littératie créative numérique : l'ensemble des savoirs qui permettent de recevoir de façon critique, comprendre, imaginer, fabriquer, diffuser et valoriser dans les environnements numériques.",
+      "lead": "CréaComp cartographie la littératie numérique créative : l'ensemble des savoirs qui permettent de recevoir de façon critique, comprendre, imaginer, fabriquer, diffuser et valoriser dans les environnements numériques.",
       "primaryCta": "Explorer les 31 compétences",
       "secondaryCta": "Comprendre le cadre"
     },
@@ -190,7 +186,7 @@
     "levels": {
       "eyebrow": "La grammaire commune",
       "title": "Quatre niveaux, des postures et non des âges",
-      "lead": "Les mêmes quatre niveaux s'appliquent identiquement aux trente et une entrées du référentiel : c'est ce qui lui donne sa cohérence interne. Les repères scolaires et l'équivalence DigComp sont indicatifs.",
+      "lead": "Les mêmes quatre niveaux s'appliquent identiquement aux trente et une entrées du référentiel : c'est ce qui lui donne sa cohérence interne. Les repères scolaires sont indicatifs.",
       "goldenRule": "Règle d'or de calibrage : tout descripteur de niveau Découverte est atteignable par un collégien équipé d'un simple smartphone. Aucun ne présuppose de matériel professionnel, d'audience existante ou d'activité établie."
     },
     "audiences": {
@@ -240,9 +236,9 @@
     "sections": [
       {
         "id": "preambule",
-        "title": "La littératie créative numérique",
+        "title": "La littératie numérique créative",
         "body": [
-          "La littératie créative numérique désigne l'ensemble des connaissances, des savoir-faire et des dispositions permettant à une personne de recevoir de manière critique, de comprendre, d'imaginer, de fabriquer, de diffuser et de valoriser des contenus et des projets dans les environnements numériques — de façon autonome, éthique et durable.",
+          "La littératie numérique créative désigne l'ensemble des connaissances, des savoir-faire et des dispositions permettant à une personne de recevoir de manière critique, de comprendre, d'imaginer, de fabriquer, de diffuser et de valoriser des contenus et des projets dans les environnements numériques — de façon autonome, éthique et durable.",
           "Comme la lecture, l'écriture et le calcul l'ont été pour la civilisation de l'imprimé, elle constitue un socle : un ensemble de savoirs que la société a intérêt à voir partagés par le plus grand nombre, cartographiables, observables et mesurables par niveaux — sans que quiconque soit censé en maîtriser l'intégralité. CréaComp en est la cartographie."
         ]
       },
@@ -299,8 +295,8 @@
         },
         {
           "id": "P7",
-          "title": "Complémentarité avec DigComp",
-          "body": "CréaComp présuppose et complète le cadre européen DigComp : la sécurité des comptes, la protection défensive des données personnelles et la bureautique en sont délibérément exclues. DigComp outille le citoyen numérique ; CréaComp outille le créateur."
+          "title": "Un périmètre délibérément resserré",
+          "body": "CréaComp traite du versant créatif et n'y mêle rien d'autre : la sécurité des comptes, la protection défensive des données personnelles et la bureautique en sont délibérément exclues. Elles relèvent d'une littératie numérique générale, que ce référentiel suppose acquise pour aller plus loin qu'elle."
         }
       ]
     },
@@ -315,7 +311,7 @@
       "id": "niveaux",
       "title": "La grammaire des quatre niveaux",
       "body": [
-        "Les niveaux décrivent des postures, non des âges : ils s'appliquent identiquement à toutes les compétences, ce qui donne au référentiel sa cohérence interne. Les repères scolaires et la correspondance avec les huit niveaux de DigComp sont indicatifs."
+        "Les niveaux décrivent des postures, non des âges : ils s'appliquent identiquement à toutes les compétences, ce qui donne au référentiel sa cohérence interne. Les repères scolaires sont indicatifs."
       ],
       "goldenRule": "Règle d'or : tout descripteur de niveau Découverte est atteignable par un collégien équipé d'un simple smartphone. Cette règle garantit que le référentiel couvre réellement l'ensemble des publics, du collège au monde professionnel."
     },
@@ -337,12 +333,13 @@
         }
       ]
     },
-    "digcomp": {
-      "id": "digcomp",
-      "title": "Interface avec DigComp et périmètre d'exclusion",
+    "perimeter": {
+      "id": "perimetre",
+      "title": "Périmètre : ce que CréaComp n'inclut pas",
       "body": [
-        "CréaComp présuppose et complète DigComp ; il ne le remplace pas. Le cadre européen couvre la littératie numérique citoyenne — dont sa dimension défensive : sécurité des équipements et des comptes, protection des données personnelles, résolution de problèmes techniques, bureautique et communication administrative. CréaComp considère ces acquis comme son socle et n'en duplique aucun : il commence là où DigComp s'arrête, sur le versant offensif — créer, comprendre les systèmes, entreprendre, valoriser.",
-        "Trois zones de contact méritent d'être explicitées. La compétence 1.2 (fiabilité et manipulation) prolonge la zone « littératie informationnelle » de DigComp vers la détection des contenus synthétiques et des techniques d'influence propres aux espaces de création. La compétence 5.3 (conduite en ligne) prolonge la zone « communication et collaboration » vers la modération et la gestion publique de la critique. La compétence 7.4 (actifs indépendants) reprend la question des données sous un angle patrimonial — posséder son audience et ses contenus — là où DigComp la traite sous l'angle défensif de la protection. Dans les trois cas, CréaComp suppose les bases DigComp acquises et décrit exclusivement le prolongement créatif.",
+        "CréaComp est un référentiel neuf, bâti sur son propre objet : la littératie numérique créative. Il ne prolonge pas un cadre existant et ne s'y subordonne pas. Les référentiels européens de compétences — DigComp pour la compétence numérique du citoyen, EntreComp pour la compétence entrepreneuriale — en ont été l'inspiration et la base de travail, et ils en restent le complément naturel ; mais aucun ne décrit ce que CréaComp décrit, et c'est la raison d'être de celui-ci.",
+        "Ce que CréaComp exclut délibérément, il l'exclut donc par choix de périmètre, non par renvoi à une autorité extérieure. N'y figurent ni la sécurité des équipements et des comptes, ni la protection défensive des données personnelles, ni la résolution de problèmes techniques, ni la bureautique et la communication administrative. Ces acquis relèvent d'une littératie numérique générale, largement outillée ailleurs, et les dupliquer aurait dilué le propos. CréaComp les suppose disponibles et traite exclusivement du versant créatif : comprendre les systèmes, concevoir, fabriquer, adresser, entreprendre, valoriser.",
+        "Trois points de contact avec la littératie numérique générale méritent d'être explicités, parce que CréaComp y va plus loin qu'elle. La compétence 1.2 (fiabilité et manipulation) pousse la lecture critique jusqu'à la détection des contenus synthétiques et des techniques d'influence propres aux espaces de création. La compétence 5.3 (conduite en ligne) va jusqu'à la modération et à la gestion publique de la critique. La compétence 7.4 (actifs indépendants) traite les données sous un angle patrimonial — posséder son audience et ses contenus — là où l'approche défensive habituelle s'arrête à leur protection.",
         "Enfin, l'éducation aux médias et à l'information (EMI), inscrite dans les programmes scolaires français, trouve dans la rubrique S'informer son prolongement naturel : CréaComp offre aux enseignants d'EMI une trajectoire qui mène de la réception critique — leur territoire — vers la création assumée, qui est le sien."
       ]
     },
@@ -409,12 +406,12 @@
         {
           "label": "Citation courte",
           "hint": "Dans un support pédagogique, une présentation, un site.",
-          "value": "Hébert, M. (2026). CréaComp 1.0 — Référentiel de littératie créative numérique. CC BY-SA 4.0."
+          "value": "Hébert, M. (2026). CréaComp 1.0 — Référentiel de littératie numérique créative. CC BY-SA 4.0."
         },
         {
           "label": "Référence académique (APA)",
           "hint": "Dans un article, un mémoire, un rapport.",
-          "value": "Hébert, M. (2026). CréaComp 1.0 : Référentiel de littératie créative numérique (édition 2026). Publié sous licence Creative Commons Attribution – Partage dans les mêmes conditions 4.0."
+          "value": "Hébert, M. (2026). CréaComp 1.0 : Référentiel de littératie numérique créative (édition 2026). Publié sous licence Creative Commons Attribution – Partage dans les mêmes conditions 4.0."
         },
         {
           "label": "BibTeX",
@@ -488,7 +485,7 @@
     "imageAlt": "Gros plan d'un crayon de bois taillé."
   },
   "footer": {
-    "about": "CréaComp est un référentiel ouvert de littératie créative numérique, conçu pour cartographier les savoirs de la création à l'ère des créateurs.",
+    "about": "CréaComp est un référentiel ouvert de littératie numérique créative, conçu pour cartographier les savoirs de la création à l'ère des créateurs.",
     "navTitle": "Naviguer",
     "licenseTitle": "Licence",
     "licenseBody": "Contenu publié sous licence Creative Commons Attribution – Partage dans les mêmes conditions 4.0. Réutilisation libre avec citation.",

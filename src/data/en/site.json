@@ -47,29 +47,25 @@
       "id": "N1",
       "name": "Discovery",
       "posture": "I discover and understand by practising on a small scale.",
-      "landmark": "Lower secondary · complete beginner",
-      "digcomp": "DigComp 1–2"
+      "landmark": "Lower secondary · complete beginner"
     },
     {
       "id": "N2",
       "name": "Application",
       "posture": "I apply deliberately within a regular practice.",
-      "landmark": "Upper secondary · advanced beginner",
-      "digcomp": "DigComp 3–4"
+      "landmark": "Upper secondary · advanced beginner"
     },
     {
       "id": "N3",
       "name": "Autonomy",
       "posture": "I experiment, measure and improve independently.",
-      "landmark": "Tertiary · junior professional",
-      "digcomp": "DigComp 5–6"
+      "landmark": "Tertiary · junior professional"
     },
     {
       "id": "N4",
       "name": "Expertise",
       "posture": "I systematise and master for the benefit of others.",
-      "landmark": "Experienced professional · trainer",
-      "digcomp": "DigComp 7–8"
+      "landmark": "Experienced professional · trainer"
     }
   ],
   "ui": {
@@ -190,7 +186,7 @@
     "levels": {
       "eyebrow": "The shared grammar",
       "title": "Four levels — postures, not ages",
-      "lead": "The same four levels apply identically to all thirty-one entries in the framework, and that is what gives it internal coherence. The educational landmarks and the DigComp equivalence are indicative only.",
+      "lead": "The same four levels apply identically to all thirty-one entries in the framework, and that is what gives it internal coherence. The educational landmarks are indicative only.",
       "goldenRule": "Calibration golden rule: every Discovery-level descriptor is achievable by a lower-secondary student equipped with nothing more than a smartphone. None presupposes professional equipment, an existing audience or an established activity."
     },
     "audiences": {
@@ -299,8 +295,8 @@
         },
         {
           "id": "P7",
-          "title": "Complementarity with DigComp",
-          "body": "CréaComp presupposes and complements the European DigComp framework: account security, defensive personal-data protection and office software are deliberately excluded from it. DigComp equips the digital citizen; CréaComp equips the creator."
+          "title": "A deliberately narrow scope",
+          "body": "CréaComp deals with the creative side and mixes nothing else into it: account security, defensive personal-data protection and office software are deliberately excluded. Those belong to a general digital literacy, which this framework assumes in order to go further than it."
         }
       ]
     },
@@ -315,7 +311,7 @@
       "id": "levels",
       "title": "The grammar of the four levels",
       "body": [
-        "The levels describe postures, not ages: they apply identically to all competencies, which is what gives the framework its internal coherence. The educational landmarks and the correspondence with the eight DigComp levels are indicative."
+        "The levels describe postures, not ages: they apply identically to all competencies, which is what gives the framework its internal coherence. The educational landmarks are indicative."
       ],
       "goldenRule": "Golden rule: every Discovery-level descriptor is achievable by a lower-secondary student equipped with nothing more than a smartphone. This rule guarantees that the framework genuinely covers all audiences, from school to professional practice."
     },
@@ -337,12 +333,13 @@
         }
       ]
     },
-    "digcomp": {
-      "id": "digcomp",
-      "title": "Interface with DigComp, and what is excluded",
+    "perimeter": {
+      "id": "scope",
+      "title": "Scope: what CréaComp leaves out",
       "body": [
-        "CréaComp presupposes and complements DigComp; it does not replace it. The European framework covers citizen digital literacy — including its defensive dimension: device and account security, personal-data protection, technical problem-solving, office software and administrative communication. CréaComp treats those as its foundation and duplicates none of them: it begins where DigComp stops, on the offensive side — creating, understanding systems, venturing, capitalising.",
-        "Three contact zones deserve to be made explicit. Competency 1.2 (reliability and manipulation) extends DigComp's information-literacy zone towards the detection of synthetic content and of influence techniques specific to creative spaces. Competency 5.3 (conduct online) extends the communication-and-collaboration zone towards moderation and the public handling of criticism. Competency 7.4 (platform-independent assets) revisits the question of data from an ownership angle — owning your audience and your content — where DigComp treats it defensively as protection. In all three cases, CréaComp assumes the DigComp foundations are in place and describes exclusively the creative extension.",
+        "CréaComp is a new framework, built on an object of its own: digital creative literacy. It neither extends nor subordinates itself to an existing framework. The European competence frameworks — DigComp for the digital competence of citizens, EntreComp for entrepreneurial competence — were its inspiration and its working basis, and they remain its natural complement; but none of them describes what CréaComp describes, which is precisely why it exists.",
+        "What CréaComp deliberately leaves out, it leaves out as a matter of scope, not by deferring to an outside authority. It covers neither device and account security, nor defensive personal-data protection, nor technical problem-solving, nor office software and administrative communication. Those belong to a general digital literacy that is well served elsewhere, and duplicating them would have diluted the point. CréaComp assumes them available and deals exclusively with the creative side: understanding systems, conceiving, making, addressing, venturing, capitalising.",
+        "Three points of contact with general digital literacy deserve to be made explicit, because CréaComp goes further than it does at each. Competency 1.2 (reliability and manipulation) pushes critical reading as far as detecting synthetic content and the influence techniques specific to creative spaces. Competency 5.3 (conduct online) reaches moderation and the public handling of criticism. Competency 7.4 (platform-independent assets) treats data as property — owning your audience and your work — where the usual defensive approach stops at protecting it.",
         "Finally, media and information literacy — a formal part of the French school curriculum — finds its natural extension in the Gather domain: CréaComp offers MIL teachers a trajectory leading from critical reception, their territory, towards assumed creation, which is its own."
       ]
     },

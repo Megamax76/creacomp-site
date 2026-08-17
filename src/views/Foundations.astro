@@ -22,7 +22,7 @@ const toc = [
   { id: f.architecture.id, title: f.architecture.title },
   { id: f.levels.id, title: f.levels.title },
   { id: f.assessment.id, title: f.assessment.title },
-  { id: f.digcomp.id, title: f.digcomp.title },
+  { id: f.perimeter.id, title: f.perimeter.title },
 ];
 ---
 
@@ -171,10 +171,10 @@ const toc = [
         }
       </section>
 
-      <section id={f.digcomp.id} class="chapter">
-        <h2 class="chapter__title">{f.digcomp.title}</h2>
+      <section id={f.perimeter.id} class="chapter">
+        <h2 class="chapter__title">{f.perimeter.title}</h2>
         <div class="prose">
-          {f.digcomp.body.map((paragraph) => <p>{paragraph}</p>)}
+          {f.perimeter.body.map((paragraph) => <p>{paragraph}</p>)}
         </div>
       </section>
 
