@@ -13,7 +13,7 @@ body:
     id: page
     attributes:
       label: Sur quelle page ?
-      placeholder: "https://creacomp.org/referentiel/rechercher-et-sourcer/"
+      placeholder: "https://creacomp.org/referentiel/1-1-rechercher-et-sourcer-l-information/"
     validations:
       required: true
 

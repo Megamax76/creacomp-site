@@ -241,7 +241,7 @@ La structure est stable et lisible directement :
   "rubrics":     [ { "id": 1, "title": "S'INFORMER", "definition": "…" } ],
   "competences": [ {
       "code": "1.1",                       // clé stable entre les langues
-      "slug": "rechercher-et-sourcer",
+      "slug": "1-1-rechercher-et-sourcer-l-information",   // l'URL de la page
       "title": "Rechercher et sourcer l'information",
       "definition": "…",
       "components": [ "…" ],               // ce que la compétence recouvre
