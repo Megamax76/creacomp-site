@@ -306,7 +306,7 @@ formulations recommandées dans les deux langues.
 Ce dépôt est **sous double licence**, parce qu'il contient deux natures de
 travail :
 
-| Ce qui est couvert | Licence | |
+| Ce qui est couvert | Licence | Texte |
 |---|---|---|
 | **Le référentiel** — les fichiers de `src/data/`, les descripteurs, définitions et textes éditoriaux | **CC BY-SA 4.0** | [LICENSE](LICENSE) |
 | **Le code du site** — composants, mises en page, styles, scripts, configuration | **MIT** | [LICENSE-CODE](LICENSE-CODE) |
@@ -315,9 +315,15 @@ Autrement dit : réutilisez le **contenu** en citant l'auteur et en partageant
 vos adaptations aux mêmes conditions ; réutilisez le **code** comme il vous
 plaira.
 
-Les trois photographies viennent d'Unsplash et relèvent de la
-[licence Unsplash](https://unsplash.com/license) ; leurs auteurs sont crédités
-dans [`src/data/credits.json`](src/data/credits.json) et sur le site.
+[**NOTICE**](NOTICE) dit en français, et précisément, ce que chaque licence
+couvre — utile avant une traduction ou une adaptation.
+
+Trois catégories d'éléments présents dans le dépôt n'en relèvent pas : les
+photographies, qui viennent d'Unsplash et suivent la
+[licence Unsplash](https://unsplash.com/license) — leurs auteurs sont crédités
+dans [`src/data/credits.json`](src/data/credits.json) et sur le site ; les
+polices Fraunces, Archivo et JetBrains Mono, sous SIL Open Font License ; et les
+dépendances npm, sous leurs licences propres.
 
 ---
 

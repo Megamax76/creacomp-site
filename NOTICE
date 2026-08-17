@@ -1,0 +1,80 @@
+CréaComp — portée des licences
+==============================
+
+Ce dépôt tient deux natures de travail, sous deux licences distinctes. Ce
+fichier dit précisément ce que couvre chacune. Il est indicatif : en cas de
+divergence, les textes de licence font foi.
+
+Auteur du référentiel : Maxime Hébert
+Version : CréaComp 1.0 — édition 2026
+Site : https://creacomp.org
+
+
+1. Le contenu du référentiel — CC BY-SA 4.0
+-------------------------------------------
+
+Couvre le dossier `src/data/` : rubriques, compétences, fils transversaux,
+définitions, composantes et les 124 descripteurs, dans les deux langues, ainsi
+que les textes éditoriaux du site (accueil, cadre, usage, contact).
+
+    Creative Commons Attribution – Partage dans les mêmes conditions 4.0
+    International (CC BY-SA 4.0)
+
+    Texte intégral       : fichier LICENSE
+    Résumé lisible en fr : https://creativecommons.org/licenses/by-sa/4.0/deed.fr
+
+Vous pouvez **partager** et **adapter** — y compris traduire dans une autre
+langue, adapter à un contexte national ou sectoriel, et exploiter
+commercialement — à deux conditions :
+
+  * **Attribution** — créditer l'auteur, indiquer la version reprise et
+    signaler si des modifications ont été apportées. Formulation recommandée :
+
+        Hébert, M. (2026). CréaComp : référentiel de littératie créative
+        numérique (version 1.0, édition 2026). https://creacomp.org
+
+  * **Partage dans les mêmes conditions** — diffuser toute adaptation ou
+    traduction sous cette même licence CC BY-SA 4.0.
+
+Aucune restriction supplémentaire ne peut être ajoutée : ni condition légale,
+ni mesure technique qui restreindrait autrui à faire ce que la licence permet.
+
+
+2. Le code du site — MIT
+------------------------
+
+Couvre tout le reste de ce que contient le dépôt en propre : composants, mises
+en page, styles, scripts client, configuration, scripts utilitaires de
+`scripts/`.
+
+    Licence MIT — texte intégral : fichier LICENSE-CODE
+
+Autrement dit : réutilisez le code comme il vous plaira, en conservant la
+mention de droit d'auteur.
+
+
+3. Ce que ce dépôt ne licencie pas
+----------------------------------
+
+Trois catégories d'éléments sont présentes dans le dépôt sans en relever :
+
+  * **Les photographies** de `src/assets/images/` (trois fichiers) proviennent
+    d'Unsplash et relèvent de la licence Unsplash — usage libre, y compris
+    commercial. Voir https://unsplash.com/license
+    Leurs auteurs sont crédités dans `src/data/credits.json` et sur la page
+    « Utiliser & citer » du site.
+
+  * **Les polices de caractères** — Fraunces, Archivo et JetBrains Mono, tirées
+    des paquets @fontsource-variable — sont distribuées par leurs auteurs
+    respectifs sous SIL Open Font License 1.1.
+
+  * **Les dépendances npm**, dont Astro, restent sous leurs licences propres.
+    Elles ne sont pas versionnées ici ; `package-lock.json` les identifie.
+
+
+4. Contributions
+----------------
+
+En proposant une contribution, vous acceptez qu'elle soit publiée sous celle
+des deux licences ci-dessus qui correspond à sa nature. Vous conservez la
+paternité de votre travail. Voir CONTRIBUTING.md.
