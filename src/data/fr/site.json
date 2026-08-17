@@ -421,6 +421,15 @@
       ],
       "competenceNote": "Pour citer une compétence précise, ajoutez son code et son intitulé — par exemple : CréaComp 1.0, compétence 3.3 « Maîtriser le récit ». Chaque page de compétence propose sa référence prête à copier."
     },
+    "method": {
+      "title": "Un travail hybride, et pourquoi le dire",
+      "body": [
+        "CréaComp a été pensé par une intelligence humaine et composé avec l'aide d'intelligences artificielles. L'intention, les partis pris et les arbitrages viennent d'un auteur ; la mise en forme, une part de la formulation, la traduction et la construction de ce site doivent beaucoup à des systèmes génératifs, qui ont permis d'aller plus vite et de viser plus large qu'un travail entièrement solitaire ne l'aurait permis.",
+        "Ce qui ne se délègue pas est resté humain : décider ce qui mérite d'être une compétence, placer la frontière entre deux niveaux, assumer ce que le référentiel exclut, et répondre de chaque descripteur devant ceux qui s'en serviront pour former ou évaluer. Une machine propose et accélère ; elle n'assume pas. L'auteur reste seul comptable de ce que dit CréaComp.",
+        "Le dire n'est pas une précaution, c'est une cohérence. La compétence 4.3 demande de créer avec l'intelligence artificielle en faisant un « choix raisonné de ce qui est délégué et de ce qui reste humain », et le fil Discerner demande de créer « de manière transparente, loyale et non manipulatoire ». Un référentiel qui exigerait des créateurs une transparence qu'il ne s'applique pas à lui-même ne vaudrait pas cher.",
+        "C'est enfin ce que CréaComp défend : conduite avec discernement, l'hybridation n'appauvrit pas le travail, elle en relève l'ambition. Encore faut-il savoir la conduire — c'est précisément ce que ce référentiel cherche à rendre enseignable."
+      ]
+    },
     "closing": {
       "title": "Vous l'utilisez ?",
       "body": "Signaler un usage, une traduction ou une adaptation n'est pas une obligation de la licence, mais cela aide à faire vivre le référentiel et à en préparer les révisions.",

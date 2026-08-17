@@ -421,6 +421,15 @@
       ],
       "competenceNote": "To cite a specific competency, add its code and title — for example: CréaComp 1.0, competency 3.3 “Master narrative”. Every competency page offers its own ready-to-copy reference."
     },
+    "method": {
+      "title": "Hybrid work, and why say so",
+      "body": [
+        "CréaComp was conceived by a human intelligence and composed with the help of artificial ones. The intention, the stances and the judgement calls come from an author; the shaping, part of the wording, the translation and the building of this site owe a great deal to generative systems, which made it possible to move faster and aim wider than wholly solitary work would have allowed.",
+        "What cannot be delegated stayed human: deciding what deserves to be a competence, placing the boundary between two levels, owning what the framework leaves out, and answering for every descriptor to those who will use it to teach or assess. A machine proposes and accelerates; it does not answer for the result. The author alone remains accountable for what CréaComp says.",
+        "Saying so is not a precaution, it is a matter of consistency. Competency 4.3 calls for creating with artificial intelligence through a “reasoned choice of what is delegated and what stays human”, and the Discern thread calls for creating “transparently, fairly and without manipulation”. A framework demanding of creators a transparency it does not apply to itself would be worth little.",
+        "It is, finally, what CréaComp argues for: conducted with discernment, hybridisation does not impoverish the work, it raises its ambition. It still has to be conducted well — which is precisely what this framework seeks to make teachable."
+      ]
+    },
     "closing": {
       "title": "Are you using it?",
       "body": "Reporting a use, a translation or an adaptation is not a licence obligation, but it helps keep the framework alive and informs its future revisions.",

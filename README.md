@@ -34,6 +34,7 @@ Bilingue français / anglais, librement réutilisable.
 - [Sécurité](#sécurité)
 - [Contribuer](#contribuer)
 - [Citer CréaComp](#citer-créacomp)
+- [Comment ce référentiel a été fait](#comment-ce-référentiel-a-été-fait)
 - [Licences](#licences)
 - [English summary](#english-summary)
 
@@ -412,6 +413,25 @@ En clair :
 
 La page [« Utiliser & citer »](https://creacomp.org/utiliser/) du site donne les
 formulations recommandées dans les deux langues.
+
+## Comment ce référentiel a été fait
+
+CréaComp a été pensé par une intelligence humaine et composé avec l'aide
+d'intelligences artificielles. L'intention, les partis pris et les arbitrages
+viennent d'un auteur ; la mise en forme, une part de la formulation, la
+traduction et la construction de ce site doivent beaucoup à des systèmes
+génératifs.
+
+Ce qui ne se délègue pas est resté humain : décider ce qui mérite d'être une
+compétence, placer la frontière entre deux niveaux, assumer ce que le
+référentiel exclut, et répondre de chaque descripteur devant ceux qui s'en
+serviront. Une machine propose et accélère ; elle n'assume pas.
+
+Le dire relève moins de la précaution que de la cohérence : la compétence 4.3
+demande un « choix raisonné de ce qui est délégué et de ce qui reste humain »,
+et le fil Discerner demande de créer « de manière transparente, loyale et non
+manipulatoire ». La note complète figure sur
+[la page « Utiliser & citer »](https://creacomp.org/utiliser/).
 
 ## Licences
 
