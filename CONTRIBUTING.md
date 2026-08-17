@@ -95,6 +95,50 @@ sécurité du contenu, laquelle échoue en silence.
 Si vous modifiez le contenu du référentiel, changez un `code` **dans les deux
 langues** ou dans aucune.
 
+## Régénérer les captures du README
+
+Les deux captures de `docs/media/` vieilliront avec le design. Elles sont
+produites en headless, sans dépendance ajoutée au projet — Chrome suffit.
+
+Servez d'abord le site construit :
+
+```bash
+npm run build && npm run preview   # sert dist/ sur le port 4321
+```
+
+Puis, dans un autre terminal :
+
+```bash
+CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+
+"$CHROME" --headless=old --disable-gpu --hide-scrollbars \
+  --virtual-time-budget=8000 --force-device-scale-factor=2 \
+  --window-size=1280,800 --user-data-dir="$(mktemp -d)" \
+  --screenshot=accueil.png http://localhost:4321/
+
+"$CHROME" --headless=old --disable-gpu --hide-scrollbars \
+  --virtual-time-budget=8000 --force-device-scale-factor=2 \
+  --window-size=1280,1750 --user-data-dir="$(mktemp -d)" \
+  --screenshot=referentiel.png http://localhost:4321/referentiel/
+```
+
+`--virtual-time-budget` est indispensable : sans lui Chrome écrit le fichier
+puis ne rend jamais la main. Il peut malgré tout rester en arrière-plan —
+`pkill -f 'Google Chrome.*headless'` s'il traîne.
+
+Convertissez enfin en webp, ce qui divise le poids par dix, avec le `sharp`
+qu'Astro installe déjà :
+
+```bash
+node -e "
+const sharp = require('sharp');
+sharp('accueil.png').resize({width:1600}).webp({quality:86}).toFile('docs/media/accueil.webp');
+sharp('referentiel.png').resize({width:1400}).webp({quality:86}).toFile('docs/media/referentiel.webp');
+"
+```
+
+Ne versionnez pas les PNG intermédiaires.
+
 ## Style
 
 - **Le code suit le code existant** : mêmes conventions de nommage, même densité
