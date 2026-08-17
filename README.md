@@ -23,6 +23,8 @@ Bilingue français / anglais, librement réutilisable.
 ## Sommaire
 
 - [De quoi s'agit-il](#de-quoi-sagit-il)
+- [La littératie créative numérique](#la-littératie-créative-numérique) — le concept central
+- [D'où vient le nom](#doù-vient-le-nom)
 - [Le référentiel en un coup d'œil](#le-référentiel-en-un-coup-dœil)
 - [Utiliser le référentiel](#utiliser-le-référentiel-sans-toucher-au-code)
 - [Faire tourner le site](#faire-tourner-le-site)
@@ -39,12 +41,16 @@ Bilingue français / anglais, librement réutilisable.
 
 ## De quoi s'agit-il
 
-**CréaComp est un référentiel de compétences**, c'est-à-dire une description
-structurée de ce qu'il faut savoir faire pour créer, diffuser et vivre de
-contenus numériques. Il couvre ce que les référentiels existants traitent mal
-ou pas du tout : la lecture critique d'un flux algorithmique, la construction
-d'une voix, le travail avec l'IA génératrice, l'économie de l'attention, la
-soutenabilité d'une pratique créative.
+**CréaComp** — contraction de *Creative Competence* — **est un référentiel de
+compétences** : une description structurée de ce qu'il faut savoir faire pour
+créer, diffuser et vivre de contenus numériques. Son objet est un concept unique,
+la **littératie créative numérique**, qu'il a pour seule ambition de rendre
+enseignable et évaluable.
+
+Il couvre ce que les référentiels existants traitent mal ou pas du tout : la
+lecture critique d'un flux algorithmique, la construction d'une voix, le travail
+avec l'IA génératrice, l'économie de l'attention, la soutenabilité d'une pratique
+créative.
 
 Il s'adresse à qui doit **former, évaluer ou se situer** : enseignants et
 formateurs qui adossent une progression à un cadre explicite, organismes qui
@@ -59,13 +65,116 @@ données structurées réutilisables, et le site qui le publie.
 | **Version** | CréaComp 1.0 — édition 2026 |
 | **Auteur** | Maxime Hébert |
 | **Langues** | français (source), anglais (traduction maintenue à la main) |
-| **Adossement** | niveaux alignés sur DigComp 1–8 |
+| **Objet** | la littératie créative numérique — [voir la définition](#la-littératie-créative-numérique) |
+| **Filiation** | la famille européenne des référentiels *Comp — DigComp, EntreComp — sans affiliation institutionnelle |
 | **Contenu** | CC BY-SA 4.0 — réutilisation, traduction et adaptation libres |
 | **Statut** | publié ; le protocole de validation empirique est ouvert aux contributions |
 
 > [!NOTE]
 > Le référentiel décrit **un territoire, pas un parcours**. Nul n'est censé
 > tout maîtriser, et il n'existe aucun ordre imposé de progression.
+
+## La littératie créative numérique
+
+Tout, dans CréaComp, tourne autour d'un seul concept. Les sept rubriques n'en
+sont que la décomposition opératoire.
+
+> **La littératie créative numérique est la capacité d'une personne à naviguer
+> au cœur du web créatif et à y devenir actrice de la création plutôt que
+> destinataire de celle des autres.**
+>
+> Elle désigne l'ensemble articulé de savoirs, de savoir-faire et de
+> dispositions qui permet de **recevoir de façon critique** ce que des systèmes
+> algorithmiques distribuent, de **comprendre** les logiques techniques et
+> économiques qui gouvernent cette distribution, de **concevoir et fabriquer**
+> des contenus porteurs d'une intention propre, de les **adresser** à un public
+> réel, et de **soutenir** cette pratique dans le temps — matériellement,
+> juridiquement et humainement.
+
+### Pourquoi « littératie », et non « compétence »
+
+Le terme est emprunté aux *literacy studies*, où une littératie ne désigne pas
+un inventaire de gestes techniques mais un **ensemble de pratiques socialement
+situées** : savoir lire et écrire n'est pas savoir tenir un stylo. Ce choix de
+mot engage trois choses qu'un référentiel de compétences logicielles ne dit pas.
+
+- **Elle est indissociable de ses contextes.** La même capacité ne s'exerce pas
+  de la même façon selon la plateforme, le public, la communauté et l'économie
+  dans lesquels on écrit. Un descripteur qui serait vrai hors de tout contexte
+  serait vide.
+- **Elle est graduelle, pas binaire.** On n'est pas « alphabétisé » ou non : on
+  lit et on écrit plus ou moins finement. D'où quatre niveaux de maîtrise, et non
+  une liste d'acquis à cocher.
+- **Elle est critique autant que productive.** Lire suppose de reconnaître ce
+  qu'on cherche à nous faire faire ; écrire suppose de répondre de ce qu'on
+  fait faire aux autres.
+
+### Lire et écrire le web créatif
+
+La littératie créative numérique se tient donc sur **deux jambes**, et l'ordre
+des rubriques suit ce partage :
+
+| | Ce que cela veut dire concrètement | Rubriques |
+|---|---|---|
+| **Lire** | Décoder un flux recommandé, distinguer un contenu choisi d'un contenu subi, reconnaître un format, un code de communauté, un modèle de revenus, une manipulation ; comprendre qu'une IA génératrice produit des sorties probables et non des vérités | 1 · 2 |
+| **Écrire** | Faire naître une intention et lui donner une forme singulière, construire une voix reconnaissable, tenir une cadence, s'adresser à quelqu'un, collaborer, faire vivre une activité de sa pratique | 3 → 7 |
+
+Les trois fils transversaux — **Discerner**, **Durer**, **Se réinventer** — ne
+se rangent dans aucune des deux colonnes parce qu'ils conditionnent les deux :
+on ne lit pas honnêtement si l'on n'écrit pas loyalement, et l'on ne fait ni
+l'un ni l'autre longtemps si l'on s'épuise.
+
+### Ce que le concept n'est pas
+
+Une définition ne vaut que par ce qu'elle exclut. La littératie créative
+numérique n'est donc :
+
+- **ni la maîtrise d'outils** — savoir monter une vidéo dans un logiciel donné
+  est une habileté technique, remplaçable et périssable, pas une littératie ;
+- **ni la promotion de soi** — se rendre visible est un effet possible de la
+  pratique, pas son objet ; le référentiel décrit une capacité à créer, pas une
+  stratégie de notoriété ;
+- **ni l'esprit d'entreprise seul** — entreprendre et rentabiliser en sont deux
+  rubriques sur sept, pas la finalité ;
+- **ni la créativité en général** — l'inventivité est une disposition
+  psychologique largement étudiée ailleurs ; ce qui est décrit ici est ce qui
+  permet à une intention créative de **circuler** dans des environnements
+  numériques, ce qui est autre chose.
+
+L'enjeu, en un mot, est une **asymétrie** : beaucoup reçoivent, peu produisent,
+et moins encore comprennent ce qui décide de ce qui leur parvient. Nommer une
+littératie, c'est poser que cet écart s'apprend et donc s'enseigne.
+
+## D'où vient le nom
+
+**CréaComp** contracte *Creative Competence*, sur le modèle des référentiels de
+compétences publiés par le **Centre commun de recherche** de la Commission
+européenne (*Joint Research Centre*), qui ont fait de ce suffixe une
+convention :
+
+| Référentiel | Objet | Origine |
+|---|---|---|
+| **DigComp** | la compétence numérique du citoyen | JRC, première version en 2013, aujourd'hui en version 3.0 |
+| **EntreComp** | la compétence entrepreneuriale | JRC et DG Emploi, juin 2016 — 3 domaines, 15 compétences |
+| **CréaComp** | la littératie créative numérique | travail indépendant, 2026 |
+
+Le nom situe donc une **parenté d'intention** : décrire une capacité en termes
+observables et graduels, pour qu'elle devienne enseignable et évaluable.
+
+CréaComp se place précisément là où ces deux cadres **ne se recouvrent pas**.
+DigComp décrit le citoyen numérique — s'informer, communiquer, se protéger — mais
+ne dit presque rien du fait de produire une œuvre et d'en vivre. EntreComp
+décrit l'entrepreneur — repérer une occasion, mobiliser des ressources, agir —
+sans rien devoir aux logiques propres des plateformes et de l'attention.
+L'espace laissé vide entre les deux est exactement celui du créateur numérique :
+c'est celui-là que CréaComp cartographie.
+
+> [!IMPORTANT]
+> **CréaComp n'est ni un produit ni une publication de l'Union européenne.**
+> Le nom suit une convention et revendique une filiation méthodologique ; il
+> n'implique aucune affiliation, validation ni approbation institutionnelle.
+> DigComp et EntreComp sont mentionnés comme travaux voisins, dont les niveaux
+> de maîtrise ont servi de repère à la construction des quatre niveaux d'ici.
 
 ## Le référentiel en un coup d'œil
 
@@ -94,12 +203,15 @@ ranger :
 **Quatre niveaux de maîtrise**, décrits pour chacune des 31 entrées — soit
 124 descripteurs :
 
-| Niveau | Nom | Posture | Repère | DigComp |
-|---|---|---|---|---|
-| **N1** | Découverte | Je découvre et je comprends en pratiquant à petite échelle | Collège · grand débutant | 1–2 |
-| **N2** | Application | J'applique consciemment dans une pratique régulière | Lycée · débutant avancé | 3–4 |
-| **N3** | Autonomie | J'expérimente, je mesure et j'améliore en autonomie | Post-bac · professionnel junior | 5–6 |
-| **N4** | Expertise | Je systématise et je maîtrise au bénéfice d'autrui | Professionnel confirmé · formateur | 7–8 |
+| Niveau | Nom | Posture | Repère |
+|---|---|---|---|
+| **N1** | Découverte | Je découvre et je comprends en pratiquant à petite échelle | Collège · grand débutant |
+| **N2** | Application | J'applique consciemment dans une pratique régulière | Lycée · débutant avancé |
+| **N3** | Autonomie | J'expérimente, je mesure et j'améliore en autonomie | Post-bac · professionnel junior |
+| **N4** | Expertise | Je systématise et je maîtrise au bénéfice d'autrui | Professionnel confirmé · formateur |
+
+Chaque descripteur est formulé de manière **observable** — « Est capable de… » —
+afin qu'un niveau puisse être constaté plutôt que supposé.
 
 La carte du site affiche les 31 entrées d'un seul regard, et le sélecteur de
 niveau réécrit **tous** les descripteurs à la fois — on lit le référentiel à
@@ -329,16 +441,44 @@ dépendances npm, sous leurs licences propres.
 
 ## English summary
 
-**CréaComp is a digital creative literacy framework** — a structured
-description of the skills needed to create, publish and make a living from
-digital content. It covers what existing frameworks handle poorly or not at
-all: reading an algorithmic feed critically, building a voice, working with
-generative AI, the attention economy, and sustaining a creative practice.
+**CréaComp — from *Creative Competence* — is a framework for digital creative
+literacy**, a single concept it exists to make teachable.
 
-**7 rubrics, 28 competences, 3 cross-cutting threads, 124 descriptors across
-4 mastery levels**, aligned with DigComp 1–8. Fully bilingual; the English
-translation is structurally identical to the French source and shares the same
-stable `code` keys.
+> **Digital creative literacy is a person's capacity to navigate the creative
+> web and become an *author* within it rather than a recipient of other
+> people's work.**
+>
+> It is the articulated set of knowledge, skills and dispositions that allows
+> someone to **critically receive** what algorithmic systems distribute, to
+> **understand** the technical and economic logics governing that distribution,
+> to **conceive and make** content carrying an intention of its own, to
+> **address** it to a real audience, and to **sustain** that practice over time —
+> materially, legally and personally.
+
+The word *literacy* is borrowed from literacy studies deliberately: a literacy
+is a set of socially situated practices, not an inventory of technical gestures.
+Knowing how to read and write is not knowing how to hold a pen. The framework
+therefore has two legs — **reading** the creative web (rubrics 1–2) and
+**writing** in it (rubrics 3–7) — with three threads conditioning both.
+
+It is **not** software proficiency, **not** self-promotion, **not**
+entrepreneurship alone, and **not** creativity in general: what is described
+here is what lets a creative intention *circulate* in networked environments.
+
+**7 rubrics, 28 competences, 3 cross-cutting threads, 124 observable descriptors
+across 4 mastery levels.** Fully bilingual; the English translation is
+structurally identical to the French source and shares the same stable `code`
+keys.
+
+The name follows the naming convention of the European Commission Joint
+Research Centre's competence frameworks — **DigComp** (digital competence,
+first published 2013) and **EntreComp** (entrepreneurial competence, 2016) —
+and claims a methodological kinship with them. CréaComp sits in the gap
+between the two: DigComp describes the digital citizen but says little about
+producing a body of work and living from it; EntreComp describes the
+entrepreneur but owes nothing to platform and attention logics.
+**CréaComp is not an EU product or publication, and implies no institutional
+affiliation or endorsement.**
 
 This repository holds both the framework — as reusable structured data in
 [`src/data/en/framework.json`](src/data/en/framework.json) — and the static

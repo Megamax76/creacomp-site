@@ -8,13 +8,20 @@ message: >-
 type: dataset
 title: "CréaComp : référentiel de littératie créative numérique"
 abstract: >-
-  CréaComp cartographie la littératie créative numérique : l'ensemble des
-  savoirs qui permettent de recevoir de façon critique, comprendre, imaginer,
-  fabriquer, diffuser et valoriser dans les environnements numériques. Le
-  référentiel compte sept rubriques, vingt-huit compétences et trois fils
-  transversaux, décrits sur quatre niveaux de maîtrise alignés sur DigComp 1–8,
-  soit cent vingt-quatre descripteurs observables. Il est publié en français et
-  en anglais.
+  CréaComp — contraction de « Creative Competence » — cartographie la littératie
+  créative numérique, entendue comme la capacité d'une personne à naviguer au
+  cœur du web créatif et à y devenir actrice de la création plutôt que
+  destinataire de celle des autres : recevoir de façon critique ce que des
+  systèmes algorithmiques distribuent, comprendre les logiques techniques et
+  économiques qui gouvernent cette distribution, concevoir et fabriquer des
+  contenus porteurs d'une intention propre, les adresser à un public et
+  soutenir cette pratique dans le temps. Le référentiel compte sept rubriques,
+  vingt-huit compétences et trois fils transversaux, décrits sur quatre niveaux
+  de maîtrise, soit cent vingt-quatre descripteurs observables. Il est publié en
+  français et en anglais. Son nom suit la convention des référentiels de
+  compétences du Centre commun de recherche de la Commission européenne
+  (DigComp, EntreComp), dont il revendique la filiation méthodologique sans
+  aucune affiliation institutionnelle.
 authors:
   - family-names: Hébert
     given-names: Maxime
