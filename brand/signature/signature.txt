@@ -1,0 +1,16 @@
+Signature en texte brut — pour les messages sans mise en forme.
+Deux versions ; ne garder que celle qui sert.
+
+--- français -------------------------------------------------
+
+Maxime Hébert
+Auteur et mainteneur du référentiel CréaComp
+contact@creacomp.org · https://creacomp.org
+CréaComp 1.0 — Référentiel de littératie numérique créative · CC BY-SA 4.0
+
+--- english --------------------------------------------------
+
+Maxime Hébert
+Author and maintainer of the CréaComp framework
+contact@creacomp.org · https://creacomp.org/en/
+CréaComp 1.0 — Digital Creative Literacy Framework · CC BY-SA 4.0
