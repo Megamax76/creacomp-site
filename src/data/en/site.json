@@ -99,120 +99,220 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "CréaComp 1.0 — 2026 edition",
       "title": "The competency framework for the creator era",
       "lead": "CréaComp maps digital creative literacy: the body of knowledge that allows a person to critically receive, understand, imagine, make, publish and capitalise on content and projects in digital environments.",
-      "primaryCta": "Explore the 31 competencies",
+      "primaryCta": "Explore the 31 entries",
       "secondaryCta": "Understand the foundations"
     },
-    "warning": {
-      "title": "What CréaComp is, and what it is not",
-      "lead": "Four misunderstandings worth clearing up before you read any further.",
+    "toc": {
+      "label": "On this page",
+      "items": [
+        {
+          "id": "object",
+          "num": "01",
+          "label": "The object"
+        },
+        {
+          "id": "architecture",
+          "num": "02",
+          "label": "The architecture"
+        },
+        {
+          "id": "entry",
+          "num": "03",
+          "label": "One entry"
+        },
+        {
+          "id": "scope",
+          "num": "04",
+          "label": "Scope and limits"
+        },
+        {
+          "id": "why",
+          "num": "",
+          "label": "Why this framework"
+        },
+        {
+          "id": "uses",
+          "num": "",
+          "label": "Uses"
+        },
+        {
+          "id": "cite",
+          "num": "",
+          "label": "Use and cite"
+        }
+      ]
+    },
+    "object": {
+      "id": "object",
+      "num": "01",
+      "eyebrow": "The object",
+      "title": "What the framework describes",
+      "lead": "The definition fits in a single sentence, but it covers six distinct capacities. Here they are, set apart: they are what the framework is built on.",
+      "verbsLabel": "Six capacities",
+      "verbs": [
+        "Critically receive",
+        "Understand",
+        "Imagine",
+        "Make",
+        "Publish",
+        "Capitalise on"
+      ],
+      "note": "CréaComp maps them. It does not say how to teach these capacities: it says how to recognise them."
+    },
+    "architecture": {
+      "id": "architecture",
+      "num": "02",
+      "eyebrow": "The architecture",
+      "title": "How the framework is organised",
+      "lead": "Four numbers describe its whole structure. Each one names something precise.",
+      "counts": [
+        {
+          "value": "7",
+          "unit": "domains",
+          "body": "Fields of action, named with verbs."
+        },
+        {
+          "value": "28",
+          "unit": "competencies",
+          "body": "Four per domain."
+        },
+        {
+          "value": "3",
+          "unit": "transversal threads",
+          "body": "They run through all seven domains."
+        },
+        {
+          "value": "124",
+          "unit": "observable descriptors",
+          "body": "Four levels applied to each of the 31 entries."
+        }
+      ],
+      "mapTitle": "Seven domains of action",
+      "mapLead": "Each domain gathers four competencies. Hover one to reveal what it contains.",
+      "levelsTitle": "Four levels — postures, not ages",
+      "levelsLead": "The same four levels apply identically to all thirty-one entries, and that is what gives the framework its internal coherence. The educational landmarks are indicative only.",
+      "goldenRule": "Calibration golden rule: every Discovery-level descriptor is achievable by a lower-secondary student equipped with nothing more than a smartphone. None presupposes professional equipment, an existing audience or an established activity.",
+      "cta": "Open the full framework"
+    },
+    "specimen": {
+      "id": "entry",
+      "num": "03",
+      "eyebrow": "One entry",
+      "title": "What a competency looks like",
+      "lead": "Here is a real entry, unfolded at both ends. The other thirty have exactly the same shape.",
+      "code": "1.2",
+      "levels": [
+        "N1",
+        "N4"
+      ],
+      "annotationsLabel": "How to read this entry",
+      "annotations": [
+        {
+          "term": "The code",
+          "body": "Stable across editions and across languages. It is what you cite — never the title."
+        },
+        {
+          "term": "The descriptor",
+          "body": "States what the person is able to do, in terms a third-party assessor can verify."
+        },
+        {
+          "term": "The evidence",
+          "body": "States how it is verified: through a real artefact, never through a questionnaire."
+        }
+      ]
+    },
+    "scope": {
+      "id": "scope",
+      "num": "04",
+      "eyebrow": "Scope and limits",
+      "title": "What the framework does, and what it does not",
+      "lead": "Four boundaries, stated as choices rather than as caveats.",
       "pairs": [
         {
           "is": "A map",
           "isNot": "Not a curriculum",
-          "body": "The framework describes knowledge and makes it assessable. It prescribes no pathway, no method and no training content. Any instructional design can build on it; none follows from it automatically."
+          "body": "It describes knowledge and makes it assessable. It prescribes no pathway, no method and no content."
         },
         {
           "is": "A territory where each person draws their own profile",
           "isNot": "Not a baseline everyone must master",
-          "body": "There is no hierarchy between domains and no imposed order of progression. The same person can be expert in one competency and a beginner in another. Nobody is expected to master the whole."
+          "body": "No hierarchy between domains, no imposed order of progression. Nobody is expected to master the whole."
         },
         {
           "is": "Evidence of creation",
           "isNot": "No quizzes, no overall grade",
-          "body": "A competency is validated through a real artefact — published content, a completed project, a system built — together with a short reflective analysis. The framework produces no average and no aggregate score."
+          "body": "A competency is validated through a real artefact, together with a short reflective analysis."
         },
         {
           "is": "Capacities of judgement",
           "isNot": "Not a list of software",
-          "body": "No descriptor names a tool, a platform or a model. Tools are replaced every six months; the judgement, direction and method that govern them remain."
+          "body": "No descriptor names a tool. Tools are replaced; judgement remains."
         }
-      ]
+      ],
+      "cta": "Read the seven guiding principles"
     },
     "why": {
+      "id": "why",
       "eyebrow": "Why this framework",
       "title": "Value has moved",
-      "shift": {
-        "title": "From the attention economy to the intention economy",
-        "body": [
-          "The dominant digital economy captures attention: it optimises time spent, reflexive engagement, consumption endured rather than chosen. CréaComp argues for a shift — from an economy in which people are the extracted resource to one in which they become authors again, of what they read, what they create and what they build.",
-          "Every domain can be reread through that shift: understanding algorithms not in order to flatter them but in order to choose what you feed; building a community you own rather than an audience you rent; creating with AI by directing it, rather than by delegating your judgement to it."
-        ],
-        "fromLabel": "Attention economy",
-        "fromBody": "The person is the extracted resource.",
-        "toLabel": "Intention economy",
-        "toBody": "The person becomes the author again."
-      },
-      "chain": {
-        "title": "The creator era and the displacement of value",
-        "body": [
-          "Generative artificial intelligence has collapsed the cost of production: a competent text, a clean visual, an edited video are becoming universally accessible. What becomes ordinary loses its value, and value moves towards both ends of the creative chain.",
-          "This thesis does not change the architecture of the framework, which remains a complete map. It is its reading key: it explains why the upstream and downstream domains weigh as much as making itself."
-        ],
-        "caption": "Where value sits along the creative chain",
-        "stages": [
-          {
-            "label": "Upstream",
-            "name": "The eye",
-            "body": "Knowing what to create, why, and from which point of view.",
-            "value": "high",
-            "rubrics": "Gather · Analyse · Create"
-          },
-          {
-            "label": "Midstream",
-            "name": "Making",
-            "body": "Producing a correct form. Cost collapsed, value diluted.",
-            "value": "low",
-            "rubrics": "Make"
-          },
-          {
-            "label": "Downstream",
-            "name": "The relationship",
-            "body": "Trust, community, and the assets you actually own.",
-            "value": "high",
-            "rubrics": "Collaborate · Venture · Monetise"
-          }
-        ]
-      }
-    },
-    "map": {
-      "eyebrow": "Overview",
-      "title": "Seven domains of action, named with verbs",
-      "lead": "Each domain gathers four competencies. Three transversal threads run through all of them. Hover a domain to reveal what it contains.",
-      "cta": "Open the full map"
-    },
-    "levels": {
-      "eyebrow": "The shared grammar",
-      "title": "Four levels — postures, not ages",
-      "lead": "The same four levels apply identically to all thirty-one entries in the framework, and that is what gives it internal coherence. The educational landmarks are indicative only.",
-      "goldenRule": "Calibration golden rule: every Discovery-level descriptor is achievable by a lower-secondary student equipped with nothing more than a smartphone. None presupposes professional equipment, an existing audience or an established activity."
+      "body": [
+        "Generative artificial intelligence has collapsed the cost of production: a competent text, a clean visual, an edited video are becoming universally accessible. What becomes ordinary loses its value, and value moves towards both ends of the creative chain.",
+        "No existing framework described those two ends together. That is why CréaComp exists, and it is the reading key that explains why its upstream and downstream domains weigh as much as making itself."
+      ],
+      "caption": "Where value sits along the creative chain",
+      "stages": [
+        {
+          "label": "Upstream",
+          "name": "The eye",
+          "body": "Knowing what to create, why, and from which point of view.",
+          "value": "high",
+          "rubrics": "Gather · Analyse · Create"
+        },
+        {
+          "label": "Midstream",
+          "name": "Making",
+          "body": "Producing a correct form. Cost collapsed, value diluted.",
+          "value": "low",
+          "rubrics": "Make"
+        },
+        {
+          "label": "Downstream",
+          "name": "The relationship",
+          "body": "Trust, community, and the assets you actually own.",
+          "value": "high",
+          "rubrics": "Collaborate · Venture · Monetise"
+        }
+      ],
+      "cta": "Read the foundations of the framework"
     },
     "audiences": {
+      "id": "uses",
       "eyebrow": "Uses",
       "title": "Who is this framework for?",
       "items": [
         {
           "name": "Teachers",
-          "body": "Anchor a progression in observable descriptors rather than in intentions, from lower secondary to higher education. The Gather domain is a natural extension of media and information literacy."
+          "body": "Anchor a progression in observable descriptors rather than in intentions, from lower secondary to higher education."
         },
         {
           "name": "Training providers",
-          "body": "Build a legible offer aligned with a public framework, and assess it through evidence of creation rather than through questionnaires."
+          "body": "Build a legible offer aligned with a public framework, and assess it through evidence of creation."
         },
         {
           "name": "Creators and freelancers",
-          "body": "Locate your practice on a map, identify your blind spots, and choose deliberately what to learn next."
+          "body": "Locate your practice on a map and identify your blind spots."
         },
         {
           "name": "Institutions and researchers",
-          "body": "Work from an open, citable framework, complementary to DigComp, to support public policy or research."
+          "body": "Work from an open, dated and citable framework, to support public policy or research."
         }
       ],
       "cta": "How to use the framework"
     },
     "closing": {
+      "id": "cite",
       "title": "A common good",
       "body": "CréaComp is published under a Creative Commons Attribution–ShareAlike 4.0 licence. You may reuse it, translate it, adapt it and embed it in your own programmes, provided you credit its origin and share your adaptations under the same terms.",
       "primaryCta": "Use & cite",

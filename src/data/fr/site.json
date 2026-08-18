@@ -99,120 +99,220 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "CréaComp 1.0 — édition 2026",
       "title": "Le référentiel de compétences pour l'ère des créateurs",
       "lead": "CréaComp cartographie la littératie numérique créative : l'ensemble des savoirs qui permettent de recevoir de façon critique, comprendre, imaginer, fabriquer, diffuser et valoriser dans les environnements numériques.",
-      "primaryCta": "Explorer les 31 compétences",
+      "primaryCta": "Explorer les 31 entrées",
       "secondaryCta": "Comprendre le cadre"
     },
-    "warning": {
-      "title": "Ce que CréaComp est, ce qu'il n'est pas",
-      "lead": "Quatre malentendus valent d'être écartés avant toute lecture.",
+    "toc": {
+      "label": "Sur cette page",
+      "items": [
+        {
+          "id": "objet",
+          "num": "01",
+          "label": "L'objet"
+        },
+        {
+          "id": "architecture",
+          "num": "02",
+          "label": "L'architecture"
+        },
+        {
+          "id": "entree",
+          "num": "03",
+          "label": "Une entrée"
+        },
+        {
+          "id": "portee",
+          "num": "04",
+          "label": "Portée et limites"
+        },
+        {
+          "id": "pourquoi",
+          "num": "",
+          "label": "Pourquoi ce cadre"
+        },
+        {
+          "id": "usages",
+          "num": "",
+          "label": "Usages"
+        },
+        {
+          "id": "citer",
+          "num": "",
+          "label": "Citer et réutiliser"
+        }
+      ]
+    },
+    "object": {
+      "id": "objet",
+      "num": "01",
+      "eyebrow": "L'objet",
+      "title": "Ce que le référentiel décrit",
+      "lead": "La définition tient en une phrase, mais elle recouvre six capacités distinctes. Les voici séparées : c'est sur elles que le référentiel est bâti.",
+      "verbsLabel": "Six capacités",
+      "verbs": [
+        "Recevoir de façon critique",
+        "Comprendre",
+        "Imaginer",
+        "Fabriquer",
+        "Diffuser",
+        "Valoriser"
+      ],
+      "note": "CréaComp en est la cartographie. Il ne dit pas comment enseigner ces capacités : il dit comment les reconnaître."
+    },
+    "architecture": {
+      "id": "architecture",
+      "num": "02",
+      "eyebrow": "L'architecture",
+      "title": "Comment le référentiel est organisé",
+      "lead": "Quatre nombres suffisent à en décrire la charpente. Chacun désigne une chose précise.",
+      "counts": [
+        {
+          "value": "7",
+          "unit": "rubriques",
+          "body": "Des domaines d'action, nommés par des verbes."
+        },
+        {
+          "value": "28",
+          "unit": "compétences",
+          "body": "Quatre par rubrique."
+        },
+        {
+          "value": "3",
+          "unit": "fils transversaux",
+          "body": "Ils traversent les sept rubriques."
+        },
+        {
+          "value": "124",
+          "unit": "descripteurs observables",
+          "body": "Quatre niveaux appliqués à chacune des 31 entrées."
+        }
+      ],
+      "mapTitle": "Sept rubriques d'action",
+      "mapLead": "Chaque rubrique regroupe quatre compétences. Survolez-en une pour en découvrir le contenu.",
+      "levelsTitle": "Quatre niveaux — des postures, non des âges",
+      "levelsLead": "Les mêmes quatre niveaux s'appliquent identiquement aux trente et une entrées : c'est ce qui donne au référentiel sa cohérence interne. Les repères scolaires sont indicatifs.",
+      "goldenRule": "Règle d'or de calibrage : tout descripteur de niveau Découverte est atteignable par un collégien équipé d'un simple smartphone. Aucun ne présuppose de matériel professionnel, d'audience existante ou d'activité établie.",
+      "cta": "Ouvrir le référentiel complet"
+    },
+    "specimen": {
+      "id": "entree",
+      "num": "03",
+      "eyebrow": "Une entrée",
+      "title": "À quoi ressemble une compétence",
+      "lead": "Voici une entrée réelle, dépliée à ses deux extrémités. Les trente autres ont exactement la même forme.",
+      "code": "1.2",
+      "levels": [
+        "N1",
+        "N4"
+      ],
+      "annotationsLabel": "Comment lire cette fiche",
+      "annotations": [
+        {
+          "term": "Le code",
+          "body": "Stable d'une édition à l'autre et d'une langue à l'autre. C'est lui qu'on cite, jamais le titre."
+        },
+        {
+          "term": "Le descripteur",
+          "body": "Énonce ce que la personne est capable de faire, en termes vérifiables par un évaluateur tiers."
+        },
+        {
+          "term": "La preuve d'évaluation",
+          "body": "Dit comment on le vérifie : par un artefact réel, jamais par un questionnaire."
+        }
+      ]
+    },
+    "scope": {
+      "id": "portee",
+      "num": "04",
+      "eyebrow": "Portée et limites",
+      "title": "Ce que le référentiel fait, et ce qu'il ne fait pas",
+      "lead": "Quatre bornes, énoncées comme des choix et non comme des réserves.",
       "pairs": [
         {
           "is": "Une cartographie",
           "isNot": "Pas un programme de formation",
-          "body": "Le référentiel décrit des savoirs et permet de les évaluer. Il ne prescrit ni parcours, ni méthode, ni contenu. Toute ingénierie pédagogique peut s'y adosser ; aucune n'en découle mécaniquement."
+          "body": "Il décrit des savoirs et permet de les évaluer. Il ne prescrit ni parcours, ni méthode, ni contenu."
         },
         {
           "is": "Un territoire où chacun dessine son profil",
           "isNot": "Pas un socle que tout le monde devrait maîtriser",
-          "body": "Il n'existe ni hiérarchie entre les rubriques, ni ordre imposé de progression. Une même personne peut être experte d'une compétence et débutante d'une autre. Nul n'est censé tout maîtriser."
+          "body": "Ni hiérarchie entre les rubriques, ni ordre imposé de progression. Nul n'est censé tout maîtriser."
         },
         {
           "is": "Des preuves de création",
           "isNot": "Pas de questionnaire, pas de note globale",
-          "body": "Une compétence se valide par un artefact réel — contenu publié, projet mené, dispositif construit — accompagné d'une analyse réflexive. Le référentiel ne produit ni moyenne, ni score agrégé."
+          "body": "Une compétence se valide par un artefact réel, accompagné d'une analyse réflexive."
         },
         {
           "is": "Des capacités de jugement",
           "isNot": "Pas une liste de logiciels",
-          "body": "Aucun descripteur ne nomme un outil, une plateforme ou un modèle. Les outils se renouvellent tous les six mois ; les capacités de jugement, de direction et de méthode qui les gouvernent demeurent."
+          "body": "Aucun descripteur ne nomme un outil. Les outils se renouvellent ; le jugement demeure."
         }
-      ]
+      ],
+      "cta": "Lire les sept principes directeurs"
     },
     "why": {
-      "eyebrow": "Pourquoi ce référentiel",
+      "id": "pourquoi",
+      "eyebrow": "Pourquoi ce cadre",
       "title": "La valeur a changé de place",
-      "shift": {
-        "title": "De l'économie de l'attention à l'économie de l'intention",
-        "body": [
-          "L'économie numérique dominante capture l'attention : elle optimise le temps passé, l'engagement réflexe, la consommation subie. CréaComp défend un basculement — passer d'une économie où les personnes sont la ressource extraite à une économie où elles redeviennent les auteurs de ce qu'elles consultent, de ce qu'elles créent, de ce qu'elles construisent.",
-          "Chaque rubrique se relit à travers ce basculement : comprendre les algorithmes non pour les flatter mais pour choisir ce qu'on nourrit ; construire une communauté qu'on possède plutôt qu'une audience qu'on loue ; créer avec l'IA en dirigeant, plutôt qu'en déléguant son jugement."
-        ],
-        "fromLabel": "Économie de l'attention",
-        "fromBody": "La personne est la ressource extraite.",
-        "toLabel": "Économie de l'intention",
-        "toBody": "La personne redevient l'auteur."
-      },
-      "chain": {
-        "title": "L'ère des créateurs et le déplacement de la valeur",
-        "body": [
-          "L'intelligence artificielle générative a effondré le coût de la production : un texte correct, un visuel propre, une vidéo montée sont en passe de devenir universellement accessibles. Ce qui se banalise se dévalue, et la valeur se déplace vers les deux extrémités de la chaîne créative.",
-          "Cette thèse ne modifie pas l'architecture du référentiel, qui demeure une cartographie complète. Elle en constitue la clé de lecture : elle explique pourquoi les rubriques d'amont et d'aval pèsent autant que la fabrication elle-même."
-        ],
-        "caption": "Où se loge la valeur dans la chaîne créative",
-        "stages": [
-          {
-            "label": "En amont",
-            "name": "Le regard",
-            "body": "Savoir quoi créer, pourquoi, avec quel point de vue.",
-            "value": "high",
-            "rubrics": "S'informer · Analyser · Créer"
-          },
-          {
-            "label": "Au milieu",
-            "name": "La fabrication",
-            "body": "Produire une forme correcte. Coût effondré, valeur diluée.",
-            "value": "low",
-            "rubrics": "Faire"
-          },
-          {
-            "label": "En aval",
-            "name": "La relation",
-            "body": "La confiance, la communauté, les actifs que l'on possède.",
-            "value": "high",
-            "rubrics": "Collaborer · Entreprendre · Rentabiliser"
-          }
-        ]
-      }
-    },
-    "map": {
-      "eyebrow": "Aperçu",
-      "title": "Sept rubriques d'action, nommées par des verbes",
-      "lead": "Chaque rubrique regroupe quatre compétences. Trois fils transversaux les traversent toutes. Survolez une rubrique pour en découvrir le contenu.",
-      "cta": "Ouvrir la carte complète"
-    },
-    "levels": {
-      "eyebrow": "La grammaire commune",
-      "title": "Quatre niveaux, des postures et non des âges",
-      "lead": "Les mêmes quatre niveaux s'appliquent identiquement aux trente et une entrées du référentiel : c'est ce qui lui donne sa cohérence interne. Les repères scolaires sont indicatifs.",
-      "goldenRule": "Règle d'or de calibrage : tout descripteur de niveau Découverte est atteignable par un collégien équipé d'un simple smartphone. Aucun ne présuppose de matériel professionnel, d'audience existante ou d'activité établie."
+      "body": [
+        "L'intelligence artificielle générative a effondré le coût de la production : un texte correct, un visuel propre, une vidéo montée deviennent universellement accessibles. Ce qui se banalise se dévalue, et la valeur se déplace vers les deux extrémités de la chaîne créative.",
+        "Aucun cadre existant ne décrivait ces deux extrémités ensemble. C'est la raison d'être de CréaComp, et la clé de lecture qui explique pourquoi ses rubriques d'amont et d'aval pèsent autant que la fabrication elle-même."
+      ],
+      "caption": "Où se loge la valeur dans la chaîne créative",
+      "stages": [
+        {
+          "label": "En amont",
+          "name": "Le regard",
+          "body": "Savoir quoi créer, pourquoi, avec quel point de vue.",
+          "value": "high",
+          "rubrics": "S'informer · Analyser · Créer"
+        },
+        {
+          "label": "Au milieu",
+          "name": "La fabrication",
+          "body": "Produire une forme correcte. Coût effondré, valeur diluée.",
+          "value": "low",
+          "rubrics": "Faire"
+        },
+        {
+          "label": "En aval",
+          "name": "La relation",
+          "body": "La confiance, la communauté, les actifs que l'on possède.",
+          "value": "high",
+          "rubrics": "Collaborer · Entreprendre · Rentabiliser"
+        }
+      ],
+      "cta": "Lire les fondements du référentiel"
     },
     "audiences": {
+      "id": "usages",
       "eyebrow": "Usages",
       "title": "À qui ce référentiel sert-il ?",
       "items": [
         {
           "name": "Enseignants",
-          "body": "Adosser une progression à des descripteurs observables plutôt qu'à des intentions, du collège au supérieur. La rubrique S'informer prolonge naturellement l'éducation aux médias et à l'information."
+          "body": "Adosser une progression à des descripteurs observables plutôt qu'à des intentions, du collège au supérieur."
         },
         {
           "name": "Organismes de formation",
-          "body": "Construire une offre lisible, alignée sur un cadre public, et l'évaluer par des preuves de création plutôt que par des questionnaires."
+          "body": "Construire une offre lisible, alignée sur un cadre public, et l'évaluer par des preuves de création."
         },
         {
           "name": "Créateurs et indépendants",
-          "body": "Situer sa pratique sur une carte, repérer ses angles morts, et choisir en connaissance de cause ce qu'on veut apprendre ensuite."
+          "body": "Situer sa pratique sur une carte et repérer ses angles morts."
         },
         {
           "name": "Institutions et chercheurs",
-          "body": "Disposer d'un cadre ouvert et citable, complémentaire de DigComp, pour outiller des politiques publiques ou des travaux de recherche."
+          "body": "Disposer d'un cadre ouvert, daté et citable, pour outiller des politiques publiques ou des travaux de recherche."
         }
       ],
       "cta": "Comment utiliser le référentiel"
     },
     "closing": {
+      "id": "citer",
       "title": "Un bien commun",
       "body": "CréaComp est publié sous licence Creative Commons Attribution – Partage dans les mêmes conditions 4.0. Vous pouvez le reprendre, le traduire, l'adapter et l'intégrer à vos propres dispositifs, à condition d'en citer l'origine et de partager vos adaptations aux mêmes conditions.",
       "primaryCta": "Utiliser & citer",

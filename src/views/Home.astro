@@ -3,6 +3,8 @@ import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import RubricMap from '../components/RubricMap.astro';
 import LevelCards from '../components/LevelCards.astro';
+import PageToc from '../components/PageToc.astro';
+import Specimen from '../components/Specimen.astro';
 import { site, path, type Lang } from '../lib/i18n';
 import { image, credit, creditSource } from '../lib/images';
 
@@ -13,13 +15,20 @@ interface Props {
 const { lang } = Astro.props;
 const s = site(lang);
 const home = s.home;
-const counts = [
-  s.counts.rubrics,
-  s.counts.competences,
-  s.counts.threads,
-  s.counts.levels,
-  s.counts.descriptors,
-];
+
+// La carte d'identité du document remplace les compteurs : c'est le repère
+// qu'attend un lecteur institutionnel, et il se déduit entièrement des méta.
+const identity = `${s.meta.versionLabel} · ${s.meta.author} · ${s.meta.license}`;
+
+const tocItems = home.toc.items.map((item) => ({
+  href: `#${item.id}`,
+  num: item.num,
+  label: item.label,
+}));
+
+// Les principes directeurs portent une ancre localisée : « principes » en
+// français, « principles » en anglais. On la lit plutôt que de la deviner.
+const principlesHref = `${path(lang, 'foundations')}#${s.foundations.principles.id}`;
 
 const heroImage = image('hero');
 const heroCredit = credit('hero');
@@ -30,21 +39,22 @@ const heroAlt =
 ---
 
 <Base lang={lang} page="home">
-  <!-- Hero -->
+  <!-- En-tête du document -->
   <section class="hero">
     <div class="wrap hero__inner">
       <div class="hero__text">
-      <p class="hero__eyebrow">{home.hero.eyebrow}</p>
-      <h1 class="hero__title">{home.hero.title}</h1>
-      <p class="hero__lead">{home.hero.lead}</p>
+        <h1 class="hero__title">{home.hero.title}</h1>
+        <p class="hero__lead">{home.hero.lead}</p>
 
-      <div class="hero__actions">
-        <a class="btn" href={path(lang, 'framework')}>
-          {home.hero.primaryCta}
-          <span class="btn__arrow" aria-hidden="true">→</span>
-        </a>
-        <a class="btn btn--ghost" href={path(lang, 'foundations')}>{home.hero.secondaryCta}</a>
-      </div>
+        <div class="hero__actions">
+          <a class="btn" href={path(lang, 'framework')}>
+            {home.hero.primaryCta}
+            <span class="btn__arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="btn btn--ghost" href={path(lang, 'foundations')}>{home.hero.secondaryCta}</a>
+        </div>
+
+        <p class="hero__identity">{identity}</p>
       </div>
 
       {
@@ -74,71 +84,160 @@ const heroAlt =
           </figure>
         )
       }
-
-      <ul class="hero__counts">
-        {counts.map((count) => <li>{count}</li>)}
-      </ul>
     </div>
   </section>
 
+  <!-- Sommaire de page -->
+  <div class="wrap">
+    <PageToc label={home.toc.label} items={tocItems} />
+  </div>
 
-  <!-- L'avertissement : ce que le référentiel est, ce qu'il n'est pas -->
-  <section class="section section--sunken section--ruled">
+  <!-- 01 · L'objet -->
+  <section class="section" id={home.object.id}>
     <div class="wrap">
-      <div class="warning__head">
-        <h2 class="title-2">{home.warning.title}</h2>
-        <p class="lead">{home.warning.lead}</p>
-      </div>
-      <ul class="warning__grid">
+      <p class="eyebrow">
+        <span class="step">{home.object.num}</span>
+        {home.object.eyebrow}
+      </p>
+      <h2 class="title-2">{home.object.title}</h2>
+      <p class="lead section__lead">{home.object.lead}</p>
+
+      <p class="verbs__label">{home.object.verbsLabel}</p>
+      <ul class="verbs">
+        {home.object.verbs.map((verb) => <li class="verb">{verb}</li>)}
+      </ul>
+
+      <p class="object__note">{home.object.note}</p>
+    </div>
+  </section>
+
+  <!-- 02 · L'architecture -->
+  <section class="section section--sunken section--ruled" id={home.architecture.id}>
+    <div class="wrap">
+      <p class="eyebrow">
+        <span class="step">{home.architecture.num}</span>
+        {home.architecture.eyebrow}
+      </p>
+      <h2 class="title-2">{home.architecture.title}</h2>
+      <p class="lead section__lead">{home.architecture.lead}</p>
+
+      <ul class="tally">
         {
-          home.warning.pairs.map((pair) => (
-            <li class="warning__item">
-              <p class="warning__is">{pair.is}</p>
-              <p class="warning__isnot">{pair.isNot}</p>
-              <p class="warning__body">{pair.body}</p>
+          home.architecture.counts.map((count) => (
+            <li class="tally__item">
+              <p class="tally__value">{count.value}</p>
+              <p class="tally__unit">{count.unit}</p>
+              <p class="tally__body">{count.body}</p>
             </li>
           ))
         }
       </ul>
+
+      <div class="block">
+        <h3 class="title-3">{home.architecture.mapTitle}</h3>
+        <p class="block__lead">{home.architecture.mapLead}</p>
+        <RubricMap lang={lang} />
+      </div>
+
+      <div class="block">
+        <h3 class="title-3">{home.architecture.levelsTitle}</h3>
+        <p class="block__lead">{home.architecture.levelsLead}</p>
+        <LevelCards lang={lang} />
+        <p class="rule-gold">{home.architecture.goldenRule}</p>
+      </div>
+
+      <p class="block__cta">
+        <a class="btn" href={path(lang, 'framework')}>
+          {home.architecture.cta}
+          <span class="btn__arrow" aria-hidden="true">→</span>
+        </a>
+      </p>
     </div>
   </section>
 
-  <!-- Pourquoi : le basculement et le déplacement de la valeur -->
-  <section class="section">
+  <!-- 03 · Une entrée -->
+  <section class="section" id={home.specimen.id}>
+    <div class="wrap">
+      <p class="eyebrow">
+        <span class="step">{home.specimen.num}</span>
+        {home.specimen.eyebrow}
+      </p>
+      <h2 class="title-2">{home.specimen.title}</h2>
+      <p class="lead section__lead">{home.specimen.lead}</p>
+
+      <div class="sample">
+        <Specimen lang={lang} code={home.specimen.code} levels={home.specimen.levels} />
+
+        <aside class="notes">
+          <p class="notes__label">{home.specimen.annotationsLabel}</p>
+          <dl class="notes__list">
+            {
+              home.specimen.annotations.map((note) => (
+                <div class="note">
+                  <dt class="note__term">{note.term}</dt>
+                  <dd class="note__body">{note.body}</dd>
+                </div>
+              ))
+            }
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 · Portée et limites -->
+  <section class="section section--sunken section--ruled" id={home.scope.id}>
+    <div class="wrap">
+      <p class="eyebrow">
+        <span class="step">{home.scope.num}</span>
+        {home.scope.eyebrow}
+      </p>
+      <h2 class="title-2">{home.scope.title}</h2>
+      <p class="lead section__lead">{home.scope.lead}</p>
+
+      <ul class="pairs">
+        {
+          home.scope.pairs.map((pair) => (
+            <li class="pair">
+              <p class="pair__is">{pair.is}</p>
+              <p class="pair__isnot">{pair.isNot}</p>
+              <p class="pair__body">{pair.body}</p>
+            </li>
+          ))
+        }
+      </ul>
+
+      <p class="block__cta">
+        <a class="btn btn--ghost" href={principlesHref}>
+          {home.scope.cta}
+          <span class="btn__arrow" aria-hidden="true">→</span>
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Pourquoi ce cadre -->
+  <section class="section" id={home.why.id}>
     <div class="wrap">
       <p class="eyebrow">{home.why.eyebrow}</p>
       <h2 class="title-2 why__title">{home.why.title}</h2>
 
-      <div class="shift">
-        <div class="shift__text prose">
-          <h3 class="title-3">{home.why.shift.title}</h3>
-          {home.why.shift.body.map((paragraph) => <p>{paragraph}</p>)}
-        </div>
-
-        <figure class="scale">
-          <div class="scale__pan scale__pan--from">
-            <p class="scale__label">{home.why.shift.fromLabel}</p>
-            <p class="scale__body">{home.why.shift.fromBody}</p>
-          </div>
-          <p class="scale__arrow" aria-hidden="true">↓</p>
-          <div class="scale__pan scale__pan--to">
-            <p class="scale__label">{home.why.shift.toLabel}</p>
-            <p class="scale__body">{home.why.shift.toBody}</p>
-          </div>
-        </figure>
-      </div>
-
       <div class="chain">
         <div class="chain__text prose">
-          <h3 class="title-3">{home.why.chain.title}</h3>
-          {home.why.chain.body.map((paragraph) => <p>{paragraph}</p>)}
+          {home.why.body.map((paragraph) => <p>{paragraph}</p>)}
+          <p class="block__cta">
+            <a class="btn btn--ghost" href={path(lang, 'foundations')}>
+              {home.why.cta}
+              <span class="btn__arrow" aria-hidden="true">→</span>
+            </a>
+          </p>
         </div>
 
         <figure class="curve">
-          <figcaption class="curve__caption">{home.why.chain.caption}</figcaption>
+          <figcaption class="curve__caption">{home.why.caption}</figcaption>
           <ol class="curve__stages">
             {
-              home.why.chain.stages.map((stage) => (
+              home.why.stages.map((stage) => (
                 <li class="stage" data-value={stage.value}>
                   <div class="stage__bar" aria-hidden="true">
                     <span class="stage__fill" />
@@ -156,39 +255,8 @@ const heroAlt =
     </div>
   </section>
 
-  <!-- La carte des sept rubriques -->
-  <section class="section section--sunken section--ruled">
-    <div class="wrap">
-      <div class="map__head">
-        <div>
-          <p class="eyebrow">{home.map.eyebrow}</p>
-          <h2 class="title-2">{home.map.title}</h2>
-        </div>
-        <p class="lead map__lead">{home.map.lead}</p>
-      </div>
-      <RubricMap lang={lang} />
-      <p class="map__cta">
-        <a class="btn" href={path(lang, 'framework')}>
-          {home.map.cta}
-          <span class="btn__arrow" aria-hidden="true">→</span>
-        </a>
-      </p>
-    </div>
-  </section>
-
-  <!-- Les quatre niveaux -->
-  <section class="section">
-    <div class="wrap">
-      <p class="eyebrow">{home.levels.eyebrow}</p>
-      <h2 class="title-2">{home.levels.title}</h2>
-      <p class="lead levels__lead">{home.levels.lead}</p>
-      <LevelCards lang={lang} />
-      <p class="rule-gold">{home.levels.goldenRule}</p>
-    </div>
-  </section>
-
-  <!-- À qui ça sert -->
-  <section class="section section--sunken section--ruled">
+  <!-- Usages -->
+  <section class="section section--sunken section--ruled" id={home.audiences.id}>
     <div class="wrap">
       <p class="eyebrow">{home.audiences.eyebrow}</p>
       <h2 class="title-2">{home.audiences.title}</h2>
@@ -214,8 +282,8 @@ const heroAlt =
     </div>
   </section>
 
-  <!-- Clôture : le commun -->
-  <section class="section closing">
+  <!-- Citer et réutiliser -->
+  <section class="section closing" id={home.closing.id}>
     <div class="wrap closing__inner">
       <h2 class="title-2">{home.closing.title}</h2>
       <p class="closing__body">{home.closing.body}</p>
@@ -257,7 +325,6 @@ const heroAlt =
   }
   @media (min-width: 62rem) {
     .hero__inner { grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); }
-    .hero__counts { grid-column: 1 / -1; }
   }
 
   .hero__figure { margin: 0; }
@@ -283,16 +350,6 @@ const heroAlt =
     filter: saturate(0.62) contrast(1.04);
   }
 
-  .hero__eyebrow {
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 1.6rem;
-  }
-
   .hero__title {
     font-size: var(--step-5);
     font-variation-settings: 'SOFT' 30, 'WONK' 1, 'opsz' 144;
@@ -316,6 +373,17 @@ const heroAlt =
     margin-top: clamp(1.8rem, 3.5vw, 2.6rem);
   }
 
+  /* La carte d'identité du document : version, édition, auteur, licence. */
+  .hero__identity {
+    margin-top: clamp(1.8rem, 3.5vw, 2.6rem);
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--rule);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    color: var(--ink-faint);
+  }
+
   .credit-line {
     margin-top: 0.55rem;
     text-align: right;
@@ -327,33 +395,162 @@ const heroAlt =
   .credit-line a { color: inherit; text-decoration: none; }
   .credit-line a:hover { color: var(--accent); text-decoration: underline; }
 
-  .hero__counts {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.55rem 1.4rem;
-    list-style: none;
-    margin-top: clamp(2.5rem, 5vw, 4rem);
-    padding-top: 1.3rem;
-    border-top: 1px solid var(--rule);
+  /* --- En-têtes de section --------------------------------------------------- */
+
+  /* Le numéro d'étape rend la progression visible sans quitter le registre
+     documentaire : c'est la même convention que les principes P1–P7. */
+  .step {
+    display: inline-block;
+    margin-right: 0.6rem;
+    padding-right: 0.6rem;
+    border-right: 1px solid var(--accent-edge);
+    font-weight: 700;
+  }
+
+  .section__lead { margin: 0.9rem 0 clamp(1.8rem, 4vw, 2.6rem); max-width: 46rem; }
+
+  .block { margin-top: clamp(2.6rem, 6vw, 4rem); }
+  .block__lead {
+    margin: 0.7rem 0 clamp(1.4rem, 3vw, 2rem);
+    max-width: 46rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+  .block__cta { margin-top: 2.2rem; }
+
+  /* --- 01 · L'objet ----------------------------------------------------------- */
+
+  .verbs__label {
     font-family: var(--font-mono);
-    font-size: 0.74rem;
-    letter-spacing: 0.05em;
+    font-size: 0.66rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
     color: var(--ink-faint);
   }
-  .hero__counts li { position: relative; }
-  .hero__counts li + li::before {
-    content: '·';
-    position: absolute;
-    left: -0.85rem;
-    color: var(--accent);
+
+  /* Les six verbes étaient noyés dans la phrase du chapô. Dépliés, ils se
+     lisent d'un coup d'œil : la prose dit, la bande montre. */
+  .verbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    list-style: none;
+    margin-top: 0.9rem;
+  }
+  .verb {
+    padding: 0.5rem 0.95rem;
+    border: 1px solid var(--accent-edge);
+    border-radius: var(--radius);
+    background: var(--accent-wash);
+    font-family: var(--font-display);
+    font-variation-settings: 'SOFT' 30, 'WONK' 1, 'opsz' 20;
+    font-size: 1.02rem;
+    letter-spacing: -0.01em;
+    color: var(--ink);
   }
 
-  /* --- Avertissement --------------------------------------------------------- */
+  .object__note {
+    margin-top: clamp(1.8rem, 4vw, 2.6rem);
+    padding-left: 1.3rem;
+    border-left: 3px solid var(--accent);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 46rem;
+  }
 
-  .warning__head { max-width: 44rem; margin-bottom: clamp(2rem, 4vw, 3rem); }
-  .warning__head .lead { margin-top: 0.9rem; }
+  /* --- 02 · L'architecture ---------------------------------------------------- */
 
-  .warning__grid {
+  /* Chaque nombre porte son unité et son explication : un chiffre expliqué
+     vaut mieux que cinq chiffres alignés. */
+  .tally {
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    list-style: none;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .tally__item {
+    background: var(--paper-raised);
+    padding: 1.4rem 1.4rem 1.6rem;
+  }
+  .tally__value {
+    font-family: var(--font-display);
+    font-variation-settings: 'SOFT' 30, 'WONK' 1, 'opsz' 60;
+    font-size: 2.4rem;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--accent);
+  }
+  .tally__unit {
+    margin-top: 0.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .tally__body {
+    margin-top: 0.8rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+
+  .rule-gold {
+    margin-top: 1.6rem;
+    padding: 1.05rem 1.3rem;
+    border-left: 3px solid var(--accent);
+    background: var(--accent-wash);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 54rem;
+  }
+
+  /* --- 03 · Une entrée -------------------------------------------------------- */
+
+  .sample {
+    display: grid;
+    gap: clamp(1.6rem, 4vw, 2.6rem);
+    align-items: start;
+  }
+  @media (min-width: 64rem) {
+    .sample { grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr); }
+  }
+
+  .notes__label {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .notes__list { margin: 1rem 0 0; display: grid; gap: 1.2rem; }
+  .note__term {
+    font-family: var(--font-display);
+    font-variation-settings: 'SOFT' 20, 'WONK' 1, 'opsz' 20;
+    font-size: 1.02rem;
+    font-weight: 600;
+    letter-spacing: -0.012em;
+    color: var(--accent);
+  }
+  .note__body {
+    margin: 0.35rem 0 0;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+
+  /* --- 04 · Portée et limites ------------------------------------------------- */
+
+  .pairs {
     display: grid;
     gap: 1px;
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
@@ -363,12 +560,11 @@ const heroAlt =
     border-radius: var(--radius);
     overflow: hidden;
   }
-
-  .warning__item {
+  .pair {
     background: var(--paper-raised);
     padding: 1.6rem 1.5rem 1.8rem;
   }
-  .warning__is {
+  .pair__is {
     font-family: var(--font-display);
     font-variation-settings: 'SOFT' 20, 'WONK' 1, 'opsz' 24;
     font-size: 1.16rem;
@@ -378,7 +574,7 @@ const heroAlt =
     color: var(--accent);
     text-wrap: balance;
   }
-  .warning__isnot {
+  .pair__isnot {
     display: flex;
     align-items: baseline;
     gap: 0.45rem;
@@ -386,7 +582,7 @@ const heroAlt =
     font-size: 0.86rem;
     color: var(--ink-faint);
   }
-  .warning__isnot::before {
+  .pair__isnot::before {
     content: '';
     flex: none;
     width: 0.85rem;
@@ -394,7 +590,7 @@ const heroAlt =
     background: var(--ink-faint);
     transform: translateY(-0.28em);
   }
-  .warning__body {
+  .pair__body {
     margin-top: 1rem;
     padding-top: 1rem;
     border-top: 1px solid var(--rule);
@@ -403,11 +599,10 @@ const heroAlt =
     color: var(--ink-soft);
   }
 
-  /* --- Pourquoi -------------------------------------------------------------- */
+  /* --- Pourquoi ce cadre ------------------------------------------------------ */
 
   .why__title { max-width: 20ch; }
 
-  .shift,
   .chain {
     display: grid;
     gap: clamp(2rem, 5vw, 4rem);
@@ -415,56 +610,8 @@ const heroAlt =
     margin-top: clamp(2.2rem, 5vw, 3.5rem);
   }
   @media (min-width: 60rem) {
-    .shift { grid-template-columns: 1.35fr 1fr; }
     .chain { grid-template-columns: 1fr 1.35fr; }
-    .chain__text { order: -1; }
   }
-
-  .chain { margin-top: clamp(3.5rem, 8vw, 6rem); }
-
-  .scale {
-    margin: 0;
-    display: grid;
-    justify-items: stretch;
-    gap: 0.5rem;
-    padding: 1.6rem;
-    border: 1px solid var(--rule);
-    border-radius: var(--radius);
-    background: var(--paper-raised);
-  }
-  .scale__pan { padding: 1.1rem 1.2rem; border-radius: var(--radius); }
-  .scale__pan--from {
-    background: var(--paper-sunken);
-    border: 1px dashed var(--rule-strong);
-  }
-  .scale__pan--to {
-    background: var(--accent-wash);
-    border: 1px solid var(--accent-edge);
-  }
-  .scale__label {
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    letter-spacing: 0.13em;
-    text-transform: uppercase;
-    color: var(--ink-faint);
-  }
-  .scale__pan--to .scale__label { color: var(--accent); }
-  .scale__body {
-    margin-top: 0.4rem;
-    font-family: var(--font-display);
-    font-variation-settings: 'SOFT' 30, 'WONK' 1, 'opsz' 20;
-    font-size: 1.08rem;
-    line-height: 1.35;
-    text-wrap: balance;
-  }
-  .scale__arrow {
-    justify-self: center;
-    font-size: 1.15rem;
-    color: var(--accent);
-    line-height: 1;
-  }
-
-  /* --- La chaîne créative ---------------------------------------------------- */
 
   .curve {
     margin: 0;
@@ -549,36 +696,7 @@ const heroAlt =
     color: var(--ink-faint);
   }
 
-  /* --- Carte ----------------------------------------------------------------- */
-
-  .map__head {
-    display: grid;
-    gap: 1rem clamp(2rem, 5vw, 4rem);
-    align-items: end;
-    margin-bottom: clamp(2rem, 4vw, 3rem);
-  }
-  @media (min-width: 60rem) {
-    .map__head { grid-template-columns: 1fr 1fr; }
-  }
-  .map__lead { font-size: 1rem; }
-  .map__cta { margin-top: 2.2rem; }
-
-  /* --- Niveaux ---------------------------------------------------------------- */
-
-  .levels__lead { margin: 0.9rem 0 clamp(1.8rem, 4vw, 2.8rem); }
-
-  .rule-gold {
-    margin-top: 1.6rem;
-    padding: 1.05rem 1.3rem;
-    border-left: 3px solid var(--accent);
-    background: var(--accent-wash);
-    font-size: 0.92rem;
-    line-height: 1.6;
-    color: var(--ink-soft);
-    max-width: 54rem;
-  }
-
-  /* --- Publics ---------------------------------------------------------------- */
+  /* --- Usages ------------------------------------------------------------------ */
 
   .audiences {
     display: grid;
@@ -614,7 +732,7 @@ const heroAlt =
   }
   .audiences__cta { margin-top: 2rem; }
 
-  /* --- Clôture ----------------------------------------------------------------- */
+  /* --- Citer et réutiliser ------------------------------------------------------ */
 
   .closing__inner {
     max-width: 46rem;

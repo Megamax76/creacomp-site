@@ -1,0 +1,190 @@
+---
+import { entryByCode, rubricById, entryPath, site, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+  /** Code de l'entrée à exposer, par exemple « 1.2 ». */
+  code: string;
+  /** Niveaux à déplier, dans l'ordre d'affichage. */
+  levels: string[];
+}
+
+const { lang, code, levels } = Astro.props;
+const s = site(lang);
+
+// Le spécimen est lu dans le référentiel, jamais recopié : une donnée absente
+// est une erreur de construction, pas une case vide à l'écran.
+const entry = entryByCode(lang, code);
+if (!entry) {
+  throw new Error(`Specimen : aucune entrée ne porte le code « ${code} » en ${lang}.`);
+}
+
+const rubric = entry.rubricId === undefined ? undefined : rubricById(lang, entry.rubricId);
+const accent = rubric?.color ?? 'graphite';
+
+const shown = levels.map((id) => {
+  const level = s.levels.find((candidate) => candidate.id === id);
+  const content = entry.levels[id];
+  if (!level || !content) {
+    throw new Error(`Specimen : le niveau « ${id} » est introuvable pour l'entrée ${code} en ${lang}.`);
+  }
+  return { id, name: level.name, descriptor: content.descriptor, evidence: content.evidence };
+});
+---
+
+<figure class="specimen" data-accent={accent}>
+  <div class="specimen__head">
+    <p class="specimen__stamp">
+      <span class="specimen__code">{entry.code}</span>
+      {rubric && <span class="specimen__rubric">{rubric.title}</span>}
+    </p>
+    <h3 class="specimen__title">{entry.title}</h3>
+    <p class="specimen__definition">{entry.definition}</p>
+  </div>
+
+  <ol class="specimen__levels">
+    {
+      shown.map((level) => (
+        <li class="specimen__level">
+          <p class="specimen__level-head">
+            <span class="specimen__level-code">{level.id}</span>
+            <span class="specimen__level-name">{level.name}</span>
+          </p>
+          <dl class="specimen__fields">
+            <dt>{s.ui.descriptor}</dt>
+            <dd class="specimen__descriptor">{level.descriptor}</dd>
+            <dt>{s.ui.evidence}</dt>
+            <dd class="specimen__evidence">{level.evidence}</dd>
+          </dl>
+        </li>
+      ))
+    }
+  </ol>
+
+  <figcaption class="specimen__foot">
+    <a class="specimen__link" href={entryPath(lang, entry.slug)}>
+      {s.ui.readMore}
+      <span class="specimen__arrow" aria-hidden="true">→</span>
+    </a>
+  </figcaption>
+</figure>
+
+<style>
+  .specimen {
+    margin: 0;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    background: var(--paper-raised);
+    overflow: hidden;
+  }
+
+  .specimen__head {
+    padding: 1.5rem 1.5rem 1.6rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /* Le code et la rubrique portent la teinte ; le nom de la rubrique est écrit
+     en toutes lettres pour que rien ne dépende de la seule couleur. */
+  .specimen__stamp {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.6rem;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+  .specimen__code {
+    padding: 0.18rem 0.45rem;
+    border: 1px solid var(--accent-edge);
+    border-radius: 3px;
+    background: var(--accent-wash);
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+  }
+  .specimen__rubric { color: var(--ink-faint); }
+
+  .specimen__title {
+    margin-top: 0.85rem;
+    font-size: var(--step-2);
+    letter-spacing: -0.018em;
+    text-wrap: balance;
+  }
+
+  .specimen__definition {
+    margin-top: 0.7rem;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+
+  .specimen__levels {
+    display: grid;
+    gap: 1px;
+    background: var(--rule);
+    list-style: none;
+  }
+  @media (min-width: 46rem) {
+    .specimen__levels { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .specimen__level {
+    padding: 1.3rem 1.5rem 1.5rem;
+    background: var(--paper-raised);
+  }
+
+  .specimen__level-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.55rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .specimen__level-code {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+  }
+  .specimen__level-name {
+    font-family: var(--font-display);
+    font-variation-settings: 'SOFT' 30, 'WONK' 1, 'opsz' 20;
+    font-size: 1.08rem;
+    letter-spacing: -0.012em;
+  }
+
+  .specimen__fields { margin: 0; }
+  .specimen__fields dt {
+    margin-top: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .specimen__fields dd {
+    margin: 0.35rem 0 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .specimen__descriptor { color: var(--ink); }
+  .specimen__evidence { color: var(--ink-soft); }
+
+  .specimen__foot {
+    padding: 1rem 1.5rem 1.1rem;
+    border-top: 1px solid var(--rule);
+    background: var(--paper-sunken);
+  }
+  .specimen__link {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .specimen__link:hover { text-decoration: underline; }
+  .specimen__arrow { margin-left: 0.4rem; }
+</style>
