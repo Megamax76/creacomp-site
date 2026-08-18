@@ -148,22 +148,13 @@
       "id": "objet",
       "num": "01",
       "eyebrow": "L'objet",
-      "title": "Ce que le référentiel décrit",
-      "lead": "Chacun publie désormais : un texte, une vidéo, un podcast, une boutique, une communauté. Ce qui relevait hier de métiers spécialisés est devenu une pratique ordinaire — sans que personne ait décrit les savoirs qu'elle demande.",
+      "title": "Un savoir devenu ordinaire, jamais décrit",
+      "lead": "Chacun publie désormais : un texte, une vidéo, une boutique, une communauté. Ce qui relevait de métiers spécialisés est devenu une pratique ordinaire — sans que personne ait décrit les savoirs qu'elle demande.",
       "body": [
-        "Ces savoirs existent pourtant, et ils sont exigeants. Retrouver une information à sa source et juger de sa fiabilité. Comprendre ce qu'un algorithme met en avant, et pourquoi. Construire un récit qui tienne. Diriger une intelligence artificielle au lieu de lui déléguer son jugement. Animer une communauté, protéger ses droits, vivre de son travail. On les apprend aujourd'hui au hasard des occasions, de façon très inégale, et sans que quiconque puisse dire ce que « savoir faire » veut dire.",
-        "C'est cet ensemble qu'on appelle la littératie numérique créative : les connaissances, les savoir-faire et les dispositions qui permettent de recevoir de manière critique, de comprendre, d'imaginer, de fabriquer, de diffuser et de valoriser des contenus et des projets dans les environnements numériques — de façon autonome, éthique et durable."
+        "Ils sont pourtant exigeants : remonter une information à sa source, comprendre ce qu'un algorithme met en avant, construire un récit qui tienne, diriger une intelligence artificielle plutôt que lui déléguer son jugement, vivre de son travail. On les apprend au hasard, très inégalement, et nul ne peut dire ce que « savoir faire » y signifie.",
+        "C'est cet ensemble qu'on nomme la littératie numérique créative : les connaissances, les savoir-faire et les dispositions qui permettent de recevoir de manière critique, comprendre, imaginer, fabriquer, diffuser et valoriser dans les environnements numériques — de façon autonome, éthique et durable."
       ],
-      "verbsLabel": "Six capacités",
-      "verbs": [
-        "Recevoir de façon critique",
-        "Comprendre",
-        "Imaginer",
-        "Fabriquer",
-        "Diffuser",
-        "Valoriser"
-      ],
-      "note": "CréaComp en dresse la carte. Il nomme ces savoirs, les découpe en compétences, et décrit pour chacune quatre niveaux de maîtrise par ce qu'une personne est capable de faire — non par la formation qu'elle a suivie. Il ne dit pas comment les enseigner : il dit comment les reconnaître, et à quel niveau."
+      "note": "CréaComp en dresse la carte : il décrit ces savoirs par ce qu'une personne est capable de faire, non par la formation qu'elle a suivie. Il ne dit pas comment les enseigner, mais comment les reconnaître — et à quel niveau."
     },
     "architecture": {
       "id": "architecture",

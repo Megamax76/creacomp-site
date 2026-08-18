@@ -106,11 +106,6 @@ const heroAlt =
         {home.object.body.map((paragraph) => <p>{paragraph}</p>)}
       </div>
 
-      <p class="verbs__label">{home.object.verbsLabel}</p>
-      <ul class="verbs">
-        {home.object.verbs.map((verb) => <li class="verb">{verb}</li>)}
-      </ul>
-
       <p class="object__note">{home.object.note}</p>
     </div>
   </section>
@@ -425,45 +420,17 @@ const heroAlt =
 
   /* --- 01 · L'objet ----------------------------------------------------------- */
 
-  /* La section pose la situation, puis nomme le sujet. Les six verbes ne
-     viennent qu'après : on ne montre la structure qu'une fois le propos tenu. */
+  /* La section pose la situation, nomme le sujet, puis dit ce qu'en fait le
+     référentiel. La structure est l'affaire de la section 02 : afficher ici
+     les six verbes de la définition ouvrait un décompte concurrent des sept
+     rubriques, sans correspondance possible entre les deux. */
   .object__body {
     max-width: 46rem;
-    margin-bottom: clamp(2rem, 4vw, 2.8rem);
+    margin-bottom: clamp(1.6rem, 3.5vw, 2.4rem);
   }
   .object__body p + p { margin-top: 1.1rem; }
 
-  .verbs__label {
-    font-family: var(--font-mono);
-    font-size: 0.66rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ink-faint);
-  }
-
-  /* Les six verbes étaient noyés dans la phrase du chapô. Dépliés, ils se
-     lisent d'un coup d'œil : la prose dit, la bande montre. */
-  .verbs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-    list-style: none;
-    margin-top: 0.9rem;
-  }
-  .verb {
-    padding: 0.5rem 0.95rem;
-    border: 1px solid var(--accent-edge);
-    border-radius: var(--radius);
-    background: var(--accent-wash);
-    font-family: var(--font-display);
-    font-variation-settings: 'SOFT' 30, 'WONK' 1, 'opsz' 20;
-    font-size: 1.02rem;
-    letter-spacing: -0.01em;
-    color: var(--ink);
-  }
-
   .object__note {
-    margin-top: clamp(1.8rem, 4vw, 2.6rem);
     padding-left: 1.3rem;
     border-left: 3px solid var(--accent);
     font-size: 0.95rem;
