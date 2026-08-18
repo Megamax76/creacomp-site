@@ -74,12 +74,11 @@ Le titre est conservé tel quel : « Le référentiel de compétences pour l'èr
 créateurs ». C'est une accroche assumée ; le registre institutionnel est porté par
 le corps de page, pas par le H1.
 
-Le chapô est raccourci. La définition à six verbes n'est pas une accroche mais la
-matière du premier chapitre : elle descend en **01**. Ce qui reste tient en une
-phrase — vingt-cinq mots au plus — qui dit ce qu'est le document et à quoi il
-sert, sans définir la littératie numérique créative. La formulation exacte est
-arrêtée à l'implémentation ; la contrainte de longueur et l'interdiction de
-définir ne le sont pas.
+Le chapô est **conservé tel quel**, définition à six verbes comprise. C'est une
+décision de l'auteur, prise contre ma proposition initiale de le raccourcir, et
+elle est meilleure : poser la définition dès le premier écran est exactement ce
+qu'on attend d'un cadre de référence, et cela permet à la section **01** de faire
+un autre travail que de re-définir.
 
 Les cinq compteurs quittent l'en-tête. Alignés sans explication, « 7 rubriques ·
 28 compétences · 3 fils transversaux · 4 niveaux · 124 descripteurs observables »
@@ -109,12 +108,17 @@ compétence.
 
 ### 4.3 — 01 · L'objet — ce que le référentiel décrit
 
-La définition de la littératie numérique créative, en une phrase.
+La définition est déjà posée dans l'en-tête. Cette section ne la répète pas :
+elle la **déplie**.
 
-Les six verbes sont dépliés en bande plutôt qu'empilés dans une phrase de
-quarante mots : *recevoir de façon critique · comprendre · imaginer · fabriquer ·
-diffuser · valoriser*. C'est le gain de lisibilité le plus immédiat de la refonte,
-et il ne coûte qu'une mise en forme.
+Les six verbes, noyés dans la phrase du chapô, sont sortis en bande : *recevoir
+de façon critique · comprendre · imaginer · fabriquer · diffuser · valoriser*.
+La prose dit, la bande montre. C'est le gain de lisibilité le plus immédiat de la
+refonte, et il ne coûte qu'une mise en forme.
+
+Un chapô de section fait le pont — il annonce le dépliage sans redire la
+définition — et une note conclut sur ce que CréaComp fait de ces six capacités :
+il les cartographie, il ne dit pas comment les enseigner.
 
 Le développement — le parallèle avec la lecture, l'écriture et le calcul — reste
 sur `/cadre` § `preambule`, où il est déjà écrit. La page d'accueil ne le reprend

@@ -84,7 +84,7 @@ corps resserrés.
 "home": {
   "hero": {
     "title": "Le référentiel de compétences pour l'ère des créateurs",
-    "lead": "Un cadre de référence ouvert, daté et citable, pour décrire et évaluer la littératie numérique créative.",
+    "lead": "CréaComp cartographie la littératie numérique créative : l'ensemble des savoirs qui permettent de recevoir de façon critique, comprendre, imaginer, fabriquer, diffuser et valoriser dans les environnements numériques.",
     "primaryCta": "Explorer les 31 entrées",
     "secondaryCta": "Comprendre le cadre"
   },
@@ -105,7 +105,7 @@ corps resserrés.
     "num": "01",
     "eyebrow": "L'objet",
     "title": "Ce que le référentiel décrit",
-    "lead": "La littératie numérique créative est l'ensemble des savoirs qui permettent d'agir en auteur dans les environnements numériques — de façon autonome, éthique et durable.",
+    "lead": "La définition tient en une phrase, mais elle recouvre six capacités distinctes. Les voici séparées : c'est sur elles que le référentiel est bâti.",
     "verbsLabel": "Six capacités",
     "verbs": [
       "Recevoir de façon critique",
@@ -266,7 +266,7 @@ Mêmes clés, exactement, valeurs en anglais.
 "home": {
   "hero": {
     "title": "The competency framework for the creator era",
-    "lead": "An open, dated and citable reference framework for describing and assessing digital creative literacy.",
+    "lead": "CréaComp maps digital creative literacy: the body of knowledge that allows a person to critically receive, understand, imagine, make, publish and capitalise on content and projects in digital environments.",
     "primaryCta": "Explore the 31 entries",
     "secondaryCta": "Understand the foundations"
   },
@@ -287,7 +287,7 @@ Mêmes clés, exactement, valeurs en anglais.
     "num": "01",
     "eyebrow": "The object",
     "title": "What the framework describes",
-    "lead": "Digital creative literacy is the body of knowledge that allows a person to act as an author in digital environments — independently, ethically and sustainably.",
+    "lead": "The definition fits in a single sentence, but it covers six distinct capacities. Here they are, set apart: they are what the framework is built on.",
     "verbsLabel": "Six capacities",
     "verbs": [
       "Critically receive",
@@ -483,7 +483,8 @@ cd "/Users/maximehebert/CreaComp Site" && git add src/data/fr/site.json src/data
 Les nouvelles clés cohabitent avec les anciennes : la page ne change pas
 encore. Le sommaire, l'objet, l'architecture, le spécimen et la portée
 entrent ; la balance attention-intention sort, elle figure mot pour mot
-sur la page « Le cadre »."
+sur la page « Le cadre ». Le chapô de l'en-tête est conservé tel quel :
+la section 01 ne redéfinit pas, elle déplie ses six verbes."
 ```
 
 ---
@@ -1252,7 +1253,7 @@ const heroAlt =
 
   .hero__lead {
     margin-top: clamp(1.5rem, 3vw, 2.2rem);
-    max-width: 42rem;
+    max-width: 46rem;
     font-size: var(--step-1);
     line-height: 1.55;
     color: var(--ink-soft);
