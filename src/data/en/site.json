@@ -149,7 +149,11 @@
       "num": "01",
       "eyebrow": "The object",
       "title": "What the framework describes",
-      "lead": "The definition fits in a single sentence, but it covers six distinct capacities. Here they are, set apart: they are what the framework is built on.",
+      "lead": "Everyone publishes now: a text, a video, a podcast, a shop, a community. What belonged yesterday to specialised trades has become an ordinary practice — without anyone having described the knowledge it demands.",
+      "body": [
+        "That knowledge exists, and it is demanding. Tracing information back to its source and judging its reliability. Understanding what an algorithm promotes, and why. Building a narrative that holds. Directing an artificial intelligence rather than delegating your judgement to it. Running a community, protecting your rights, making a living from your work. Today these are learned by chance, very unevenly, and without anyone being able to say what doing them well actually means.",
+        "This is what we call digital creative literacy: the knowledge, the skills and the dispositions that allow a person to critically receive, understand, imagine, make, publish and capitalise on content and projects in digital environments — independently, ethically and sustainably."
+      ],
       "verbsLabel": "Six capacities",
       "verbs": [
         "Critically receive",
@@ -159,7 +163,7 @@
         "Publish",
         "Capitalise on"
       ],
-      "note": "CréaComp maps them. It does not say how to teach these capacities: it says how to recognise them."
+      "note": "CréaComp maps it. It names this knowledge, breaks it into competencies, and describes four levels of mastery for each by what a person is able to do — not by the training they have attended. It does not say how to teach them: it says how to recognise them, and at what level."
     },
     "architecture": {
       "id": "architecture",
