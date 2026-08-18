@@ -1,5 +1,6 @@
 ---
 import { site, path, alternatePath, type Lang, type PageKey } from '../lib/i18n';
+import Logo from './Logo.astro';
 
 interface Props {
   lang: Lang;
@@ -21,8 +22,9 @@ const links: { key: PageKey; label: string }[] = [
 <header class="masthead">
   <div class="masthead__inner wrap">
     <a class="brand" href={path(lang, 'home')}>
+      <span class="brand__mark"><Logo /></span>
       <span class="brand__name">CréaComp</span>
-      <span class="brand__sub">{s.meta.subtitle}</span>
+      <span class="visually-hidden">{s.meta.subtitle}</span>
     </a>
 
     <input type="checkbox" id="menu-toggle" class="menu-state" />
@@ -105,11 +107,20 @@ const links: { key: PageKey; label: string }[] = [
     min-height: 4.4rem;
   }
 
+  /* Une seule ligne : le symbole porte l'identité, le mot la nomme. La ligne de
+     définition a quitté le bandeau — elle est dans le titre de la page et dans
+     le pied — pour que l'en-tête reste léger et laisse la place au contenu. */
   .brand {
-    display: grid;
+    display: flex;
+    align-items: center;
+    gap: 0.62rem;
     text-decoration: none;
-    line-height: 1.15;
     padding-block: 0.7rem;
+  }
+  /* Le symbole se dimensionne en `em` : sa taille tient dans cette seule règle. */
+  .brand__mark {
+    display: flex;
+    font-size: 1.72rem;
   }
   .brand__name {
     font-family: var(--font-display);
@@ -117,12 +128,7 @@ const links: { key: PageKey; label: string }[] = [
     font-size: 1.32rem;
     font-weight: 600;
     letter-spacing: -0.02em;
-  }
-  .brand__sub {
-    font-size: 0.66rem;
-    letter-spacing: 0.11em;
-    text-transform: uppercase;
-    color: var(--ink-faint);
+    line-height: 1;
   }
 
   .nav {
