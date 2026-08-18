@@ -148,13 +148,14 @@
       "id": "object",
       "num": "01",
       "eyebrow": "The object",
-      "title": "Knowledge that became ordinary, never described",
-      "lead": "Everyone publishes now: a text, a video, a shop, a community. What belonged to specialised trades has become an ordinary practice — without anyone having described the knowledge it demands.",
+      "title": "A framework for digital creative literacy",
+      "lead": "Existing digital competency frameworks train people in the use of tools: office software, communication, security. That literacy is necessary, but it remains defensive — it teaches adaptation to digital environments, not creation with them.",
       "body": [
-        "It is demanding all the same: tracing information back to its source, understanding what an algorithm promotes, building a narrative that holds, directing an artificial intelligence rather than delegating your judgement to it, making a living from your work. It is learned by chance, very unevenly, and nobody can say what doing it well means.",
-        "This is what we call digital creative literacy: the knowledge, the skills and the dispositions that allow a person to critically receive, understand, imagine, make, publish and capitalise on content and projects in digital environments — independently, ethically and sustainably."
+        "Yet creation has become a structuring dimension of those environments. Recommendation algorithms, content production, generative artificial intelligence, digital entrepreneurship: people's capacity to understand these mechanisms and to produce value through them now conditions their economic, cultural and civic autonomy.",
+        "That capacity — digital creative literacy — is at present neither defined nor measured by any framework.",
+        "CréaComp answers that gap. It is built around a single question:"
       ],
-      "note": "CréaComp maps it: it describes this knowledge by what a person is able to do, not by the training they have attended. It does not say how to teach it, but how to recognise it — and at what level."
+      "question": "What is a person actually able to do in digital environments, and what value are they able to create there?"
     },
     "architecture": {
       "id": "architecture",

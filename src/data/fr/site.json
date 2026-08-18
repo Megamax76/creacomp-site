@@ -148,13 +148,14 @@
       "id": "objet",
       "num": "01",
       "eyebrow": "L'objet",
-      "title": "Un savoir devenu ordinaire, jamais décrit",
-      "lead": "Chacun publie désormais : un texte, une vidéo, une boutique, une communauté. Ce qui relevait de métiers spécialisés est devenu une pratique ordinaire — sans que personne ait décrit les savoirs qu'elle demande.",
+      "title": "Référentiel de la littératie numérique créative",
+      "lead": "Les cadres de compétences numériques existants forment à l'usage des outils : bureautique, communication, sécurité. Cette littératie est nécessaire, mais elle reste défensive — elle apprend à s'adapter aux environnements numériques, non à créer avec eux.",
       "body": [
-        "Ils sont pourtant exigeants : remonter une information à sa source, comprendre ce qu'un algorithme met en avant, construire un récit qui tienne, diriger une intelligence artificielle plutôt que lui déléguer son jugement, vivre de son travail. On les apprend au hasard, très inégalement, et nul ne peut dire ce que « savoir faire » y signifie.",
-        "C'est cet ensemble qu'on nomme la littératie numérique créative : les connaissances, les savoir-faire et les dispositions qui permettent de recevoir de manière critique, comprendre, imaginer, fabriquer, diffuser et valoriser dans les environnements numériques — de façon autonome, éthique et durable."
+        "Or la création est devenue une dimension structurante de ces environnements. Algorithmes de recommandation, production de contenus, intelligences artificielles génératives, entrepreneuriat numérique : la capacité des individus à comprendre ces logiques et à produire de la valeur à travers elles conditionne désormais leur autonomie économique, culturelle et citoyenne.",
+        "Cette capacité — la littératie numérique créative — n'est aujourd'hui ni définie, ni mesurée par aucun référentiel.",
+        "CréaComp répond à cette lacune. Il est construit autour d'une question unique :"
       ],
-      "note": "CréaComp en dresse la carte : il décrit ces savoirs par ce qu'une personne est capable de faire, non par la formation qu'elle a suivie. Il ne dit pas comment les enseigner, mais comment les reconnaître — et à quel niveau."
+      "question": "Que sait réellement faire une personne dans les environnements numériques, et quelle valeur est-elle capable d'y créer ?"
     },
     "architecture": {
       "id": "architecture",
