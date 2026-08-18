@@ -67,10 +67,15 @@ union et ferait échouer `astro check` ; les entrées non numérotées portent d
 - Modifier : `src/data/fr/site.json` — branche `home`
 - Modifier : `src/data/en/site.json` — branche `home`
 
-Cette tâche est **additive** : les nouvelles clés sont ajoutées, les anciennes
-laissées en place. `Home.astro` continue de lire les anciennes et la page ne
-change pas. Les orphelines seront retirées en tâche 5, une fois la nouvelle page
-en service.
+> **Corrigé à l'exécution.** Cette tâche était annoncée comme additive : elle ne
+> l'est pas. Remplacer `hero` et `why` en bloc retire `hero.eyebrow` et
+> `why.shift`, que l'ancien `Home.astro` lit encore — `astro check` remonte 11
+> erreurs de type. Les données et la page doivent atterrir **ensemble** : dérouler
+> les tâches 1 à 4 avant de construire, et ne vérifier qu'à la fin de la tâche 4.
+> L'étape 4 ci-dessous est donc à ignorer telle qu'écrite.
+
+Les clés `warning`, `map` et `levels` restent en place jusqu'à la tâche 5, où
+elles sont retirées une fois plus personne pour les lire.
 
 - [ ] **Étape 1 : remplacer la branche `home` de `src/data/fr/site.json`**
 
@@ -466,19 +471,20 @@ PY
 
 Attendu : `FR seul : []`, `EN seul : []`, `OK`.
 
-- [ ] **Étape 4 : vérifier que le site construit toujours**
+- [ ] **Étape 4 : ~~vérifier que le site construit toujours~~ — supprimée**
+
+Voir l'avertissement en tête de tâche : à ce stade la construction échoue
+nécessairement. Enchaîner les tâches 2, 3 et 4, et construire à la fin de la
+tâche 4.
+
+- [ ] **Étape 5 : ~~commit~~ — reporté à la fin de la tâche 4**
+
+Les données seules ne construisent pas ; elles sont commitées avec la page.
+Message de référence, conservé pour mémoire :
 
 ```bash
-cd "/Users/maximehebert/CreaComp Site" && npx astro check && npm run build
-```
-
-Attendu : `0 errors`, puis `Complete!`. La page d'accueil est inchangée à l'écran :
-`Home.astro` lit encore les anciennes clés, qui sont toujours là.
-
-- [ ] **Étape 5 : commit**
-
-```bash
-cd "/Users/maximehebert/CreaComp Site" && git add src/data/fr/site.json src/data/en/site.json && git commit -m "Refond les données de la page d'accueil
+# NE PAS EXÉCUTER SEUL — voir tâche 4, étape 6
+git commit -m "Refond les données de la page d'accueil
 
 Les nouvelles clés cohabitent avec les anciennes : la page ne change pas
 encore. Le sommaire, l'objet, l'architecture, le spécimen et la portée
