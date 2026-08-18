@@ -225,6 +225,9 @@ a:hover { text-decoration-color: currentColor; }
   transition: transform 0.16s ease, background-color 0.16s ease, color 0.16s ease;
 }
 .btn:hover { transform: translateY(-1px); background: var(--accent); border-color: var(--accent); }
+/* Le survol soulève d'un pixel ; l'appui le repose et l'enfonce à peine. Sans
+   cet état, un clic sur écran tactile ne renvoie rien du tout. */
+.btn:active { transform: translateY(0) scale(0.99); }
 .btn--ghost { background: transparent; color: var(--ink); border-color: var(--rule-strong); }
 .btn--ghost:hover { background: transparent; color: var(--accent); border-color: var(--accent); }
 .btn__arrow { transition: transform 0.16s ease; }

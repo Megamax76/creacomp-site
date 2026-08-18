@@ -9,10 +9,15 @@ const { value, label, copiedLabel } = Astro.props;
 ---
 
 <button class="copy" type="button" data-copy data-value={value} data-copied={copiedLabel}>
-  <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7">
-    <rect x="9" y="9" width="11" height="11" rx="2" />
-    <path d="M5 15V6a2 2 0 0 1 2-2h9" stroke-linecap="round" />
-  </svg>
+  <span class="copy__icons" aria-hidden="true">
+    <svg class="copy__icon copy__icon--idle" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.7">
+      <rect x="9" y="9" width="11" height="11" rx="2" />
+      <path d="M5 15V6a2 2 0 0 1 2-2h9" stroke-linecap="round" />
+    </svg>
+    <svg class="copy__icon copy__icon--done" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4.5 12.5 9.5 17.5 19.5 6.5" />
+    </svg>
+  </span>
   <span data-copy-label>{label}</span>
 </button>
 
@@ -62,8 +67,23 @@ const { value, label, copiedLabel } = Astro.props;
     border: 1px solid var(--rule);
     border-radius: var(--radius);
     cursor: pointer;
-    transition: color 0.15s ease, border-color 0.15s ease;
+    transition: color 0.15s ease, border-color 0.15s ease, transform 0.14s ease-out;
   }
   .copy:hover { color: var(--accent); border-color: var(--accent); }
+  .copy:active { transform: scale(0.985); }
   .copy[data-state='done'] { color: var(--accent); border-color: var(--accent); }
+
+  /* La confirmation ne tenait qu'au libellé : le pictogramme restait un
+     presse-papiers pendant qu'on lisait « Copié ». Les deux icônes sont
+     superposées dans une case de taille fixe — rien ne bouge autour — et
+     s'échangent par un fondu court. C'est un geste rare, donc il a droit à
+     une coche. */
+  .copy__icons { display: grid; width: 14px; height: 14px; flex: none; }
+  .copy__icon {
+    grid-area: 1 / 1;
+    transition: opacity 0.16s ease-out, transform 0.16s ease-out;
+  }
+  .copy__icon--done { opacity: 0; transform: scale(0.7); }
+  .copy[data-state='done'] .copy__icon--idle { opacity: 0; transform: scale(0.7); }
+  .copy[data-state='done'] .copy__icon--done { opacity: 1; transform: none; }
 </style>

@@ -385,6 +385,16 @@ const searchIndex = (entry: Entry) =>
     .map:has(#map-N4:checked) .cell__descriptor:not([data-level='N4']) {
       display: none;
     }
+
+    /* Changer de niveau réécrit les trente et un descripteurs d'un coup. Sans
+       transition, la carte entière semble sauter ; le fondu à l'entrée fait
+       comprendre que le texte a changé plutôt que la page glissé. Uniquement à
+       l'entrée, et uniquement l'opacité : deux descripteurs affichés en même
+       temps feraient enfler la case, et un déplacement gênerait la lecture. */
+    .cell__descriptor { transition: opacity 0.16s ease-out; }
+    @starting-style {
+      .cell__descriptor { opacity: 0; }
+    }
   }
 
   /* --- Fils transversaux ---------------------------------------------------- */
