@@ -50,11 +50,29 @@ R = 47.0                 # rayon extérieur du disque
 RI = 34.0                # rayon de l'ouverture
 VRILLE = 35.0            # décalage angulaire du bord intérieur de chaque lame
 JEU = 2.6                # blanc entre deux lames, en degrés
-INSCRIT = math.cos(math.pi / N)
-C_EXT = round(RI * INSCRIT - 2.5, 2)
-C_EP = 11.0
+C_EP = 12.5              # épaisseur du C
+C_DX = 1.2               # recentrage optique : la masse du C est du côté fermé
+C_JOUR = 0.25            # jour entre le C et le bord de lame le plus proche
+
+# L'ouverture est un hexagone : ses côtés sont les bords intérieurs des lames,
+# chacun tendu entre deux points du cercle de rayon RI et distant du centre de
+# RI × cos(moitié de l'arc qu'il sous-tend).
+INSCRIT = math.cos(math.radians((PAS - JEU) / 2))
+
+
+def loge(dx):
+    """Rayon du plus grand cercle tenant dans l'ouverture, centré à dx du milieu.
+
+    Le décalage optique rapproche le C de certains côtés et l'éloigne des
+    autres ; c'est le plus serré des six qui commande. Chaque côté est normal
+    à sa bissectrice, à mi-chemin de l'arc qu'il sous-tend.
+    """
+    return min(RI * INSCRIT - dx * math.cos(math.radians(k * PAS + PAS / 2 + VRILLE - 90))
+               for k in range(N))
+
+
+C_EXT = round(loge(C_DX) - C_JOUR, 2)
 C_COUPE = round(C_EXT * 0.42, 2)
-C_DX = 3.0               # recentrage optique : la masse du C est du côté fermé
 
 NOTE = (
     "<!-- CréaComp — six lames d'obturateur pour les rubriques 2 à 7 ; la première,\n"

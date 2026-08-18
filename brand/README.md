@@ -48,8 +48,13 @@ le rôle d'ouverture se justifie.
 ## Géométrie
 
 Rayon extérieur 47, ouverture 34, vrille des lames 35°, jeu 2,6°, dans un carré
-de 100. Le C est décalé de 3 unités vers la droite : centré géométriquement, il
-paraissait pencher à gauche, sa masse étant du côté fermé.
+de 100. Le C mesure 28,49 de rayon pour 12,5 d'épaisseur : il occupe presque
+toute l'ouverture, ce qui le tient lisible jusqu'à 16 px. Il est décalé de 1,2
+unité vers la droite — centré géométriquement, il paraissait pencher à gauche,
+sa masse étant du côté fermé — mais pas davantage : au-delà, il vient buter sur
+le bord de lame en haut à droite et le jour se referme d'un seul côté. Ce rayon
+n'est pas saisi à la main, il se déduit du décalage : voir `loge()` dans le
+script.
 
 ## Les fichiers
 
