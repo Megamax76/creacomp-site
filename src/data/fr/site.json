@@ -578,13 +578,14 @@
       "submit": "Envoyer",
       "sending": "Envoi en cours…",
       "success": "Message envoyé. Merci — une réponse suivra dès que possible.",
-      "error": "L'envoi a échoué. Vous pouvez écrire directement à l'adresse ci-dessous.",
-      "required": "Champ obligatoire"
+      "error": "L'envoi a échoué. Vous pouvez écrire directement à {email}.",
+      "submitFallback": "Ouvrir dans ma messagerie",
+      "fallbackNote": "Le relais d'envoi n'est pas encore branché : le bouton prépare le message dans votre logiciel de messagerie, à vous de l'expédier.",
+      "privacy": "Ces informations transitent par le relais Web3Forms, qui les remet à la seule adresse {email}. Elles ne servent qu'à vous répondre : ni liste de diffusion, ni suivi publicitaire."
     },
     "direct": {
       "title": "Par courrier électronique",
-      "body": "Le formulaire n'est pas encore configuré. Écrivez directement à l'adresse suivante :",
-      "bodyConfigured": "Vous préférez votre propre messagerie ? Écrivez directement à :"
+      "body": "Vous préférez votre propre messagerie ? Écrivez directement à :"
     },
     "imageAlt": "Gros plan d'un crayon de bois taillé."
   },

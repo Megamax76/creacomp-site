@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import { site, type Lang } from '../lib/i18n';
-import { formspreeId, contactEmail } from '../config';
+import { web3formsKey, contactEmail } from '../config';
 import { image, credit, creditSource } from '../lib/images';
 
 interface Props {
@@ -12,8 +12,13 @@ interface Props {
 const { lang } = Astro.props;
 const s = site(lang);
 const c = s.contact;
-const configured = formspreeId.trim().length > 0;
-const endpoint = `https://formspree.io/f/${formspreeId.trim()}`;
+
+// Un site statique n'a pas de serveur : sans relais configuré, aucun envoi ne
+// peut partir d'ici. Le formulaire reste alors affiché, mais son bouton prépare
+// le message dans la messagerie du visiteur — la page n'est jamais une impasse.
+const key = web3formsKey.trim();
+const configured = key.length > 0;
+const endpoint = 'https://api.web3forms.com/submit';
 const illustration = image('contact');
 const illustrationCredit = credit('contact');
 ---
@@ -55,7 +60,7 @@ const illustrationCredit = credit('contact');
       }
   </div>
 
-  <div class:list={['wrap', 'layout', !configured && 'layout--single']}>
+  <div class="wrap layout">
     <section class="reasons">
       <h2 class="reasons__title">{c.reasons.title}</h2>
       <ul class="reasons__list">
@@ -71,110 +76,169 @@ const illustrationCredit = credit('contact');
 
       <div class="direct">
         <p class="direct__label">{c.direct.title}</p>
-        <p class="direct__body">
-          {configured ? c.direct.bodyConfigured : c.direct.body}
-        </p>
+        <p class="direct__body">{c.direct.body}</p>
         <a class="direct__mail" href={`mailto:${contactEmail}`}>{contactEmail}</a>
       </div>
     </section>
 
-    {
-      configured && (
-        <section class="formwrap">
-          <h2 class="formwrap__title">{c.form.title}</h2>
-          <form class="form" action={endpoint} method="POST" data-contact-form>
-            <div class="field">
-              <label for="name">{c.form.name}</label>
-              <input type="text" id="name" name="name" required autocomplete="name" />
-            </div>
+    <section class="formwrap">
+      <h2 class="formwrap__title">{c.form.title}</h2>
 
-            <div class="field">
-              <label for="email">{c.form.email}</label>
-              <input type="email" id="email" name="email" required autocomplete="email" />
-            </div>
+      {!configured && <p class="form__note">{c.form.fallbackNote}</p>}
 
-            <div class="field">
-              <label for="organisation">{c.form.organisation}</label>
-              <input type="text" id="organisation" name="organisation" autocomplete="organization" />
-            </div>
+      <form
+        class="form"
+        action={configured ? endpoint : undefined}
+        method="POST"
+        data-contact-form
+        data-relay={configured ? 'web3forms' : 'mailto'}
+        data-mail-to={contactEmail}
+        data-prefix={s.meta.name}
+        data-sending={c.form.sending}
+        data-success={c.form.success}
+        data-failure={c.form.error.replace('{email}', contactEmail)}
+      >
+        {configured && <input type="hidden" name="access_key" value={key} />}
 
-            <div class="field">
-              <label for="subject">{c.form.subject}</label>
-              <select id="subject" name="subject" required>
-                {c.form.subjectOptions.map((option) => (
-                  <option value={option}>{option}</option>
-                ))}
-              </select>
-            </div>
+        <div class="field">
+          <label for="name">{c.form.name}</label>
+          <input type="text" id="name" name="name" required autocomplete="name" />
+        </div>
 
-            <div class="field">
-              <label for="message">{c.form.message}</label>
-              <textarea id="message" name="message" rows="7" required />
-            </div>
+        <div class="field">
+          <label for="email">{c.form.email}</label>
+          <input type="email" id="email" name="email" required autocomplete="email" />
+        </div>
 
-            <input type="hidden" name="_language" value={lang} />
+        <div class="field">
+          <label for="organisation">{c.form.organisation}</label>
+          <input type="text" id="organisation" name="organisation" autocomplete="organization" />
+        </div>
 
-            {/* Piège à robots : le champ n'est ni visible, ni atteignable au
-                clavier, ni annoncé aux lecteurs d'écran — seul un automate le
-                remplit. Formspree écarte alors l'envoi sans rien signaler,
-                ce qui évite d'apprendre au robot à s'en passer. */}
-            <input
-              class="gotcha"
-              type="text"
-              name="_gotcha"
-              tabindex="-1"
-              autocomplete="off"
-              aria-hidden="true"
-            />
+        <div class="field">
+          <label for="subject">{c.form.subject}</label>
+          <select id="subject" name="subject" required>
+            {c.form.subjectOptions.map((option) => (
+              <option value={option}>{option}</option>
+            ))}
+          </select>
+        </div>
 
-            <button class="btn" type="submit" data-submit>{c.form.submit}</button>
+        <div class="field">
+          <label for="message">{c.form.message}</label>
+          <textarea id="message" name="message" rows="7" required />
+        </div>
 
-            <p class="form__status" role="status" aria-live="polite" data-status hidden></p>
-          </form>
-        </section>
-      )
-    }
+        {/* Piège à robots : la case n'est ni visible, ni atteignable au clavier,
+            ni annoncée aux lecteurs d'écran — seul un automate la coche. Web3Forms
+            écarte alors l'envoi sans rien signaler, ce qui évite d'apprendre au
+            robot à s'en passer. */}
+        <input
+          class="gotcha"
+          type="checkbox"
+          name="botcheck"
+          tabindex="-1"
+          autocomplete="off"
+          aria-hidden="true"
+        />
+
+        <button class="btn" type="submit" data-submit>
+          {configured ? c.form.submit : c.form.submitFallback}
+        </button>
+
+        <p class="form__status" role="status" aria-live="polite" tabindex="-1" data-status hidden></p>
+
+        {configured && <p class="form__privacy">{c.form.privacy.replace('{email}', contactEmail)}</p>}
+      </form>
+    </section>
   </div>
 </Base>
 
-<script
-  is:inline
-  define:vars={{
-    sending: s.contact.form.sending,
-    submitLabel: s.contact.form.submit,
-    success: s.contact.form.success,
-    failure: s.contact.form.error,
-  }}
->
+<script>
+  // Ce script ne porte pas `is:inline` : Astro ne calcule d'empreinte SHA-256
+  // que pour les scripts qu'il traite lui-même, et la politique de sécurité du
+  // site bloque tout le reste. Les textes traduits arrivent donc par attributs
+  // `data-` plutôt que par `define:vars`, qui imposerait `is:inline`.
   const form = document.querySelector('[data-contact-form]');
-  if (form) {
-    const status = form.querySelector('[data-status]');
-    const submit = form.querySelector('[data-submit]');
 
-    form.addEventListener('submit', async (event) => {
-      event.preventDefault();
+  if (form instanceof HTMLFormElement) {
+    // Astro traite ce bloc comme du TypeScript et le compile avant de le servir :
+    // les annotations ci-dessous disparaissent du script envoyé au navigateur.
+    const status = form.querySelector('[data-status]') as HTMLElement;
+    const submit = form.querySelector('[data-submit]') as HTMLButtonElement;
+    const submitLabel = submit.textContent?.trim() ?? '';
+    const settings = form.dataset;
+
+    type Field = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
+    const value = (name: string) => (form.elements.namedItem(name) as Field).value.trim();
+
+    // Les intitulés vivent déjà dans les <label> : les relire évite d'entretenir
+    // une seconde copie des traductions rien que pour le brouillon de courriel.
+    const labelOf = (name: string) =>
+      form.querySelector(`label[for="${name}"]`)?.textContent?.trim() ?? '';
+
+    // L'objet du courrier reçu porte de quoi trier sans ouvrir : le nom du
+    // référentiel, la raison choisie dans la liste, puis l'expéditeur.
+    const subjectLine = () => `${settings.prefix} — ${value('subject')} — ${value('name')}`;
+
+    const announce = (text: string, state: 'ok' | 'error') => {
+      status.textContent = text;
+      status.dataset.state = state;
+      status.hidden = false;
+      status.focus();
+    };
+
+    // Sans relais configuré, le navigateur reste le seul chemin possible : on
+    // remet au visiteur un brouillon déjà rempli, à lui de l'expédier.
+    const draftInMailClient = () => {
+      const body = ['name', 'email', 'organisation', 'message']
+        .map((name) => [labelOf(name), value(name)])
+        .filter(([, written]) => written)
+        .map(([label, written]) => `${label}\n${written}`)
+        .join('\n\n');
+
+      window.location.href =
+        `mailto:${settings.mailTo}` +
+        `?subject=${encodeURIComponent(subjectLine())}` +
+        `&body=${encodeURIComponent(body)}`;
+    };
+
+    const relay = async () => {
       submit.disabled = true;
-      submit.textContent = sending;
+      submit.textContent = settings.sending ?? '';
       status.hidden = true;
 
       try {
+        const data = new FormData(form);
+        data.set('subject', subjectLine());
+        data.set('from_name', value('name'));
+
         const response = await fetch(form.action, {
           method: 'POST',
-          body: new FormData(form),
+          body: data,
           headers: { Accept: 'application/json' },
         });
-        if (!response.ok) throw new Error(String(response.status));
+        // Web3Forms répond 200 même lorsqu'il écarte l'envoi : c'est le drapeau
+        // `success` du corps de la réponse qui fait foi, pas le code HTTP.
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok || !result.success) {
+          throw new Error(result.message ?? String(response.status));
+        }
+
         form.reset();
-        status.textContent = success;
-        status.dataset.state = 'ok';
+        announce(settings.success ?? '', 'ok');
       } catch {
-        status.textContent = failure;
-        status.dataset.state = 'error';
+        announce(settings.failure ?? '', 'error');
       } finally {
-        status.hidden = false;
         submit.disabled = false;
         submit.textContent = submitLabel;
       }
+    };
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (settings.relay === 'mailto') draftInMailClient();
+      else relay();
     });
   }
 </script>
@@ -225,9 +289,6 @@ const illustrationCredit = credit('contact');
   @media (min-width: 62rem) {
     .layout { grid-template-columns: 1fr 1.1fr; }
   }
-
-  /* Sans formulaire configuré, la colonne unique ne doit pas flotter dans le vide. */
-  .layout--single { grid-template-columns: minmax(0, 46rem); }
 
   .reasons__title,
   .formwrap__title {
@@ -288,6 +349,17 @@ const illustrationCredit = credit('contact');
 
   .form { display: grid; gap: 1.1rem; }
   .gotcha { display: none; }
+
+  .form__note {
+    margin-bottom: 1.3rem;
+    padding: 0.75rem 0.95rem;
+    border: 1px dashed var(--rule-strong);
+    border-radius: var(--radius);
+    font-size: 0.84rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+
   .field { display: grid; gap: 0.4rem; }
   .field label {
     font-size: 0.84rem;
@@ -311,6 +383,7 @@ const illustrationCredit = credit('contact');
   .field textarea:focus-visible { border-color: var(--accent); }
 
   .form .btn { justify-self: start; margin-top: 0.4rem; }
+  .form .btn[disabled] { opacity: 0.6; cursor: progress; transform: none; }
 
   .form__status {
     padding: 0.8rem 1rem;
@@ -327,5 +400,11 @@ const illustrationCredit = credit('contact');
     background: var(--paper-sunken);
     border: 1px solid var(--rule-strong);
     color: var(--ink-soft);
+  }
+
+  .form__privacy {
+    font-size: 0.76rem;
+    line-height: 1.6;
+    color: var(--ink-faint);
   }
 </style>

@@ -1,7 +1,8 @@
 /**
  * Réglages de déploiement du site CréaComp — le seul fichier à modifier
  * pour mettre le site en ligne. Il est lu à la fois par la configuration
- * d'Astro (URL canonique, plan du site) et par les pages (formulaire).
+ * d'Astro (URL canonique, plan du site, politique de sécurité) et par les
+ * pages (formulaire de contact).
  */
 
 /**
@@ -15,7 +16,7 @@
 export const siteUrl = 'https://creacomp.org';
 
 /**
- * Adresse affichée sur la page Contact.
+ * Adresse affichée sur la page Contact, et destination du formulaire.
  *
  * Elle est publiée en clair sur une page publique : elle sera moissonnée par
  * des robots et recevra du courrier indésirable. C'est donc une adresse de
@@ -29,11 +30,21 @@ export const siteUrl = 'https://creacomp.org';
 export const contactEmail = 'contact@creacomp.org';
 
 /**
- * Identifiant du formulaire Formspree (https://formspree.io).
- * Créez un formulaire gratuit, copiez l'identifiant affiché dans son URL
- * (https://formspree.io/f/XXXXXXXX → « XXXXXXXX ») et collez-le ci-dessous.
+ * Clé d'accès Web3Forms (https://web3forms.com), le relais qui transforme
+ * l'envoi du formulaire en courrier électronique. Un site statique n'a pas
+ * de serveur : sans relais, un formulaire ne peut arriver nulle part.
  *
- * Tant que la valeur est vide, la page Contact affiche l'adresse e-mail
- * directe à la place du formulaire : le site reste utilisable en l'état.
+ * Pour l'obtenir : entrer `contactEmail` ci-dessus sur web3forms.com, valider,
+ * et relever la clé reçue par courrier à cette même adresse. Aucun compte,
+ * aucun mot de passe. Coller la clé ci-dessous.
+ *
+ * Cette clé est publique par construction : elle voyage dans le HTML de la
+ * page, et ne donne rien d'autre que le droit d'écrire à `contactEmail`.
+ * Elle ne relaie que vers cette adresse, jamais vers une autre. La révoquer
+ * ou la remplacer se fait depuis le courriel d'activation de Web3Forms.
+ *
+ * Tant que la valeur est vide, le formulaire reste affiché mais bascule en
+ * mode dégradé : le bouton prépare le message dans le logiciel de messagerie
+ * du visiteur au lieu de l'envoyer. La page n'est jamais une impasse.
  */
-export const formspreeId = '';
+export const web3formsKey = '';

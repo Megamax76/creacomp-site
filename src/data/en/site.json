@@ -578,13 +578,14 @@
       "submit": "Send",
       "sending": "Sending…",
       "success": "Message sent. Thank you — a reply will follow as soon as possible.",
-      "error": "Sending failed. You can write directly to the address below.",
-      "required": "Required field"
+      "error": "Sending failed. You can write directly to {email}.",
+      "submitFallback": "Open in my mail app",
+      "fallbackNote": "The sending relay is not connected yet: the button drafts the message in your mail app, and you send it yourself.",
+      "privacy": "This information travels through the Web3Forms relay, which hands it to {email} and to no other address. It is used only to reply to you: no mailing list, no advertising tracking."
     },
     "direct": {
       "title": "By email",
-      "body": "The form is not configured yet. Write directly to the following address:",
-      "bodyConfigured": "Prefer your own mail client? Write directly to:"
+      "body": "Prefer your own mail client? Write directly to:"
     },
     "imageAlt": "Close-up of a sharpened pencil."
   },
