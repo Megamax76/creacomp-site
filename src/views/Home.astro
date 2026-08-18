@@ -30,6 +30,12 @@ const tocItems = home.toc.items.map((item) => ({
 // français, « principles » en anglais. On la lit plutôt que de la deviner.
 const principlesHref = `${path(lang, 'foundations')}#${s.foundations.principles.id}`;
 
+// Le cadre d'ouverture est en 4/5 sur grand écran quand la photographie est
+// en 3/2 : le recadrage `cover` en agrandit environ 1,9 fois la largeur avant
+// d'en garder une tranche verticale. Le `sizes` ci-dessous déclare donc 64vw
+// là où la colonne n'en fait que 34 — non par erreur, mais pour que le
+// navigateur choisisse un rendu assez large pour ce recadrage. Le ramener à
+// 34vw ferait revenir la pixellisation.
 const heroImage = image('hero');
 const heroCredit = credit('hero');
 const heroAlt =
@@ -64,8 +70,8 @@ const heroAlt =
               <Image
                 src={heroImage}
                 alt={heroAlt}
-                widths={[420, 640, 900]}
-                sizes="(max-width: 62rem) 100vw, 34vw"
+                widths={[640, 960, 1400, 1900, 2400]}
+                sizes="(max-width: 62rem) 100vw, 64vw"
                 loading="eager"
                 fetchpriority="high"
               />

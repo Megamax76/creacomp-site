@@ -24,14 +24,20 @@ UTM = 'utm_source=creacomp&utm_medium=referral'
 # Trois photographies seulement : accueil, page du cadre, page de contact.
 # Les rubriques du référentiel sont signalées par des motifs dessinés, pas
 # par des images — voir src/components/Motif.astro.
+#
+# Les largeurs sont celles de la source conservée dans le dépôt, pas celles
+# qui partent en ligne : Astro en tire des rendus WebP de 640 à 2560 px. Elles
+# valent 2600 px parce que les trois cadres sont recadrés en `cover` et qu'un
+# écran à deux points par pixel demande jusqu'à ~2500 px de source pour rester
+# net ; en dessous, le navigateur agrandit et l'image se pixellise.
 # clé locale, identifiant Unsplash, identifiant de fichier, auteur, compte, largeur
 SELECTION = [
-    ('hero', 'LX3YF0Rv524', 'photo-1727334291061-fd29582ef9dc',
-     'Luciano Oliveira', 'lucianooliveira', 1400),
+    ('hero', 'CTflmHHVrBM', 'photo-1603993097397-89c963e325c7',
+     'Jakob Owens', 'jakobowens1', 2600),
     ('cadre', '_ar2ENzmqb0', 'photo-1507738978512-35798112892c',
-     'Sylvia Yang', 'sylviasyang', 1800),
+     'Sylvia Yang', 'sylviasyang', 2600),
     ('contact', 'L9wxrShZboU', 'photo-1685444857197-a7739c9017fc',
-     'Ries Bosch', 'ries_bosch', 1400),
+     'Ries Bosch', 'ries_bosch', 2600),
 ]
 
 
@@ -46,6 +52,20 @@ def download(file_id: str, width: int, target: pathlib.Path) -> int:
     return len(payload)
 
 
+def largeur(chemin: pathlib.Path) -> int:
+    """Largeur d'un JPEG, lue dans son premier segment SOF."""
+    octets = chemin.read_bytes()
+    i = 2
+    while i + 9 < len(octets):
+        if octets[i] != 0xFF:
+            return 0
+        marqueur, taille = octets[i + 1], int.from_bytes(octets[i + 2:i + 4], 'big')
+        if 0xC0 <= marqueur <= 0xCF and marqueur not in (0xC4, 0xC8, 0xCC):
+            return int.from_bytes(octets[i + 7:i + 9], 'big')
+        i += 2 + taille
+    return 0
+
+
 def main() -> None:
     IMAGES.mkdir(parents=True, exist_ok=True)
     credits = []
@@ -53,7 +73,9 @@ def main() -> None:
 
     for key, photo_id, file_id, author, username, width in SELECTION:
         target = IMAGES / f'{key}.jpg'
-        if target.exists():
+        # La largeur demandée fait partie de l'identité du fichier : l'augmenter
+        # doit relancer le téléchargement, sinon le dépôt garde l'ancienne source.
+        if target.exists() and largeur(target) >= width:
             size = target.stat().st_size
         else:
             size = download(file_id, width, target)
