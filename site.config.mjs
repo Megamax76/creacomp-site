@@ -47,4 +47,4 @@ export const contactEmail = 'contact@creacomp.org';
  * mode dégradé : le bouton prépare le message dans le logiciel de messagerie
  * du visiteur au lieu de l'envoyer. La page n'est jamais une impasse.
  */
-export const web3formsKey = '';
+export const web3formsKey = '6a466224-46c8-4419-8832-ffce68648103';
