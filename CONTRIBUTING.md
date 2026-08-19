@@ -1,4 +1,4 @@
-# Contribuer à CréaComp
+# Contribuer à CreaComp
 
 Le référentiel est un travail ouvert : les retours, les usages signalés et les
 objections argumentées en nourrissent les révisions. Ce document dit ce qui est

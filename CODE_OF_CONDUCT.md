@@ -32,7 +32,7 @@ personne.
 
 Ces règles s'appliquent partout où le projet est en jeu : issues, demandes de
 fusion, commentaires de commit, et toute communication se présentant comme liée
-à CréaComp.
+à CreaComp.
 
 ## Application
 

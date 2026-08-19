@@ -1,4 +1,4 @@
-# Identité visuelle CréaComp
+# Identité visuelle CreaComp
 
 La marque est un **obturateur à six lames refermé sur un C**.
 
@@ -120,8 +120,12 @@ clair/sombre sans second fichier.
 ## Une autre piste, gardée
 
 `variante-accent/` contient une première direction : le é de *Créa* taillé dans
-le Fraunces du site, posé dans un carré pétrole. Elle est complète et utilisable
-telle quelle.
+le Fraunces du site, posé dans un carré pétrole.
+
+Elle est antérieure à la chute de l'accent : son symbole comme son mot portent
+encore *CréaComp*. Elle est donc conservée pour mémoire, et non réutilisable
+telle quelle — la reprendre demanderait de la redessiner sur *CreaComp*, ce qui
+la priverait de ce qui en faisait l'idée.
 
 ## Refabriquer les fichiers
 

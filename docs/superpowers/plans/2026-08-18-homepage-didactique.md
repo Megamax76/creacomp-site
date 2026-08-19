@@ -89,7 +89,7 @@ corps resserrés.
 "home": {
   "hero": {
     "title": "Le référentiel de compétences pour l'ère des créateurs",
-    "lead": "CréaComp cartographie la littératie numérique créative : l'ensemble des savoirs qui permettent de recevoir de façon critique, comprendre, imaginer, fabriquer, diffuser et valoriser dans les environnements numériques.",
+    "lead": "CreaComp cartographie la littératie numérique créative : l'ensemble des savoirs qui permettent de recevoir de façon critique, comprendre, imaginer, fabriquer, diffuser et valoriser dans les environnements numériques.",
     "primaryCta": "Explorer les 31 entrées",
     "secondaryCta": "Comprendre le cadre"
   },
@@ -120,7 +120,7 @@ corps resserrés.
       "Diffuser",
       "Valoriser"
     ],
-    "note": "CréaComp en est la cartographie. Il ne dit pas comment enseigner ces capacités : il dit comment les reconnaître."
+    "note": "CreaComp en est la cartographie. Il ne dit pas comment enseigner ces capacités : il dit comment les reconnaître."
   },
   "architecture": {
     "id": "architecture",
@@ -201,7 +201,7 @@ corps resserrés.
     "title": "La valeur a changé de place",
     "body": [
       "L'intelligence artificielle générative a effondré le coût de la production : un texte correct, un visuel propre, une vidéo montée deviennent universellement accessibles. Ce qui se banalise se dévalue, et la valeur se déplace vers les deux extrémités de la chaîne créative.",
-      "Aucun cadre existant ne décrivait ces deux extrémités ensemble. C'est la raison d'être de CréaComp, et la clé de lecture qui explique pourquoi ses rubriques d'amont et d'aval pèsent autant que la fabrication elle-même."
+      "Aucun cadre existant ne décrivait ces deux extrémités ensemble. C'est la raison d'être de CreaComp, et la clé de lecture qui explique pourquoi ses rubriques d'amont et d'aval pèsent autant que la fabrication elle-même."
     ],
     "caption": "Où se loge la valeur dans la chaîne créative",
     "stages": [
@@ -256,7 +256,7 @@ corps resserrés.
   "closing": {
     "id": "citer",
     "title": "Un bien commun",
-    "body": "CréaComp est publié sous licence Creative Commons Attribution – Partage dans les mêmes conditions 4.0. Vous pouvez le reprendre, le traduire, l'adapter et l'intégrer à vos propres dispositifs, à condition d'en citer l'origine et de partager vos adaptations aux mêmes conditions.",
+    "body": "CreaComp est publié sous licence Creative Commons Attribution – Partage dans les mêmes conditions 4.0. Vous pouvez le reprendre, le traduire, l'adapter et l'intégrer à vos propres dispositifs, à condition d'en citer l'origine et de partager vos adaptations aux mêmes conditions.",
     "primaryCta": "Utiliser & citer",
     "secondaryCta": "Écrire à l'auteur"
   }
@@ -271,7 +271,7 @@ Mêmes clés, exactement, valeurs en anglais.
 "home": {
   "hero": {
     "title": "The competency framework for the creator era",
-    "lead": "CréaComp maps digital creative literacy: the body of knowledge that allows a person to critically receive, understand, imagine, make, publish and capitalise on content and projects in digital environments.",
+    "lead": "CreaComp maps digital creative literacy: the body of knowledge that allows a person to critically receive, understand, imagine, make, publish and capitalise on content and projects in digital environments.",
     "primaryCta": "Explore the 31 entries",
     "secondaryCta": "Understand the foundations"
   },
@@ -302,7 +302,7 @@ Mêmes clés, exactement, valeurs en anglais.
       "Publish",
       "Capitalise on"
     ],
-    "note": "CréaComp maps them. It does not say how to teach these capacities: it says how to recognise them."
+    "note": "CreaComp maps them. It does not say how to teach these capacities: it says how to recognise them."
   },
   "architecture": {
     "id": "architecture",
@@ -383,7 +383,7 @@ Mêmes clés, exactement, valeurs en anglais.
     "title": "Value has moved",
     "body": [
       "Generative artificial intelligence has collapsed the cost of production: a competent text, a clean visual, an edited video are becoming universally accessible. What becomes ordinary loses its value, and value moves towards both ends of the creative chain.",
-      "No existing framework described those two ends together. That is why CréaComp exists, and it is the reading key that explains why its upstream and downstream domains weigh as much as making itself."
+      "No existing framework described those two ends together. That is why CreaComp exists, and it is the reading key that explains why its upstream and downstream domains weigh as much as making itself."
     ],
     "caption": "Where value sits along the creative chain",
     "stages": [
@@ -438,7 +438,7 @@ Mêmes clés, exactement, valeurs en anglais.
   "closing": {
     "id": "cite",
     "title": "A common good",
-    "body": "CréaComp is published under a Creative Commons Attribution–ShareAlike 4.0 licence. You may reuse it, translate it, adapt it and embed it in your own programmes, provided you credit its origin and share your adaptations under the same terms.",
+    "body": "CreaComp is published under a Creative Commons Attribution–ShareAlike 4.0 licence. You may reuse it, translate it, adapt it and embed it in your own programmes, provided you credit its origin and share your adaptations under the same terms.",
     "primaryCta": "Use & cite",
     "secondaryCta": "Write to the author"
   }
@@ -1826,7 +1826,7 @@ Naviguer sur `http://localhost:4321/`, puis lire la page avec `read_page`.
 Vérifier point par point :
 
 - l'en-tête ne contient plus la liste des cinq compteurs ;
-- l'en-tête ne contient plus le surtitre « CréaComp 1.0 — édition 2026 » **au-dessus** du titre, et porte bien la ligne d'identité « CréaComp 1.0 — édition 2026 · Maxime Hébert · CC BY-SA 4.0 » **sous les boutons** ;
+- l'en-tête ne contient plus le surtitre « CreaComp 1.0 — édition 2026 » **au-dessus** du titre, et porte bien la ligne d'identité « CreaComp 1.0 — édition 2026 · Maxime Hébert · CC BY-SA 4.0 » **sous les boutons** ;
 - le sommaire liste sept entrées, dont quatre numérotées 01 à 04 ;
 - les six verbes apparaissent comme six éléments distincts, non comme une phrase ;
 - le spécimen affiche le code `1.2`, la rubrique en toutes lettres, et deux niveaux : `N1 Découverte` et `N4 Expertise` ;
@@ -1855,7 +1855,7 @@ police manquante.
 - [ ] **Étape 5 : contrôler la page anglaise**
 
 Naviguer sur `http://localhost:4321/en/` et refaire l'étape 2 avec les intitulés
-anglais : ligne d'identité `CréaComp 1.0 — 2026 edition · Maxime Hébert · CC
+anglais : ligne d'identité `CreaComp 1.0 — 2026 edition · Maxime Hébert · CC
 BY-SA 4.0`, spécimen `1.2 / GATHER`, niveaux `N1 Discovery` et `N4 Expertise`,
 sommaire de sept entrées.
 

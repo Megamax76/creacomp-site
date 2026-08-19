@@ -4,13 +4,13 @@ Deux versions ; ne garder que celle qui sert.
 --- français -------------------------------------------------
 
 Maxime Hébert
-Auteur et mainteneur du référentiel CréaComp
+Auteur et mainteneur du référentiel CreaComp
 contact@creacomp.org · https://creacomp.org
-CréaComp 1.0 — Référentiel de littératie numérique créative · CC BY-SA 4.0
+CreaComp 1.0 — Référentiel de littératie numérique créative · CC BY-SA 4.0
 
 --- english --------------------------------------------------
 
 Maxime Hébert
-Author and maintainer of the CréaComp framework
+Author and maintainer of the CreaComp framework
 contact@creacomp.org · https://creacomp.org/en/
-CréaComp 1.0 — Digital Creative Literacy Framework · CC BY-SA 4.0
+CreaComp 1.0 — Digital Creative Literacy Framework · CC BY-SA 4.0

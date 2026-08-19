@@ -1,4 +1,4 @@
-# Design system CréaComp
+# Design system CreaComp
 
 Le système tient dans un seul fichier de style,
 [`src/styles/global.css`](../src/styles/global.css), et dans une poignée de
@@ -132,7 +132,7 @@ et à ne jamais employer en dessous de la taille du texte courant.
 Fraunces est une fonte variable à quatre axes. Les titres emploient
 `'SOFT' 20, 'WONK' 1, 'opsz' 40` ; le nom de la marque, plus petit, descend à
 `'opsz' 20`. `WONK` active les formes penchées qui donnent son caractère à la
-fonte — c'est le réglage qui fait qu'un titre CréaComp ne ressemble pas à un
+fonte — c'est le réglage qui fait qu'un titre CreaComp ne ressemble pas à un
 titre par défaut. Ne pas y toucher.
 
 ### L'échelle

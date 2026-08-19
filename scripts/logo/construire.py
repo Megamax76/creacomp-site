@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Fabrique tous les fichiers de `brand/` — le logo CréaComp, en SVG vectorisé.
+"""Fabrique tous les fichiers de `brand/` — le logo CreaComp, en SVG vectorisé.
 
 La marque est un obturateur à six lames refermé sur un C. Les lames sont
-calculées ; le mot « CréaComp » et la ligne de définition sont des contours
+calculées ; le mot « CreaComp » et la ligne de définition sont des contours
 extraits des fontes du projet, de sorte qu'aucun fichier produit n'ait besoin
 qu'une fonte soit installée pour s'afficher — chez un imprimeur comme dans un
 navigateur.
@@ -75,7 +75,7 @@ C_EXT = round(loge(C_DX) - C_JOUR, 2)
 C_COUPE = round(C_EXT * 0.42, 2)
 
 NOTE = (
-    "<!-- CréaComp — six lames d'obturateur pour les rubriques 2 à 7 ; la première,\n"
+    "<!-- CreaComp — six lames d'obturateur pour les rubriques 2 à 7 ; la première,\n"
     "     S'informer, est l'ouverture elle-même, et porte le C. Contours vectorisés :\n"
     "     aucune fonte n'est requise. Refabriqué par scripts/logo/construire.py. -->\n"
 )
@@ -183,10 +183,10 @@ def normalise(source, axes, tag, texte, approche):
 AXES_MOT = {"wght": 600, "opsz": 24, "SOFT": 20, "WONK": 1}
 AXES_LIGNE = {"wght": 500}
 
-MOT = normalise(FRAUNCES, AXES_MOT, "mot", "CréaComp", -0.022)
+MOT = normalise(FRAUNCES, AXES_MOT, "mot", "CreaComp", -0.022)
 # Hauteur de capitale du mot, dans sa boîte de 100 : sert à caler tout le reste.
-# Le haut de la boîte est le haut du « C » — en Fraunces, l'accent du « é » ne
-# dépasse pas la capitale — donc la capitale va du haut de boîte à la ligne de pied.
+# Le mot ne porte ni accent ni jambage : le haut de la boîte est le haut du « C »,
+# donc la capitale va du haut de boîte à la ligne de pied.
 CAPITALE = round(-MOT["haut"] * MOT["echelle"], 3)
 
 LIGNES = {
@@ -226,20 +226,20 @@ SYM_CLAIR = symbole(LAMES_CLAIR, PETROLE)
 SYM_SOMBRE = symbole(LAMES_SOMBRE, PETROLE_CLAIR)
 os.makedirs(SORTIE, exist_ok=True)
 
-ecrire("creacomp-marque.svg", svg(100, 100, SYM_CLAIR, "CréaComp"))
-ecrire("creacomp-marque-sombre.svg", svg(100, 100, SYM_SOMBRE, "CréaComp"))
-ecrire("creacomp-marque-mono.svg", svg(100, 100, monochrome("currentColor"), "CréaComp"))
-ecrire("creacomp-marque-petrole.svg", svg(100, 100, monochrome(PETROLE), "CréaComp"))
+ecrire("creacomp-marque.svg", svg(100, 100, SYM_CLAIR, "CreaComp"))
+ecrire("creacomp-marque-sombre.svg", svg(100, 100, SYM_SOMBRE, "CreaComp"))
+ecrire("creacomp-marque-mono.svg", svg(100, 100, monochrome("currentColor"), "CreaComp"))
+ecrire("creacomp-marque-petrole.svg", svg(100, 100, monochrome(PETROLE), "CreaComp"))
 
 ZOOM = "translate(50 50) scale(0.9) translate(-50 -50)"
 ecrire("creacomp-marque-tuile.svg",
        svg(100, 100, f'<rect width="100" height="100" rx="2.5" fill="{PAPIER}"/>'
-                     f'<g transform="{ZOOM}">{SYM_CLAIR}</g>', "CréaComp"))
+                     f'<g transform="{ZOOM}">{SYM_CLAIR}</g>', "CreaComp"))
 ecrire("creacomp-marque-tuile-sombre.svg",
        svg(100, 100, f'<rect width="100" height="100" rx="2.5" fill="{NUIT}"/>'
-                     f'<g transform="{ZOOM}">{SYM_SOMBRE}</g>', "CréaComp"))
+                     f'<g transform="{ZOOM}">{SYM_SOMBRE}</g>', "CreaComp"))
 ecrire("creacomp-mot.svg",
-       svg(round(G["word"]["w"], 2), 100, pose("word", 100, 0, 0, PETROLE), "CréaComp"))
+       svg(round(G["word"]["w"], 2), 100, pose("word", 100, 0, 0, PETROLE), "CreaComp"))
 
 
 def verrou(ligne, nom, titre, sym, couleur_mot, couleur_ligne):
@@ -257,8 +257,8 @@ def verrou(ligne, nom, titre, sym, couleur_mot, couleur_ligne):
     ecrire(nom, svg(round(W, 2), round(H, 2), corps, titre))
 
 
-TITRE_FR = "CréaComp — Référentiel de littératie numérique créative"
-TITRE_EN = "CréaComp — Digital Creative Literacy Framework"
+TITRE_FR = "CreaComp — Référentiel de littératie numérique créative"
+TITRE_EN = "CreaComp — Digital Creative Literacy Framework"
 verrou("subFr", "creacomp-logo.svg", TITRE_FR, SYM_CLAIR, PETROLE, GRIS)
 verrou("subEn", "creacomp-logo-en.svg", TITRE_EN, SYM_CLAIR, PETROLE, GRIS)
 verrou("subFr", "creacomp-logo-sombre.svg", TITRE_FR, SYM_SOMBRE, PETROLE_CLAIR, GRIS_SOMBRE)
@@ -280,9 +280,9 @@ def centre(ligne, nom, titre, sym, couleur_mot, couleur_ligne):
     ecrire(nom, svg(round(W, 2), round(y_ligne + hl, 2), corps, titre))
 
 
-centre("subFrCourt", "creacomp-logo-centre.svg", "CréaComp", SYM_CLAIR, PETROLE, GRIS)
-centre("subEnCourt", "creacomp-logo-centre-en.svg", "CréaComp", SYM_CLAIR, PETROLE, GRIS)
-centre("subFrCourt", "creacomp-logo-centre-sombre.svg", "CréaComp",
+centre("subFrCourt", "creacomp-logo-centre.svg", "CreaComp", SYM_CLAIR, PETROLE, GRIS)
+centre("subEnCourt", "creacomp-logo-centre-en.svg", "CreaComp", SYM_CLAIR, PETROLE, GRIS)
+centre("subFrCourt", "creacomp-logo-centre-sombre.svg", "CreaComp",
        SYM_SOMBRE, PETROLE_CLAIR, GRIS_SOMBRE)
 
 FAV = "translate(50 50) scale(0.88) translate(-50 -50)"
@@ -296,7 +296,7 @@ ecrire("favicon.svg", svg(100, 100,
        f'  </style>\n'
        f'  <rect width="100" height="100" rx="10" class="fond"/>\n'
        f'  <g class="clair" transform="{FAV}">{SYM_CLAIR}</g>\n'
-       f'  <g class="sombre" transform="{FAV}">{SYM_SOMBRE}</g>\n', "CréaComp"))
+       f'  <g class="sombre" transform="{FAV}">{SYM_SOMBRE}</g>\n', "CreaComp"))
 
 # ─── Carte sociale, 1200 × 630 ──────────────────────────────────────────────
 def carte(ligne, nom, titre):

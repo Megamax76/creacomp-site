@@ -1,6 +1,6 @@
 <div align="center">
 
-# CréaComp
+# CreaComp
 
 **Le référentiel de compétences pour l'ère des créateurs**
 
@@ -14,7 +14,7 @@ Bilingue français / anglais, librement réutilisable.
 [![Code MIT](https://img.shields.io/badge/code-MIT-informational)](LICENSE-CODE)
 [![Astro](https://img.shields.io/badge/Astro-7.2-bc52ee)](https://astro.build)
 
-![Page d'accueil du site CréaComp](docs/media/accueil.webp)
+![Page d'accueil du site CreaComp](docs/media/accueil.webp)
 
 </div>
 
@@ -33,7 +33,7 @@ Bilingue français / anglais, librement réutilisable.
 - [Mise en ligne](#mise-en-ligne)
 - [Sécurité](#sécurité)
 - [Contribuer](#contribuer)
-- [Citer CréaComp](#citer-créacomp)
+- [Citer CreaComp](#citer-creacomp)
 - [Comment ce référentiel a été fait](#comment-ce-référentiel-a-été-fait)
 - [Licences](#licences)
 - [English summary](#english-summary)
@@ -42,7 +42,7 @@ Bilingue français / anglais, librement réutilisable.
 
 ## De quoi s'agit-il
 
-**CréaComp** — contraction de *Creative Competence* — **est un référentiel de
+**CreaComp** — contraction de *Creative Competence* — **est un référentiel de
 compétences** : une description structurée de ce qu'il faut savoir faire pour
 créer, diffuser et vivre de contenus numériques. Son objet est un concept unique,
 la **littératie numérique créative**, qu'il a pour seule ambition de rendre
@@ -63,7 +63,7 @@ données structurées réutilisables, et le site qui le publie.
 
 | | |
 |---|---|
-| **Version** | CréaComp 1.0 — édition 2026 |
+| **Version** | CreaComp 1.0 — édition 2026 |
 | **Auteur** | Maxime Hébert |
 | **Langues** | français (source), anglais (traduction maintenue à la main) |
 | **Objet** | la littératie numérique créative — [voir la définition](#la-littératie-numérique-créative) |
@@ -77,7 +77,7 @@ données structurées réutilisables, et le site qui le publie.
 
 ## La littératie numérique créative
 
-Tout, dans CréaComp, tourne autour d'un seul concept. Les sept rubriques n'en
+Tout, dans CreaComp, tourne autour d'un seul concept. Les sept rubriques n'en
 sont que la décomposition opératoire.
 
 > **La littératie numérique créative est la capacité d'une personne à naviguer
@@ -148,7 +148,7 @@ littératie, c'est poser que cet écart s'apprend et donc s'enseigne.
 
 ## D'où vient le nom
 
-**CréaComp** contracte *Creative Competence*, sur le modèle des référentiels de
+**CreaComp** contracte *Creative Competence*, sur le modèle des référentiels de
 compétences publiés par le **Centre commun de recherche** de la Commission
 européenne (*Joint Research Centre*), qui ont fait de ce suffixe une
 convention :
@@ -157,21 +157,21 @@ convention :
 |---|---|---|
 | **DigComp** | la compétence numérique du citoyen | JRC, première version en 2013, aujourd'hui en version 3.0 |
 | **EntreComp** | la compétence entrepreneuriale | JRC et DG Emploi, juin 2016 — 3 domaines, 15 compétences |
-| **CréaComp** | la littératie numérique créative | travail indépendant, 2026 |
+| **CreaComp** | la littératie numérique créative | travail indépendant, 2026 |
 
 Le nom situe donc une **parenté d'intention** : décrire une capacité en termes
 observables et graduels, pour qu'elle devienne enseignable et évaluable.
 
-CréaComp se place précisément là où ces deux cadres **ne se recouvrent pas**.
+CreaComp se place précisément là où ces deux cadres **ne se recouvrent pas**.
 DigComp décrit le citoyen numérique — s'informer, communiquer, se protéger — mais
 ne dit presque rien du fait de produire une œuvre et d'en vivre. EntreComp
 décrit l'entrepreneur — repérer une occasion, mobiliser des ressources, agir —
 sans rien devoir aux logiques propres des plateformes et de l'attention.
 L'espace laissé vide entre les deux est exactement celui du créateur numérique :
-c'est celui-là que CréaComp cartographie.
+c'est celui-là que CreaComp cartographie.
 
 > [!IMPORTANT]
-> **CréaComp n'est ni un produit ni une publication de l'Union européenne.**
+> **CreaComp n'est ni un produit ni une publication de l'Union européenne.**
 > Le nom suit une convention et revendique une filiation méthodologique ; il
 > n'implique aucune affiliation, validation ni approbation institutionnelle.
 > DigComp et EntreComp sont mentionnés comme travaux voisins, dont les niveaux
@@ -407,7 +407,7 @@ traduction.
 
 Le canal le plus simple reste [une issue](https://github.com/Megamax76/creacomp-site/issues/new/choose).
 
-## Citer CréaComp
+## Citer CreaComp
 
 Le dépôt contient un fichier [CITATION.cff](CITATION.cff) : GitHub affiche donc
 un bouton **« Cite this repository »** en haut de cette page, qui produit la
@@ -415,7 +415,7 @@ citation au format BibTeX ou APA.
 
 En clair :
 
-> Hébert, M. (2026). *CréaComp : référentiel de littératie numérique créative*
+> Hébert, M. (2026). *CreaComp : référentiel de littératie numérique créative*
 > (version 1.0, édition 2026). https://creacomp.org
 
 La page [« Utiliser & citer »](https://creacomp.org/utiliser/) du site donne les
@@ -423,7 +423,7 @@ formulations recommandées dans les deux langues.
 
 ## Comment ce référentiel a été fait
 
-CréaComp a été pensé par une intelligence humaine et composé avec l'aide
+CreaComp a été pensé par une intelligence humaine et composé avec l'aide
 d'intelligences artificielles. L'intention, les partis pris et les arbitrages
 viennent d'un auteur ; la mise en forme, une part de la formulation, la
 traduction et la construction de ce site doivent beaucoup à des systèmes
@@ -468,7 +468,7 @@ dépendances npm, sous leurs licences propres.
 
 ## English summary
 
-**CréaComp — from *Creative Competence* — is a framework for digital creative
+**CreaComp — from *Creative Competence* — is a framework for digital creative
 literacy**, a single concept it exists to make teachable.
 
 > **Digital creative literacy is a person's capacity to navigate the creative
@@ -500,11 +500,11 @@ keys.
 The name follows the naming convention of the European Commission Joint
 Research Centre's competence frameworks — **DigComp** (digital competence,
 first published 2013) and **EntreComp** (entrepreneurial competence, 2016) —
-and claims a methodological kinship with them. CréaComp sits in the gap
+and claims a methodological kinship with them. CreaComp sits in the gap
 between the two: DigComp describes the digital citizen but says little about
 producing a body of work and living from it; EntreComp describes the
 entrepreneur but owes nothing to platform and attention logics.
-**CréaComp is not an EU product or publication, and implies no institutional
+**CreaComp is not an EU product or publication, and implies no institutional
 affiliation or endorsement.**
 
 This repository holds both the framework — as reusable structured data in

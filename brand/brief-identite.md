@@ -1,8 +1,8 @@
-# CréaComp — brief d'identité visuelle
+# CreaComp — brief d'identité visuelle
 
 ## Ce qu'il faut produire
 
-Une identité graphique pour **CréaComp**, un référentiel de compétences publié
+Une identité graphique pour **CreaComp**, un référentiel de compétences publié
 en accès libre. Le cœur de la demande est une marque — symbole, logotype, ou les
 deux — et le système minimal qui permet de l'employer : couleurs, typographies,
 et la manière dont l'ensemble tient sur un site, un document et une icône.
@@ -14,7 +14,7 @@ Il ne propose pas de piste graphique : c'est le travail attendu.
 
 ## 1. Le projet
 
-**CréaComp cartographie la littératie numérique créative** : la capacité d'une
+**CreaComp cartographie la littératie numérique créative** : la capacité d'une
 personne à naviguer au cœur du web créatif et à y devenir actrice de la création
 plutôt que destinataire de celle des autres.
 
@@ -39,12 +39,12 @@ Travail indépendant, première édition 2026. Site : `creacomp.org`.
 
 ## 2. La thèse, qui donne le ton
 
-CréaComp n'est pas neutre. Il défend un basculement, et l'identité gagnerait à
+CreaComp n'est pas neutre. Il défend un basculement, et l'identité gagnerait à
 ne pas le trahir :
 
 > **De l'économie de l'attention à l'économie de l'intention.** L'économie
 > numérique dominante capture l'attention : elle optimise le temps passé,
-> l'engagement réflexe, la consommation subie. CréaComp défend le passage d'une
+> l'engagement réflexe, la consommation subie. CreaComp défend le passage d'une
 > économie où les personnes sont la ressource extraite à une économie où elles
 > redeviennent les auteurs de ce qu'elles consultent et de ce qu'elles font.
 
@@ -66,13 +66,13 @@ commun de recherche de la Commission européenne : **DigComp** (la compétence
 numérique du citoyen) et **EntreComp** (la compétence entrepreneuriale). Ce
 suffixe est devenu une convention.
 
-CréaComp se place là où ces deux cadres ne se recouvrent pas : DigComp décrit le
+CreaComp se place là où ces deux cadres ne se recouvrent pas : DigComp décrit le
 citoyen numérique mais ne dit presque rien du fait de produire une œuvre et d'en
 vivre ; EntreComp décrit l'entrepreneur sans rien devoir aux logiques propres
 des plateformes et de l'attention. L'espace laissé vide entre les deux est celui
 du créateur numérique.
 
-> **Contrainte ferme.** CréaComp n'est ni un produit ni une publication de
+> **Contrainte ferme.** CreaComp n'est ni un produit ni une publication de
 > l'Union européenne. Le nom revendique une filiation méthodologique, aucune
 > affiliation. L'identité ne doit donc **jamais** pouvoir être confondue avec
 > une marque institutionnelle européenne ou publique — ni par les couleurs, ni
@@ -134,7 +134,7 @@ qui ressemble aujourd'hui à l'air du temps ressemblera dans trois ans à 2026.
 
 - **Bilingue.** Tout élément textuel de l'identité doit exister en français et
   en anglais, et le nom conserve son accent dans les deux langues :
-  *CréaComp*, toujours.
+  *CreaComp*, toujours.
 - **Clair et sombre.** Le site propose les deux thèmes, avec bascule manuelle et
   respect de la préférence système. Tout doit fonctionner dans les deux.
 - **Sept objets à distinguer.** Les sept rubriques sont signalées séparément

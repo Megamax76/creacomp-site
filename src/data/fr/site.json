@@ -4,17 +4,17 @@
   "langName": "Français",
   "otherLangName": "English",
   "meta": {
-    "name": "CréaComp",
+    "name": "CreaComp",
     "version": "1.0",
     "edition": "2026",
-    "versionLabel": "CréaComp 1.0 — édition 2026",
+    "versionLabel": "CreaComp 1.0 — édition 2026",
     "author": "Maxime Hébert",
     "license": "CC BY-SA 4.0",
     "licenseName": "Creative Commons Attribution – Partage dans les mêmes conditions 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.fr",
     "subtitle": "Référentiel de littératie numérique créative",
     "tagline": "Le référentiel de compétences pour l'ère des créateurs",
-    "description": "CréaComp cartographie la littératie numérique créative : 7 rubriques, 28 compétences, 3 fils transversaux, 4 niveaux, 124 descripteurs observables. Un référentiel ouvert sous licence CC BY-SA 4.0."
+    "description": "CreaComp cartographie la littératie numérique créative : 7 rubriques, 28 compétences, 3 fils transversaux, 4 niveaux, 124 descripteurs observables. Un référentiel ouvert sous licence CC BY-SA 4.0."
   },
   "counts": {
     "rubrics": "7 rubriques",
@@ -100,7 +100,7 @@
   "home": {
     "hero": {
       "title": "Le référentiel de compétences pour l'ère des créateurs",
-      "lead": "CréaComp cartographie la littératie numérique créative : l'ensemble des savoirs qui permettent de recevoir de façon critique, comprendre, imaginer, fabriquer, diffuser et valoriser dans les environnements numériques.",
+      "lead": "CreaComp cartographie la littératie numérique créative : l'ensemble des savoirs qui permettent de recevoir de façon critique, comprendre, imaginer, fabriquer, diffuser et valoriser dans les environnements numériques.",
       "primaryCta": "Explorer les 31 entrées",
       "secondaryCta": "Comprendre le cadre"
     },
@@ -153,7 +153,7 @@
       "body": [
         "Or la création est devenue une dimension structurante de ces environnements. Algorithmes de recommandation, production de contenus, intelligences artificielles génératives, entrepreneuriat numérique : la capacité des individus à comprendre ces logiques et à produire de la valeur à travers elles conditionne désormais leur autonomie économique, culturelle et citoyenne.",
         "Cette capacité — la littératie numérique créative — n'est aujourd'hui ni définie, ni mesurée par aucun référentiel.",
-        "CréaComp répond à cette lacune. Il est construit autour d'une question unique :"
+        "CreaComp répond à cette lacune. Il est construit autour d'une question unique :"
       ],
       "question": "Que sait réellement faire une personne dans les environnements numériques, et quelle valeur est-elle capable d'y créer ?"
     },
@@ -255,7 +255,7 @@
       "title": "La valeur a changé de place",
       "body": [
         "L'intelligence artificielle générative a effondré le coût de la production : un texte correct, un visuel propre, une vidéo montée deviennent universellement accessibles. Ce qui se banalise se dévalue, et la valeur se déplace vers les deux extrémités de la chaîne créative.",
-        "Aucun cadre existant ne décrivait ces deux extrémités ensemble. C'est la raison d'être de CréaComp, et la clé de lecture qui explique pourquoi ses rubriques d'amont et d'aval pèsent autant que la fabrication elle-même."
+        "Aucun cadre existant ne décrivait ces deux extrémités ensemble. C'est la raison d'être de CreaComp, et la clé de lecture qui explique pourquoi ses rubriques d'amont et d'aval pèsent autant que la fabrication elle-même."
       ],
       "caption": "Où se loge la valeur dans la chaîne créative",
       "stages": [
@@ -310,7 +310,7 @@
     "closing": {
       "id": "citer",
       "title": "Un bien commun",
-      "body": "CréaComp est publié sous licence Creative Commons Attribution – Partage dans les mêmes conditions 4.0. Vous pouvez le reprendre, le traduire, l'adapter et l'intégrer à vos propres dispositifs, à condition d'en citer l'origine et de partager vos adaptations aux mêmes conditions.",
+      "body": "CreaComp est publié sous licence Creative Commons Attribution – Partage dans les mêmes conditions 4.0. Vous pouvez le reprendre, le traduire, l'adapter et l'intégrer à vos propres dispositifs, à condition d'en citer l'origine et de partager vos adaptations aux mêmes conditions.",
       "primaryCta": "Utiliser & citer",
       "secondaryCta": "Écrire à l'auteur"
     }
@@ -335,14 +335,14 @@
         "title": "La littératie numérique créative",
         "body": [
           "La littératie numérique créative désigne l'ensemble des connaissances, des savoir-faire et des dispositions permettant à une personne de recevoir de manière critique, de comprendre, d'imaginer, de fabriquer, de diffuser et de valoriser des contenus et des projets dans les environnements numériques — de façon autonome, éthique et durable.",
-          "Comme la lecture, l'écriture et le calcul l'ont été pour la civilisation de l'imprimé, elle constitue un socle : un ensemble de savoirs que la société a intérêt à voir partagés par le plus grand nombre, cartographiables, observables et mesurables par niveaux — sans que quiconque soit censé en maîtriser l'intégralité. CréaComp en est la cartographie."
+          "Comme la lecture, l'écriture et le calcul l'ont été pour la civilisation de l'imprimé, elle constitue un socle : un ensemble de savoirs que la société a intérêt à voir partagés par le plus grand nombre, cartographiables, observables et mesurables par niveaux — sans que quiconque soit censé en maîtriser l'intégralité. CreaComp en est la cartographie."
         ]
       },
       {
         "id": "intention",
         "title": "De l'économie de l'attention à l'économie de l'intention",
         "body": [
-          "L'économie numérique dominante capture l'attention : elle optimise le temps passé, l'engagement réflexe, la consommation subie. CréaComp défend un basculement : passer d'une économie de l'attention, où les personnes sont la ressource extraite, à une économie de l'intention, où elles redeviennent les auteurs — de ce qu'elles consultent, de ce qu'elles créent, de ce qu'elles construisent.",
+          "L'économie numérique dominante capture l'attention : elle optimise le temps passé, l'engagement réflexe, la consommation subie. CreaComp défend un basculement : passer d'une économie de l'attention, où les personnes sont la ressource extraite, à une économie de l'intention, où elles redeviennent les auteurs — de ce qu'elles consultent, de ce qu'elles créent, de ce qu'elles construisent.",
           "Chaque rubrique du référentiel peut se relire à travers ce basculement : comprendre les algorithmes non pour les flatter mais pour choisir ce qu'on nourrit ; construire une communauté qu'on possède plutôt qu'une audience qu'on loue ; créer avec l'IA en dirigeant, plutôt qu'en déléguant son jugement."
         ]
       },
@@ -362,7 +362,7 @@
         {
           "id": "P1",
           "title": "Une cartographie, non un programme",
-          "body": "CréaComp décrit et permet d'évaluer des savoirs ; il ne prescrit ni parcours, ni méthode, ni contenu de formation. Toute ingénierie pédagogique peut s'y adosser ; aucune n'en découle mécaniquement."
+          "body": "CreaComp décrit et permet d'évaluer des savoirs ; il ne prescrit ni parcours, ni méthode, ni contenu de formation. Toute ingénierie pédagogique peut s'y adosser ; aucune n'en découle mécaniquement."
         },
         {
           "id": "P2",
@@ -392,7 +392,7 @@
         {
           "id": "P7",
           "title": "Un périmètre délibérément resserré",
-          "body": "CréaComp traite du versant créatif et n'y mêle rien d'autre : la sécurité des comptes, la protection défensive des données personnelles et la bureautique en sont délibérément exclues. Elles relèvent d'une littératie numérique générale, que ce référentiel suppose acquise pour aller plus loin qu'elle."
+          "body": "CreaComp traite du versant créatif et n'y mêle rien d'autre : la sécurité des comptes, la protection défensive des données personnelles et la bureautique en sont délibérément exclues. Elles relèvent d'une littératie numérique générale, que ce référentiel suppose acquise pour aller plus loin qu'elle."
         }
       ]
     },
@@ -425,18 +425,18 @@
         },
         {
           "title": "Exigences de validité",
-          "body": "Pour prétendre à un usage scientifique et certifiant, l'évaluation adossée à CréaComp respecte trois exigences : la vérifiabilité (tout descripteur s'observe sur la preuve produite, sans interprétation extensive), la fidélité inter-évaluateurs (deux évaluateurs formés parviennent au même verdict sur la même preuve) et la traçabilité (chaque validation référence la preuve, la date et l'évaluateur). Le référentiel fait l'objet d'un protocole de validation empirique — étude pilote sur cohortes réelles, mesure d'accord inter-juges, révision annuelle des descripteurs ambigus — préalable à toute prétention certifiante."
+          "body": "Pour prétendre à un usage scientifique et certifiant, l'évaluation adossée à CreaComp respecte trois exigences : la vérifiabilité (tout descripteur s'observe sur la preuve produite, sans interprétation extensive), la fidélité inter-évaluateurs (deux évaluateurs formés parviennent au même verdict sur la même preuve) et la traçabilité (chaque validation référence la preuve, la date et l'évaluateur). Le référentiel fait l'objet d'un protocole de validation empirique — étude pilote sur cohortes réelles, mesure d'accord inter-juges, révision annuelle des descripteurs ambigus — préalable à toute prétention certifiante."
         }
       ]
     },
     "perimeter": {
       "id": "perimetre",
-      "title": "Périmètre : ce que CréaComp n'inclut pas",
+      "title": "Périmètre : ce que CreaComp n'inclut pas",
       "body": [
-        "CréaComp est un référentiel neuf, bâti sur son propre objet : la littératie numérique créative. Il ne prolonge pas un cadre existant et ne s'y subordonne pas. Les référentiels européens de compétences — DigComp pour la compétence numérique du citoyen, EntreComp pour la compétence entrepreneuriale — en ont été l'inspiration et la base de travail, et ils en restent le complément naturel ; mais aucun ne décrit ce que CréaComp décrit, et c'est la raison d'être de celui-ci.",
-        "Ce que CréaComp exclut délibérément, il l'exclut donc par choix de périmètre, non par renvoi à une autorité extérieure. N'y figurent ni la sécurité des équipements et des comptes, ni la protection défensive des données personnelles, ni la résolution de problèmes techniques, ni la bureautique et la communication administrative. Ces acquis relèvent d'une littératie numérique générale, largement outillée ailleurs, et les dupliquer aurait dilué le propos. CréaComp les suppose disponibles et traite exclusivement du versant créatif : comprendre les systèmes, concevoir, fabriquer, adresser, entreprendre, valoriser.",
-        "Trois points de contact avec la littératie numérique générale méritent d'être explicités, parce que CréaComp y va plus loin qu'elle. La compétence 1.2 (fiabilité et manipulation) pousse la lecture critique jusqu'à la détection des contenus synthétiques et des techniques d'influence propres aux espaces de création. La compétence 5.3 (conduite en ligne) va jusqu'à la modération et à la gestion publique de la critique. La compétence 7.4 (actifs indépendants) traite les données sous un angle patrimonial — posséder son audience et ses contenus — là où l'approche défensive habituelle s'arrête à leur protection.",
-        "Enfin, l'éducation aux médias et à l'information (EMI), inscrite dans les programmes scolaires français, trouve dans la rubrique S'informer son prolongement naturel : CréaComp offre aux enseignants d'EMI une trajectoire qui mène de la réception critique — leur territoire — vers la création assumée, qui est le sien."
+        "CreaComp est un référentiel neuf, bâti sur son propre objet : la littératie numérique créative. Il ne prolonge pas un cadre existant et ne s'y subordonne pas. Les référentiels européens de compétences — DigComp pour la compétence numérique du citoyen, EntreComp pour la compétence entrepreneuriale — en ont été l'inspiration et la base de travail, et ils en restent le complément naturel ; mais aucun ne décrit ce que CreaComp décrit, et c'est la raison d'être de celui-ci.",
+        "Ce que CreaComp exclut délibérément, il l'exclut donc par choix de périmètre, non par renvoi à une autorité extérieure. N'y figurent ni la sécurité des équipements et des comptes, ni la protection défensive des données personnelles, ni la résolution de problèmes techniques, ni la bureautique et la communication administrative. Ces acquis relèvent d'une littératie numérique générale, largement outillée ailleurs, et les dupliquer aurait dilué le propos. CreaComp les suppose disponibles et traite exclusivement du versant créatif : comprendre les systèmes, concevoir, fabriquer, adresser, entreprendre, valoriser.",
+        "Trois points de contact avec la littératie numérique générale méritent d'être explicités, parce que CreaComp y va plus loin qu'elle. La compétence 1.2 (fiabilité et manipulation) pousse la lecture critique jusqu'à la détection des contenus synthétiques et des techniques d'influence propres aux espaces de création. La compétence 5.3 (conduite en ligne) va jusqu'à la modération et à la gestion publique de la critique. La compétence 7.4 (actifs indépendants) traite les données sous un angle patrimonial — posséder son audience et ses contenus — là où l'approche défensive habituelle s'arrête à leur protection.",
+        "Enfin, l'éducation aux médias et à l'information (EMI), inscrite dans les programmes scolaires français, trouve dans la rubrique S'informer son prolongement naturel : CreaComp offre aux enseignants d'EMI une trajectoire qui mène de la réception critique — leur territoire — vers la création assumée, qui est le sien."
       ]
     },
     "imageAlt": "Une bibliothèque contemporaine baignée de lumière."
@@ -444,7 +444,7 @@
   "use": {
     "eyebrow": "Utiliser & citer",
     "title": "Un bien commun, à reprendre",
-    "lead": "CréaComp est publié sous licence libre pour être utilisé, traduit, adapté et intégré. Voici ce que cela autorise, ce que cela demande, et comment le citer correctement.",
+    "lead": "CreaComp est publié sous licence libre pour être utilisé, traduit, adapté et intégré. Voici ce que cela autorise, ce que cela demande, et comment le citer correctement.",
     "profiles": {
       "title": "Quatre manières de s'en servir",
       "items": [
@@ -472,11 +472,11 @@
     },
     "notPrescriptive": {
       "title": "Ce que le référentiel ne prescrit pas",
-      "body": "CréaComp ne prescrit ni parcours, ni méthode, ni contenu de formation, ni durée, ni outil. Il ne définit aucun seuil d'entrée sur le marché du travail et ne produit aucune note globale. Toute ingénierie pédagogique peut s'y adosser ; aucune n'en découle mécaniquement. Cette réserve n'est pas une modestie de façade : c'est la condition pour qu'un même référentiel serve un collège, un organisme de formation professionnelle et un créateur indépendant sans en trahir aucun."
+      "body": "CreaComp ne prescrit ni parcours, ni méthode, ni contenu de formation, ni durée, ni outil. Il ne définit aucun seuil d'entrée sur le marché du travail et ne produit aucune note globale. Toute ingénierie pédagogique peut s'y adosser ; aucune n'en découle mécaniquement. Cette réserve n'est pas une modestie de façade : c'est la condition pour qu'un même référentiel serve un collège, un organisme de formation professionnelle et un créateur indépendant sans en trahir aucun."
     },
     "license": {
       "title": "La licence",
-      "lead": "CréaComp est publié sous licence Creative Commons Attribution – Partage dans les mêmes conditions 4.0 (CC BY-SA 4.0).",
+      "lead": "CreaComp est publié sous licence Creative Commons Attribution – Partage dans les mêmes conditions 4.0 (CC BY-SA 4.0).",
       "allowed": {
         "title": "Vous pouvez",
         "items": [
@@ -496,18 +496,18 @@
       "linkLabel": "Lire le texte complet de la licence"
     },
     "citation": {
-      "title": "Citer CréaComp",
+      "title": "Citer CreaComp",
       "lead": "Trois formats selon le contexte. Chacun est copiable en un clic.",
       "formats": [
         {
           "label": "Citation courte",
           "hint": "Dans un support pédagogique, une présentation, un site.",
-          "value": "Hébert, M. (2026). CréaComp 1.0 — Référentiel de littératie numérique créative. CC BY-SA 4.0."
+          "value": "Hébert, M. (2026). CreaComp 1.0 — Référentiel de littératie numérique créative. CC BY-SA 4.0."
         },
         {
           "label": "Référence académique (APA)",
           "hint": "Dans un article, un mémoire, un rapport.",
-          "value": "Hébert, M. (2026). CréaComp 1.0 : Référentiel de littératie numérique créative (édition 2026). Publié sous licence Creative Commons Attribution – Partage dans les mêmes conditions 4.0."
+          "value": "Hébert, M. (2026). CreaComp 1.0 : Référentiel de littératie numérique créative (édition 2026). Publié sous licence Creative Commons Attribution – Partage dans les mêmes conditions 4.0."
         },
         {
           "label": "BibTeX",
@@ -515,15 +515,15 @@
           "value": "@misc{hebert2026creacomp,\n  author  = {H{\\'e}bert, Maxime},\n  title   = {Cr{\\'e}aComp 1.0 : R{\\'e}f{\\'e}rentiel de litt{\\'e}ratie cr{\\'e}ative num{\\'e}rique},\n  year    = {2026},\n  edition = {2026},\n  note    = {Licence CC BY-SA 4.0}\n}"
         }
       ],
-      "competenceNote": "Pour citer une compétence précise, ajoutez son code et son intitulé — par exemple : CréaComp 1.0, compétence 3.3 « Maîtriser le récit ». Chaque page de compétence propose sa référence prête à copier."
+      "competenceNote": "Pour citer une compétence précise, ajoutez son code et son intitulé — par exemple : CreaComp 1.0, compétence 3.3 « Maîtriser le récit ». Chaque page de compétence propose sa référence prête à copier."
     },
     "method": {
       "title": "Un travail hybride, et pourquoi le dire",
       "body": [
-        "CréaComp a été pensé par une intelligence humaine et composé avec l'aide d'intelligences artificielles. L'intention, les partis pris et les arbitrages viennent d'un auteur ; la mise en forme, une part de la formulation, la traduction et la construction de ce site doivent beaucoup à des systèmes génératifs, qui ont permis d'aller plus vite et de viser plus large qu'un travail entièrement solitaire ne l'aurait permis.",
-        "Ce qui ne se délègue pas est resté humain : décider ce qui mérite d'être une compétence, placer la frontière entre deux niveaux, assumer ce que le référentiel exclut, et répondre de chaque descripteur devant ceux qui s'en serviront pour former ou évaluer. Une machine propose et accélère ; elle n'assume pas. L'auteur reste seul comptable de ce que dit CréaComp.",
+        "CreaComp a été pensé par une intelligence humaine et composé avec l'aide d'intelligences artificielles. L'intention, les partis pris et les arbitrages viennent d'un auteur ; la mise en forme, une part de la formulation, la traduction et la construction de ce site doivent beaucoup à des systèmes génératifs, qui ont permis d'aller plus vite et de viser plus large qu'un travail entièrement solitaire ne l'aurait permis.",
+        "Ce qui ne se délègue pas est resté humain : décider ce qui mérite d'être une compétence, placer la frontière entre deux niveaux, assumer ce que le référentiel exclut, et répondre de chaque descripteur devant ceux qui s'en serviront pour former ou évaluer. Une machine propose et accélère ; elle n'assume pas. L'auteur reste seul comptable de ce que dit CreaComp.",
         "Le dire n'est pas une précaution, c'est une cohérence. La compétence 4.3 demande de créer avec l'intelligence artificielle en faisant un « choix raisonné de ce qui est délégué et de ce qui reste humain », et le fil Discerner demande de créer « de manière transparente, loyale et non manipulatoire ». Un référentiel qui exigerait des créateurs une transparence qu'il ne s'applique pas à lui-même ne vaudrait pas cher.",
-        "C'est enfin ce que CréaComp défend : conduite avec discernement, l'hybridation n'appauvrit pas le travail, elle en relève l'ambition. Encore faut-il savoir la conduire — c'est précisément ce que ce référentiel cherche à rendre enseignable."
+        "C'est enfin ce que CreaComp défend : conduite avec discernement, l'hybridation n'appauvrit pas le travail, elle en relève l'ambition. Encore faut-il savoir la conduire — c'est précisément ce que ce référentiel cherche à rendre enseignable."
       ]
     },
     "closing": {
@@ -540,7 +540,7 @@
   "contact": {
     "eyebrow": "Contact",
     "title": "Écrire à l'auteur",
-    "lead": "CréaComp est conçu et maintenu par Maxime Hébert. Le référentiel est un travail ouvert : les retours, les usages signalés et les objections argumentées en nourrissent les révisions.",
+    "lead": "CreaComp est conçu et maintenu par Maxime Hébert. Le référentiel est un travail ouvert : les retours, les usages signalés et les objections argumentées en nourrissent les révisions.",
     "reasons": {
       "title": "Quelques bonnes raisons d'écrire",
       "items": [
@@ -591,12 +591,12 @@
     "imageAlt": "Gros plan d'un crayon de bois taillé."
   },
   "footer": {
-    "about": "CréaComp est un référentiel ouvert de littératie numérique créative, conçu pour cartographier les savoirs de la création à l'ère des créateurs.",
+    "about": "CreaComp est un référentiel ouvert de littératie numérique créative, conçu pour cartographier les savoirs de la création à l'ère des créateurs.",
     "navTitle": "Naviguer",
     "licenseTitle": "Licence",
     "licenseBody": "Contenu publié sous licence Creative Commons Attribution – Partage dans les mêmes conditions 4.0. Réutilisation libre avec citation.",
     "authorTitle": "Auteur",
-    "credit": "CréaComp 1.0 — édition 2026 · Maxime Hébert"
+    "credit": "CreaComp 1.0 — édition 2026 · Maxime Hébert"
   },
   "notFound": {
     "title": "Page introuvable",

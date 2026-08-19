@@ -1,4 +1,4 @@
-# CréaComp — Page d'accueil didactique · Spécification de conception
+# CreaComp — Page d'accueil didactique · Spécification de conception
 
 Date : 2026-08-18
 Auteur du référentiel : Maxime Hébert
@@ -8,7 +8,7 @@ Licence du contenu : CC BY-SA 4.0
 
 Refondre la page d'accueil pour qu'elle **introduise** le référentiel au lieu de
 le résumer. Le lecteur visé est institutionnel — décideur, chercheur, cadre d'un
-organisme — et CréaComp se présente à lui comme ce qu'il est : un cadre de
+organisme — et CreaComp se présente à lui comme ce qu'il est : un cadre de
 référence, rigoureux et citable, dont enseignants et créateurs sont des usagers
 parmi d'autres.
 
@@ -17,7 +17,7 @@ Aucun contenu n'est perdu. La refonte réordonne, déduplique et ajoute un seul
 
 ## 2. Diagnostic de la page actuelle
 
-**On nie avant d'avoir posé.** La section « Ce que CréaComp est, ce qu'il n'est
+**On nie avant d'avoir posé.** La section « Ce que CreaComp est, ce qu'il n'est
 pas » suit immédiatement le hero. C'est un procédé de correction de
 préconception : il ne fonctionne que sur un lecteur qui a déjà la préconception.
 Celui qui découvre lit quatre négations et se retrouve devant un vide.
@@ -86,11 +86,11 @@ sont des slogans pour qui ignore ce qu'est une rubrique ou un descripteur. Ils
 remontent en **02**, où chaque nombre est suivi de sa définition.
 
 À leur place, sous les appels à l'action, une **ligne d'identité du document** :
-version, édition, auteur, licence — « CréaComp 1.0 · édition 2026 · Maxime
+version, édition, auteur, licence — « CreaComp 1.0 · édition 2026 · Maxime
 Hébert · CC BY-SA 4.0 ». C'est le signal de crédibilité qu'attend un lecteur
 institutionnel, et c'est la fonction que les compteurs remplissaient mal.
 
-Le surtitre actuel, qui affiche déjà « CréaComp 1.0 — édition 2026 », **est
+Le surtitre actuel, qui affiche déjà « CreaComp 1.0 — édition 2026 », **est
 supprimé** : il est absorbé par cette ligne. La version ne doit pas figurer deux
 fois dans le même écran.
 
@@ -117,7 +117,7 @@ La prose dit, la bande montre. C'est le gain de lisibilité le plus immédiat de
 refonte, et il ne coûte qu'une mise en forme.
 
 Un chapô de section fait le pont — il annonce le dépliage sans redire la
-définition — et une note conclut sur ce que CréaComp fait de ces six capacités :
+définition — et une note conclut sur ce que CreaComp fait de ces six capacités :
 il les cartographie, il ne dit pas comment les enseigner.
 
 Le développement — le parallèle avec la lecture, l'écriture et le calcul — reste
@@ -169,7 +169,7 @@ que « quatre niveaux » recouvre concrètement.
 
 Les quatre paires existantes, conservées dans leur principe.
 
-La section est renommée : « Ce que CréaComp est, ce qu'il n'est pas » devient
+La section est renommée : « Ce que CreaComp est, ce qu'il n'est pas » devient
 **« Portée et limites »**, l'énoncé standard d'un cadre de référence. Déplacée
 après l'exposition de l'objet, elle ne creuse plus de vide : elle borne quelque
 chose de déjà posé.

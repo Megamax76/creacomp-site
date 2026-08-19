@@ -1,4 +1,4 @@
-# Signature de courriel CréaComp
+# Signature de courriel CreaComp
 
 Quatre fichiers, et rien à installer :
 
@@ -17,7 +17,7 @@ Quatre fichiers, et rien à installer :
 Trois endroits, pas davantage.
 
 1. **La fonction**, ligne 2 du bloc — « Auteur et mainteneur du référentiel
-   CréaComp ». C'est la formule que reprend le site (« conçu et maintenu par
+   CreaComp ». C'est la formule que reprend le site (« conçu et maintenu par
    Maxime Hébert ») ; une autre fait l'affaire, à condition de tenir sur une
    ligne.
 2. **Le téléphone**, facultatif : un motif commenté attend dans la ligne de
@@ -32,7 +32,7 @@ Trois endroits, pas davantage.
 
 Le bloc pointe vers `https://creacomp.org/signature-marque.png`, servi depuis
 `public/`. **Elle ne s'affichera qu'une fois le site en ligne** ; d'ici là le
-destinataire verra le texte de remplacement « CréaComp ». Le reste de la
+destinataire verra le texte de remplacement « CreaComp ». Le reste de la
 signature — le nom, les liens, le filet de six couleurs — ne dépend d'aucune
 image et s'affiche partout, y compris chez les gens qui bloquent les images
 distantes, ce que font beaucoup de messageries d'entreprise.

@@ -1,4 +1,4 @@
-# CréaComp — Éclairages · Spécification de conception
+# CreaComp — Éclairages · Spécification de conception
 
 Date : 2026-08-17
 Auteur du référentiel : Maxime Hébert
@@ -11,7 +11,7 @@ d'un **éclairage** : un texte court qui présente la compétence, montre ce qu'
 recouvre dans le monde réel, et adosse ce propos à des travaux vérifiés.
 
 Le référentiel ne comporte aujourd'hui aucune bibliographie. L'ajouter fait
-passer CréaComp de « document raisonné » à « document adossé à la littérature ».
+passer CreaComp de « document raisonné » à « document adossé à la littérature ».
 C'est un gain de crédibilité et un engagement : chaque référence doit tenir devant
 un lecteur qui la vérifie.
 

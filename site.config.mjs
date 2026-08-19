@@ -1,5 +1,5 @@
 /**
- * Réglages de déploiement du site CréaComp — le seul fichier à modifier
+ * Réglages de déploiement du site CreaComp — le seul fichier à modifier
  * pour mettre le site en ligne. Il est lu à la fois par la configuration
  * d'Astro (URL canonique, plan du site, politique de sécurité) et par les
  * pages (formulaire de contact).

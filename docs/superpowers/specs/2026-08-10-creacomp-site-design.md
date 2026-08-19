@@ -1,4 +1,4 @@
-# CréaComp — Site du référentiel · Spécification de conception
+# CreaComp — Site du référentiel · Spécification de conception
 
 Date : 2026-08-10
 Auteur du référentiel : Maxime Hébert
@@ -6,16 +6,16 @@ Licence du contenu : CC BY-SA 4.0
 
 ## 1. Objet
 
-Site web public présentant **CréaComp**, référentiel mondial de littératie créative numérique
+Site web public présentant **CreaComp**, référentiel mondial de littératie créative numérique
 (*Digital Creative Literacy Framework*). Le site est bilingue français/anglais, statique,
 et sert trois fonctions : faire comprendre le référentiel à un visiteur qui le découvre,
 permettre sa consultation compétence par compétence, et en organiser la réutilisation
 sous licence Creative Commons.
 
 Le nom « DCLIC » et la graphie « Créacompe » n'apparaissent nulle part. Le nom retenu est
-**CréaComp**, en français comme en anglais.
+**CreaComp**, en français comme en anglais.
 
-Version affichée : **CréaComp 1.0 — édition 2026**.
+Version affichée : **CreaComp 1.0 — édition 2026**.
 
 Baseline (hero) : « Le référentiel de compétences pour l'ère des créateurs » /
 *The competency framework for the creator era*.
@@ -69,7 +69,7 @@ Séquence imposée, du plus général au plus précis :
 
 1. **Hero** — nom, baseline, ligne de chiffres (7 rubriques · 28 compétences · 3 fils
    transversaux · 4 niveaux · 124 descripteurs observables), deux appels à l'action.
-2. **Encart d'avertissement — « Ce que CréaComp est, ce qu'il n'est pas »**. Bloc court,
+2. **Encart d'avertissement — « Ce que CreaComp est, ce qu'il n'est pas »**. Bloc court,
    sans emphase, en quatre oppositions : une cartographie et non un programme ; nul n'est
    censé tout maîtriser ; aucune note globale ni moyenne ; aucun logiciel nommé. Ce bloc
    est la réponse au risque principal du projet — être lu comme un curriculum prescriptif.

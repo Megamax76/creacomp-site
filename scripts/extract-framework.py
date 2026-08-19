@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Extrait le référentiel CréaComp du document source Word vers framework.fr.json.
+"""Extrait le référentiel CreaComp du document source Word vers framework.fr.json.
 
 Le document source structure chaque compétence en un tableau de sept lignes :
 intitulé, définition, composantes, en-tête, puis les quatre niveaux. Les rubriques

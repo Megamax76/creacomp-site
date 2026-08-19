@@ -4,17 +4,17 @@
   "langName": "English",
   "otherLangName": "Français",
   "meta": {
-    "name": "CréaComp",
+    "name": "CreaComp",
     "version": "1.0",
     "edition": "2026",
-    "versionLabel": "CréaComp 1.0 — 2026 edition",
+    "versionLabel": "CreaComp 1.0 — 2026 edition",
     "author": "Maxime Hébert",
     "license": "CC BY-SA 4.0",
     "licenseName": "Creative Commons Attribution–ShareAlike 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
     "subtitle": "Digital Creative Literacy Framework",
     "tagline": "The competency framework for the creator era",
-    "description": "CréaComp maps digital creative literacy: 7 domains, 28 competencies, 3 transversal threads, 4 levels, 124 observable descriptors. An open framework released under CC BY-SA 4.0."
+    "description": "CreaComp maps digital creative literacy: 7 domains, 28 competencies, 3 transversal threads, 4 levels, 124 observable descriptors. An open framework released under CC BY-SA 4.0."
   },
   "counts": {
     "rubrics": "7 domains",
@@ -100,7 +100,7 @@
   "home": {
     "hero": {
       "title": "The competency framework for the creator era",
-      "lead": "CréaComp maps digital creative literacy: the body of knowledge that allows a person to critically receive, understand, imagine, make, publish and capitalise on content and projects in digital environments.",
+      "lead": "CreaComp maps digital creative literacy: the body of knowledge that allows a person to critically receive, understand, imagine, make, publish and capitalise on content and projects in digital environments.",
       "primaryCta": "Explore the 31 entries",
       "secondaryCta": "Understand the foundations"
     },
@@ -153,7 +153,7 @@
       "body": [
         "Yet creation has become a structuring dimension of those environments. Recommendation algorithms, content production, generative artificial intelligence, digital entrepreneurship: people's capacity to understand these mechanisms and to produce value through them now conditions their economic, cultural and civic autonomy.",
         "That capacity — digital creative literacy — is at present neither defined nor measured by any framework.",
-        "CréaComp answers that gap. It is built around a single question:"
+        "CreaComp answers that gap. It is built around a single question:"
       ],
       "question": "What is a person actually able to do in digital environments, and what value are they able to create there?"
     },
@@ -255,7 +255,7 @@
       "title": "Value has moved",
       "body": [
         "Generative artificial intelligence has collapsed the cost of production: a competent text, a clean visual, an edited video are becoming universally accessible. What becomes ordinary loses its value, and value moves towards both ends of the creative chain.",
-        "No existing framework described those two ends together. That is why CréaComp exists, and it is the reading key that explains why its upstream and downstream domains weigh as much as making itself."
+        "No existing framework described those two ends together. That is why CreaComp exists, and it is the reading key that explains why its upstream and downstream domains weigh as much as making itself."
       ],
       "caption": "Where value sits along the creative chain",
       "stages": [
@@ -310,7 +310,7 @@
     "closing": {
       "id": "cite",
       "title": "A common good",
-      "body": "CréaComp is published under a Creative Commons Attribution–ShareAlike 4.0 licence. You may reuse it, translate it, adapt it and embed it in your own programmes, provided you credit its origin and share your adaptations under the same terms.",
+      "body": "CreaComp is published under a Creative Commons Attribution–ShareAlike 4.0 licence. You may reuse it, translate it, adapt it and embed it in your own programmes, provided you credit its origin and share your adaptations under the same terms.",
       "primaryCta": "Use & cite",
       "secondaryCta": "Write to the author"
     }
@@ -335,14 +335,14 @@
         "title": "Digital creative literacy",
         "body": [
           "Digital creative literacy is the body of knowledge, know-how and dispositions that allows a person to critically receive, understand, imagine, make, publish and capitalise on content and projects in digital environments — autonomously, ethically and sustainably.",
-          "As reading, writing and arithmetic were to the civilisation of print, it constitutes a foundation: a body of knowledge society has an interest in seeing widely shared, and which can be mapped, observed and measured by levels — without anyone being expected to master all of it. CréaComp is that map."
+          "As reading, writing and arithmetic were to the civilisation of print, it constitutes a foundation: a body of knowledge society has an interest in seeing widely shared, and which can be mapped, observed and measured by levels — without anyone being expected to master all of it. CreaComp is that map."
         ]
       },
       {
         "id": "intention",
         "title": "From the attention economy to the intention economy",
         "body": [
-          "The dominant digital economy captures attention: it optimises time spent, reflexive engagement, consumption endured rather than chosen. CréaComp argues for a shift: from an attention economy, in which people are the extracted resource, to an intention economy, in which they become authors again — of what they read, what they create and what they build.",
+          "The dominant digital economy captures attention: it optimises time spent, reflexive engagement, consumption endured rather than chosen. CreaComp argues for a shift: from an attention economy, in which people are the extracted resource, to an intention economy, in which they become authors again — of what they read, what they create and what they build.",
           "Every domain of the framework can be reread through that shift: understanding algorithms not in order to flatter them but in order to choose what you feed; building a community you own rather than an audience you rent; creating with AI by directing it, rather than by delegating your judgement to it."
         ]
       },
@@ -362,7 +362,7 @@
         {
           "id": "P1",
           "title": "A map, not a curriculum",
-          "body": "CréaComp describes knowledge and makes it assessable; it prescribes no pathway, no method and no training content. Any instructional design can build on it; none follows from it automatically."
+          "body": "CreaComp describes knowledge and makes it assessable; it prescribes no pathway, no method and no training content. Any instructional design can build on it; none follows from it automatically."
         },
         {
           "id": "P2",
@@ -392,7 +392,7 @@
         {
           "id": "P7",
           "title": "A deliberately narrow scope",
-          "body": "CréaComp deals with the creative side and mixes nothing else into it: account security, defensive personal-data protection and office software are deliberately excluded. Those belong to a general digital literacy, which this framework assumes in order to go further than it."
+          "body": "CreaComp deals with the creative side and mixes nothing else into it: account security, defensive personal-data protection and office software are deliberately excluded. Those belong to a general digital literacy, which this framework assumes in order to go further than it."
         }
       ]
     },
@@ -425,18 +425,18 @@
         },
         {
           "title": "Validity requirements",
-          "body": "To support scientific and certifying use, assessment based on CréaComp meets three requirements: verifiability (every descriptor is observable in the evidence produced, without extensive interpretation), inter-rater reliability (two trained assessors reach the same verdict on the same evidence) and traceability (each validation references the evidence, the date and the assessor). The framework is subject to an empirical validation protocol — a pilot study on real cohorts, measurement of inter-rater agreement, annual revision of ambiguous descriptors — as a precondition to any certifying claim."
+          "body": "To support scientific and certifying use, assessment based on CreaComp meets three requirements: verifiability (every descriptor is observable in the evidence produced, without extensive interpretation), inter-rater reliability (two trained assessors reach the same verdict on the same evidence) and traceability (each validation references the evidence, the date and the assessor). The framework is subject to an empirical validation protocol — a pilot study on real cohorts, measurement of inter-rater agreement, annual revision of ambiguous descriptors — as a precondition to any certifying claim."
         }
       ]
     },
     "perimeter": {
       "id": "scope",
-      "title": "Scope: what CréaComp leaves out",
+      "title": "Scope: what CreaComp leaves out",
       "body": [
-        "CréaComp is a new framework, built on an object of its own: digital creative literacy. It neither extends nor subordinates itself to an existing framework. The European competence frameworks — DigComp for the digital competence of citizens, EntreComp for entrepreneurial competence — were its inspiration and its working basis, and they remain its natural complement; but none of them describes what CréaComp describes, which is precisely why it exists.",
-        "What CréaComp deliberately leaves out, it leaves out as a matter of scope, not by deferring to an outside authority. It covers neither device and account security, nor defensive personal-data protection, nor technical problem-solving, nor office software and administrative communication. Those belong to a general digital literacy that is well served elsewhere, and duplicating them would have diluted the point. CréaComp assumes them available and deals exclusively with the creative side: understanding systems, conceiving, making, addressing, venturing, capitalising.",
-        "Three points of contact with general digital literacy deserve to be made explicit, because CréaComp goes further than it does at each. Competency 1.2 (reliability and manipulation) pushes critical reading as far as detecting synthetic content and the influence techniques specific to creative spaces. Competency 5.3 (conduct online) reaches moderation and the public handling of criticism. Competency 7.4 (platform-independent assets) treats data as property — owning your audience and your work — where the usual defensive approach stops at protecting it.",
-        "Finally, media and information literacy — a formal part of the French school curriculum — finds its natural extension in the Gather domain: CréaComp offers MIL teachers a trajectory leading from critical reception, their territory, towards assumed creation, which is its own."
+        "CreaComp is a new framework, built on an object of its own: digital creative literacy. It neither extends nor subordinates itself to an existing framework. The European competence frameworks — DigComp for the digital competence of citizens, EntreComp for entrepreneurial competence — were its inspiration and its working basis, and they remain its natural complement; but none of them describes what CreaComp describes, which is precisely why it exists.",
+        "What CreaComp deliberately leaves out, it leaves out as a matter of scope, not by deferring to an outside authority. It covers neither device and account security, nor defensive personal-data protection, nor technical problem-solving, nor office software and administrative communication. Those belong to a general digital literacy that is well served elsewhere, and duplicating them would have diluted the point. CreaComp assumes them available and deals exclusively with the creative side: understanding systems, conceiving, making, addressing, venturing, capitalising.",
+        "Three points of contact with general digital literacy deserve to be made explicit, because CreaComp goes further than it does at each. Competency 1.2 (reliability and manipulation) pushes critical reading as far as detecting synthetic content and the influence techniques specific to creative spaces. Competency 5.3 (conduct online) reaches moderation and the public handling of criticism. Competency 7.4 (platform-independent assets) treats data as property — owning your audience and your work — where the usual defensive approach stops at protecting it.",
+        "Finally, media and information literacy — a formal part of the French school curriculum — finds its natural extension in the Gather domain: CreaComp offers MIL teachers a trajectory leading from critical reception, their territory, towards assumed creation, which is its own."
       ]
     },
     "imageAlt": "A light-filled contemporary library."
@@ -444,7 +444,7 @@
   "use": {
     "eyebrow": "Use & cite",
     "title": "A common good, made to be reused",
-    "lead": "CréaComp is published under an open licence so that it can be used, translated, adapted and embedded. Here is what that permits, what it requires, and how to cite it properly.",
+    "lead": "CreaComp is published under an open licence so that it can be used, translated, adapted and embedded. Here is what that permits, what it requires, and how to cite it properly.",
     "profiles": {
       "title": "Four ways to put it to work",
       "items": [
@@ -472,11 +472,11 @@
     },
     "notPrescriptive": {
       "title": "What the framework does not prescribe",
-      "body": "CréaComp prescribes no pathway, no method, no training content, no duration and no tool. It defines no threshold for entering the labour market and produces no overall grade. Any instructional design can build on it; none follows from it automatically. This reserve is not false modesty: it is the condition for one framework to serve a secondary school, a vocational training provider and an independent creator without betraying any of them."
+      "body": "CreaComp prescribes no pathway, no method, no training content, no duration and no tool. It defines no threshold for entering the labour market and produces no overall grade. Any instructional design can build on it; none follows from it automatically. This reserve is not false modesty: it is the condition for one framework to serve a secondary school, a vocational training provider and an independent creator without betraying any of them."
     },
     "license": {
       "title": "The licence",
-      "lead": "CréaComp is published under a Creative Commons Attribution–ShareAlike 4.0 International licence (CC BY-SA 4.0).",
+      "lead": "CreaComp is published under a Creative Commons Attribution–ShareAlike 4.0 International licence (CC BY-SA 4.0).",
       "allowed": {
         "title": "You may",
         "items": [
@@ -496,18 +496,18 @@
       "linkLabel": "Read the full licence text"
     },
     "citation": {
-      "title": "Citing CréaComp",
+      "title": "Citing CreaComp",
       "lead": "Three formats depending on context. Each one can be copied in a single click.",
       "formats": [
         {
           "label": "Short citation",
           "hint": "In teaching material, a presentation, a website.",
-          "value": "Hébert, M. (2026). CréaComp 1.0 — Digital Creative Literacy Framework. CC BY-SA 4.0."
+          "value": "Hébert, M. (2026). CreaComp 1.0 — Digital Creative Literacy Framework. CC BY-SA 4.0."
         },
         {
           "label": "Academic reference (APA)",
           "hint": "In an article, a dissertation, a report.",
-          "value": "Hébert, M. (2026). CréaComp 1.0: Digital Creative Literacy Framework (2026 edition). Published under a Creative Commons Attribution–ShareAlike 4.0 licence."
+          "value": "Hébert, M. (2026). CreaComp 1.0: Digital Creative Literacy Framework (2026 edition). Published under a Creative Commons Attribution–ShareAlike 4.0 licence."
         },
         {
           "label": "BibTeX",
@@ -515,15 +515,15 @@
           "value": "@misc{hebert2026creacomp,\n  author  = {H{\\'e}bert, Maxime},\n  title   = {Cr{\\'e}aComp 1.0: Digital Creative Literacy Framework},\n  year    = {2026},\n  edition = {2026},\n  note    = {CC BY-SA 4.0}\n}"
         }
       ],
-      "competenceNote": "To cite a specific competency, add its code and title — for example: CréaComp 1.0, competency 3.3 “Master narrative”. Every competency page offers its own ready-to-copy reference."
+      "competenceNote": "To cite a specific competency, add its code and title — for example: CreaComp 1.0, competency 3.3 “Master narrative”. Every competency page offers its own ready-to-copy reference."
     },
     "method": {
       "title": "Hybrid work, and why say so",
       "body": [
-        "CréaComp was conceived by a human intelligence and composed with the help of artificial ones. The intention, the stances and the judgement calls come from an author; the shaping, part of the wording, the translation and the building of this site owe a great deal to generative systems, which made it possible to move faster and aim wider than wholly solitary work would have allowed.",
-        "What cannot be delegated stayed human: deciding what deserves to be a competence, placing the boundary between two levels, owning what the framework leaves out, and answering for every descriptor to those who will use it to teach or assess. A machine proposes and accelerates; it does not answer for the result. The author alone remains accountable for what CréaComp says.",
+        "CreaComp was conceived by a human intelligence and composed with the help of artificial ones. The intention, the stances and the judgement calls come from an author; the shaping, part of the wording, the translation and the building of this site owe a great deal to generative systems, which made it possible to move faster and aim wider than wholly solitary work would have allowed.",
+        "What cannot be delegated stayed human: deciding what deserves to be a competence, placing the boundary between two levels, owning what the framework leaves out, and answering for every descriptor to those who will use it to teach or assess. A machine proposes and accelerates; it does not answer for the result. The author alone remains accountable for what CreaComp says.",
         "Saying so is not a precaution, it is a matter of consistency. Competency 4.3 calls for creating with artificial intelligence through a “reasoned choice of what is delegated and what stays human”, and the Discern thread calls for creating “transparently, fairly and without manipulation”. A framework demanding of creators a transparency it does not apply to itself would be worth little.",
-        "It is, finally, what CréaComp argues for: conducted with discernment, hybridisation does not impoverish the work, it raises its ambition. It still has to be conducted well — which is precisely what this framework seeks to make teachable."
+        "It is, finally, what CreaComp argues for: conducted with discernment, hybridisation does not impoverish the work, it raises its ambition. It still has to be conducted well — which is precisely what this framework seeks to make teachable."
       ]
     },
     "closing": {
@@ -540,7 +540,7 @@
   "contact": {
     "eyebrow": "Contact",
     "title": "Write to the author",
-    "lead": "CréaComp is designed and maintained by Maxime Hébert. The framework is open work: feedback, reported uses and reasoned objections all feed its revisions.",
+    "lead": "CreaComp is designed and maintained by Maxime Hébert. The framework is open work: feedback, reported uses and reasoned objections all feed its revisions.",
     "reasons": {
       "title": "Good reasons to write",
       "items": [
@@ -591,12 +591,12 @@
     "imageAlt": "Close-up of a sharpened pencil."
   },
   "footer": {
-    "about": "CréaComp is an open framework of digital creative literacy, built to map the knowledge of creation in the creator era.",
+    "about": "CreaComp is an open framework of digital creative literacy, built to map the knowledge of creation in the creator era.",
     "navTitle": "Navigate",
     "licenseTitle": "Licence",
     "licenseBody": "Content published under a Creative Commons Attribution–ShareAlike 4.0 licence. Free to reuse with citation.",
     "authorTitle": "Author",
-    "credit": "CréaComp 1.0 — 2026 edition · Maxime Hébert"
+    "credit": "CreaComp 1.0 — 2026 edition · Maxime Hébert"
   },
   "notFound": {
     "title": "Page not found",
