@@ -7,7 +7,7 @@
 
 **Le référentiel de compétences de la littératie numérique créative**
 
-7 rubriques · 28 compétences · 3 fils transversaux · 124 descripteurs · 4 niveaux
+7 rubriques · 28 compétences · 3 fils transversaux · 124 descripteurs · 4 niveaux<br>
 Bilingue français / anglais, librement réutilisable.
 
 [**creacomp.org**](https://creacomp.org) · [Le référentiel](https://creacomp.org/referentiel/) · [Le cadre](https://creacomp.org/cadre/) · [English](https://creacomp.org/en/)
