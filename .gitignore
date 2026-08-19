@@ -9,3 +9,9 @@ dist/
 
 # Réglages Claude Code propres à cette machine — hors du dépôt public.
 .claude/settings.local.json
+
+# Outillage et notes de travail propres à cette machine — hors du dépôt public.
+.claude/
+.agents/
+skills-lock.json
+docs/superpowers/
