@@ -579,7 +579,7 @@
         {
           "label": "BibTeX",
           "hint": "Dans une bibliographie LaTeX.",
-          "value": "@misc{hebert2026creacomp,\n  author  = {H{\\'e}bert, Maxime},\n  title   = {Cr{\\'e}aComp 1.0 : R{\\'e}f{\\'e}rentiel de litt{\\'e}ratie cr{\\'e}ative num{\\'e}rique},\n  year    = {2026},\n  edition = {2026},\n  note    = {Licence CC BY-SA 4.0}\n}"
+          "value": "@misc{hebert2026creacomp,\n  author  = {H{\\'e}bert, Maxime},\n  title   = {CreaComp 1.0 : R{\\'e}f{\\'e}rentiel de litt{\\'e}ratie num{\\'e}rique cr{\\'e}ative},\n  year    = {2026},\n  edition = {2026},\n  note    = {Licence CC BY-SA 4.0}\n}"
         }
       ],
       "competenceNote": "Pour citer une compétence précise, ajoutez son code et son intitulé — par exemple : CreaComp 1.0, compétence 3.3 « Maîtriser le récit ». Chaque page de compétence propose sa référence prête à copier."

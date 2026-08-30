@@ -579,7 +579,7 @@
         {
           "label": "BibTeX",
           "hint": "In a LaTeX bibliography.",
-          "value": "@misc{hebert2026creacomp,\n  author  = {H{\\'e}bert, Maxime},\n  title   = {Cr{\\'e}aComp 1.0: Digital Creative Literacy Framework},\n  year    = {2026},\n  edition = {2026},\n  note    = {CC BY-SA 4.0}\n}"
+          "value": "@misc{hebert2026creacomp,\n  author  = {H{\\'e}bert, Maxime},\n  title   = {CreaComp 1.0: Digital Creative Literacy Framework},\n  year    = {2026},\n  edition = {2026},\n  note    = {CC BY-SA 4.0}\n}"
         }
       ],
       "competenceNote": "To cite a specific competency, add its code and title — for example: CreaComp 1.0, competency 3.3 “Master narrative”. Every competency page offers its own ready-to-copy reference."
