@@ -14,7 +14,7 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.fr",
     "subtitle": "Référentiel de littératie numérique créative",
     "tagline": "Le référentiel de compétences pour l'ère des créateurs",
-    "description": "CreaComp cartographie la littératie numérique créative : 7 rubriques, 28 compétences, 3 fils transversaux, 4 niveaux, 124 descripteurs observables. Un référentiel ouvert sous licence CC BY-SA 4.0."
+    "description": "CreaComp cartographie la littératie numérique créative : 7 rubriques, 28 compétences, 3 fils transversaux, 4 niveaux, 124 descripteurs observables. Un référentiel ouvert sous licence CC BY-SA 4.0, en cours de développement et de validation scientifique."
   },
   "counts": {
     "rubrics": "7 rubriques",
@@ -224,7 +224,7 @@
       "num": "04",
       "eyebrow": "Portée et limites",
       "title": "Ce que le référentiel fait, et ce qu'il ne fait pas",
-      "lead": "Quatre bornes, énoncées comme des choix et non comme des réserves.",
+      "lead": "Cinq bornes, énoncées comme des choix et non comme des réserves.",
       "pairs": [
         {
           "is": "Une cartographie",
@@ -245,6 +245,11 @@
           "is": "Des capacités de jugement",
           "isNot": "Pas une liste de logiciels",
           "body": "Aucun descripteur ne nomme un outil. Les outils se renouvellent ; le jugement demeure."
+        },
+        {
+          "is": "Un modèle en cours de validation",
+          "isNot": "Pas un référentiel déjà validé",
+          "body": "La proposition théorique est publiée ; sa validation empirique reste à conduire. Le référentiel dit lequel des deux il est."
         }
       ],
       "cta": "Lire les sept principes directeurs"
@@ -328,7 +333,7 @@
   "foundations": {
     "eyebrow": "Le cadre",
     "title": "Fondements, principes et méthode",
-    "lead": "Ce que le référentiel décrit, sur quels principes il repose, comment il s'organise et comment il s'évalue.",
+    "lead": "Ce que le référentiel décrit, sur quels principes il repose, comment il s'organise, comment il s'évalue et où en est sa validation.",
     "sections": [
       {
         "id": "preambule",
@@ -434,7 +439,7 @@
         },
         {
           "title": "Exigences de validité",
-          "body": "Pour prétendre à un usage scientifique et certifiant, l'évaluation adossée à CreaComp respecte trois exigences : la vérifiabilité (tout descripteur s'observe sur la preuve produite, sans interprétation extensive), la fidélité inter-évaluateurs (deux évaluateurs formés parviennent au même verdict sur la même preuve) et la traçabilité (chaque validation référence la preuve, la date et l'évaluateur). Le référentiel fait l'objet d'un protocole de validation empirique — étude pilote sur cohortes réelles, mesure d'accord inter-juges, révision annuelle des descripteurs ambigus — préalable à toute prétention certifiante."
+          "body": "Pour prétendre à un usage scientifique et certifiant, une évaluation adossée à CreaComp devrait respecter trois exigences : la vérifiabilité (tout descripteur s'observe sur la preuve produite, sans interprétation extensive), la fidélité inter-évaluateurs (deux évaluateurs formés parviennent au même verdict sur la même preuve) et la traçabilité (chaque validation référence la preuve, la date et l'évaluateur). Ces exigences décrivent la méthode visée, non un résultat acquis : le protocole de validation empirique qui doit les établir — étude pilote sur cohortes réelles, mesure d'accord inter-juges, révision des descripteurs ambigus — reste à conduire, et il est décrit au chapitre suivant."
         }
       ]
     },
@@ -448,7 +453,45 @@
         "Enfin, l'éducation aux médias et à l'information (EMI), inscrite dans les programmes scolaires français, trouve dans la rubrique S'informer son prolongement naturel : CreaComp offre aux enseignants d'EMI une trajectoire qui mène de la réception critique — leur territoire — vers la création assumée, qui est le sien."
       ]
     },
-    "imageAlt": "Une bibliothèque contemporaine baignée de lumière."
+    "imageAlt": "Une bibliothèque contemporaine baignée de lumière.",
+    "status": {
+      "id": "statut",
+      "title": "Statut scientifique et validation",
+      "lead": "CreaComp 1.0 est un modèle théorique et opérationnel. Sa validité empirique n'est pas encore établie, et le référentiel le dit plutôt que de le laisser supposer.",
+      "body": [
+        "Dans son état actuel, CreaComp est un référentiel ouvert en cours de développement et de validation scientifique. Sa construction — le choix des sept rubriques, le découpage en trente et une entrées, la grammaire des quatre niveaux, la rédaction des cent vingt-quatre descripteurs — procède d'un travail d'analyse et de comparaison avec les cadres existants, conduit selon les sept principes directeurs énoncés plus haut. Aucune étude n'en a en revanche encore mesuré le comportement sur des cohortes réelles.",
+        "Distinguer la proposition théorique de sa validation empirique n'est pas une précaution de façade : c'est ce qui rend le référentiel discutable, critiquable, testable et corrigible. Un cadre qui se présenterait comme déjà validé n'offrirait aucune prise à la critique et n'aurait rien à gagner d'une étude qui lui donnerait tort."
+      ],
+      "frontsTitle": "Six fronts de validation",
+      "frontsLead": "Valider un référentiel n'est pas une opération unique mais une série de questions distinctes, auxquelles répondent des protocoles différents. Voici celles qui attendent CreaComp, dans l'ordre où elles se posent.",
+      "fronts": [
+        {
+          "title": "Pertinence des dimensions",
+          "body": "Les sept rubriques et les trente et une entrées recouvrent-elles ce que font réellement les personnes qui créent en ligne, sans angle mort majeur ni catégorie superflue ? La réponse se cherche auprès de praticiens et d'experts du domaine, en confrontant le modèle à leur activité réelle."
+        },
+        {
+          "title": "Clarté des descripteurs",
+          "body": "Chaque descripteur est-il compris de la même façon par des lecteurs différents ? Un descripteur ambigu produit des évaluations incomparables ; le repérer et le reformuler est le premier travail de révision."
+        },
+        {
+          "title": "Cohérence des niveaux",
+          "body": "La progression Découverte → Application → Autonomie → Expertise décrit-elle un ordre réel de difficulté, identique d'une compétence à l'autre ? Un niveau devrait être atteint après celui qui le précède, et rarement l'inverse."
+        },
+        {
+          "title": "Accord entre évaluateurs",
+          "body": "Deux évaluateurs formés, examinant la même preuve au regard du même descripteur, parviennent-ils au même verdict ? C'est la fidélité inter-juges : elle ne se décrète pas, elle se mesure."
+        },
+        {
+          "title": "Pouvoir de discrimination",
+          "body": "Le référentiel sépare-t-il effectivement des profils de maîtrise différents, ou range-t-il tout le monde au même endroit ? Un cadre qui ne distingue rien ne décrit rien."
+        },
+        {
+          "title": "Utilité en contexte",
+          "body": "Le cadre change-t-il quelque chose pour ceux qui s'en servent — concevoir une progression, évaluer un travail, lire sa propre pratique ? C'est une validité d'usage, distincte de la validité de construction, et elle s'observe en situation éducative ou professionnelle."
+        }
+      ],
+      "limits": "En conséquence, la version 1.0 ne se présente ni comme un référentiel validé scientifiquement, ni comme une mesure fiable, ni comme un standard, et elle ne fonde aucune certification. Ces qualifications seront employées lorsque les études correspondantes auront été conduites — et le référentiel indiquera alors lesquelles, sur quelles données, avec quels résultats."
+    }
   },
   "use": {
     "eyebrow": "Utiliser & citer",
@@ -463,8 +506,8 @@
           "how": "Sélectionnez les compétences pertinentes, retenez le niveau visé, et faites produire la preuve d'évaluation associée."
         },
         {
-          "name": "Former et certifier",
-          "body": "Construire une offre de formation lisible, alignée sur un cadre public et citable, et l'évaluer par des preuves de création. Les exigences de validité — vérifiabilité, fidélité inter-évaluateurs, traçabilité — sont décrites dans le cadre.",
+          "name": "Former et évaluer",
+          "body": "Construire une offre de formation lisible, alignée sur un cadre public et citable, et l'évaluer par des preuves de création. Les exigences de validité visées — vérifiabilité, fidélité inter-évaluateurs, traçabilité — sont décrites dans le cadre. CreaComp ne délivre ni certification ni équivalence, et sa validation empirique reste à conduire : une offre certifiante qui s'y adosse engage son propre dispositif de validation.",
           "how": "Cartographiez votre offre sur les 31 entrées, puis définissez pour chacune le niveau de sortie visé."
         },
         {
@@ -600,7 +643,7 @@
     "imageAlt": "Gros plan d'un crayon de bois taillé."
   },
   "footer": {
-    "about": "CreaComp est un référentiel ouvert de littératie numérique créative, conçu pour cartographier les savoirs de la création à l'ère des créateurs.",
+    "about": "CreaComp est un référentiel ouvert de littératie numérique créative, en cours de développement et de validation scientifique, conçu pour cartographier les savoirs de la création à l'ère des créateurs.",
     "navTitle": "Naviguer",
     "licenseTitle": "Licence",
     "licenseBody": "Contenu publié sous licence Creative Commons Attribution – Partage dans les mêmes conditions 4.0. Réutilisation libre avec citation.",

@@ -51,6 +51,15 @@ structurées réutilisables, et le site qui le publie.
 | **Langues** | français (source), anglais |
 | **Filiation** | la famille européenne des référentiels *Comp — DigComp, EntreComp — sans affiliation institutionnelle |
 | **Contenu** | CC BY-SA 4.0 — réutilisation, traduction et adaptation libres |
+| **Statut** | référentiel ouvert **en cours de développement et de validation scientifique** — modèle théorique et opérationnel, dont la validité empirique reste à établir |
+
+> [!NOTE]
+> **La version 1.0 n'est pas un référentiel validé scientifiquement.** C'est une
+> proposition théorique et opérationnelle, publiée pour être discutée, testée et
+> corrigée. Elle ne fonde aucune certification et ne constitue ni une mesure
+> établie ni un standard. Les six fronts de validation qui restent à conduire
+> sont décrits au chapitre
+> [Statut scientifique et validation](https://creacomp.org/cadre/#statut).
 
 > [!IMPORTANT]
 > **CreaComp n'est ni un produit ni une publication de l'Union européenne.** Le

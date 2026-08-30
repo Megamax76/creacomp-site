@@ -22,6 +22,7 @@ const toc = [
   { id: f.architecture.id, title: f.architecture.title },
   { id: f.levels.id, title: f.levels.title },
   { id: f.assessment.id, title: f.assessment.title },
+  { id: f.status.id, title: f.status.title },
   { id: f.perimeter.id, title: f.perimeter.title },
 ];
 ---
@@ -171,6 +172,30 @@ const toc = [
         }
       </section>
 
+      <section id={f.status.id} class="chapter">
+        <h2 class="chapter__title">{f.status.title}</h2>
+        <p class="chapter__lead">{f.status.lead}</p>
+        <div class="prose">
+          {f.status.body.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+
+        <h3 class="sub__title sub__title--spaced">{f.status.frontsTitle}</h3>
+        <p class="sub__body">{f.status.frontsLead}</p>
+        <ol class="principles principles--fronts">
+          {
+            f.status.fronts.map((front, index) => (
+              <li class="principle">
+                <p class="principle__id">{String(index + 1).padStart(2, '0')}</p>
+                <h4 class="principle__title">{front.title}</h4>
+                <p class="principle__body">{front.body}</p>
+              </li>
+            ))
+          }
+        </ol>
+
+        <p class="callout">{f.status.limits}</p>
+      </section>
+
       <section id={f.perimeter.id} class="chapter">
         <h2 class="chapter__title">{f.perimeter.title}</h2>
         <div class="prose">
@@ -280,6 +305,15 @@ const toc = [
     margin-bottom: 1.3rem;
   }
   .chapter__wide { margin-top: 1.8rem; }
+  .chapter__lead {
+    font-size: 1.06rem;
+    line-height: 1.6;
+    color: var(--ink);
+    max-width: 46rem;
+    margin-bottom: 1.3rem;
+  }
+  .principles--fronts { margin-top: 1.4rem; }
+  .sub__title--spaced { margin-top: 2.2rem; }
 
   .principles {
     display: grid;

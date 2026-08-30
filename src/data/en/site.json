@@ -14,7 +14,7 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
     "subtitle": "Digital Creative Literacy Framework",
     "tagline": "The competency framework for the creator era",
-    "description": "CreaComp maps digital creative literacy: 7 domains, 28 competencies, 3 transversal threads, 4 levels, 124 observable descriptors. An open framework released under CC BY-SA 4.0."
+    "description": "CreaComp maps digital creative literacy: 7 rubrics, 28 competences, 3 cross-cutting threads, 4 levels, 124 observable descriptors. An open framework under CC BY-SA 4.0, under development and scientific validation."
   },
   "counts": {
     "rubrics": "7 domains",
@@ -224,7 +224,7 @@
       "num": "04",
       "eyebrow": "Scope and limits",
       "title": "What the framework does, and what it does not",
-      "lead": "Four boundaries, stated as choices rather than as caveats.",
+      "lead": "Five boundaries, stated as choices rather than reservations.",
       "pairs": [
         {
           "is": "A map",
@@ -245,6 +245,11 @@
           "is": "Capacities of judgement",
           "isNot": "Not a list of software",
           "body": "No descriptor names a tool. Tools are replaced; judgement remains."
+        },
+        {
+          "is": "A model under validation",
+          "isNot": "Not an already validated framework",
+          "body": "The theoretical proposal is published; its empirical validation is still to be carried out. The framework says which of the two it is."
         }
       ],
       "cta": "Read the seven guiding principles"
@@ -328,7 +333,7 @@
   "foundations": {
     "eyebrow": "Foundations",
     "title": "Grounding, principles and method",
-    "lead": "What the framework describes, the principles it rests on, how it is organised and how it is assessed.",
+    "lead": "What the framework describes, the principles it rests on, how it is organised, how it is assessed, and where its validation stands.",
     "sections": [
       {
         "id": "preamble",
@@ -434,7 +439,7 @@
         },
         {
           "title": "Validity requirements",
-          "body": "To support scientific and certifying use, assessment based on CreaComp meets three requirements: verifiability (every descriptor is observable in the evidence produced, without extensive interpretation), inter-rater reliability (two trained assessors reach the same verdict on the same evidence) and traceability (each validation references the evidence, the date and the assessor). The framework is subject to an empirical validation protocol — a pilot study on real cohorts, measurement of inter-rater agreement, annual revision of ambiguous descriptors — as a precondition to any certifying claim."
+          "body": "To claim scientific and certifying use, an assessment based on CreaComp would have to meet three requirements: verifiability (every descriptor is observable in the evidence produced, without extensive interpretation), inter-rater reliability (two trained assessors reach the same verdict on the same evidence) and traceability (each validation references the evidence, the date and the assessor). These requirements describe the intended method, not an established result: the empirical validation protocol that would establish them — a pilot study with real cohorts, measurement of inter-rater agreement, revision of ambiguous descriptors — is still to be carried out, and is described in the next chapter."
         }
       ]
     },
@@ -448,7 +453,45 @@
         "Finally, media and information literacy — a formal part of the French school curriculum — finds its natural extension in the Gather domain: CreaComp offers MIL teachers a trajectory leading from critical reception, their territory, towards assumed creation, which is its own."
       ]
     },
-    "imageAlt": "A light-filled contemporary library."
+    "imageAlt": "A light-filled contemporary library.",
+    "status": {
+      "id": "status",
+      "title": "Scientific status and validation",
+      "lead": "CreaComp 1.0 is a theoretical and operational model. Its empirical validity has not yet been established, and the framework says so rather than letting it be assumed.",
+      "body": [
+        "As it stands, CreaComp is an open framework under development and scientific validation. Its construction — the choice of seven rubrics, the division into thirty-one entries, the grammar of four levels, the writing of one hundred and twenty-four descriptors — proceeds from analysis and comparison with existing frameworks, carried out along the seven guiding principles set out above. No study has yet measured how it behaves with real cohorts.",
+        "Separating the theoretical proposal from its empirical validation is not a token precaution: it is what makes the framework arguable, criticisable, testable and correctable. A framework presenting itself as already validated would offer no purchase for criticism, and would have nothing to gain from a study that proved it wrong."
+      ],
+      "frontsTitle": "Six fronts of validation",
+      "frontsLead": "Validating a framework is not a single operation but a series of distinct questions, each answered by a different protocol. These are the ones ahead of CreaComp, in the order in which they arise.",
+      "fronts": [
+        {
+          "title": "Relevance of the dimensions",
+          "body": "Do the seven rubrics and thirty-one entries cover what people who create online actually do, with no major blind spot and no superfluous category? The answer is sought from practitioners and domain experts, by holding the model up against their real activity."
+        },
+        {
+          "title": "Clarity of the descriptors",
+          "body": "Is each descriptor understood the same way by different readers? An ambiguous descriptor produces assessments that cannot be compared; finding and rewriting it is the first task of revision."
+        },
+        {
+          "title": "Coherence of the levels",
+          "body": "Does the progression Discovery → Application → Autonomy → Expertise describe a real order of difficulty, identical from one competence to the next? A level should be reached after the one preceding it, and rarely the other way round."
+        },
+        {
+          "title": "Agreement between assessors",
+          "body": "Do two trained assessors, examining the same evidence against the same descriptor, reach the same verdict? This is inter-rater reliability: it cannot be declared, only measured."
+        },
+        {
+          "title": "Discriminating power",
+          "body": "Does the framework actually separate different profiles of mastery, or does it place everyone in the same spot? A framework that distinguishes nothing describes nothing."
+        },
+        {
+          "title": "Usefulness in context",
+          "body": "Does the framework change anything for the people using it — designing a progression, assessing a piece of work, reading one's own practice? This is validity of use, distinct from validity of construction, and it is observed in educational or professional settings."
+        }
+      ],
+      "limits": "Version 1.0 therefore presents itself neither as a scientifically validated framework, nor as a reliable measure, nor as a standard, and it grounds no certification. Those qualifications will be used once the corresponding studies have been carried out — and the framework will then state which ones, on what data, with what results."
+    }
   },
   "use": {
     "eyebrow": "Use & cite",
@@ -463,8 +506,8 @@
           "how": "Select the relevant competencies, fix the target level, and have the associated evidence of assessment produced."
         },
         {
-          "name": "Train and certify",
-          "body": "Build a legible training offer aligned with a public, citable framework, and assess it through evidence of creation. The validity requirements — verifiability, inter-rater reliability, traceability — are set out in the foundations.",
+          "name": "Train and assess",
+          "body": "Build a legible training offer, aligned with a public and citable framework, and assess it through evidence of creation. The intended requirements of validity — verifiability, inter-rater reliability, traceability — are described in the foundations. CreaComp awards no certification and no equivalence, and its empirical validation is still to be carried out: a certifying offer that builds on it commits its own validation arrangements.",
           "how": "Map your offer onto the 31 entries, then define the target exit level for each."
         },
         {
@@ -600,7 +643,7 @@
     "imageAlt": "Close-up of a sharpened pencil."
   },
   "footer": {
-    "about": "CreaComp is an open framework of digital creative literacy, built to map the knowledge of creation in the creator era.",
+    "about": "CreaComp is an open framework for digital creative literacy, under development and scientific validation, designed to map the knowledge of creation in the creator era.",
     "navTitle": "Navigate",
     "licenseTitle": "Licence",
     "licenseBody": "Content published under a Creative Commons Attribution–ShareAlike 4.0 licence. Free to reuse with citation.",
