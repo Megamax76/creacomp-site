@@ -1,0 +1,329 @@
+---
+import Base from '../layouts/Base.astro';
+import { site, entryByCode, entryPath, path, accentOf, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const s = site(lang);
+const p = s.positioning;
+
+/**
+ * La matrice ne stocke que le code de l'entrée : son titre, son slug et sa
+ * couleur viennent du référentiel, qui reste la source unique.
+ */
+const rows = p.crosswalk.rows.map((row) => {
+  const entry = entryByCode(lang, row.code);
+  return {
+    ...row,
+    title: entry?.title ?? row.code,
+    href: entry ? entryPath(lang, entry.slug) : undefined,
+    accent: entry ? accentOf(lang, entry) : 'graphite',
+  };
+});
+
+const overlapLabel = Object.fromEntries(
+  p.crosswalk.legend.map((item) => [item.key, item.label]),
+);
+---
+
+<Base lang={lang} page="positioning" title={p.title} description={p.lead}>
+  <section class="head">
+    <div class="wrap">
+      <p class="eyebrow">{p.eyebrow}</p>
+      <h1 class="head__title">{p.title}</h1>
+      <p class="lead">{p.lead}</p>
+    </div>
+  </section>
+
+  <section id={p.stance.id} class="section">
+    <div class="wrap">
+      <h2 class="title-2">{p.stance.title}</h2>
+      <div class="prose prose--wide">
+        {p.stance.body.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+    </div>
+  </section>
+
+  <section id={p.frameworks.id} class="section section--sunken section--ruled">
+    <div class="wrap">
+      <h2 class="title-2">{p.frameworks.title}</h2>
+      <p class="lead">{p.frameworks.lead}</p>
+
+      <ol class="cards">
+        {
+          p.frameworks.items.map((item) => (
+            <li class="card">
+              <h3 class="card__name">{item.name}</h3>
+              <p class="card__source">{item.source}</p>
+              <dl class="card__facets">
+                <dt>{p.frameworks.bringsLabel}</dt>
+                <dd>{item.brings}</dd>
+                <dt>{p.frameworks.takesLabel}</dt>
+                <dd>{item.takes}</dd>
+                <dt>{p.frameworks.extendsLabel}</dt>
+                <dd>{item.extends}</dd>
+              </dl>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section id={p.crosswalk.id} class="section section--ruled">
+    <div class="wrap">
+      <h2 class="title-2">{p.crosswalk.title}</h2>
+      <p class="lead">{p.crosswalk.lead}</p>
+
+      <div class="legend">
+        <p class="legend__title">{p.crosswalk.legendTitle}</p>
+        <ul>
+          {
+            p.crosswalk.legend.map((item) => (
+              <li>
+                <span class="tag" data-overlap={item.key}>{item.label}</span>
+                <span class="legend__body">{item.body}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="table-scroll">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th scope="col">{p.crosswalk.columns.entry}</th>
+              <th scope="col">{p.crosswalk.columns.digcomp}</th>
+              <th scope="col">{p.crosswalk.columns.entrecomp}</th>
+              <th scope="col">{p.crosswalk.columns.mil}</th>
+              <th scope="col">{p.crosswalk.columns.creativity}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              rows.map((row) => (
+                <tr data-accent={row.accent}>
+                  <th scope="row">
+                    <a href={row.href}>
+                      <span class="matrix__code">{row.code}</span> {row.title}
+                    </a>
+                    <span class="tag" data-overlap={row.overlap}>
+                      {overlapLabel[row.overlap]}
+                    </span>
+                  </th>
+                  <td>{row.digcomp ?? p.crosswalk.none}</td>
+                  <td>{row.entrecomp ?? p.crosswalk.none}</td>
+                  <td>{row.mil ?? p.crosswalk.none}</td>
+                  <td>{row.creativity ?? p.crosswalk.none}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id={p.originality.id} class="section section--sunken section--ruled">
+    <div class="wrap">
+      <h2 class="title-2">{p.originality.title}</h2>
+      <p class="lead">{p.originality.lead}</p>
+
+      <ol class="zones">
+        {
+          p.originality.items.map((item) => (
+            <li class="zone">
+              <p class="zone__codes">{item.codes}</p>
+              <h3 class="zone__title">{item.title}</h3>
+              <p class="zone__body">{item.body}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section id={p.caveat.id} class="section section--ruled">
+    <div class="wrap">
+      <h2 class="title-2">{p.caveat.title}</h2>
+      <div class="prose prose--wide">
+        {p.caveat.body.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+      <p class="doc__cta">
+        <a class="btn" href={`${path(lang, 'foundations')}#${s.foundations.status.id}`}>
+          {p.caveat.cta}
+          <span class="btn__arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="btn btn--ghost" href={path(lang, 'framework')}>{s.nav.framework}</a>
+      </p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .head {
+    padding-block: clamp(2.8rem, 7vw, 5rem) clamp(2rem, 4vw, 3rem);
+    border-bottom: 1px solid var(--rule);
+  }
+  .head__title { font-size: var(--step-4); max-width: 20ch; margin-bottom: 1.1rem; }
+
+  .section { padding-block: clamp(3rem, 7vw, 5rem); }
+  .prose--wide { max-width: 46rem; margin-top: 1.4rem; }
+  .prose--wide p + p { margin-top: 1rem; }
+
+  /* --- Les quatre héritages ----------------------------------------------------- */
+
+  .cards {
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    list-style: none;
+    margin-top: 2rem;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .card { background: var(--paper-raised); padding: 1.5rem 1.4rem 1.7rem; }
+  .card__name { font-size: 1.2rem; letter-spacing: -0.012em; }
+  .card__source {
+    margin-top: 0.3rem;
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.06em;
+    color: var(--ink-faint);
+  }
+  .card__facets { margin-top: 1.1rem; }
+  .card__facets dt {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .card__facets dd {
+    margin-top: 0.35rem;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+  .card__facets dd + dt { margin-top: 1.05rem; }
+
+  /* --- Matrice ------------------------------------------------------------------ */
+
+  .legend { margin-top: 2rem; }
+  .legend__title {
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .legend ul { list-style: none; margin-top: 0.8rem; }
+  .legend li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.6rem;
+  }
+  .legend li + li { margin-top: 0.45rem; }
+  .legend__body { font-size: 0.88rem; color: var(--ink-soft); }
+
+  .tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.16rem 0.45rem;
+    border-radius: 0.2rem;
+    border: 1px solid currentColor;
+    white-space: nowrap;
+  }
+  .tag[data-overlap='high'] { color: var(--ink-faint); }
+  .tag[data-overlap='partial'] { color: var(--ink-soft); }
+  .tag[data-overlap='low'] { color: var(--accent); background: var(--accent-wash); }
+
+  .table-scroll { overflow-x: auto; margin-top: 1.8rem; }
+  .matrix {
+    width: 100%;
+    min-width: 58rem;
+    border-collapse: collapse;
+    font-size: 0.84rem;
+  }
+  .matrix th,
+  .matrix td {
+    text-align: left;
+    vertical-align: top;
+    padding: 0.8rem 0.9rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .matrix thead th {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    border-bottom-color: var(--rule-strong);
+  }
+  .matrix tbody th {
+    width: 17rem;
+    font-family: var(--font-display);
+    font-variation-settings: 'SOFT' 20, 'WONK' 1, 'opsz' 18;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+  .matrix tbody th a { color: var(--accent); text-decoration: none; }
+  .matrix tbody th a:hover { text-decoration: underline; }
+  .matrix tbody th .tag { margin-top: 0.4rem; display: table; }
+  .matrix__code {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--ink-faint);
+  }
+  .matrix td { color: var(--ink-soft); }
+
+  /* --- Zones d'originalité ------------------------------------------------------- */
+
+  .zones {
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    list-style: none;
+    margin-top: 2rem;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .zone { background: var(--paper-raised); padding: 1.4rem 1.35rem 1.6rem; }
+  .zone__codes {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+  }
+  .zone__title { margin-top: 0.45rem; font-size: 1.14rem; letter-spacing: -0.012em; }
+  .zone__body {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+
+  .doc__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: clamp(2rem, 4vw, 3rem);
+  }
+</style>

@@ -28,7 +28,8 @@
     "framework": "referentiel",
     "foundations": "cadre",
     "use": "utiliser",
-    "contact": "contact"
+    "contact": "contact",
+    "positioning": "positionnement"
   },
   "nav": {
     "home": "Accueil",
@@ -40,7 +41,8 @@
     "menu": "Menu",
     "close": "Fermer",
     "theme": "Changer de thème",
-    "switchLang": "English"
+    "switchLang": "English",
+    "positioning": "Positionnement"
   },
   "levels": [
     {
@@ -665,5 +667,374 @@
     "title": "Page introuvable",
     "body": "Cette page n'existe pas ou a été déplacée.",
     "cta": "Retour à l'accueil"
+  },
+  "positioning": {
+    "eyebrow": "Positionnement",
+    "title": "Ce que CreaComp reprend, approfondit et assemble",
+    "lead": "CreaComp ne remplace aucun référentiel existant. Cette page dit ce qu'il leur doit, où il s'en écarte, et où son apport est réellement propre.",
+    "stance": {
+      "id": "posture",
+      "title": "Des cadres de référence, non des concurrents",
+      "body": [
+        "Un référentiel qui se présenterait comme le remplaçant de DigComp ou d'EntreComp se tromperait deux fois. Scientifiquement, parce que ces cadres décrivent correctement ce qu'ils décrivent. Institutionnellement, parce qu'une université, un ministère ou un organisme certificateur qui les a adoptés n'a aucune raison de choisir entre deux systèmes — et choisira le sien.",
+        "La position de CreaComp est autre : reprendre ce qui est établi, approfondir ce qui n'est traité qu'en surface dans les environnements de création, et assembler différemment des dimensions habituellement réparties entre plusieurs cadres. Cette page rend l'opération vérifiable, entrée par entrée.",
+        "L'exercice a une conséquence utile, et c'est la principale : il rend visibles les endroits où le rapprochement échoue. Ce sont ces zones — et elles seules — que CreaComp peut revendiquer comme peu couvertes ailleurs."
+      ]
+    },
+    "frameworks": {
+      "id": "cadres",
+      "title": "Quatre héritages",
+      "lead": "Ce que chaque cadre apporte, ce que CreaComp lui reprend, et où il va au-delà.",
+      "bringsLabel": "Ce qu'il apporte",
+      "takesLabel": "Ce que CreaComp lui reprend",
+      "extendsLabel": "Où CreaComp va au-delà",
+      "items": [
+        {
+          "name": "DigComp 2.2",
+          "source": "Commission européenne, Centre commun de recherche",
+          "brings": "La référence de la compétence numérique du citoyen : information et données, communication et collaboration, création de contenus, sécurité, résolution de problèmes — vingt et une compétences décrites sur huit niveaux de maîtrise.",
+          "takes": "La rigueur descriptive et la logique de descripteurs observables, ainsi que l'essentiel des compétences de recherche, d'évaluation, de production et de droit d'auteur. La proximité est réelle sur les rubriques S'informer et Faire.",
+          "extends": "CreaComp resserre sur les trajectoires de création : dynamiques de plateforme, construction d'audience, conduite d'un projet créatif, création de valeur. Il laisse hors périmètre la sécurité et la résolution de problèmes techniques, qu'il suppose acquises."
+        },
+        {
+          "name": "EntreComp",
+          "source": "Commission européenne, Centre commun de recherche",
+          "brings": "Un cadre très structuré de l'initiative : repérer des opportunités, créativité, vision, évaluer des idées, mobiliser des ressources et des personnes, planifier, composer avec le risque, apprendre par l'expérience.",
+          "takes": "La rubrique Entreprendre et une partie de Rentabiliser lui doivent leur charpente. La parenté est directe, et elle est revendiquée plutôt que dissimulée.",
+          "extends": "CreaComp installe ces capacités dans un environnement spécifiquement numérique, médiatique et créatif — où le produit est un contenu, le marché une plateforme dont on ne fixe pas les règles, et la ressource principale une audience."
+        },
+        {
+          "name": "Éducation aux médias et à l'information",
+          "source": "UNESCO ; en France, l'EMI inscrite aux programmes scolaires",
+          "brings": "L'accès à l'information, l'évaluation critique, la compréhension des représentations et de l'économie des médias, la participation et la production médiatique — un socle largement institué et enseigné.",
+          "takes": "La rubrique S'informer en est le prolongement direct, et la compétence 1.2 en reprend l'exigence critique.",
+          "extends": "CreaComp poursuit la trajectoire au-delà de la réception : lire les médias, puis en produire, puis en vivre. C'est le passage de la critique à la création assumée."
+        },
+        {
+          "name": "Recherche sur la créativité",
+          "source": "Guilford, Torrance, Osborn et Parnes, Amabile, Kaufman et Beghetto",
+          "brings": "Un siècle de travaux sur la génération, l'évaluation et l'amélioration des idées : pensée divergente, indicateurs de fluidité et d'originalité, cycles de résolution créative de problèmes, rôle de la motivation intrinsèque, progression du créatif débutant au professionnel.",
+          "takes": "La rubrique Créer s'y adosse, et la grammaire des quatre niveaux doit beaucoup aux modèles de progression créative.",
+          "extends": "CreaComp traduit ces construits en descripteurs observables sur des artefacts numériques réels, là où la recherche les mesure le plus souvent par des tests hors contexte."
+        }
+      ]
+    },
+    "crosswalk": {
+      "id": "matrice",
+      "title": "Matrice de correspondance",
+      "lead": "Chacune des trente et une entrées de CreaComp est rapprochée des compétences voisines de DigComp 2.2 et d'EntreComp, ainsi que des apports de l'éducation aux médias et de la recherche sur la créativité. Un tiret signale qu'aucun rapprochement n'a paru défendable.",
+      "columns": {
+        "entry": "Entrée CreaComp",
+        "digcomp": "DigComp 2.2",
+        "entrecomp": "EntreComp",
+        "mil": "Éducation aux médias",
+        "creativity": "Recherche sur la créativité"
+      },
+      "legendTitle": "Degré de recouvrement",
+      "legend": [
+        {
+          "key": "high",
+          "label": "Fort",
+          "body": "La compétence est déjà bien décrite ailleurs ; CreaComp la reprend et la contextualise."
+        },
+        {
+          "key": "partial",
+          "label": "Partiel",
+          "body": "Un cadre voisin en traite une part, sous un autre angle ou à une autre échelle."
+        },
+        {
+          "key": "low",
+          "label": "Faible",
+          "body": "Aucun rapprochement solide ; c'est là que l'apport de CreaComp est propre."
+        }
+      ],
+      "none": "—",
+      "rows": [
+        {
+          "code": "1.1",
+          "overlap": "high",
+          "digcomp": "1.1 — Naviguer, rechercher et filtrer données et contenus",
+          "entrecomp": null,
+          "mil": "Accès à l'information",
+          "creativity": null
+        },
+        {
+          "code": "1.2",
+          "overlap": "high",
+          "digcomp": "1.2 — Évaluer données, informations et contenus",
+          "entrecomp": null,
+          "mil": "Évaluation critique de l'information et des médias",
+          "creativity": null
+        },
+        {
+          "code": "1.3",
+          "overlap": "partial",
+          "digcomp": "1.3 — Gérer données, informations et contenus",
+          "entrecomp": null,
+          "mil": null,
+          "creativity": null
+        },
+        {
+          "code": "1.4",
+          "overlap": "partial",
+          "digcomp": null,
+          "entrecomp": null,
+          "mil": "Compréhension des médias, représentations et publics",
+          "creativity": null
+        },
+        {
+          "code": "2.1",
+          "overlap": "low",
+          "digcomp": null,
+          "entrecomp": null,
+          "mil": "Travaux récents sur les algorithmes et l'IA",
+          "creativity": null
+        },
+        {
+          "code": "2.2",
+          "overlap": "low",
+          "digcomp": null,
+          "entrecomp": "2.4 — Littératie financière et économique",
+          "mil": "Propriété et économie des médias",
+          "creativity": null
+        },
+        {
+          "code": "2.3",
+          "overlap": "partial",
+          "digcomp": "1.2 · 1.3 — Évaluer données, informations et contenus",
+          "entrecomp": null,
+          "mil": null,
+          "creativity": null
+        },
+        {
+          "code": "2.4",
+          "overlap": "low",
+          "digcomp": null,
+          "entrecomp": null,
+          "mil": "Travaux récents sur les algorithmes et l'IA",
+          "creativity": null
+        },
+        {
+          "code": "3.1",
+          "overlap": "high",
+          "digcomp": "5.3 — Utiliser les technologies avec créativité",
+          "entrecomp": "1.2 · 1.1 — Créativité",
+          "mil": null,
+          "creativity": "Pensée divergente (Guilford) ; fluidité, flexibilité, originalité, élaboration (Torrance)"
+        },
+        {
+          "code": "3.2",
+          "overlap": "low",
+          "digcomp": "2.6 — Gérer son identité numérique",
+          "entrecomp": null,
+          "mil": null,
+          "creativity": "Modèle componentiel : savoirs de domaine et motivation intrinsèque (Amabile)"
+        },
+        {
+          "code": "3.3",
+          "overlap": "partial",
+          "digcomp": "3.1 — Développer des contenus numériques",
+          "entrecomp": null,
+          "mil": "Production médiatique",
+          "creativity": null
+        },
+        {
+          "code": "3.4",
+          "overlap": "partial",
+          "digcomp": "3.1 · 3.2 — Développer des contenus numériques",
+          "entrecomp": "1.4 — Évaluer des idées",
+          "mil": "Production médiatique et connaissance des publics",
+          "creativity": null
+        },
+        {
+          "code": "4.1",
+          "overlap": "high",
+          "digcomp": "3.1 · 3.2 — Développer des contenus numériques",
+          "entrecomp": null,
+          "mil": "Production médiatique",
+          "creativity": null
+        },
+        {
+          "code": "4.2",
+          "overlap": "low",
+          "digcomp": "2.1 — Interagir par les technologies numériques",
+          "entrecomp": null,
+          "mil": null,
+          "creativity": null
+        },
+        {
+          "code": "4.3",
+          "overlap": "low",
+          "digcomp": "3.1 — Développer des contenus numériques",
+          "entrecomp": null,
+          "mil": null,
+          "creativity": null
+        },
+        {
+          "code": "4.4",
+          "overlap": "partial",
+          "digcomp": "2.2 — Partager par les technologies numériques",
+          "entrecomp": "3.2 — Planifier et gérer",
+          "mil": null,
+          "creativity": null
+        },
+        {
+          "code": "5.1",
+          "overlap": "high",
+          "digcomp": "2.4 — Collaborer par les technologies numériques",
+          "entrecomp": "3.4 · 2.5 — Travailler avec les autres",
+          "mil": null,
+          "creativity": "Créativité collaborative et culture du feedback"
+        },
+        {
+          "code": "5.2",
+          "overlap": "high",
+          "digcomp": "3.3 — Droit d'auteur et licences",
+          "entrecomp": null,
+          "mil": null,
+          "creativity": null
+        },
+        {
+          "code": "5.3",
+          "overlap": "high",
+          "digcomp": "2.5 · 2.3 — Netiquette",
+          "entrecomp": null,
+          "mil": "Participation et dialogue interculturel",
+          "creativity": null
+        },
+        {
+          "code": "5.4",
+          "overlap": "partial",
+          "digcomp": "2.3 — Exercer une citoyenneté numérique",
+          "entrecomp": "2.5 — Mobiliser les autres",
+          "mil": "Participation",
+          "creativity": null
+        },
+        {
+          "code": "6.1",
+          "overlap": "high",
+          "digcomp": null,
+          "entrecomp": "1.3 · 3.1 — Vision",
+          "mil": null,
+          "creativity": null
+        },
+        {
+          "code": "6.2",
+          "overlap": "high",
+          "digcomp": "5.2 — Identifier besoins et réponses technologiques",
+          "entrecomp": "3.5 · 3.3 — Apprendre par l'expérience",
+          "mil": null,
+          "creativity": "Résolution créative de problèmes : cycles idéation-évaluation (Osborn et Parnes)"
+        },
+        {
+          "code": "6.3",
+          "overlap": "high",
+          "digcomp": null,
+          "entrecomp": "3.2 · 2.3 — Planifier et gérer",
+          "mil": null,
+          "creativity": null
+        },
+        {
+          "code": "6.4",
+          "overlap": "high",
+          "digcomp": null,
+          "entrecomp": "3.3 · 2.2 · 2.1 — Composer avec l'incertitude et le risque",
+          "mil": null,
+          "creativity": "Modèle des quatre C : progression du mini-c au Pro-c (Kaufman et Beghetto)"
+        },
+        {
+          "code": "7.1",
+          "overlap": "partial",
+          "digcomp": null,
+          "entrecomp": "2.4 · 1.4 — Littératie financière et économique",
+          "mil": "Propriété et économie des médias",
+          "creativity": null
+        },
+        {
+          "code": "7.2",
+          "overlap": "partial",
+          "digcomp": "3.3 — Droit d'auteur et licences",
+          "entrecomp": "1.4 — Évaluer des idées",
+          "mil": null,
+          "creativity": null
+        },
+        {
+          "code": "7.3",
+          "overlap": "partial",
+          "digcomp": null,
+          "entrecomp": "2.4 · 3.2 — Littératie financière et économique",
+          "mil": null,
+          "creativity": null
+        },
+        {
+          "code": "7.4",
+          "overlap": "low",
+          "digcomp": "4.2 — Protéger les données personnelles et la vie privée",
+          "entrecomp": "2.3 — Mobiliser des ressources",
+          "mil": null,
+          "creativity": null
+        },
+        {
+          "code": "T1",
+          "overlap": "high",
+          "digcomp": "2.3 · 4.4 — Exercer une citoyenneté numérique",
+          "entrecomp": "1.5 — Pensée éthique et durable",
+          "mil": "Éthique de l'information et responsabilité médiatique",
+          "creativity": null
+        },
+        {
+          "code": "T2",
+          "overlap": "partial",
+          "digcomp": "4.3 — Protéger la santé et le bien-être",
+          "entrecomp": "2.2 — Motivation et persévérance",
+          "mil": null,
+          "creativity": null
+        },
+        {
+          "code": "T3",
+          "overlap": "high",
+          "digcomp": "5.4 — Repérer ses lacunes de compétence numérique",
+          "entrecomp": "3.5 — Apprendre par l'expérience",
+          "mil": null,
+          "creativity": "Modèle des quatre C : la trajectoire d'apprentissage créatif (Kaufman et Beghetto)"
+        }
+      ]
+    },
+    "originality": {
+      "id": "originalite",
+      "title": "Où l'apport est réellement propre",
+      "lead": "Sept entrées ressortent de la matrice avec un recouvrement faible. C'est là, et nulle part ailleurs, que CreaComp peut dire apporter quelque chose de peu couvert.",
+      "items": [
+        {
+          "codes": "2.1 · 2.2 · 2.4",
+          "title": "Comprendre les systèmes qui distribuent",
+          "body": "Les algorithmes de recommandation, l'économie des plateformes et de l'attention, le fonctionnement des systèmes génératifs. Les cadres existants mentionnent l'IA depuis leur dernière révision, mais aucun n'en fait un domaine de compétence décrit par niveaux. C'est la rubrique la plus propre à CreaComp."
+        },
+        {
+          "codes": "4.3",
+          "title": "Créer avec les systèmes génératifs",
+          "body": "Diriger un modèle comme on dirige un prestataire, juger ses sorties, décider de ce qui est délégué. Le versant productif de 2.4, absent des cadres qui traitent l'IA comme un objet de connaissance plutôt que comme un instrument de création."
+        },
+        {
+          "codes": "3.2 · 4.2",
+          "title": "La voix et le direct",
+          "body": "L'identité éditoriale singulière, reconnaissable dans la durée, et la prise de parole en temps réel. DigComp 2.6 décrit la gestion de l'identité numérique sous l'angle des traces et de la réputation, jamais sous celui du point de vue."
+        },
+        {
+          "codes": "7.4",
+          "title": "Les actifs indépendants des plateformes",
+          "body": "Ce qui reste quand une plateforme change ses règles ou disparaît : audience propriétaire, contenus et données portables, dépendances cartographiées. DigComp traite les données personnelles sous l'angle défensif de la vie privée ; l'angle patrimonial n'a pas d'équivalent."
+        }
+      ]
+    },
+    "caveat": {
+      "id": "limites",
+      "title": "Ce que cette matrice n'est pas",
+      "body": [
+        "Ces rapprochements sont une lecture argumentée, pas une équivalence validée. Ils n'autorisent aucune conversion automatique d'un niveau CreaComp vers un niveau DigComp ou EntreComp : les échelles diffèrent — huit niveaux de part et d'autre, quatre ici — et les objets ne se recouvrent jamais exactement.",
+        "Établir de véritables correspondances de niveau supposerait une étude dédiée, avec double codage et mesure d'accord entre codeurs. Elle figure parmi les travaux à conduire, décrits au chapitre sur le statut scientifique du référentiel."
+      ],
+      "cta": "Lire le statut scientifique"
+    }
   }
 }

@@ -4,7 +4,13 @@ import frFramework from '../data/fr/framework.json';
 import enFramework from '../data/en/framework.json';
 
 export type Lang = 'fr' | 'en';
-export type PageKey = 'home' | 'framework' | 'foundations' | 'use' | 'contact';
+export type PageKey =
+  | 'home'
+  | 'framework'
+  | 'foundations'
+  | 'positioning'
+  | 'use'
+  | 'contact';
 
 export const langs: Lang[] = ['fr', 'en'];
 

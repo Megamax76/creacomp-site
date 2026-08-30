@@ -10,7 +10,7 @@
 7 rubriques · 28 compétences · 3 fils transversaux · 124 descripteurs · 4 niveaux<br>
 Bilingue français / anglais, librement réutilisable.
 
-[**creacomp.org**](https://creacomp.org) · [Le référentiel](https://creacomp.org/referentiel/) · [Le cadre](https://creacomp.org/cadre/) · [English](https://creacomp.org/en/)
+[**creacomp.org**](https://creacomp.org) · [Le référentiel](https://creacomp.org/referentiel/) · [Le cadre](https://creacomp.org/cadre/) · [Positionnement](https://creacomp.org/positionnement/) · [English](https://creacomp.org/en/)
 
 [![Déploiement](https://github.com/Megamax76/creacomp-site/actions/workflows/deploy.yml/badge.svg)](https://github.com/Megamax76/creacomp-site/actions/workflows/deploy.yml)
 [![Contenu CC BY-SA 4.0](https://img.shields.io/badge/contenu-CC%20BY--SA%204.0-1a7f5a)](https://creativecommons.org/licenses/by-sa/4.0/deed.fr)
