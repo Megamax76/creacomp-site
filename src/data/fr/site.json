@@ -48,26 +48,26 @@
     {
       "id": "N1",
       "name": "Découverte",
-      "posture": "Je découvre et je comprends en pratiquant à petite échelle.",
+      "posture": "Je pratique avec un guidage : consigne, modèle ou accompagnement.",
       "landmark": "Collège · grand débutant"
     },
     {
       "id": "N2",
       "name": "Application",
-      "posture": "J'applique consciemment dans une pratique régulière.",
+      "posture": "Je pratique seul dans des situations familières.",
       "landmark": "Lycée · débutant avancé"
     },
     {
       "id": "N3",
-      "name": "Autonomie",
-      "posture": "J'expérimente, je mesure et j'améliore en autonomie.",
+      "name": "Adaptation",
+      "posture": "J'adapte et j'arbitre dans des situations complexes ou nouvelles.",
       "landmark": "Post-bac · professionnel junior"
     },
     {
       "id": "N4",
-      "name": "Expertise",
-      "posture": "Je systématise et je maîtrise au bénéfice d'autrui.",
-      "landmark": "Professionnel confirmé · formateur"
+      "name": "Orchestration",
+      "posture": "Je conçois des systèmes, j'articule plusieurs compétences et je décide dans l'incertitude.",
+      "landmark": "Professionnel confirmé"
     }
   ],
   "ui": {
@@ -434,7 +434,9 @@
       "id": "niveaux",
       "title": "La grammaire des quatre niveaux",
       "body": [
-        "Les niveaux décrivent des postures, non des âges : ils s'appliquent identiquement à toutes les compétences, ce qui donne au référentiel sa cohérence interne. Les repères scolaires sont indicatifs."
+        "Les niveaux décrivent des postures, non des âges : ils s'appliquent identiquement à toutes les compétences, ce qui donne au référentiel sa cohérence interne. Les repères scolaires sont indicatifs.",
+        "Ils suivent un axe unique — l'autonomie, la complexité des situations traitées, la capacité à orchestrer. On passe d'une pratique guidée à une pratique autonome dans des situations familières, puis à l'adaptation et à l'arbitrage dans des situations complexes, enfin à la conception de systèmes : articuler plusieurs compétences, décider dans l'incertitude, et le cas échéant augmenter la capacité d'un collectif.",
+        "Ce n'est donc pas une échelle du « je sais faire de mieux en mieux ». Elle ne confond pas non plus la maîtrise d'une compétence avec la capacité à l'enseigner : un excellent créateur peut n'être pas pédagogue, et aucun descripteur de niveau Orchestration n'exige de former qui que ce soit. Là où un collectif apparaît, c'est que la compétence elle-même porte sur le travail collectif."
       ],
       "goldenRule": "Règle d'or : tout descripteur de niveau Découverte est atteignable par un collégien équipé d'un simple smartphone. Cette règle garantit que le référentiel couvre réellement l'ensemble des publics, du collège au monde professionnel."
     },
@@ -488,7 +490,7 @@
         },
         {
           "title": "Cohérence des niveaux",
-          "body": "La progression Découverte → Application → Autonomie → Expertise décrit-elle un ordre réel de difficulté, identique d'une compétence à l'autre ? Un niveau devrait être atteint après celui qui le précède, et rarement l'inverse."
+          "body": "La progression Découverte → Application → Adaptation → Orchestration décrit-elle un ordre réel de difficulté, identique d'une compétence à l'autre ? Un niveau devrait être atteint après celui qui le précède, et rarement l'inverse."
         },
         {
           "title": "Accord entre évaluateurs",

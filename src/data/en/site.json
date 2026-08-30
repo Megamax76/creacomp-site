@@ -48,26 +48,26 @@
     {
       "id": "N1",
       "name": "Discovery",
-      "posture": "I discover and understand by practising on a small scale.",
+      "posture": "I practise with guidance: instructions, a model or support.",
       "landmark": "Lower secondary · complete beginner"
     },
     {
       "id": "N2",
       "name": "Application",
-      "posture": "I apply deliberately within a regular practice.",
+      "posture": "I practise on my own in familiar situations.",
       "landmark": "Upper secondary · advanced beginner"
     },
     {
       "id": "N3",
-      "name": "Autonomy",
-      "posture": "I experiment, measure and improve independently.",
+      "name": "Adaptation",
+      "posture": "I adapt and arbitrate in complex or unfamiliar situations.",
       "landmark": "Tertiary · junior professional"
     },
     {
       "id": "N4",
-      "name": "Expertise",
-      "posture": "I systematise and master for the benefit of others.",
-      "landmark": "Experienced professional · trainer"
+      "name": "Orchestration",
+      "posture": "I design systems, combine several competences and decide under uncertainty.",
+      "landmark": "Experienced professional"
     }
   ],
   "ui": {
@@ -434,7 +434,9 @@
       "id": "levels",
       "title": "The grammar of the four levels",
       "body": [
-        "The levels describe postures, not ages: they apply identically to all competencies, which is what gives the framework its internal coherence. The educational landmarks are indicative."
+        "The levels describe postures, not ages: they apply identically to every competency, which is what gives the framework its internal coherence. The school markers are indicative.",
+        "They follow a single axis — autonomy, the complexity of the situations handled, the capacity to orchestrate. Practice moves from guided to independent in familiar situations, then to adaptation and arbitration in complex ones, and finally to the design of systems: combining several competences, deciding under uncertainty and, where relevant, increasing the capacity of a collective.",
+        "This is therefore not a scale of \"doing the same thing better and better\". Nor does it confuse mastery of a competency with the ability to teach it: an excellent creator need not be a teacher, and no Orchestration descriptor requires training anyone. Where a collective appears, it is because the competency itself is about collective work."
       ],
       "goldenRule": "Golden rule: every Discovery-level descriptor is achievable by a lower-secondary student equipped with nothing more than a smartphone. This rule guarantees that the framework genuinely covers all audiences, from school to professional practice."
     },
@@ -488,7 +490,7 @@
         },
         {
           "title": "Coherence of the levels",
-          "body": "Does the progression Discovery → Application → Autonomy → Expertise describe a real order of difficulty, identical from one competence to the next? A level should be reached after the one preceding it, and rarely the other way round."
+          "body": "Does the progression Discovery → Application → Adaptation → Orchestration describe a real order of difficulty, identical from one competence to the next? A level should be reached after the one preceding it, and rarely the other way round."
         },
         {
           "title": "Agreement between assessors",

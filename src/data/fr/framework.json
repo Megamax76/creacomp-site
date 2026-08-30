@@ -91,8 +91,8 @@
           "evidence": "Produire la note méthodologique de recherche ayant préparé un contenu effectivement publié."
         },
         "N4": {
-          "descriptor": "Est capable de concevoir et de transmettre une méthodologie de sourcing pour un collectif, une rédaction ou une équipe créative.",
-          "evidence": "Produire un guide de sourcing effectivement utilisé par des tiers, illustré de cas traités."
+          "descriptor": "Est capable de concevoir une méthodologie de sourcing reproductible pour une rédaction ou un projet collectif, et d'arbitrer les cas où les sources se contredisent.",
+          "evidence": "Produire un guide de sourcing appliqué à cinq cas réels documentés, dont deux cas litigieux et leur arbitrage."
         }
       },
       "rubricId": 1
@@ -123,8 +123,8 @@
           "evidence": "Publier (ou rendre publiable) une synthèse contradictoire avec cartographie des positions en présence."
         },
         "N4": {
-          "descriptor": "Est capable de former autrui à l'évaluation de l'information et de concevoir des dispositifs de vérification.",
-          "evidence": "Concevoir et animer un atelier ou une ressource pédagogique de vérification, testés sur un public réel."
+          "descriptor": "Est capable de concevoir un dispositif de vérification complet et de trancher des cas ambigus, où les indices de fiabilité se contredisent.",
+          "evidence": "Concevoir un dispositif de vérification et le documenter sur dix cas réels, dont trois cas ambigus assortis de la décision retenue."
         }
       },
       "rubricId": 1
@@ -220,8 +220,8 @@
           "evidence": "Publier deux versions d'un même contenu avec des stratégies de distribution différentes et analyser l'écart de performance à J+7."
         },
         "N4": {
-          "descriptor": "Est capable de comparer les logiques de recommandation de plusieurs plateformes, d'anticiper l'effet d'un changement d'algorithme sur une stratégie, et de conseiller des tiers.",
-          "evidence": "Produire un audit algorithmique multi-plateforme avec recommandations suivies d'effet mesurable."
+          "descriptor": "Est capable de comparer les logiques de recommandation de plusieurs plateformes, d'anticiper l'effet d'un changement d'algorithme sur une stratégie et d'en tirer des décisions de diffusion.",
+          "evidence": "Produire un audit algorithmique multi-plateforme, les décisions de diffusion qui en découlent et leur effet mesuré."
         }
       },
       "rubricId": 2
@@ -285,8 +285,8 @@
           "evidence": "Identifier trois enseignements actionnables dans les données d'un contenu et produire une version améliorée."
         },
         "N4": {
-          "descriptor": "Est capable de construire un tableau de bord de pilotage créatif et d'installer une culture de décision éclairée par les données dans un collectif.",
-          "evidence": "Présenter un tableau de bord personnalisé utilisé sur trois mois, avec les décisions prises et leurs effets."
+          "descriptor": "Est capable de construire un tableau de bord de pilotage créatif et de distinguer ce que la donnée peut trancher de ce qu'elle ne peut pas.",
+          "evidence": "Présenter un tableau de bord utilisé sur trois mois, les décisions prises, leurs effets, et une décision volontairement prise contre l'indicateur."
         }
       },
       "rubricId": 2
@@ -382,8 +382,8 @@
           "evidence": "Soumettre un corpus de trois mois de créations ; cohérence attestée par l'analyse et par des retours de tiers."
         },
         "N4": {
-          "descriptor": "Est capable d'être identifiable par son audience sans signature, et d'aider autrui à construire sa propre voix.",
-          "evidence": "Réussir un test d'attribution (créations reconnues sans signature) et documenter l'accompagnement éditorial d'un tiers."
+          "descriptor": "Est capable d'être identifiable par son audience sans signature, et de tenir cette voix sur plusieurs formats et registres sans la diluer.",
+          "evidence": "Réussir un test d'attribution (créations reconnues sans signature) sur trois formats différents."
         }
       },
       "rubricId": 3
@@ -414,8 +414,8 @@
           "evidence": "Transformer un sujet technique en trois formats (vidéo courte, fil de publications, infographie) avec une logique narrative distincte dans chacun."
         },
         "N4": {
-          "descriptor": "Est capable de concevoir des architectures narratives (séries, univers, formats récurrents) et de diriger la narration d'autrui.",
-          "evidence": "Produire la bible narrative d'une série ou d'un format, avec des épisodes réalisés par des tiers sous sa direction."
+          "descriptor": "Est capable de concevoir des architectures narratives — séries, univers, formats récurrents — et d'en maintenir la cohérence dans la durée.",
+          "evidence": "Produire la bible narrative d'une série ou d'un format, et six épisodes qui en respectent les règles."
         }
       },
       "rubricId": 3
@@ -447,8 +447,8 @@
           "evidence": "Produire une première version, recueillir les retours de destinataires réels, livrer une seconde version avec écarts documentés."
         },
         "N4": {
-          "descriptor": "Est capable de formaliser la conception orientée public en méthode transmissible.",
-          "evidence": "Documenter une méthode de conception (profils types, parcours de réception) appliquée avec succès par un tiers."
+          "descriptor": "Est capable de formaliser la conception orientée public en méthode explicite et réutilisable, et de l'ajuster à un public qu'il ne connaît pas d'avance.",
+          "evidence": "Documenter une méthode de conception (profils types, parcours de réception) et l'appliquer à deux publics contrastés, en explicitant ce qui a dû être ajusté."
         }
       },
       "rubricId": 3
@@ -513,8 +513,8 @@
           "evidence": "Animer un direct de vingt minutes sur un sujet préparé en trente minutes maximum."
         },
         "N4": {
-          "descriptor": "Est capable d'improviser avec aisance, de tenir des formats longs et de faire progresser la prise de parole d'autrui.",
-          "evidence": "Animer un format long (table ronde, émission) et documenter la progression d'une personne accompagnée."
+          "descriptor": "Est capable d'improviser avec aisance, de tenir des formats longs et de conduire un direct à plusieurs intervenants sans perdre le fil.",
+          "evidence": "Animer un format long à plusieurs intervenants (table ronde, émission) et documenter la gestion d'un imprévu survenu à l'antenne."
         }
       },
       "rubricId": 4
@@ -546,8 +546,8 @@
           "evidence": "Produire un contenu complet en documentant chaque décision — réalisée à la main ou déléguée à l'IA — et en justifiant les choix."
         },
         "N4": {
-          "descriptor": "Est capable de concevoir des systèmes d'instructions réutilisables et de former autrui à la direction de l'IA.",
-          "evidence": "Concevoir un système de cinq instructions chaînées produisant un contenu de bout en bout, documenté et utilisé par des tiers."
+          "descriptor": "Est capable de concevoir des systèmes d'instructions réutilisables et d'architecturer une chaîne de production où l'IA occupe une place décidée, contrôlée et révisable.",
+          "evidence": "Concevoir un système de cinq instructions chaînées produisant un contenu de bout en bout, documenté, avec ses points de contrôle humains et ce qui a été refusé au modèle."
         }
       },
       "rubricId": 4
@@ -581,7 +581,7 @@
         },
         "N4": {
           "descriptor": "Est capable de concevoir une architecture de contenu un-vers-plusieurs entièrement systématisée, avec supervision qualité.",
-          "evidence": "À partir d'un seul contenu long, générer huit formats distincts cohérents via un système documenté et transmissible."
+          "evidence": "À partir d'un seul contenu long, générer huit formats distincts cohérents via un système documenté et réutilisable."
         }
       },
       "rubricId": 4
@@ -844,8 +844,8 @@
           "evidence": "Documenter une prise de risque : enjeux et critères posés avant, bilan honnête après."
         },
         "N4": {
-          "descriptor": "Est capable d'accompagner autrui dans l'échec et d'instaurer un rapport sain au risque dans un collectif.",
-          "evidence": "Instaurer un rituel de bilan post-projet dans une équipe et documenter un accompagnement individuel."
+          "descriptor": "Est capable de prendre des risques calibrés dans l'incertitude, de décider sans garantie de résultat et de transformer un échec majeur en réorientation assumée.",
+          "evidence": "Documenter un échec majeur : le pari initial, ce qui a été perdu, la décision de réorientation et ce qu'elle a produit ensuite."
         }
       },
       "rubricId": 6
@@ -1010,8 +1010,8 @@
           "evidence": "Rédiger une charte éthique personnelle de création numérique, l'appliquer, et documenter un cas d'arbitrage réel."
         },
         "N4": {
-          "descriptor": "Est capable de concevoir les standards éthiques d'un collectif et de former d'autres créateurs à ces enjeux.",
-          "evidence": "Déployer une charte collective ou une formation à l'éthique de la création, avec preuve d'appropriation par des tiers."
+          "descriptor": "Est capable de concevoir les standards éthiques d'un collectif ou d'un projet et d'arbitrer les cas où les principes entrent en conflit.",
+          "evidence": "Déployer une charte de création et documenter trois arbitrages réels, dont un où deux principes s'opposaient."
         }
       },
       "subtitle": "Éthique et responsabilité créative"
@@ -1076,8 +1076,8 @@
           "evidence": "Documenter un pivot réalisé : signaux détectés, critères de décision, exécution, bilan."
         },
         "N4": {
-          "descriptor": "Est capable de construire une trajectoire à douze-trente-six mois avec scénarios, et de guider la réinvention d'autrui.",
-          "evidence": "Produire une feuille de route à douze mois avec trois scénarios et critères de décision, et documenter l'accompagnement d'un tiers."
+          "descriptor": "Est capable de construire une trajectoire à douze-trente-six mois avec scénarios, et de pivoter avant que la contrainte ne l'impose.",
+          "evidence": "Produire une feuille de route à douze mois avec trois scénarios et critères de décision, et documenter un pivot décidé sur signal faible."
         }
       },
       "subtitle": "Apprendre, désapprendre, pivoter"

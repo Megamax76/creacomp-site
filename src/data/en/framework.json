@@ -92,8 +92,8 @@
           "evidence": "Produce the methodological research note that prepared a piece of content actually published."
         },
         "N4": {
-          "descriptor": "Is able to design and transmit a sourcing methodology for a collective, a newsroom or a creative team.",
-          "evidence": "Produce a sourcing guide actually used by third parties, illustrated with handled cases."
+          "descriptor": "Is able to design a reproducible sourcing methodology for a newsroom or a collective project, and to arbitrate cases where sources contradict one another.",
+          "evidence": "Produce a sourcing guide applied to five documented real cases, including two disputed ones and how they were settled."
         }
       }
     },
@@ -124,8 +124,8 @@
           "evidence": "Publish (or make publishable) a contradictory synthesis mapping the positions in presence."
         },
         "N4": {
-          "descriptor": "Is able to train others in information assessment and to design verification schemes.",
-          "evidence": "Design and run a verification workshop or teaching resource, tested with a real audience."
+          "descriptor": "Is able to design a complete verification scheme and to settle ambiguous cases, where signals of reliability contradict one another.",
+          "evidence": "Design a verification scheme and document it across ten real cases, including three ambiguous ones with the decision taken."
         }
       }
     },
@@ -221,8 +221,8 @@
           "evidence": "Publish two versions of the same content with different distribution strategies and analyse the performance gap at day 7."
         },
         "N4": {
-          "descriptor": "Is able to compare the recommendation logics of several platforms, to anticipate the effect of an algorithm change on a strategy, and to advise others.",
-          "evidence": "Produce a multi-platform algorithmic audit with recommendations followed by measurable effect."
+          "descriptor": "Is able to compare the recommendation logics of several platforms, to anticipate the effect of an algorithm change on a strategy, and to turn that into distribution decisions.",
+          "evidence": "Produce a multi-platform algorithmic audit, the distribution decisions drawn from it, and their measured effect."
         }
       }
     },
@@ -286,8 +286,8 @@
           "evidence": "Identify three actionable insights in the data of a piece of content and produce an improved version."
         },
         "N4": {
-          "descriptor": "Is able to build a creative steering dashboard and to establish a culture of data-informed decision within a collective.",
-          "evidence": "Present a personalised dashboard used over three months, with the decisions taken and their effects."
+          "descriptor": "Is able to build a creative steering dashboard and to distinguish what the data can settle from what it cannot.",
+          "evidence": "Present a dashboard used over three months, the decisions taken, their effects, and one decision deliberately taken against the metric."
         }
       }
     },
@@ -383,8 +383,8 @@
           "evidence": "Submit a three-month body of work; coherence attested by analysis and by third-party feedback."
         },
         "N4": {
-          "descriptor": "Is able to be identifiable to their audience without a signature, and to help others build their own voice.",
-          "evidence": "Pass an attribution test (work recognised without a signature) and document the editorial mentoring of a third party."
+          "descriptor": "Is able to be identifiable to their audience without a signature, and to hold that voice across several formats and registers without diluting it.",
+          "evidence": "Pass an attribution test (work recognised without a signature) across three different formats."
         }
       }
     },
@@ -415,8 +415,8 @@
           "evidence": "Turn a technical subject into three formats (short video, post thread, infographic) with a distinct narrative logic in each."
         },
         "N4": {
-          "descriptor": "Is able to design narrative architectures (series, universes, recurring formats) and to direct the storytelling of others.",
-          "evidence": "Produce the narrative bible of a series or format, with episodes made by others under their direction."
+          "descriptor": "Is able to design narrative architectures — series, universes, recurring formats — and to hold them coherent over time.",
+          "evidence": "Produce the narrative bible of a series or format, and six episodes that observe its rules."
         }
       }
     },
@@ -448,8 +448,8 @@
           "evidence": "Produce a first version, gather feedback from real recipients, deliver a second version with documented differences."
         },
         "N4": {
-          "descriptor": "Is able to formalise audience-centred design into a transmissible method.",
-          "evidence": "Document a design method (personas, reception journeys) successfully applied by a third party."
+          "descriptor": "Is able to formalise audience-centred design into an explicit, reusable method, and to adjust it to an audience they do not know in advance.",
+          "evidence": "Document a design method (personas, reception journeys) and apply it to two contrasting audiences, setting out what had to be adjusted."
         }
       }
     },
@@ -514,8 +514,8 @@
           "evidence": "Host a twenty-minute live on a subject prepared in thirty minutes or less."
         },
         "N4": {
-          "descriptor": "Is able to improvise with ease, to hold long formats, and to advance the public speaking of others.",
-          "evidence": "Host a long format (panel, show) and document the progress of a person they have coached."
+          "descriptor": "Is able to improvise with ease, to hold long formats, and to run a multi-speaker live session without losing the thread.",
+          "evidence": "Host a long multi-speaker format (panel, show) and document how an unforeseen incident on air was handled."
         }
       }
     },
@@ -547,8 +547,8 @@
           "evidence": "Produce a complete piece of content documenting every decision — made by hand or delegated to the AI — and justifying the choices."
         },
         "N4": {
-          "descriptor": "Is able to design reusable instruction systems and to train others in directing AI.",
-          "evidence": "Design a system of five chained instructions producing a piece of content end to end, documented and used by third parties."
+          "descriptor": "Is able to design reusable instruction systems and to architect a production chain where AI occupies a decided, controlled and revisable place.",
+          "evidence": "Design a system of five chained instructions producing a piece of content end to end, documented, with its human checkpoints and what the model was refused."
         }
       }
     },
@@ -582,7 +582,7 @@
         },
         "N4": {
           "descriptor": "Is able to design a fully systematised one-to-many content architecture, with quality supervision.",
-          "evidence": "From a single long-form piece, generate eight distinct coherent formats through a documented, transmissible system."
+          "evidence": "From a single long-form piece, generate eight distinct coherent formats through a documented, reusable system."
         }
       }
     },
@@ -845,8 +845,8 @@
           "evidence": "Document a risk taken: stakes and criteria set beforehand, honest review afterwards."
         },
         "N4": {
-          "descriptor": "Is able to support others through failure and to establish a healthy relationship to risk within a collective.",
-          "evidence": "Establish a post-project review ritual in a team and document an individual mentoring case."
+          "descriptor": "Is able to take calibrated risks under uncertainty, to decide without a guarantee of outcome, and to turn a major failure into a deliberate reorientation.",
+          "evidence": "Document a major failure: the initial bet, what was lost, the decision to reorient, and what it produced afterwards."
         }
       }
     },
@@ -1011,8 +1011,8 @@
           "evidence": "Write a personal ethical charter for digital creation, apply it, and document a real arbitration case."
         },
         "N4": {
-          "descriptor": "Is able to design the ethical standards of a collective and to train other creators in these issues.",
-          "evidence": "Deploy a collective charter or an ethics training programme, with evidence of uptake by third parties."
+          "descriptor": "Is able to design the ethical standards of a collective or a project and to arbitrate cases where principles conflict.",
+          "evidence": "Deploy a charter for creative work and document three real arbitrations, including one where two principles were in conflict."
         }
       }
     },
@@ -1077,8 +1077,8 @@
           "evidence": "Document a pivot carried out: signals detected, decision criteria, execution, review."
         },
         "N4": {
-          "descriptor": "Is able to build a twelve- to thirty-six-month trajectory with scenarios, and to guide the reinvention of others.",
-          "evidence": "Produce a twelve-month roadmap with three scenarios and decision criteria, and document the mentoring of a third party."
+          "descriptor": "Is able to build a twelve- to thirty-six-month trajectory with scenarios, and to pivot before circumstances force it.",
+          "evidence": "Produce a twelve-month roadmap with three scenarios and decision criteria, and document a pivot decided on a weak signal."
         }
       }
     }

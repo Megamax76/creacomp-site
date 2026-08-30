@@ -91,10 +91,15 @@ abandonner ce qui ne fonctionne plus).
 
 | Niveau | Nom | Posture | Repère |
 |---|---|---|---|
-| **N1** | Découverte | Je découvre et je comprends en pratiquant à petite échelle | Collège · grand débutant |
-| **N2** | Application | J'applique consciemment dans une pratique régulière | Lycée · débutant avancé |
-| **N3** | Autonomie | J'expérimente, je mesure et j'améliore en autonomie | Post-bac · professionnel junior |
-| **N4** | Expertise | Je systématise et je maîtrise au bénéfice d'autrui | Professionnel confirmé · formateur |
+| **N1** | Découverte | Je pratique avec un guidage : consigne, modèle ou accompagnement | Collège · grand débutant |
+| **N2** | Application | Je pratique seul dans des situations familières | Lycée · débutant avancé |
+| **N3** | Adaptation | J'adapte et j'arbitre dans des situations complexes ou nouvelles | Post-bac · professionnel junior |
+| **N4** | Orchestration | Je conçois des systèmes, j'articule plusieurs compétences et je décide dans l'incertitude | Professionnel confirmé |
+
+L'échelle suit un axe unique — autonomie, complexité des situations, capacité
+d'orchestration — et ne confond jamais la maîtrise d'une compétence avec la
+capacité à l'enseigner : aucun descripteur de niveau Orchestration n'exige de
+former qui que ce soit.
 
 Chaque descripteur est formulé de manière **observable** — « Est capable de… » —
 afin qu'un niveau puisse être constaté plutôt que supposé. Le référentiel décrit
