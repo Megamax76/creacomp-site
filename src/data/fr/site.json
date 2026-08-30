@@ -353,6 +353,17 @@
         ]
       },
       {
+        "id": "agentivite",
+        "title": "Littératie et agentivité : une distinction à construire",
+        "body": [
+          "Dans son usage scientifique classique, une littératie désigne un ensemble de connaissances et de capacités permettant de comprendre, d'interpréter, d'utiliser et de produire des formes d'information et de communication. Les rubriques S'informer, Analyser, Créer, et une partie de Faire, entrent sans difficulté dans cette définition : elles décrivent une lecture et une production de formes.",
+          "La difficulté commence avec les rubriques d'aval. Négocier un accord, conduire un projet, éprouver un modèle économique, développer une activité, se constituer des ressources indépendantes des plateformes, organiser un collectif : ces capacités débordent la notion classique de littératie. Les nommer ainsi étirerait le mot jusqu'à lui faire perdre sa précision, et c'est précisément la précision qui fait sa valeur scientifique.",
+          "Une notion plus large permettrait de tenir l'ensemble : l'agentivité créative numérique — digital creative agency dans les publications anglophones. L'agentivité désigne la capacité d'une personne à agir intentionnellement sur son environnement plutôt qu'à le subir. Appliquée au numérique, elle recouvre le fait de comprendre les systèmes, d'y prendre des décisions éclairées, de créer, de transformer ces créations en actions concrètes et d'en tirer une forme d'autonomie.",
+          "L'articulation entre les deux notions est simple, et c'est ce qui la rend féconde : la littératie permet de comprendre et de produire ; l'agentivité permet d'agir, d'organiser et de transformer. La littératie numérique créative devient alors l'un des fondements de l'agentivité créative numérique, non son équivalent.",
+          "Cette distinction est une piste de travail, développée dans les travaux scientifiques qui accompagnent le référentiel ; elle ne modifie pas la terminologie publique du projet. CreaComp reste le référentiel de littératie numérique créative, et le restera pendant que la notion d'agentivité se construit : l'objectif est d'ajouter de la profondeur théorique, non de renommer le cadre au fil de ses hypothèses."
+        ]
+      },
+      {
         "id": "intention",
         "title": "De l'économie de l'attention à l'économie de l'intention",
         "body": [
