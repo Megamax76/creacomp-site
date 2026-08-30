@@ -149,11 +149,11 @@
       "num": "01",
       "eyebrow": "L'objet",
       "title": "Référentiel de la littératie numérique créative",
-      "lead": "Les cadres de compétences numériques existants forment à l'usage des outils : bureautique, communication, sécurité. Cette littératie est nécessaire, mais elle reste défensive — elle apprend à s'adapter aux environnements numériques, non à créer avec eux.",
+      "lead": "Une personne qui crée en ligne mobilise des savoirs que plusieurs cadres décrivent déjà, mais séparément. Ce qui manque n'est pas une compétence supplémentaire : c'est le modèle qui les tient ensemble.",
       "body": [
-        "Or la création est devenue une dimension structurante de ces environnements. Algorithmes de recommandation, production de contenus, intelligences artificielles génératives, entrepreneuriat numérique : la capacité des individus à comprendre ces logiques et à produire de la valeur à travers elles conditionne désormais leur autonomie économique, culturelle et citoyenne.",
-        "Cette capacité — la littératie numérique créative — n'est aujourd'hui ni définie, ni mesurée par aucun référentiel.",
-        "CreaComp répond à cette lacune. Il est construit autour d'une question unique :"
+        "La création est devenue une dimension structurante des environnements numériques. Algorithmes de recommandation, production de contenus, intelligences artificielles génératives, entrepreneuriat numérique : la capacité des individus à comprendre ces logiques et à produire de la valeur à travers elles conditionne désormais leur autonomie économique, culturelle et citoyenne.",
+        "Cette capacité n'est pas un territoire vierge. DigComp décrit la compétence numérique du citoyen, EntreComp la compétence entrepreneuriale, l'éducation aux médias et à l'information la réception critique, et les recherches sur la créativité l'acte d'inventer. Chacun de ces cadres en éclaire un versant ; aucun ne les réunit dans un même modèle.",
+        "C'est là qu'intervient CreaComp : un cadre intégré décrivant la capacité d'une personne à comprendre les environnements numériques, à y créer de manière intentionnelle, à transformer ses idées en réalisations, à interagir avec des communautés et à développer une autonomie durable autour de ses productions. Il est construit autour d'une question unique :"
       ],
       "question": "Que sait réellement faire une personne dans les environnements numériques, et quelle valeur est-elle capable d'y créer ?"
     },
@@ -255,7 +255,7 @@
       "title": "La valeur a changé de place",
       "body": [
         "L'intelligence artificielle générative a effondré le coût de la production : un texte correct, un visuel propre, une vidéo montée deviennent universellement accessibles. Ce qui se banalise se dévalue, et la valeur se déplace vers les deux extrémités de la chaîne créative.",
-        "Aucun cadre existant ne décrivait ces deux extrémités ensemble. C'est la raison d'être de CreaComp, et la clé de lecture qui explique pourquoi ses rubriques d'amont et d'aval pèsent autant que la fabrication elle-même."
+        "C'est ce déplacement qui justifie l'architecture du référentiel : le regard et la relation y pèsent autant que la fabrication. Les cadres existants décrivent l'une ou l'autre de ces extrémités ; CreaComp les tient dans un même modèle, avec la même grammaire de niveaux et les mêmes preuves d'évaluation."
       ],
       "caption": "Où se loge la valeur dans la chaîne créative",
       "stages": [
@@ -339,6 +339,15 @@
         ]
       },
       {
+        "id": "these",
+        "title": "La thèse : une architecture intégrée",
+        "body": [
+          "CreaComp propose un cadre intégré décrivant la capacité d'un individu à comprendre les environnements numériques, à y créer de manière intentionnelle, à transformer ses idées en réalisations, à interagir avec des communautés et à développer une autonomie durable autour de ses productions.",
+          "Prise isolément, aucune de ces dimensions n'est inédite, et le référentiel ne prétend pas l'inverse. La recherche et l'évaluation de l'information, la compréhension des plateformes et de l'intelligence artificielle, la créativité, la production numérique, la collaboration, le développement d'audience, la conduite de projet, l'entrepreneuriat, la propriété intellectuelle et la création de valeur sont déjà décrits ailleurs — par DigComp, par EntreComp, par l'éducation aux médias et à l'information, par les travaux sur la créativité, par divers modèles de compétences numériques.",
+          "L'originalité de CreaComp tient à son architecture d'ensemble, non à chacune de ses composantes prises séparément. Il rassemble dans un même modèle, avec une grammaire de niveaux commune et des preuves d'évaluation homogènes, des dimensions habituellement étudiées et évaluées séparément. C'est cette intégration qui se défend, et c'est elle que la validation empirique doit mettre à l'épreuve."
+        ]
+      },
+      {
         "id": "intention",
         "title": "De l'économie de l'attention à l'économie de l'intention",
         "body": [
@@ -351,7 +360,7 @@
         "title": "L'ère des créateurs et le déplacement de la valeur",
         "body": [
           "L'intelligence artificielle générative a effondré le coût de la production : un texte correct, un visuel propre, une vidéo montée sont en passe de devenir universellement accessibles. Ce qui se banalise se dévalue ; la valeur se déplace vers les deux extrémités de la chaîne créative. En amont : le regard — savoir quoi créer, pourquoi, avec quel point de vue. En aval : la relation — la confiance, la communauté, la capacité à transformer l'attention reçue en actifs possédés.",
-          "Cette thèse ne modifie pas l'architecture du référentiel, qui demeure une cartographie complète ; elle en constitue la clé de lecture : elle explique pourquoi les rubriques d'amont (S'informer, Analyser, Créer) et d'aval (Collaborer, Rentabiliser) pèsent autant que la fabrication elle-même."
+          "Cette lecture ne modifie pas l'architecture du référentiel, qui demeure une cartographie complète ; elle en constitue la clé de lecture : elle explique pourquoi les rubriques d'amont (S'informer, Analyser, Créer) et d'aval (Collaborer, Rentabiliser) pèsent autant que la fabrication elle-même."
         ]
       }
     ],
@@ -433,7 +442,7 @@
       "id": "perimetre",
       "title": "Périmètre : ce que CreaComp n'inclut pas",
       "body": [
-        "CreaComp est un référentiel neuf, bâti sur son propre objet : la littératie numérique créative. Il ne prolonge pas un cadre existant et ne s'y subordonne pas. Les référentiels européens de compétences — DigComp pour la compétence numérique du citoyen, EntreComp pour la compétence entrepreneuriale — en ont été l'inspiration et la base de travail, et ils en restent le complément naturel ; mais aucun ne décrit ce que CreaComp décrit, et c'est la raison d'être de celui-ci.",
+        "CreaComp est un référentiel neuf, bâti sur son propre objet : la littératie numérique créative. Il ne prolonge pas un cadre existant et ne s'y subordonne pas. Les référentiels européens de compétences — DigComp pour la compétence numérique du citoyen, EntreComp pour la compétence entrepreneuriale — en ont été l'inspiration et la base de travail, et ils en restent le complément naturel. Les recouvrements avec eux sont réels et assumés : ce qui distingue CreaComp n'est pas d'aborder des dimensions que nul n'aurait décrites, mais de les articuler dans un même modèle.",
         "Ce que CreaComp exclut délibérément, il l'exclut donc par choix de périmètre, non par renvoi à une autorité extérieure. N'y figurent ni la sécurité des équipements et des comptes, ni la protection défensive des données personnelles, ni la résolution de problèmes techniques, ni la bureautique et la communication administrative. Ces acquis relèvent d'une littératie numérique générale, largement outillée ailleurs, et les dupliquer aurait dilué le propos. CreaComp les suppose disponibles et traite exclusivement du versant créatif : comprendre les systèmes, concevoir, fabriquer, adresser, entreprendre, valoriser.",
         "Trois points de contact avec la littératie numérique générale méritent d'être explicités, parce que CreaComp y va plus loin qu'elle. La compétence 1.2 (fiabilité et manipulation) pousse la lecture critique jusqu'à la détection des contenus synthétiques et des techniques d'influence propres aux espaces de création. La compétence 5.3 (conduite en ligne) va jusqu'à la modération et à la gestion publique de la critique. La compétence 7.4 (actifs indépendants) traite les données sous un angle patrimonial — posséder son audience et ses contenus — là où l'approche défensive habituelle s'arrête à leur protection.",
         "Enfin, l'éducation aux médias et à l'information (EMI), inscrite dans les programmes scolaires français, trouve dans la rubrique S'informer son prolongement naturel : CreaComp offre aux enseignants d'EMI une trajectoire qui mène de la réception critique — leur territoire — vers la création assumée, qui est le sien."

@@ -31,11 +31,15 @@ enseignable et évaluable.
 > au cœur du web créatif et à y devenir actrice de la création plutôt que
 > destinataire de celle des autres.**
 
-Il couvre ce que les référentiels existants traitent mal ou pas du tout : la
-lecture critique d'un flux algorithmique, la construction d'une voix, le travail
-avec l'IA génératrice, l'économie de l'attention, la soutenabilité d'une pratique
-créative. Il s'adresse à qui doit **former, évaluer ou se situer** — enseignants,
-organismes de certification, créateurs, chercheurs.
+Aucune des dimensions qu'il décrit n'est inédite prise isolément : DigComp,
+EntreComp, l'éducation aux médias et à l'information et les travaux sur la
+créativité en couvrent déjà des pans. Son originalité tient à son architecture
+d'ensemble — réunir dans un même modèle, avec une grammaire de niveaux commune et
+des preuves d'évaluation homogènes, la lecture critique d'un flux algorithmique,
+la construction d'une voix, le travail avec l'IA génératrice, l'économie de
+l'attention et la soutenabilité d'une pratique créative. Il s'adresse à qui doit
+**former, évaluer ou se situer** — enseignants, organismes de certification,
+créateurs, chercheurs.
 
 Ce dépôt contient **deux choses** : le référentiel, sous forme de données
 structurées réutilisables, et le site qui le publie.
@@ -182,9 +186,13 @@ creative literacy**, a single concept it exists to make teachable and assessable
 > web and become an *author* within it rather than a recipient of other people's
 > work.**
 
-It covers what existing frameworks address poorly or not at all: critically
-reading an algorithmic feed, building a voice, working with generative AI, the
-attention economy, the sustainability of a creative practice. **7 rubrics,
+None of the dimensions it describes is unprecedented on its own — DigComp,
+EntreComp, media and information literacy and research on creativity already
+cover parts of them. What is original is the overall architecture: gathering into
+one model, with a common grammar of levels and consistent evidence of assessment,
+critically reading an algorithmic feed, building a voice, working with generative
+AI, the attention economy and the sustainability of a creative practice.
+**7 rubrics,
 28 competences, 3 cross-cutting threads, 124 observable descriptors across
 4 mastery levels** — fully bilingual, with the English translation structurally
 identical to the French source and sharing the same stable `code` keys.

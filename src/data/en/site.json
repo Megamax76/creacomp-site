@@ -149,11 +149,11 @@
       "num": "01",
       "eyebrow": "The object",
       "title": "A framework for digital creative literacy",
-      "lead": "Existing digital competency frameworks train people in the use of tools: office software, communication, security. That literacy is necessary, but it remains defensive — it teaches adaptation to digital environments, not creation with them.",
+      "lead": "Someone creating online draws on knowledge that several frameworks already describe, but separately. What is missing is not one more competence: it is the model that holds them together.",
       "body": [
-        "Yet creation has become a structuring dimension of those environments. Recommendation algorithms, content production, generative artificial intelligence, digital entrepreneurship: people's capacity to understand these mechanisms and to produce value through them now conditions their economic, cultural and civic autonomy.",
-        "That capacity — digital creative literacy — is at present neither defined nor measured by any framework.",
-        "CreaComp answers that gap. It is built around a single question:"
+        "Creation has become a structuring dimension of digital environments. Recommendation algorithms, content production, generative artificial intelligence, digital entrepreneurship: people's capacity to understand these mechanisms and to produce value through them now conditions their economic, cultural and civic autonomy.",
+        "That capacity is not uncharted ground. DigComp describes the digital competence of citizens, EntreComp entrepreneurial competence, media and information literacy critical reception, and research on creativity the act of inventing. Each of these frameworks illuminates one side of it; none brings them together in a single model.",
+        "This is where CreaComp comes in: an integrated framework describing a person's capacity to understand digital environments, to create in them intentionally, to turn ideas into finished work, to engage with communities and to build lasting autonomy around what they make. It is built around a single question:"
       ],
       "question": "What is a person actually able to do in digital environments, and what value are they able to create there?"
     },
@@ -255,7 +255,7 @@
       "title": "Value has moved",
       "body": [
         "Generative artificial intelligence has collapsed the cost of production: a competent text, a clean visual, an edited video are becoming universally accessible. What becomes ordinary loses its value, and value moves towards both ends of the creative chain.",
-        "No existing framework described those two ends together. That is why CreaComp exists, and it is the reading key that explains why its upstream and downstream domains weigh as much as making itself."
+        "That displacement is what justifies the architecture of the framework: the eye and the relationship weigh as much as making itself. Existing frameworks describe one end or the other; CreaComp holds both in a single model, with the same grammar of levels and the same evidence of assessment."
       ],
       "caption": "Where value sits along the creative chain",
       "stages": [
@@ -339,6 +339,15 @@
         ]
       },
       {
+        "id": "thesis",
+        "title": "The thesis: an integrated architecture",
+        "body": [
+          "CreaComp offers an integrated framework describing a person's capacity to understand digital environments, to create in them intentionally, to turn ideas into finished work, to engage with communities and to build lasting autonomy around what they make.",
+          "Taken on its own, none of these dimensions is unprecedented, and the framework does not claim otherwise. Searching for and evaluating information, understanding platforms and artificial intelligence, creativity, digital production, collaboration, audience building, running projects, entrepreneurship, intellectual property and value creation are already described elsewhere — by DigComp, by EntreComp, by media and information literacy, by research on creativity, by various models of digital competence.",
+          "What is original in CreaComp lies in its overall architecture rather than in any of its components taken separately. It gathers into one model, with a common grammar of levels and consistent evidence of assessment, dimensions that are usually studied and assessed apart from one another. That integration is the defensible claim, and it is what empirical validation has to put to the test."
+        ]
+      },
+      {
         "id": "intention",
         "title": "From the attention economy to the intention economy",
         "body": [
@@ -351,7 +360,7 @@
         "title": "The creator era and the displacement of value",
         "body": [
           "Generative artificial intelligence has collapsed the cost of production: a competent text, a clean visual, an edited video are becoming universally accessible. What becomes ordinary loses its value; value moves towards both ends of the creative chain. Upstream: the eye — knowing what to create, why, and from which point of view. Downstream: the relationship — trust, community, and the ability to turn attention received into assets owned.",
-          "This thesis does not change the architecture of the framework, which remains a complete map; it is its reading key. It explains why the upstream domains (Gather, Analyse, Create) and the downstream ones (Collaborate, Monetise) weigh as much as making itself."
+          "This reading does not change the architecture of the framework, which remains a complete map; it is its reading key. It explains why the upstream domains (Gather, Analyse, Create) and the downstream ones (Collaborate, Monetise) weigh as much as making itself."
         ]
       }
     ],
@@ -433,7 +442,7 @@
       "id": "scope",
       "title": "Scope: what CreaComp leaves out",
       "body": [
-        "CreaComp is a new framework, built on an object of its own: digital creative literacy. It neither extends nor subordinates itself to an existing framework. The European competence frameworks — DigComp for the digital competence of citizens, EntreComp for entrepreneurial competence — were its inspiration and its working basis, and they remain its natural complement; but none of them describes what CreaComp describes, which is precisely why it exists.",
+        "CreaComp is a new framework, built on an object of its own: digital creative literacy. It neither extends nor subordinates itself to an existing framework. The European competence frameworks — DigComp for the digital competence of citizens, EntreComp for entrepreneurial competence — were its inspiration and its working basis, and they remain its natural complement. The overlaps with them are real and acknowledged: what sets CreaComp apart is not that it covers dimensions nobody has described, but that it articulates them within a single model.",
         "What CreaComp deliberately leaves out, it leaves out as a matter of scope, not by deferring to an outside authority. It covers neither device and account security, nor defensive personal-data protection, nor technical problem-solving, nor office software and administrative communication. Those belong to a general digital literacy that is well served elsewhere, and duplicating them would have diluted the point. CreaComp assumes them available and deals exclusively with the creative side: understanding systems, conceiving, making, addressing, venturing, capitalising.",
         "Three points of contact with general digital literacy deserve to be made explicit, because CreaComp goes further than it does at each. Competency 1.2 (reliability and manipulation) pushes critical reading as far as detecting synthetic content and the influence techniques specific to creative spaces. Competency 5.3 (conduct online) reaches moderation and the public handling of criticism. Competency 7.4 (platform-independent assets) treats data as property — owning your audience and your work — where the usual defensive approach stops at protecting it.",
         "Finally, media and information literacy — a formal part of the French school curriculum — finds its natural extension in the Gather domain: CreaComp offers MIL teachers a trajectory leading from critical reception, their territory, towards assumed creation, which is its own."
