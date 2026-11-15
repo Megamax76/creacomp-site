@@ -75,4 +75,4 @@ export const umamiScriptUrl = 'https://stats.srv2150067.hstgr.cloud/m.js';
  * qui ne donne que le droit d'envoyer des vues à ce compteur, jamais celui
  * de lire les statistiques.
  */
-export const umamiWebsiteId = '';
+export const umamiWebsiteId = '80cc4654-d8dc-40f8-8a86-ff5ef73baa60';
