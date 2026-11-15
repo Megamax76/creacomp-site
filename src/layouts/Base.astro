@@ -3,7 +3,7 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { site, other, alternatePath, path, type Lang, type PageKey } from '../lib/i18n';
-import { siteUrl } from '../config';
+import { siteUrl, umamiScriptUrl, umamiWebsiteId } from '../config';
 
 interface Props {
   lang: Lang;
@@ -27,6 +27,13 @@ const self = Astro.url.pathname;
 // de domaine arrêté, comme l'URL canonique.
 const socialCard = lang === 'fr' ? '/carte-sociale.png' : '/carte-sociale-en.png';
 const socialCardUrl = siteUrl ? new URL(socialCard, siteUrl).href : undefined;
+
+// Mesure d'audience : la balise n'apparaît que si l'instance Umami et
+// l'identifiant du site sont tous deux renseignés. `defer` la met hors du
+// chemin critique : une page s'affiche entière même si le compteur est
+// injoignable. Umami ne pose aucun témoin de connexion, d'où l'absence de
+// bandeau de consentement.
+const umami = umamiScriptUrl.trim() && umamiWebsiteId.trim() ? { src: umamiScriptUrl.trim(), id: umamiWebsiteId.trim() } : null;
 ---
 
 <!doctype html>
@@ -62,6 +69,7 @@ const socialCardUrl = siteUrl ? new URL(socialCard, siteUrl).href : undefined;
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="theme-color" content="#fbf9f5" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#131210" media="(prefers-color-scheme: dark)" />
+    {umami && <script is:inline defer src={umami.src} data-website-id={umami.id} />}
     <script is:inline>
       // Applique le thème avant le premier rendu : évite le clignotement clair/sombre.
       (() => {

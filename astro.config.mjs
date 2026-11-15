@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import { siteUrl, web3formsKey } from './site.config.mjs';
+import { siteUrl, web3formsKey, umamiScriptUrl, umamiWebsiteId } from './site.config.mjs';
 
 // Le site ne charge rien de l'extérieur : la politique de sécurité du contenu
 // part donc de `default-src 'none'` et ne rouvre que le strict nécessaire.
@@ -12,6 +12,15 @@ import { siteUrl, web3formsKey } from './site.config.mjs';
 // formulaire bascule sur le logiciel de messagerie du visiteur, qui relève du
 // navigateur et non d'une requête réseau : rien à autoriser de ce côté.
 const relay = web3formsKey.trim() ? 'https://api.web3forms.com' : null;
+
+// La mesure d'audience est le second point de contact avec l'extérieur, et
+// n'existe que si l'instance Umami est renseignée. On n'autorise pas un
+// domaine en dur : on déduit l'origine de l'adresse du script, pour que la
+// politique suive la configuration sans jamais ouvrir plus large qu'elle.
+// Le script est chargé depuis cette origine (`script-src`) et lui renvoie les
+// vues (`connect-src`) ; rien d'autre n'est permis.
+const umami = umamiScriptUrl.trim() && umamiWebsiteId.trim() ? new URL(umamiScriptUrl).origin : null;
+const connect = [relay, umami].filter(Boolean);
 
 // Tant qu'aucun nom de domaine n'est arrêté, le site se construit avec des
 // chemins relatifs et se déploie n'importe où. Renseigner `siteUrl` dans
@@ -36,7 +45,7 @@ export default defineConfig({
         // Astro intègre les sous-ensembles de polices en `data:` dans le CSS ;
         // sans cette autorisation, le site s'affiche en polices de substitution.
         "font-src 'self' data:",
-        `connect-src ${relay ?? "'none'"}`,
+        `connect-src ${connect.length ? connect.join(' ') : "'none'"}`,
         // Sans relais, `form-action 'self'` laisse l'envoi sans JavaScript
         // recharger la page plutôt que d'être bloqué net par la politique.
         `form-action ${relay ?? "'self'"}`,
@@ -48,6 +57,10 @@ export default defineConfig({
         // une erreur à chaque visite. Sur un hébergeur acceptant les en-têtes,
         // ajouter `frame-ancestors 'none'` et `X-Content-Type-Options: nosniff`.
       ],
+      // `resources` remplace les sources par défaut de `script-src` : il faut
+      // donc y remettre `'self'`. Les empreintes des scripts d'Astro s'y
+      // ajoutent ensuite d'elles-mêmes.
+      ...(umami ? { scriptDirective: { resources: ["'self'", umami] } } : {}),
     },
   },
 });

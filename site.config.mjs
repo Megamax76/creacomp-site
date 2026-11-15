@@ -48,3 +48,31 @@ export const contactEmail = 'contact@creacomp.org';
  * du visiteur au lieu de l'envoyer. La page n'est jamais une impasse.
  */
 export const web3formsKey = '6a466224-46c8-4419-8832-ffce68648103';
+
+/**
+ * Adresse du script de mesure d'audience Umami (https://umami.is), tel que
+ * servi par l'instance auto-hébergée. Exemple :
+ * 'https://stats.creacomp.org/script.js' — l'adresse complète du fichier,
+ * pas seulement celle du domaine.
+ *
+ * Umami ne pose aucun témoin de connexion et ne conserve pas d'identifiant
+ * de visiteur : il n'y a donc ni bandeau de consentement à afficher, ni
+ * déclaration de traceur à faire. Le site ne gagne qu'un compteur de pages.
+ *
+ * La politique de sécurité du contenu s'ouvre d'elle-même pour ce domaine,
+ * et pour lui seul : elle en déduit l'origine à partir de cette adresse.
+ *
+ * Tant que cette valeur ou `umamiWebsiteId` est vide, aucun script n'est
+ * inséré et la politique reste close : le site se construit sans mesure.
+ */
+export const umamiScriptUrl = '';
+
+/**
+ * Identifiant du site dans Umami — l'UUID affiché par le tableau de bord à
+ * la création du site (Settings → Websites → Edit).
+ *
+ * Il voyage en clair dans le HTML : c'est une clé publique par construction,
+ * qui ne donne que le droit d'envoyer des vues à ce compteur, jamais celui
+ * de lire les statistiques.
+ */
+export const umamiWebsiteId = '';
