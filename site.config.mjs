@@ -65,7 +65,7 @@ export const web3formsKey = '6a466224-46c8-4419-8832-ffce68648103';
  * Tant que cette valeur ou `umamiWebsiteId` est vide, aucun script n'est
  * inséré et la politique reste close : le site se construit sans mesure.
  */
-export const umamiScriptUrl = '';
+export const umamiScriptUrl = 'https://stats.srv2150067.hstgr.cloud/m.js';
 
 /**
  * Identifiant du site dans Umami — l'UUID affiché par le tableau de bord à

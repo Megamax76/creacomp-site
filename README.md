@@ -166,9 +166,15 @@ npm run dev      # http://localhost:4321
 Le contenu se modifie dans `src/data/` — le référentiel dans `framework.json`,
 les textes éditoriaux dans `site.json`. Le déploiement est automatique : chaque
 poussée sur `main` construit et publie sur GitHub Pages. Tout le réglage
-(domaine, adresse de contact, formulaire) tient dans
+(domaine, adresse de contact, formulaire, mesure d'audience) tient dans
 [`site.config.mjs`](site.config.mjs). La politique de sécurité du contenu est
 décrite dans [SECURITY.md](SECURITY.md).
+
+La mesure d'audience est facultative et sans témoin de connexion : renseigner
+l'adresse du script d'une instance [Umami](https://umami.is) et l'identifiant du
+site dans `site.config.mjs` suffit à l'activer, et la politique de sécurité
+s'ouvre alors pour cette seule origine. L'un des deux réglages laissé vide, le
+site se construit sans aucune mesure.
 
 ## Contribuer, citer, réutiliser
 

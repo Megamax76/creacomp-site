@@ -35,17 +35,26 @@ pas de prise** : il n'y a rien qui les exécuterait. La surface réelle se rédu
 
 ### Ce que le site charge
 
-- **Aucune requête vers un tiers.** Polices et photographies sont
-  auto-hébergées. Le site n'embarque aucun script tiers, aucun traceur, aucune
-  balise analytique, et ne pose aucun cookie. Vérifiable :
-  `grep -roE 'src="https?://' dist/` ne renvoie rien.
+- **Presque aucune requête vers un tiers.** Polices et photographies sont
+  auto-hébergées, et le site ne pose aucun cookie. Le seul script chargé
+  depuis l'extérieur est, s'il est configuré, celui de la mesure d'audience
+  (voir ci-dessous) ; sans lui, `grep -roE 'src="https?://' dist/` ne renvoie
+  rien.
+- **La mesure d'audience est facultative, auto-hébergée et sans identifiant de
+  visiteur.** Elle n'existe que si `umamiScriptUrl` et `umamiWebsiteId` sont
+  tous deux renseignés dans `site.config.mjs` : la politique s'ouvre alors pour
+  la seule origine déduite de cette adresse, en chargement du script et en
+  renvoi des vues. [Umami](https://umami.is) ne pose aucun témoin de connexion
+  et ne conserve pas d'identifiant de visiteur — d'où l'absence de bandeau de
+  consentement. L'identifiant du site qui voyage dans le HTML ne permet que
+  d'écrire des vues, jamais de lire les statistiques.
 - **Politique de sécurité du contenu à empreintes SHA-256**, générée à la
   construction par Astro et partant de `default-src 'none'`. Les scripts et
   feuilles de style sont autorisés par leur empreinte, jamais par
   `unsafe-inline` : un script injecté dans le HTML ne s'exécuterait pas.
-- **`connect-src` et `form-action` restent à `'none'`** tant que `formspreeId`
+- **`connect-src` et `form-action` restent à `'none'`** tant que `web3formsKey`
   est vide dans `site.config.mjs`. Le renseigner ouvre la politique pour le seul
-  domaine `formspree.io`, automatiquement.
+  domaine `api.web3forms.com`, automatiquement.
 
 ### Ce qui construit le site
 
